@@ -4,7 +4,14 @@ import './styles.scss';
 // == Composant
 const AsideNavbar = () => (
   <div className="AsideNavbar">
-    <h1>AsideNavbar</h1>
+    <div className="AsideNavbar-ProfileCard-main">
+        <img className="AsideNavbar-ProfileCard-MainPicture" alt="" />
+        <h2 className="AsideNavbar-ProfileCard-Name">Prénom</h2>
+        <h3 className="AsideNavbar-ProfileCard-Title">Titre</h3>
+
+    </div>
+    <a>changer de profil</a>
+    <a>gestion de profil</a>
   </div>
 );
 
