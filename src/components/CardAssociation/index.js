@@ -7,16 +7,13 @@ const CardAssociation = () => (
   <div className="card-association">
     {/* <img src={imgAsso1} alt="Img Association"
           className="card-association-img" style={{ width: '200px' }} /> */}
-    <div
-      className="image"
-      style={{
-        width: '50px',
-        height: '50px',
-        background: '#074666',
-        marginLeft: '1em',
-      }}
-    />
+    <div className="image" />
     <h2>Association</h2>
+    <div className="details-association">
+      <p>
+        View Details
+      </p>
+    </div>
   </div>
 );
 

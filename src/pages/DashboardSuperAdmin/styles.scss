@@ -1,3 +1,66 @@
-.App {
-  display: flex,
+body {
+  background: #E4E7EC;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-superadmin {
+  width: 95%;
+  height: 95vh;
+  display: flex;
+  background: #F5F5F5;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.aside-navbar {
+  width: 15%;
+  background: #074666;
+  border-radius: 20px 0 0 20px;
+}
+
+.cards-wrapper {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2em;
+  align-items: center;
+  margin: 2em auto;
+  justify-content: center;
+}
+
+.card-association {
+  background: #6a8fa2;
+  width: 200px;
+  height: 200px;
+  padding: 1em;
+  padding-top: 2em;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.3));
+}
+
+.card-association h2 {
+  margin-top: 0.7em;
+  text-align: center;
+}
+
+.card-association .image {
+  width: 50px;
+  height: 50px;
+  background: #074666;
+  margin-left: 1em;
+  margin: 0 auto;
+}
+
+.details-association {
+  width: 80%;
+  height: 20%;
+  background: #5E7F90;
+  margin: 2em auto;
+}
+
+
+.details-association p {
+  text-align: center;
+  color: #FFF;
+  align-items: center;
 }
