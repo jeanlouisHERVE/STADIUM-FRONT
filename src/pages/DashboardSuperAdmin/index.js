@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import CardAssociation from '../../components/CardAssociation';
+import ControlCenter from '../../components/ControlCenter';
+
 import './styles.scss';
 
 // == Composant
 const DashboardSuperAdmin = () => (
   <div className="DashboardSuperAdmin">
-    <h1>DashboardSuperAdmin</h1>
+    <CardAssociation />
+    <CardAssociation />
+    <ControlCenter />
+    <CardAssociation />
+    <CardAssociation />
+    <CardAssociation />
+    <CardAssociation />
   </div>
 );
 
