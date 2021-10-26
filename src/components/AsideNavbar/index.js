@@ -17,13 +17,15 @@ const AsideNavbar = () => (
         <a className="AsideNavbar-ProfileCard-Link" href="">gestion de profil</a>
     </div>
     
-    <nav>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+    <nav className="AsideNavbar-Navbar-main">
+      <NavMenu className="AsideNavbar-Navbar-ul">
+        <NavLink className="AsideNavbar-Navbar-item">Home</NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">Planning</NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">Cours</NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">Evenements</NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">Messages</NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">Réglages</NavLink>
+      </NavMenu>
     </nav>
 
 

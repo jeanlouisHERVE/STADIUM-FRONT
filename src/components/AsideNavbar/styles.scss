@@ -62,5 +62,22 @@
     }
   }
 
+  .AsideNavbar-Navbar-main {
+    background-color: red;
+    margin-top: 100px;
+    .AsideNavbar-Navbar-ul {
+     
+      list-style-type: none;
+
+      .AsideNavbar-Navbar-item {
+        color: vars.$turquoiseColor;
+        text-transform: uppercase;
+        
+      }
+
+    }
+
+  }
+
 }
 
