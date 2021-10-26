@@ -1,5 +1,11 @@
 import './styles.scss';
-
+import 
+{ 
+  Nav,
+  NavMenu,
+  NavLink
+} from './AsideNavbarElements'
+ 
 // == Composant
 const AsideNavbar = () => (
   <div className="AsideNavbar">
@@ -16,16 +22,16 @@ const AsideNavbar = () => (
       <a className="AsideNavbar-ProfileCard-Link" href="">gestion de profil</a>
     </div>
 
-    <nav className="AsideNavbar-Navbar-main">
-      {/* <NavMenu className="AsideNavbar-Navbar-ul">
-        <NavLink className="AsideNavbar-Navbar-item">Home</NavLink>
-        <NavLink className="AsideNavbar-Navbar-item">Planning</NavLink>
-        <NavLink className="AsideNavbar-Navbar-item">Cours</NavLink>
-        <NavLink className="AsideNavbar-Navbar-item">Evenements</NavLink>
-        <NavLink className="AsideNavbar-Navbar-item">Messages</NavLink>
-        <NavLink className="AsideNavbar-Navbar-item">Réglages</NavLink>
-      </NavMenu> */}
-    </nav>
+    <Nav className="AsideNavbar-Navbar-main">
+      <NavMenu className="AsideNavbar-Navbar-ul">
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">home</span><span class="AsideNavbar-Navbar-category">home</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">calendar_today</span><span class="AsideNavbar-Navbar-category">planning</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">face</span><span class="AsideNavbar-Navbar-category">cours</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">today</span><span class="AsideNavbar-Navbar-category">evenements</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">mark_email_unread</span><span class="AsideNavbar-Navbar-category">messages</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">settings</span><span class="AsideNavbar-Navbar-category">réglages</span></NavLink>
+      </NavMenu>
+    </Nav>
   </div>
 );
 

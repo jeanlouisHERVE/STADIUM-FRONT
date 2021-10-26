@@ -2,7 +2,7 @@
 
 .AsideNavbar {
   width: 15vw;
-  height: 45vh;
+  height: 100vh;
   background-color: vars.$blueColor;
 
   .AsideNavbar-ProfileCard-main {
@@ -49,6 +49,7 @@
       }
 
     }
+    
 
     .AsideNavbar-ProfileCard-Link{
       color: vars.$lightColor;
@@ -61,18 +62,31 @@
       }
     }
   }
-
   .AsideNavbar-Navbar-main {
-    background-color: red;
-    margin-top: 100px;
+
     .AsideNavbar-Navbar-ul {
-     
-      list-style-type: none;
 
       .AsideNavbar-Navbar-item {
-        color: vars.$turquoiseColor;
-        text-transform: uppercase;
-        
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+
+        }
+
+        .AsideNavbar-Navbar-category {
+          align-self: center;
+          margin-left: 10px;
+        }
       }
 
     }
@@ -80,4 +94,3 @@
   }
 
 }
-

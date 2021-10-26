@@ -32,6 +32,9 @@ const App = () => (
         <AsideNavbar />
         <DashboardSuperAdmin />
       </Route>
+      <Route path="/associations/backoffice">
+        <AsideNavbar />
+      </Route>
       <Route>
         <Error404 />
       </Route>
