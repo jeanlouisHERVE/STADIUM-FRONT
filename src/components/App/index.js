@@ -6,6 +6,8 @@ import Contact from '../../pages/Contact';
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
+import AsideNavbar from '../AsideNavbar';
+import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 
 import './styles.scss';
 
@@ -26,13 +28,16 @@ const App = () => (
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
       </Route>
-      <Route path="superadmin/backoffice/associations">
-        <Home />
+      <Route path="/superadmin/backoffice/associations">
+        <AsideNavbar />
+        <DashboardSuperAdmin />
+      </Route>
+      <Route path="/associations/backoffice">
+        <AsideNavbar />
       </Route>
       <Route>
         <Error404 />
       </Route>
-
     </Switch>
   </div>
 );
