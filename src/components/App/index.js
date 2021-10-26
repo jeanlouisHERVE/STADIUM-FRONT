@@ -1,7 +1,12 @@
 // == Import
 import { Route, Switch } from 'react-router-dom';
 
+import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
+import Contact from '../../pages/Contact';
+import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
+import LegalMention from '../../pages/LegalMention';
+
 import './styles.scss';
 
 // == Composant
@@ -12,19 +17,22 @@ const App = () => (
       <Route path="/" exact>
         <Home />
       </Route>
-      <Route path="/legalMention" exact>
-        <Home />
+      <Route path="/legalMention">
+        <LegalMention />
       </Route>
-      <Route path="/contact" exact>
-        <Home />
+      <Route path="/contact">
+        <Contact />
       </Route>
-      <Route path="/confidentialPolicy" exact>
-        <Home />
+      <Route path="/confidentialPolicy">
+        <ConfidentialPolicy />
       </Route>
       <Route path="superadmin/backoffice/associations">
         <Home />
       </Route>
-      <Route />
+      <Route>
+        <Error404 />
+      </Route>
+
     </Switch>
   </div>
 );
