@@ -1,0 +1,24 @@
+body {
+  background: #E4E7EC;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-superadmin {
+  width: 95%;
+  height: 95vh;
+  display: flex;
+  background: #F5F5F5;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.listing-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: aqua;
+}
+
