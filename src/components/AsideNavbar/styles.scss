@@ -5,6 +5,7 @@
   height: 100%;
   padding-top: 20px;
   background-color: vars.$blueColor;
+  border-radius: 20px 0 0 20px;
 
   .AsideNavbar-ProfileCard-main {
 
@@ -73,6 +74,7 @@
     }
   }
   .AsideNavbar-Navbar-main {
+    margin-top: 2em;
 
     .AsideNavbar-Navbar-ul {
 

@@ -5,27 +5,27 @@ import Footer from '../../components/Footer';
 // == Composant
 const Home = () => (
   <div className="home">
-      <div className= "home-header">
-          <div className="part-registration">
-            <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
-              <p className="part-registration-text">
-              Rejoignez un réseau d’associations sportives, présentes partout en France. 
-              Inscrivez-vous pour bénéficiez d’un service de qualité et optimisé pour vous faciliter le quotidien.
-              </p>
-          <ButtonFormSubscribe />  
-          </div>
-
-          <div className="part-connexion">
-          <ButtonFormLogin />
-              <div className="part-connexion-img">
-                <img src="" className="stadium-img" alt=""/>
-              </div>
-          </div>
+    <div className="home-header">
+      <div className="part-registration">
+        <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
+        <p className="part-registration-text">
+          Rejoignez un réseau d’associations sportives, présentes partout en France. 
+          Inscrivez-vous pour bénéficiez d’un service de qualité et optimisé pour vous 
+          faciliter le quotidien.
+        </p>
+        <ButtonFormSubscribe />
       </div>
+      <div className="part-connexion">
+        <ButtonFormLogin />
+        <div className="part-connexion-img">
+          <img src="" className="stadium-img" alt="" />
+        </div>
+      </div>
+    </div>
 
-      <div className= "part-association"> 
-          <div className="part-association-title"> 
-              <h1 className="part-association-title-title"> Vous êtes une association? Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
+    <div className="part-association">
+      <div className="part-association-title">
+        <h1 className="part-association-title-title"> Vous êtes une association? Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
           </div>
             <div className="part-association-content"> 
                 <p className="part-association-text">Stadium vous permet de dématérialiser entièrement la gestion de vos contrats d’adhérents.</p>
@@ -75,7 +75,7 @@ const Home = () => (
       </div>
 
       <div className="footer">
-        <Footer /> 
+        <Footer />
       </div>
   </div>
 

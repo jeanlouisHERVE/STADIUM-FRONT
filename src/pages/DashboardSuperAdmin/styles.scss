@@ -4,34 +4,26 @@ body {
 }
 
 .dashboard-superadmin {
-  width: 95%;
+  width: 95vw;
   height: 95vh;
   display: flex;
   background: #F5F5F5;
-  margin: auto;
+  margin: auto auto;
   border-radius: 20px;
 }
 
-.aside-navbar {
-  width: 15%;
-  background: #074666;
-  border-radius: 20px 0 0 20px;
-}
-
 .cards-wrapper {
-  width: auto;
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  grid-gap: 2em;
-  align-items: center;
-  margin: 2em auto;
-  justify-content: center;
+  place-content: space-around;
+  width: 100%;
+  justify-items: center;
 }
 
 .card-association {
   background: #6a8fa2;
   width: 200px;
-  height: 200px;
+  height: 220px;
   padding: 1em;
   padding-top: 2em;
   border-radius: 20px;
@@ -44,8 +36,8 @@ body {
 }
 
 .card-association .image {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 100px;
   background: #074666;
   margin-left: 1em;
   margin: 0 auto;
@@ -54,13 +46,17 @@ body {
 .details-association {
   width: 80%;
   height: 20%;
-  background: #5E7F90;
-  margin: 2em auto;
+  background: #545758;
+  font-size: 0.7em;
+  margin: 0.3em auto;
+
 }
 
 
 .details-association p {
+  color: #fff;
   text-align: center;
-  color: #FFF;
-  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

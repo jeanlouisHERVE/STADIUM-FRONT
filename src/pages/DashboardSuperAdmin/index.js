@@ -3,27 +3,16 @@ import CardAssociation from '../../components/CardAssociation';
 // import ControlCenter from '../../components/ControlCenter';
 
 import './styles.scss';
+import associationDatas from './data/associations';
 
 // == Composant
 const DashboardSuperAdmin = () => (
   <div className="dashboard-superadmin">
-    <div className="aside-navbar">
-      <AsideNavbar />
-    </div>
+    <AsideNavbar />
     <div className="cards-wrapper">
-      <CardAssociation />
-      <CardAssociation />
-      {/* <ControlCenter /> */}
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
-      <CardAssociation />
+      {associationDatas.map((association) => (
+        <CardAssociation association={association} />
+      ))}
     </div>
   </div>
 );
