@@ -1,20 +1,29 @@
 
-.listing--container {
-  width: 80%;
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   background-color: red;
   text-transform: uppercase;
+  margin-top: 70px;
 
   .listing-header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
     
     
 
     .listing-header-leftside {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       .listing-title {
-        display: flex;
-        flex-direction: row;
+        margin-right: 15px;
       }
   
       .listing-addIcon {
@@ -37,14 +46,20 @@
     }
 
     .listing-header-rightside {
-      .listing-filter {
-        h2 {
-           color: red; 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
+      .listing-filter {
+        margin-right: 15px;
+
+        h2 {
+           color: yellow;
         }
       }
 
       .listing-filterIcon {
+        margin-right: 10px;
 
         .material-icons {
           font-family: 'Material Icons';
@@ -61,14 +76,45 @@
         }
       
       }
+
     }
-   
-
-
-      
-
-    
-
 
   }
+
+  .listing-corpse {
+    height: 100px;
+    background-color: chartreuse;
+
+    .listing-table {
+      
+      .listing-table-header {
+        
+        .listing-table-header-item {
+          background-color: chocolate;
+
+        }
+
+      }
+
+      .listing-table-ligne-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: chocolate;
+
+        .listing-table-ligne-leftside {
+
+
+        }
+
+        .listing-table-ligne-rightside {
+
+
+        }
+      }
+
+    }
+
+  }
+
 }
