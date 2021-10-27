@@ -19,28 +19,18 @@ const Listing = () => (
       </div>
     </div>
     <div className="listing-corpse">
-      <table className="listing-table">
-        <tr className="listing-table-header">
-          <th className="listing-table-header-item">Prénom</th>
-          <th className="listing-table-header-item">Nom</th>
-          <th className="listing-table-header-item">Icones</th>
-        </tr>
-        <tr className="listing-table-ligne-container">
-          <div className="listing-table-ligne-leftside">
-            <td>Frédéric</td>
-            <td>Barsoti</td>
+          <div className="listing-line-leftside">
+                <div className="listing-line-items">Guy</div>
+                <div className="listing-line-items">MAUVE</div>
+                <div className="listing-line-items"> </div>
+                <div className="listing-line-items"> </div>
           </div>
-          <td className="listing-table-ligne-rightside">
-            <span class="material-icons">email</span>
-            <span class="material-icons">border_color</span>
-            <span class="material-icons">visibility</span>
-            <span class="material-icons">delete</span>
-          </td>
-        </tr> 
-        <tr><td>Mathilde</td><td>Dupont</td></tr> 
-        <tr><td>Omar</td><td>Malalid</td></tr> 
-        <tr><td>Camille</td><td>Lemaire</td></tr>
-      </table>
+          <div className="listing-line-rightside">
+              <span class="listing-line-icon material-icons">email</span>
+              <span class="listing-line-icon material-icons">border_color</span>
+              <span class="listing-line-icon material-icons">visibility</span>
+              <span class="listing-line-icon material-icons">delete</span>
+          </div>
     </div>
   </div>
 );

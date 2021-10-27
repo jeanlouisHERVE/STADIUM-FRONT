@@ -3,17 +3,15 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  background-color: red;
-  text-transform: uppercase;
   margin-top: 70px;
 
   .listing-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 5px;
     border-bottom: 1px solid black;
+    background-color: red;
+    height: 30px;
     
     
 
@@ -21,13 +19,19 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding-left: 15px;
 
       .listing-title {
         margin-right: 15px;
+         h2 {
+          font-weight: 600;
+          text-transform: uppercase;
+         }
       }
   
       .listing-addIcon {
-  
+        cursor: pointer;
+
         .material-icons {
           font-family: 'Material Icons';
           font-weight: normal;
@@ -60,6 +64,7 @@
 
       .listing-filterIcon {
         margin-right: 10px;
+        
 
         .material-icons {
           font-family: 'Material Icons';
@@ -73,6 +78,7 @@
           word-wrap: normal;
           white-space: nowrap;
           direction: ltr;
+          cursor: pointer;
         }
       
       }
@@ -82,35 +88,37 @@
   }
 
   .listing-corpse {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
     background-color: chartreuse;
-
-    .listing-table {
       
-      .listing-table-header {
-        
-        .listing-table-header-item {
-          background-color: chocolate;
-
-        }
-
+    .listing-line-leftside {
+      display: flex;
+      flex-direction: row;
+      
+      .listing-line-items {
+        margin-left: 15px
       }
+    }
 
-      .listing-table-ligne-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: chocolate;
+    .listing-line-rightside {
 
-        .listing-table-ligne-leftside {
-
-
-        }
-
-        .listing-table-ligne-rightside {
-
-
-        }
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        margin-left: 5px;
       }
 
     }
@@ -118,3 +126,7 @@
   }
 
 }
+
+  
+  
+
