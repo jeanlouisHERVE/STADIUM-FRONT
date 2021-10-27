@@ -2,9 +2,10 @@
 
 .AsideNavbar {
   width: 15vw;
-  height: 100vh;
+  height: 100%;
   padding-top: 20px;
   background-color: vars.$blueColor;
+  border-radius: 20px 0 0 20px;
 
   .AsideNavbar-ProfileCard-main {
 
@@ -47,6 +48,17 @@
         height: auto;
       }
 
+      .AsideNavbar-ProfileCard-AddPicture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        color: vars.$lightColor;
+        border: solid 1px vars.$lightColor;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
     
 
@@ -62,6 +74,7 @@
     }
   }
   .AsideNavbar-Navbar-main {
+    margin-top: 2em;
 
     .AsideNavbar-Navbar-ul {
 

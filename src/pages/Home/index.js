@@ -11,6 +11,7 @@ import imageLogo from 'src/assets/images/imageLogo.png';
 // == Composant
 const Home = () => (
   <div className="home">
+<<<<<<< HEAD
       <div className= "home-header">
           <div className="part-registration">
             <div className="part-registration-img">
@@ -30,11 +31,35 @@ const Home = () => (
             <ButtonFormLogin />
                 <img src={imageStade}  alt="" className="stadium-img"/>  
           </div>
+=======
+    <div className="home-header">
+      <div className="part-registration">
+        <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
+        <p className="part-registration-text">
+          Rejoignez un réseau d’associations sportives, présentes partout en France. 
+          Inscrivez-vous pour bénéficiez d’un service de qualité et optimisé pour vous 
+          faciliter le quotidien.
+        </p>
+        <ButtonFormSubscribe />
       </div>
+      <div className="part-connexion">
+        <ButtonFormLogin />
+        <div className="part-connexion-img">
+          <img src="" className="stadium-img" alt="" />
+        </div>
+>>>>>>> 26d38363dfba49cff97db0f2ad53cd0761727188
+      </div>
+    </div>
 
+<<<<<<< HEAD
       <div className= "part-association"> 
           <div className="part-association-title"> 
               <h1 className="part-association-title-title"> <strong> Vous êtes une association? </strong> <br/> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
+=======
+    <div className="part-association">
+      <div className="part-association-title">
+        <h1 className="part-association-title-title"> Vous êtes une association? Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
+>>>>>>> 26d38363dfba49cff97db0f2ad53cd0761727188
           </div>
             <div className="part-association-content"> 
               <div className="part-association-content-content">
@@ -101,7 +126,7 @@ const Home = () => (
       </div>
 
       <div className="footer">
-        <Footer /> 
+        <Footer />
       </div>
   </div>
 
