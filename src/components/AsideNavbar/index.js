@@ -1,15 +1,15 @@
 import './styles.scss';
-import Avatar from './avataaars.svg'
-import Avatar2 from './avataaars2.svg'
-import Avatar3 from './avataaars3.svg'
-import Avatar4 from './avataaars4.svg'
-import 
-{ 
+import Avatar from './avataaars.svg';
+import Avatar2 from './avataaars2.svg';
+import Avatar3 from './avataaars3.svg';
+import Avatar4 from './avataaars4.svg';
+import
+{
   Nav,
   NavMenu,
-  NavLink
-} from './AsideNavbarElements'
- 
+  NavLink,
+} from './AsideNavbarElements';
+
 // == Composant
 const AsideNavbar = () => (
   <div className="AsideNavbar">
@@ -28,12 +28,12 @@ const AsideNavbar = () => (
 
     <Nav className="AsideNavbar-Navbar-main">
       <NavMenu className="AsideNavbar-Navbar-ul">
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">home</span><span class="AsideNavbar-Navbar-category">home</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">calendar_today</span><span class="AsideNavbar-Navbar-category">planning</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">sports_martial_arts</span><span class="AsideNavbar-Navbar-category">cours</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">today</span><span class="AsideNavbar-Navbar-category">evenements</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">mark_email_unread</span><span class="AsideNavbar-Navbar-category">messages</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span class="material-icons">settings</span><span class="AsideNavbar-Navbar-category">réglages</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category">home</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">calendar_today</span><span className="AsideNavbar-Navbar-category">planning</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">sports_martial_arts</span><span className="AsideNavbar-Navbar-category">cours</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">today</span><span className="AsideNavbar-Navbar-category">evenements</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">mark_email_unread</span><span className="AsideNavbar-Navbar-category">messages</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category">réglages</span></NavLink>
       </NavMenu>
     </Nav>
   </div>
