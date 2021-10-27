@@ -21,6 +21,7 @@ const AsideNavbar = () => (
         <img className="AsideNavbar-ProfileCard-ProfilePicture" src={Avatar2} alt="" />
         <img className="AsideNavbar-ProfileCard-ProfilePicture" src={Avatar3} alt="" />
         <img className="AsideNavbar-ProfileCard-ProfilePicture" src={Avatar4} alt="" />
+        <div className="AsideNavbar-ProfileCard-AddPicture"><span class=" material-icons">add</span></div>
       </div>
       <a className="AsideNavbar-ProfileCard-Link" href="">changer de profil</a>
       <a className="AsideNavbar-ProfileCard-Link" href="">gestion de profil</a>
