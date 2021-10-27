@@ -57,9 +57,10 @@
       .listing-filter {
         margin-right: 15px;
 
-        h2 {
-           color: yellow;
+        .listing-filter-button {
+          background-color: white;
         }
+
       }
 
       .listing-filterIcon {
@@ -87,7 +88,7 @@
 
   }
 
-  .listing-corpse {
+  .listing-line-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -106,11 +107,15 @@
 
     .listing-line-rightside {
 
+      span {
+        cursor: pointer;
+      }
+
       .material-icons {
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
-        font-size: 24px;  /* Preferred icon size */
+        font-size: 24px; 
         display: inline-block;
         line-height: 1;
         text-transform: none;

@@ -1,6 +1,8 @@
 import AsideNavbar from '../../components/AsideNavbar';
 import Listing from '../../components/Listing';
-
+import eventsData from '../../utils/data/eventsData'
+import adherentsData from '../../utils/data/adherentsData'
+v
 import './styles.scss';
 
 // == Composant
@@ -10,9 +12,9 @@ const DashboardSuperAdmin = () => (
       <AsideNavbar />
     </div>
     <div className="listing-wrapper">
-     <Listing />
-     <Listing />
-     <Listing />
+     <Listing adherents={adherentsData}/>
+     <Listing adherents={adherentsData}/>
+     <Listing adherents={adherentsData}/>
     </div>
   </div>
 );
