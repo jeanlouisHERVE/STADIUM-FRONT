@@ -23,7 +23,7 @@ body {
 .card-association {
   background: #6a8fa2;
   width: 200px;
-  height: 200px;
+  height: 220px;
   padding: 1em;
   padding-top: 2em;
   border-radius: 20px;
@@ -36,8 +36,8 @@ body {
 }
 
 .card-association .image {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 100px;
   background: #074666;
   margin-left: 1em;
   margin: 0 auto;
@@ -46,13 +46,17 @@ body {
 .details-association {
   width: 80%;
   height: 20%;
-  background: #5E7F90;
-  margin: 2em auto;
+  background: #545758;
+  font-size: 0.7em;
+  margin: 0.3em auto;
+
 }
 
 
 .details-association p {
+  color: #fff;
   text-align: center;
-  color: #FFF;
-  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
