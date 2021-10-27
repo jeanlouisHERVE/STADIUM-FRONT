@@ -1,0 +1,119 @@
+.home{
+  width: 100%;
+  
+  .home-header{
+    display: flex; 
+    height: 800px;
+    width:100%;
+    font-size: 1.4em;
+    line-height: 30px;
+  }
+
+  .part-registration{
+    padding-top: 200px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .part-registration-title{
+    color:#074666;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-top: 100px;
+
+  }
+
+  .part-registration-text{
+    
+  }
+
+  .part-connexion{
+    width: 40%;
+    background-color: #074666;
+  }
+
+  .part-connexion-img{
+    
+
+  }
+
+  .part-association, .part-user{ 
+    width:100%;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 1.4em;
+    line-height: 30px;
+  }
+  
+  .part-association{
+    background-color: #02A5A5;
+    height: 1050px;
+  }
+  
+  .part-association-title{
+    color: white; 
+    
+  }
+  .part-association-title, .part-user-title{
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-left: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .part-association-title-title, .part-user-title-title{
+    padding-top: 90px;
+    margin-bottom: 90px;
+    width: 80%;
+  }
+
+  .part-association-content{
+    width: 50%;
+    color:white;
+    text-align: justify;
+    padding-bottom: 250px;
+  }
+
+  .part-association-text, .part-user-text{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .part-association-text-elem-list, .part-user-text-elem-list{
+    list-style-type: circle;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .part-association-img{
+    width: 50%;
+  }
+
+  .part-user{
+    background-color: white;
+    height: 900px;
+  }
+ 
+
+  .part-user-content{
+    width: 50%;
+
+  }
+
+.part-user-text{
+
+}
+
+  .part-user-img{
+    width: 50%;
+  }
+
+  
+}
