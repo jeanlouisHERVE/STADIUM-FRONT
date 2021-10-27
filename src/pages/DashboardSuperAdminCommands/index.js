@@ -13,8 +13,6 @@ const DashboardSuperAdmin = () => (
     </div>
     <div className="listing-wrapper">
      <Listing adherents={adherentsData}/>
-     <Listing adherents={adherentsData}/>
-     <Listing adherents={adherentsData}/>
     </div>
   </div>
 );
