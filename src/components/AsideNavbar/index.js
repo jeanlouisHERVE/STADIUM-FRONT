@@ -8,7 +8,7 @@ import
   Nav,
   NavMenu,
   NavLink
-} from './AsideNavbarElements'
+} from './AsideNavbarElements';
  
 // == Composant
 const AsideNavbar = () => (
