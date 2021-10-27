@@ -3,23 +3,24 @@
 .AsideNavbar {
   width: 15vw;
   height: 100vh;
+  padding-top: 20px;
   background-color: vars.$blueColor;
 
   .AsideNavbar-ProfileCard-main {
 
     display: flex;
     flex-direction: column;
-    border: solid 3px vars.$lightColor;
-    margin: 30px 20px;
+    border: solid 1px vars.$lightColor;
+    margin: 0px 30px;
+    
     padding: 15px; 
     border-radius: 25px;
 
     .AsideNavbar-ProfileCard-MainPicture{
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: auto;
       margin: 0px auto 20px auto;
-      border: solid 1px vars.$lightColor;
-      border-radius: 50%;
+      border: solide 3px vars.$turquoiseColor
     }
 
     .AsideNavbar-ProfileCard-Name{
@@ -42,10 +43,8 @@
       margin: 30px 0px 20px;
 
       .AsideNavbar-ProfileCard-ProfilePicture{
-        border: solid 1px vars.$lightColor;
         width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        height: auto;
       }
 
     }

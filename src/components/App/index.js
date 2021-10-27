@@ -3,11 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
+import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
-import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 
 import './styles.scss';
 
