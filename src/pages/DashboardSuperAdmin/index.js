@@ -7,9 +7,7 @@ import './styles.scss';
 // == Composant
 const DashboardSuperAdmin = () => (
   <div className="dashboard-superadmin">
-    <div className="aside-navbar">
-      <AsideNavbar />
-    </div>
+    <AsideNavbar />
     <div className="cards-wrapper">
       <CardAssociation />
       <CardAssociation />
