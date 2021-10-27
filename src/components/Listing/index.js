@@ -19,9 +19,8 @@ const Listing = ({adherents}) => (
     {
       adherents.map((item, index) => (
         <>
-          <div className="listing-line-container">
-                  <div className="listing-line-leftside" key={item.id}>
-                        <div className="listing-line-items">{index}</div>
+          <div className="listing-line-container" key={item.id}>
+                  <div className="listing-line-leftside" >
                         <div className="listing-line-items">{item.firstName}</div>
                         <div className="listing-line-items">{item.lastName}</div>
                         <div className="listing-line-items"> </div>

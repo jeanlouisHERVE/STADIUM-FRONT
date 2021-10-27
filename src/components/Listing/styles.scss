@@ -95,6 +95,12 @@
     height: 35px;
     border-bottom: 1px black solid;
     margin-left: 30px;
+
+    &:hover {
+      background-color: black;
+      color: white;
+
+    }
       
     .listing-line-leftside {
       display: flex;
