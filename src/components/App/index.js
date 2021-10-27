@@ -29,7 +29,6 @@ const App = () => (
         <ConfidentialPolicy />
       </Route>
       <Route path="/superadmin/backoffice/associations">
-        <AsideNavbar />
         <DashboardSuperAdmin />
       </Route>
       <Route path="/associations/backoffice">
