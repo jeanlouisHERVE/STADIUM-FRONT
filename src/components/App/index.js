@@ -35,8 +35,6 @@ const App = () => (
         <DashboardSuperAdmin />
       </Route>
       <Route path="/superadmin/backoffice/commands">
-        <Navbar />
-        <Sidebar />
         <SuperAdminCommand />
       </Route>
       <Route path="/associations/backoffice">

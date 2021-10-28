@@ -4,9 +4,6 @@ import {
   NavbarContainer,
   NavLogo,
   MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLinks,
   NavBtn,
   NavBtnLink,
 } from './NavbarElements';
