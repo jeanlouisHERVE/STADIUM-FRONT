@@ -3,18 +3,22 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.dashboard {
+// .dashboard {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translateX(-50%) translateY(-50%);
+//   width: 95%;
+// }
+
+.dashboard-superadmin {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 95%;
-  overflow-y: auto;
-}
 
-.dashboard-superadmin {
   display: flex;
-  background: #F5F5F5;
   margin: auto auto;
   border-radius: 20px;
 }
@@ -53,11 +57,17 @@ body {
 // }
 
 // @media (min-width: 1600px) {
-  .cards-wrapper {
+  .cards {
     display: grid;
+    // background: #F5F5F5;
     grid-template-columns: repeat(4,1fr);
     width: 100%;
-    place-content: space-around;
+    place-content: space-evenly;
     justify-items: center;
+  }
+
+  .cards-wrapper {
+    width: 100%;
+    place-self: center;
   }
 // }
