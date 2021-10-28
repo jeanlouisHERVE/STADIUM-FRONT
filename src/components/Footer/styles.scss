@@ -1,7 +1,10 @@
+@use 'src/styles/vars.scss';
+
 .footer-content{
-  background-color: #02A5A5;
+  background-color: vars.$turquoiseColor;
   color: white;
   text-align: center;
+  letter-spacing: 1px;
   padding-top: 30px;
   height: 200px;
 
