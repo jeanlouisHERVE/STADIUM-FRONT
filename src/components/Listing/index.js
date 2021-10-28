@@ -3,10 +3,6 @@ import './styles.scss';
 // == Composant
 const Listing = ({adherents}) => (
   <div className="listing-container">
-    <h1>Tableau de bord NameOfTheAssociation</h1>
-    <div> 
-    
-    </div>
     <div className="listing-header">
       <div className="listing-header-leftside">
         <div className="listing-title"><h2>TITLE</h2></div>

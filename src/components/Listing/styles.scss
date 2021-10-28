@@ -5,32 +5,26 @@
   width: 90%;
   margin-top: 70px;
 
-  h1 {
-    font-size: xx-large;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    font-weight: 700;
-  }
-
   .listing-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 2px solid black;
-    height: 30px;
-    
+    height: 40px;
+    align-items: center;
     
 
     .listing-header-leftside {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-content: center;
       
 
       .listing-title {
         margin-right: 15px;
          h2 {
           font-weight: 600;
+          font-size: x-large;
           text-transform: uppercase;
          }
       }
