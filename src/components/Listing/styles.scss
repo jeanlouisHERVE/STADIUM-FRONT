@@ -5,6 +5,13 @@
   width: 90%;
   margin-top: 70px;
 
+  h1 {
+    font-size: xx-large;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
   .listing-header {
     display: flex;
     flex-direction: row;
@@ -85,6 +92,32 @@
 
     }
 
+  }
+
+  .listing-line-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border-bottom: 1px black solid;
+    margin-left: 30px;
+
+    .listing-line-header-leftside {
+      display: flex;
+      flex-direction: row;
+
+      .listing-line-header-items {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700
+      }
+    }
+
+    .listing-line-header-rightside {
+
+
+    }
   }
 
   .listing-line-container {

@@ -50,6 +50,6 @@
   },
   "parserOptions": {
     "requireConfigFile": "false",
-    "babelOptions": { "configFile": "/var/www/html/Apotheose/Apotheose_Stadium/.babelrc" }
+    "babelOptions": { "configFile": "/var/www/html/S09SPEREACT/projet-o-sport-front/.babelrc" }
   }
 }
