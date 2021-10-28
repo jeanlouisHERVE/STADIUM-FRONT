@@ -1,9 +1,8 @@
 // import assets
-import imageLogo from 'src/assets/images/imageLogo.png';
 import dashboardUser from 'src/assets/images/dashboardUser.png';
 import imageStade from 'src/assets/images/imageStade.jpg';
+import imageLogo from 'src/assets/images/imageLogo.png';
 
-// import Composants
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import ButtonFormSubscribe from '../../components/ButtonFormSubscribe';
 import Footer from '../../components/Footer';
@@ -20,8 +19,8 @@ const Home = () => (
         <div className="part-registration-content">
           <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
           <p className="part-registration-text">
-            Rejoignez un réseau d’associations sportives, présentes partout en France.
-            Inscrivez-vous pour bénéficiez d’un service de qualité et optimisé pour vous 
+            Rejoignez un réseau d'associations sportives, présentes partout en France.
+            Inscrivez-vous pour bénéficiez d'un service de qualité et optimisé pour vous
             faciliter le quotidien.
           </p>
           <ButtonFormSubscribe />
@@ -38,7 +37,7 @@ const Home = () => (
       </div>
       <div className="part-association-content">
         <div className="part-association-content-content">
-          <p className="part-association-text"><strong>Stadium</strong> vous permet de dématérialiser entièrement la gestion de vos contrats d’adhérents.</p>
+          <p className="part-association-text"><strong>Stadium</strong> vous permet de dématérialiser entièrement la gestion de vos contrats d'adhérents.</p>
           <p className="part-association-text"> Opter pour Stadium, c'est choisir de se simplifier la vie face aux tâches administratives et chronophages que représente la gestion de centaines voir de milliers de contrats. </p>
           <p className="part-association-text"> Notre plateforme est un outil qui vous permet de réaliser un panel de tâches de façon simple et intuitive : </p>
           <ul>
@@ -51,6 +50,7 @@ const Home = () => (
           <p className="part-association-text"> <strong>Stadium</strong> permet aux associations de gagner du temps dans leur gestion quotidienne afin de se concentrer sur le développement de leur activité. </p>
           <p className="part-association-text"> L’inscription sur la plateforme permet automatiquement à une association d’avoir un site internet accessible et visible par tous les membres de Stadium.</p>
           <p className="part-association-text"> <strong>Stadium</strong> réunit sur sa plateforme tant les associations que les personnes en recherche d’une activité sportive. De quoi gagner en visibilité et se faire connaître. </p>
+
         </div>
         <div className="part-association-img">
           <span className="material-icons material-icons material-icons--user">
