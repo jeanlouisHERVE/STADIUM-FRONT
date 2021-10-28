@@ -1,108 +1,118 @@
 @use 'src/styles/vars';
 
-.AsideNavbar {
-  width: 15vw;
-  height: 100%;
-  padding-top: 20px;
-  background-color: vars.$blueColor;
-  border-radius: 20px 0 0 20px;
+@media (max-width: 767px) {
+  .AsideNavbar {
+    display : none;
+  }
+}
 
-  .AsideNavbar-ProfileCard-main {
 
-    display: flex;
-    flex-direction: column;
-    border: solid 1px vars.$lightColor;
-    margin: 0px 30px;
-    
-    padding: 15px; 
-    border-radius: 25px;
+@media (min-width: 768px) {
 
-    .AsideNavbar-ProfileCard-MainPicture{
-      width: 80px;
-      height: auto;
-      margin: 0px auto 20px auto;
-      border: solide 3px vars.$turquoiseColor
-    }
+  .AsideNavbar {
+    width: 15vw;
+    height: 100%;
+    padding-top: 20px;
+    background-color: vars.$blueColor;
+    border-radius: 20px 0 0 20px;
 
-    .AsideNavbar-ProfileCard-Name{
-      color: vars.$lightColor;
-      font-weight: 900;
-      text-align: center;
-      
-    }
+    .AsideNavbar-ProfileCard-main {
 
-    .AsideNavbar-ProfileCard-Title{
-      color: vars.$lightColor;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .AsideNavbar-ProfileCard-ProfilePictureContainer {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around ;
-      margin: 30px 0px 20px;
+      flex-direction: column;
+      border: solid 1px vars.$lightColor;
+      margin: 0px 30px;
+      
+      padding: 15px; 
+      border-radius: 25px;
 
-      .AsideNavbar-ProfileCard-ProfilePicture{
-        width: 40px;
+      .AsideNavbar-ProfileCard-MainPicture{
+        width: 80px;
         height: auto;
+        margin: 0px auto 20px auto;
+        border: solide 3px vars.$turquoiseColor
       }
 
-      .AsideNavbar-ProfileCard-AddPicture {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
+      .AsideNavbar-ProfileCard-Name{
         color: vars.$lightColor;
-        border: solid 1px vars.$lightColor;
-        border-radius: 50%;
-        cursor: pointer;
+        font-weight: 900;
+        text-align: center;
+        
       }
-    }
-    
 
-    .AsideNavbar-ProfileCard-Link{
-      color: vars.$lightColor;
-      text-align: center;
-      margin-top: 10px;
-      color: vars.$lightColor;
-
-      &:hover {
-        text-decoration: underline;
+      .AsideNavbar-ProfileCard-Title{
+        color: vars.$lightColor;
+        text-align: center;
+        margin-top: 10px;
       }
-    }
-  }
-  .AsideNavbar-Navbar-main {
-    margin-top: 2em;
 
-    .AsideNavbar-Navbar-ul {
+      .AsideNavbar-ProfileCard-ProfilePictureContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around ;
+        margin: 30px 0px 20px;
 
-      .AsideNavbar-Navbar-item {
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px;  /* Preferred icon size */
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
-
+        .AsideNavbar-ProfileCard-ProfilePicture{
+          width: 40px;
+          height: auto;
         }
 
-        .AsideNavbar-Navbar-category {
-          align-self: center;
-          margin-left: 10px;
+        .AsideNavbar-ProfileCard-AddPicture {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          color: vars.$lightColor;
+          border: solid 1px vars.$lightColor;
+          border-radius: 50%;
+          cursor: pointer;
         }
+      }
+      
+
+      .AsideNavbar-ProfileCard-Link{
+        color: vars.$lightColor;
+        text-align: center;
+        margin-top: 10px;
+        color: vars.$lightColor;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .AsideNavbar-Navbar-main {
+      margin-top: 2em;
+
+      .AsideNavbar-Navbar-ul {
+
+        .AsideNavbar-Navbar-item {
+
+          .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;  /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+
+          }
+
+          .AsideNavbar-Navbar-category {
+            align-self: center;
+            margin-left: 10px;
+          }
+        }
+
       }
 
     }
 
   }
-
 }
