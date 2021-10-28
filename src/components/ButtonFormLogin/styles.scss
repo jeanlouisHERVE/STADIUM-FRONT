@@ -1,21 +1,19 @@
 @use 'src/styles/vars.scss';
 
-  .btn-form-login{
-    margin-top: 2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8em;
-    background-color: vars.$blueColor;
-    color: vars.$lightColor;
-    padding: 1em 3em 1em 3em;
-    border-radius: 30px;
-    border: 1px;
-    box-shadow: 10px 5px 5px vars.$darkColor;
-    display: inline-block;
-    z-index:1;
-    position: absolute;
-    margin-left: 500px;
-    }
-
-
-
+.btn-form-login{
+  margin-top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.8em;
+  background-color: vars.$blueColor;
+  color: #FFF;
+  padding: 1em 3em 1em 3em;
+  border-radius: 30px;
+  border: 1px;
+  box-shadow: 10px 5px 5px vars.$darkColor;
+  display: inline-block;
+  z-index:1;
+  position: absolute;
+  margin-left: 500px;
+}

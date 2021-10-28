@@ -14,20 +14,20 @@ Objectif : valider les identifiants de l'utilisateur
 - (bonus) réserver la saisie de messages aux utilisateurs authentifiés
 */
 
-const LoginPage = ({
+const RegistrationPage = ({
   email,
   password,
   updateField,
   handleSubmit,
 }) => (
-  <div className="login-page">
-    <div className="login-header">
+  <div className="Registration-page">
+    <div className="Registration-header">
       <Link to="/" exact>
         <img src={imageLogo} alt="" className="imageLogo" />
       </Link>
     </div>
     <form
-      className="login-form"
+      className="Registration-form"
       onSubmit={(event) => {
         event.preventDefault();
         console.log('Submit actionned');
@@ -56,12 +56,12 @@ const LoginPage = ({
         }}
         value={password}
       />
-      <button type="submit" className="login-submit">Connexion</button>
+      <button type="submit" className="Registration-submit">Connexion</button>
     </form>
   </div>
 );
 
-LoginPage.propTypes = {
+RegistrationPage.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   // 2 paramètres : nouvelle valeur, identifiant
@@ -69,4 +69,4 @@ LoginPage.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
 
-export default LoginPage;
+export default RegistrationPage;
