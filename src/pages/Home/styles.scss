@@ -1,5 +1,7 @@
 @use 'src/styles/vars.scss';
   
+
+@media(min-width:1024px){
 .home{
   width: 100%;
   
@@ -127,7 +129,6 @@
   }
 
   .part-user{
-    background-color: vars.$lightColor;
     height: 150%;
     padding-bottom: 7em;
   }
@@ -190,3 +191,8 @@
   }
 
   }
+
+
+}
+
+
