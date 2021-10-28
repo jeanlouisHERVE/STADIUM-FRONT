@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 // import imgAsso1 from 'src/assets/imgAsso1.png';
@@ -11,9 +12,7 @@ const CardAssociation = ({ association }) => (
     <div className="image" />
     <h2>{association.name}</h2>
     <div className="details-association">
-      <p>
-        View Details
-      </p>
+      <Link to="/superadmin/backoffice/commands" className="card-link">View Details</Link>
     </div>
   </div>
 );

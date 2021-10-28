@@ -8,11 +8,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  width: 95%;
 }
 
 .dashboard-superadmin {
-  width: 95vw;
-  height: 95vh;
   display: flex;
   background: #F5F5F5;
   margin: auto auto;
@@ -25,46 +24,4 @@ body {
   width: 100%;
   place-content: space-around;
   justify-items: center;
-}
-
-.card-association {
-  background: #6a8fa2;
-  width: 200px;
-  height: 220px;
-  padding: 1em;
-  padding-top: 2em;
-  border-radius: 20px;
-  filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
-}
-
-.card-association h2 {
-  margin-top: 0.5em;
-  text-align: center;
-}
-
-.card-association .image {
-  width: 150px;
-  height: 100px;
-  background: #074666;
-  margin-left: 1em;
-  margin: 0 auto;
-}
-
-.details-association {
-  width: 80%;
-  height: 20%;
-  background: #545758;
-  font-size: 0.7em;
-  margin: 0.2em auto;
-
-}
-
-
-.details-association p {
-  color: #fff;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-top: 1.1em;
 }
