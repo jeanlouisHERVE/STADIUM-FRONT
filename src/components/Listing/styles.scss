@@ -1,15 +1,17 @@
+@use 'src/styles/vars';
 
 .listing-container {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin-top: 30px;
+  margin-top: 10px;
+
 
   .listing-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 2px solid black;
+    align-items: flex-start;
     height: 40px;
     align-items: center;
     
@@ -18,11 +20,14 @@
       display: flex;
       flex-direction: row;
       align-content: center;
-      
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+      width:30%;
 
       .listing-title {
         margin-right: 15px;
         
+
          h2 {
           font-weight: 600;
           font-size: x-large;
@@ -56,10 +61,22 @@
       align-items: center;
 
       .listing-filter {
-        margin-right: 15px;
 
         .listing-filter-button {
           background-color: white;
+          border: 2px solid vars.$salmonColor;
+          height: 30px;
+          width: 60px;
+          color: vars.$salmonColor;
+          font-weight: 700;
+          cursor: pointer;
+          margin-left: 10px;
+          border-radius: 20px;
+         
+          &:hover {
+            background-color: vars.$salmonColor;
+            color: white;
+          }
         }
 
       }

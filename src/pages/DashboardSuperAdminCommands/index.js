@@ -13,11 +13,21 @@ const DashboardSuperAdmin = () => (
     <div className="dashboard-superadmin-rightside">
       <h1 className="dashboard-superadmin-title">Tableau de bord NameOfTheAssociation</h1>
       <div className="dashboard-superadmin-presentation">
-        <p className="dashboard-superadmin-presentation-item">PresidentLastname</p>
-        <p className="dashboard-superadmin-presentation-item">PresidentFirstname</p>
-        <p className="dashboard-superadmin-presentation-item">Address</p>
-        <p className="dashboard-superadmin-presentation-item">PhoneNumber</p>
-        <p className="dashboard-superadmin-presentation-item">NumberofAdherents</p>
+        <div className="dashboard-superadmin-presentation-leftside">
+          <p className="dashboard-superadmin-presentation-title">Informations :</p>
+          <p className="dashboard-superadmin-presentation-item">Nom du Président : PresidentLastname</p>
+          <p className="dashboard-superadmin-presentation-item">Prénom du Président : PresidentLastname</p>
+          <p className="dashboard-superadmin-presentation-item">Adresse : Address</p>
+          <p className="dashboard-superadmin-presentation-item">Téléphone : PhoneNumber</p>
+          <p className="dashboard-superadmin-presentation-item">Email : Email</p>
+          <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : NumberofAdherents</p>
+        </div>
+        <div className="dashboard-superadmin-presentation-picture">Picture</div>
+      </div>
+      <div className="dashboard-superadmin-buttonsList">
+        <button className="dashboard-superadmin-button" type="submit">Adhérents</button>
+        <button className="dashboard-superadmin-button" type="submit">Cours</button>
+        <button className="dashboard-superadmin-button" type="submit">Evénements</button>
       </div>
       <div className="dashboard-superadmin-listing-wrapper">
         <Listing adherents={adherentsData} />

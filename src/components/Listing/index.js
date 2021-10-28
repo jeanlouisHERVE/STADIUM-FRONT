@@ -10,8 +10,8 @@ const Listing = ({adherents}) => (
       </div>
       <div className="listing-header-rightside">
         <div className="listing-filter">
-          <button className="listing-filter-button" type="" >A - Z </button>
-          <button className="listing-filter-button" type="" >Z - A</button>
+          <button className="listing-filter-button" type="submit">A - Z </button>
+          <button className="listing-filter-button" type="submit">Z - A</button>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@ const Listing = ({adherents}) => (
       adherents.map((item, index) => (
         <>
           <div className="listing-line-container" key={item.id}>
-            <div className="listing-line-leftside" >
+            <div className="listing-line-leftside">
               <div className="listing-line-items">{item.firstName}</div>
               <div className="listing-line-items">{item.lastName}</div>
             </div>
@@ -45,4 +45,3 @@ const Listing = ({adherents}) => (
 
 // == Export
 export default Listing;
-
