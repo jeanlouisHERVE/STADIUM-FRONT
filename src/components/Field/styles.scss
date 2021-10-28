@@ -3,6 +3,7 @@
 .field {
   margin: 2rem 0;
   position: relative;
+  color: #05221E;
 
   &:not(:last-child) {
     margin-bottom: 1rem;
@@ -20,14 +21,14 @@
     padding: 0.8rem;
     border-radius: 5px;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid #05221E;
     font-size: 1.2em;
     
     
     &:focus {
-      border-color: vars.$lightColor;
+      border-color: #02A5A5;
       & + .label {
-        color: vars.$lightColor;
+        color: #02A5A5;
       }
     }
   }

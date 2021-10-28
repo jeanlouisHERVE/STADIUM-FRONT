@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import ConnexionPage from '../../pages/ConnexionPage';
+import LoginPage from '../../pages/LoginPage';
 
 import { submitLogin, updateSettingsField } from '../../actions/connexion';
 
@@ -27,4 +27,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(ConnexionPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

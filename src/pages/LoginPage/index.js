@@ -1,3 +1,5 @@
+import imageLogo from 'src/assets/images/imageLogo.png';
+
 import PropTypes from 'prop-types';
 import Field from '../../components/Field';
 
@@ -11,21 +13,25 @@ Objectif : valider les identifiants de l'utilisateur
 - (bonus) réserver la saisie de messages aux utilisateurs authentifiés
 */
 
-const ConnexionPage = ({
+const LoginPage = ({
   email,
   password,
   updateField,
   handleSubmit,
 }) => (
-  <div className="connexion-page">
+  <div className="login-page">
+    <div className="login-header">
+      <img src={imageLogo} alt="" className="imageLogo" />
+    </div>
     <form
-      className="connexion-form"
+      className="login-form"
       onSubmit={(event) => {
         event.preventDefault();
-        // console.log('Submit actionned');
+        console.log('Submit actionned');
         handleSubmit();
       }}
     >
+      <h1>Se connecter</h1>
       <Field
         identifier="email"
         placeholder="jean_michel@oclock.io"
@@ -47,12 +53,12 @@ const ConnexionPage = ({
         }}
         value={password}
       />
-      <button type="submit" className="settings-submit">Envoyer</button>
+      <button type="submit" className="login-submit">Connexion</button>
     </form>
   </div>
 );
 
-ConnexionPage.propTypes = {
+LoginPage.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   // 2 paramètres : nouvelle valeur, identifiant
@@ -60,4 +66,4 @@ ConnexionPage.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
 
-export default ConnexionPage;
+export default LoginPage;

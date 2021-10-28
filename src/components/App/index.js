@@ -7,7 +7,7 @@ import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
 import Subscription from '../../pages/SubscriptionPage';
-import ConnexionPage from '../../pages/ConnexionPage';
+import LoginPage from '../../pages/LoginPage';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
@@ -26,7 +26,7 @@ const App = () => (
         <Subscription />
       </Route>
       <Route path="/connexion">
-        <ConnexionPage />
+        <LoginPage />
       </Route>
       <Route path="/legalMention">
         <LegalMention />
