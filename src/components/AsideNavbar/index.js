@@ -7,15 +7,9 @@ import
 {
   Nav,
   NavMenu,
-<<<<<<< HEAD
-  NavLink
-} from './AsideNavbarElements';
- 
-=======
   NavLink,
 } from './AsideNavbarElements';
 
->>>>>>> 26d38363dfba49cff97db0f2ad53cd0761727188
 // == Composant
 const AsideNavbar = () => (
   <div className="AsideNavbar">
