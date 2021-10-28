@@ -16,6 +16,8 @@ body {
   .dashboard-superadmin-rightside {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   
 
@@ -24,16 +26,21 @@ body {
       text-transform: uppercase;
       margin-bottom: 30px;
       font-weight: 700;
+      align-self: flex-start;
       margin-top: 20px;
       margin-left: 20px;
+      
     }
 
     .dashboard-superadmin-presentation{
       border: 1px solid black;
-      border-radius: 25px;
       height: 50vh;
-      width: 95%;
-      margin: 0px 30px;
+      width: 90%;
+      margin: 0px 30px 30px 30px;
+      padding: 1em;
+      padding-top: 2em;
+      border-radius: 20px;
+      filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
     }
 
     .dashboard-superadmin-listing-wrapper {
