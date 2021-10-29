@@ -1,6 +1,6 @@
 // import assets
-import dashboardUser from 'src/assets/images/dashboardUser.png';
-import imageStade from 'src/assets/images/imageStade.jpg';
+import dashboardUser from '../../assets/images/dashboardUser.png';
+import imageStade from '../../assets/images/imageStade.jpg';
 // import imageLogo from 'src/assets/images/imageLogo.png';
 
 import ButtonFormLogin from '../../components/ButtonFormLogin';
@@ -76,11 +76,11 @@ const Home = () => (
           </ul>
         </div>
         <div className="part-user-img">
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-left">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-right">
             chevron_right
           </span>
           <div className="part-user-btn-subscribe"> <ButtonFormSubscribe /> </div>

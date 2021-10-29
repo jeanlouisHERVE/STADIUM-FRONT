@@ -111,6 +111,7 @@ const eventsData =
     "endTime": "1970-01-01T06:20:48+01:00",
     "day": 3,
     "place": "Centre"
-  }
+  },
 ];
+
 export default eventsData;

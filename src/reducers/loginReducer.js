@@ -16,22 +16,10 @@ function loginReducer(state = initialState, action) {
   // console.log('une action passe dans le reducer');
   switch (action.type) {
     case UPDATE_LOGIN_FIELD:
-      // si champ "email" remplir state.email avec la valeur (return)
-      if (action.name === 'email') {
-        return {
-          ...state,
-          email: action.value,
-        };
-      }
-
-      // si champ "password" remplir state.password avec la valeur (return)
-      if (action.name === 'password') {
-        return {
-          ...state,
-          password: action.value,
-        };
-      }
-      break;
+      return {
+        ...state,
+        [action.name]: action.value,
+      };
 
     case SUCCESS_LOGIN:
       return {

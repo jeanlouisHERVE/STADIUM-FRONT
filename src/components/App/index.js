@@ -6,12 +6,12 @@ import Contact from '../../pages/Contact';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
-import Subscription from '../../pages/SignupPage';
+// import Subscription from '../../pages/SignupPage';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
 
-import LoginPage from '../../pages/LoginPage';
+import LoginPage from '../../containers/LoginPage';
 
 import './styles.scss';
 
@@ -23,9 +23,9 @@ const App = () => (
       <Route path="/" exact>
         <Home />
       </Route>
-      <Route path="/inscription" exact>
+      {/* <Route path="/inscription" exact>
         <Subscription />
-      </Route>
+      </Route> */}
       <Route path="/connexion">
         <LoginPage />
       </Route>
