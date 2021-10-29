@@ -7,12 +7,11 @@ body {
   width: 95%;
   height: 95vh;
   display: flex;
-  background: #F5F5F5;
   margin: auto;
   border-radius: 20px;
-  display: flex;
   flex-direction: row;
-
+  background: #F5F5F5;
+  
   .dashboard-superadmin-rightside {
     display: flex;
     flex-direction: column;
