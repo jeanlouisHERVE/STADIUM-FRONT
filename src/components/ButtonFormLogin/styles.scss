@@ -2,15 +2,16 @@
 
 @media(max-width:768px){
   .btn-form-login{
-    font-size: 0.9em;
-    font-weight: 700;
     width: auto;
     top: 1.2em;
     right: 1.4em;
+    margin-top: 2em;
     text-transform: uppercase;
-    background-color: vars.$blueColor;
-    color: vars.$lightColor;
-    padding: 0.7em 1em 0.7em 1em;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
+    padding: 1em 3em 1em 3em;
     border-radius: 30px;
     border: 1px;
     box-shadow: 10px 5px 5px vars.$darkColor;
@@ -22,15 +23,16 @@
 @media(min-width:768px) and (max-width:1023px)
 {
   .btn-form-login{
-    font-size: 1em;
-    font-weight: 700;
     width: auto;
     top: 1.8em;
     right: 1.5em;
+    margin-top: 2em;
     text-transform: uppercase;
-    background-color: vars.$blueColor;
-    color: vars.$lightColor;
-    padding: 0.9em 1.4em 0.9em 1.4em;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
+    padding: 1em 3em 1em 3em;
     border-radius: 30px;
     border: 1px;
     box-shadow: 10px 5px 5px vars.$darkColor;
@@ -43,20 +45,22 @@
 {
   .btn-form-login{
     font-size: 1.2em;
-    font-weight: 700;
+    font-weight: 800;
     width: auto;
     top: 1.5em;
     right: 1.4em;
+    margin-top: 2em;
     text-transform: uppercase;
-    background-color: vars.$blueColor;
-    color: vars.$lightColor;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
     padding: 1em 3em 1em 3em;
     border-radius: 30px;
     border: 1px;
     box-shadow: 10px 5px 5px vars.$darkColor;
     z-index:1;  
     position: absolute;
-
     }
   }
 

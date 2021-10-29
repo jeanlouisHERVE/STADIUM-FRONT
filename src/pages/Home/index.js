@@ -1,7 +1,7 @@
 // import assets
 import dashboardUser from 'src/assets/images/dashboardUser.png';
 import imageStade from 'src/assets/images/imageStade.jpg';
-import imageLogo from 'src/assets/images/imageLogo.png';
+// import imageLogo from 'src/assets/images/imageLogo.png';
 
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import ButtonFormSubscribe from '../../components/ButtonFormSubscribe';
@@ -11,14 +11,6 @@ import './styles.scss';
 // == Composant
 const Home = () => (
   <div className="home">
-      <div className="home-header-header">
-        <div className="part-registration-logo">
-            <img src={imageLogo} alt="" className="imageLogo" />
-        </div>
-        <div className="part-connexion-btn">
-          <ButtonFormLogin />
-        </div>
-      </div>
     <div className="home-header">
       <div className="part-registration">
         <div className="part-registration-content">
@@ -34,7 +26,7 @@ const Home = () => (
       <div className="part-connexion">
         <ButtonFormLogin />
         <img src={imageStade} alt="" className="stadium-img" />
-      </div> 
+      </div>
     </div>
     <div className="part-association">
       <div className="part-association-title">
@@ -91,7 +83,7 @@ const Home = () => (
           <span className="material-icons--user">
             chevron_right
           </span>
-            <div className="part-user-btn-subscribe"> <ButtonFormSubscribe /> </div>
+          <div className="part-user-btn-subscribe"> <ButtonFormSubscribe /> </div>
         </div>
       </div>
     </div>

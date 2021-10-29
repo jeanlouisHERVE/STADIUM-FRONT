@@ -1,10 +1,8 @@
 import './styles.scss';
 
+const ButtonFormSubscribe = () => (
 
-const ButtonFormSubscribe = ()=> (
-
-  <button className="btn-form-subscribe"> Inscription</button>
+  <button className="btn-form-subscribe" type="button"> Inscription</button>
 );
-
 
 export default ButtonFormSubscribe;
