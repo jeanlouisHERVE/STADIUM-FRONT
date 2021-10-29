@@ -3,6 +3,10 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Listing from '../../components/Listing';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+<<<<<<< HEAD
+=======
+// import eventsData from '../../utils/data/eventsData';
+>>>>>>> 7cf1a123cfce06700b15cc10d5812b3bfab3d7ca
 import adherentsData from '../../utils/data/adherentsData';
 import './styles.scss';
 
