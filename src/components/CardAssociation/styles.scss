@@ -1,0 +1,38 @@
+.card-association {
+  background: #6a8fa2;
+  width: 200px;
+  height: 220px;
+  padding: 1em;
+  padding-top: 2em;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
+}
+
+.card-association h2 {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.card-association .image {
+  width: 150px;
+  height: 100px;
+  background: #074666;
+  margin-left: 1em;
+  margin: 0 auto;
+}
+
+.details-association {
+  width: 80%;
+  height: 20%;
+  background: #545758;
+  font-size: 0.7em;
+  margin: 1em auto;
+  display: flex;
+  place-content: center;
+}
+
+.details-association .card-link {
+  color: #fff;
+  font-weight: 600;
+  place-self: center;
+}

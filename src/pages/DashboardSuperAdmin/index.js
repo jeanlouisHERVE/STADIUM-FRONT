@@ -7,12 +7,12 @@ import associationDatas from './data/associations';
 
 // == Composant
 const DashboardSuperAdmin = () => (
-  <div className="dashboard">
-    <div className="dashboard-superadmin">
-      <AsideNavbar />
-      <div className="cards-wrapper">
+  <div className="dashboard-superadmin">
+    <AsideNavbar />
+    <div className="cards-wrapper">
+      <div className="cards">
         {associationDatas.map((association) => (
-          <CardAssociation association={association} />
+          <CardAssociation key={association.id} association={association} />
         ))}
       </div>
     </div>

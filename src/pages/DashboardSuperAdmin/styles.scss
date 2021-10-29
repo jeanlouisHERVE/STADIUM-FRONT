@@ -3,68 +3,71 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.dashboard {
+// .dashboard {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translateX(-50%) translateY(-50%);
+//   width: 95%;
+// }
+
+.dashboard-superadmin {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-}
+  width: 95%;
 
-.dashboard-superadmin {
-  width: 95vw;
-  height: 95vh;
   display: flex;
-  background: #F5F5F5;
   margin: auto auto;
   border-radius: 20px;
 }
 
-.cards-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  width: 100%;
-  place-content: space-around;
-  justify-items: center;
-}
+// @media (max-width: 599px) {
+//   .cards-wrapper {
+//     display: grid;
+//     grid-template-columns: repeat(1,1fr);
+//     width: 100%;
+//     height: max-content;
+//     place-content: space-around;
+//     justify-items: center;
+//   }
+// }
 
-.card-association {
-  background: #6a8fa2;
-  width: 200px;
-  height: 220px;
-  padding: 1em;
-  padding-top: 2em;
-  border-radius: 20px;
-  filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
-}
+// @media (min-width: 750px) {
+//   .cards-wrapper {
+//     display: grid;
+//     grid-template-columns: repeat(2,1fr);
+//     width: 100%;
+//     height: max-content;
+//     place-content: space-around;
+//     justify-items: center;
+//   }
+// }
 
-.card-association h2 {
-  margin-top: 0.5em;
-  text-align: center;
-}
+// @media (min-width: 1200px) {
+//   .cards-wrapper {
+//     display: grid;
+//     grid-template-columns: repeat(3,1fr);
+//     width: 100%;
+//     height: max-content;
+//     place-content: space-around;
+//     justify-items: center;
+//   }
+// }
 
-.card-association .image {
-  width: 150px;
-  height: 100px;
-  background: #074666;
-  margin-left: 1em;
-  margin: 0 auto;
-}
+// @media (min-width: 1600px) {
+  .cards {
+    display: grid;
+    // background: #F5F5F5;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    place-content: space-evenly;
+    justify-items: center;
+  }
 
-.details-association {
-  width: 80%;
-  height: 20%;
-  background: #545758;
-  font-size: 0.7em;
-  margin: 0.2em auto;
-
-}
-
-
-.details-association p {
-  color: #fff;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-top: 1.1em;
-}
+  .cards-wrapper {
+    width: 100%;
+    place-self: center;
+  }
+// }
