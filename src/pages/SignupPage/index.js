@@ -22,7 +22,7 @@ const RegistrationPage = ({
 }) => (
   <div className="Registration-page">
     <div className="Registration-header">
-      <Link to="/" exact>
+      <Link to="/">
         <img src={imageLogo} alt="" className="imageLogo" />
       </Link>
     </div>

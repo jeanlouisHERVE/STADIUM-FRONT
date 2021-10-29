@@ -19,47 +19,50 @@ const LoginPage = ({
   password,
   updateField,
   handleSubmit,
-}) => (
-  <div className="login-page">
-    <div className="login-header">
-      <Link to="/" exact>
-        <img src={imageLogo} alt="" className="imageLogo" />
-      </Link>
+}) => {
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit();
+  };
+
+  return (
+    <div className="login-page">
+      <div className="login-header">
+        <Link to="/">
+          <img src={imageLogo} alt="" className="imageLogo" />
+        </Link>
+      </div>
+      <form
+        className="login-form"
+        onSubmit={handleLoginSubmit}
+      >
+        <h1>Se connecter</h1>
+        <Field
+          identifier="email"
+          placeholder="jean_michel@oclock.io"
+          label="E-mail"
+          changeField={(identifier, newValue) => {
+            // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+            updateField(newValue, identifier);
+          }}
+          value={email}
+        />
+        <Field
+          identifier="password"
+          placeholder="mot de passe"
+          label="Mot de passe"
+          type="password"
+          changeField={(identifier, newValue) => {
+            // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+            updateField(newValue, identifier);
+          }}
+          value={password}
+        />
+        <button type="submit" className="login-submit">Connexion</button>
+      </form>
     </div>
-    <form
-      className="login-form"
-      onSubmit={(event) => {
-        event.preventDefault();
-        console.log('Submit actionned');
-        handleSubmit();
-      }}
-    >
-      <h1>Se connecter</h1>
-      <Field
-        identifier="email"
-        placeholder="jean_michel@oclock.io"
-        label="E-mail"
-        changeField={(identifier, newValue) => {
-          // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-          updateField(newValue, identifier);
-        }}
-        value={email}
-      />
-      <Field
-        identifier="password"
-        placeholder="mot de passe"
-        label="Mot de passe"
-        type="password"
-        changeField={(identifier, newValue) => {
-          // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-          updateField(newValue, identifier);
-        }}
-        value={password}
-      />
-      <button type="submit" className="login-submit">Connexion</button>
-    </form>
-  </div>
-);
+  );
+};
 
 LoginPage.propTypes = {
   email: PropTypes.string.isRequired,
