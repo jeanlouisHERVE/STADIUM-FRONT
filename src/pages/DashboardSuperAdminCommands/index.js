@@ -1,13 +1,8 @@
 import { useState } from 'react';
 import AsideNavbar from '../../components/AsideNavbar';
 import Listing from '../../components/Listing';
-<<<<<<< HEAD
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
-import eventsData from '../../utils/data/eventsData';
-=======
-// import eventsData from '../../utils/data/eventsData';
->>>>>>> f26f514c65d67e93c2436381bf8ccb45d1ed8ccb
 import adherentsData from '../../utils/data/adherentsData';
 import './styles.scss';
 
