@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import imageLogo from 'src/assets/images/imageLogo.png';
 
 import { Link } from 'react-router-dom';
@@ -70,3 +71,5 @@ RegistrationPage.propTypes = {
 };
 
 export default RegistrationPage;
+=======
+>>>>>>> loginPage

@@ -36,7 +36,7 @@ const Sidebar = ({ isOpen, toggle }) => (
         </SidebarLink>
       </SidebarMenu>
       <SideBtnWrap>
-        <SidebarRoute to="signin">Connexion</SidebarRoute>
+        <SidebarRoute to="signin">Deconnexion</SidebarRoute>
       </SideBtnWrap>
     </SidebarWrapper>
   </SidebarContainer>

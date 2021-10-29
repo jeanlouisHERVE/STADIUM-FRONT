@@ -1,7 +1,8 @@
 @use 'src/styles/vars.scss';
 
+@media(max-width:768px){
 .btn-form-subscribe{
-  margin-top: 40px;
+  margin-top: 2em;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8em;
@@ -11,4 +12,35 @@
   border-radius: 30px;
   border: 1px;
   box-shadow: 10px 5px 5px vars.$darkColor;
+}
+}
+
+@media(min-width:768px) and (max-width:1023px){
+.btn-form-subscribe{
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  background-color: #074666;
+  color: white;
+  padding: 1em 3em 1em 3em;
+  border-radius: 30px;
+  border: 1px;
+  box-shadow: 10px 5px 5px vars.$darkColor;
+}
+}
+
+@media(min-width:1024px){
+.btn-form-subscribe{
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  background-color: #074666;
+  color: white;
+  padding: 1em 3em 1em 3em;
+  border-radius: 30px;
+  border: 1px;
+  box-shadow: 10px 5px 5px vars.$darkColor;
+}
 }

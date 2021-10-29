@@ -1,19 +1,66 @@
 @use 'src/styles/vars.scss';
 
-.btn-form-login{
-  margin-top: 2em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  font-size: 0.8em;
-  background-color: vars.$blueColor;
-  color: #FFF;
-  padding: 1em 3em 1em 3em;
-  border-radius: 30px;
-  border: 1px;
-  box-shadow: 10px 5px 5px vars.$darkColor;
-  display: inline-block;
-  z-index:1;
-  position: absolute;
-  margin-left: 500px;
+@media(max-width:768px){
+  .btn-form-login{
+    width: auto;
+    top: 1.2em;
+    right: 1.4em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
+    padding: 1em 3em 1em 3em;
+    border-radius: 30px;
+    border: 1px;
+    box-shadow: 10px 5px 5px vars.$darkColor;
+    z-index:1;  
+    position: absolute;
+  }
 }
+
+@media(min-width:768px) and (max-width:1023px)
+{
+  .btn-form-login{
+    width: auto;
+    top: 1.8em;
+    right: 1.5em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
+    padding: 1em 3em 1em 3em;
+    border-radius: 30px;
+    border: 1px;
+    box-shadow: 10px 5px 5px vars.$darkColor;
+    z-index:1;  
+    position: absolute;
+    }
+  }
+
+  @media(min-width:1024px)
+{
+  .btn-form-login{
+    font-size: 1.2em;
+    font-weight: 800;
+    width: auto;
+    top: 1.5em;
+    right: 1.4em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    background-color: #074666;
+    color: white;
+    padding: 1em 3em 1em 3em;
+    border-radius: 30px;
+    border: 1px;
+    box-shadow: 10px 5px 5px vars.$darkColor;
+    z-index:1;  
+    position: absolute;
+    }
+  }
+

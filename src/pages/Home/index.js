@@ -1,7 +1,7 @@
 // import assets
-import dashboardUser from 'src/assets/images/dashboardUser.png';
-import imageStade from 'src/assets/images/imageStade.jpg';
-import imageLogo from 'src/assets/images/imageLogo.png';
+import dashboardUser from '../../assets/images/dashboardUser.png';
+import imageStade from '../../assets/images/imageStade.jpg';
+// import imageLogo from 'src/assets/images/imageLogo.png';
 
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import ButtonFormSubscribe from '../../components/ButtonFormSubscribe';
@@ -13,9 +13,6 @@ const Home = () => (
   <div className="home">
     <div className="home-header">
       <div className="part-registration">
-        <div className="part-registration-img">
-          <img src={imageLogo} alt="" className="imageLogo" />
-        </div>
         <div className="part-registration-content">
           <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
           <p className="part-registration-text">
@@ -53,14 +50,15 @@ const Home = () => (
 
         </div>
         <div className="part-association-img">
-          <span className="material-icons material-icons material-icons--user">
+          <span className="material-icons--association">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-association-img" />
-          <span className="material-icons material-icons--user--right">
+          <span className="material-icons--association">
             chevron_right
           </span>
         </div>
+        <div className="part-association-btn-subscribe"> <ButtonFormSubscribe /> </div>
       </div>
     </div>
     <div className="part-user">
@@ -69,7 +67,7 @@ const Home = () => (
       </div>
       <div className="part-user-content">
         <div className="part-user-content-content">
-          <p className="part-user-text"> Inscrivez-vous sur <strong> Stadium</strong> et : </p>
+          <p className="part-user-text"> Inscrivez-vous sur Stadium et : </p>
           <ul>
             <li className="part-user-text-elem-list"> Retrouvez facilement les associations sportives autour de chez vous,</li>
             <li className="part-user-text-elem-list">Inscrivez-vous à vos activités favorites depuis votre domicile, </li>
@@ -78,13 +76,14 @@ const Home = () => (
           </ul>
         </div>
         <div className="part-user-img">
-          <span className="material-icons">
+          <span className="material-icons--user arrow-left">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons">
+          <span className="material-icons--user arrow-right">
             chevron_right
           </span>
+          <div className="part-user-btn-subscribe"> <ButtonFormSubscribe /> </div>
         </div>
       </div>
     </div>

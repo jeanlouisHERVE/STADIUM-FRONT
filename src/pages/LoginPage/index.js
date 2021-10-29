@@ -1,7 +1,6 @@
-import imageLogo from 'src/assets/images/imageLogo.png';
-
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import imageLogo from '../../assets/images/imageLogo.png';
 import Field from '../../components/Field';
 
 import './styles.scss';
@@ -22,6 +21,10 @@ const LoginPage = ({
 }) => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+    console.log('coucou');
+>>>>>>> loginPage
     handleSubmit();
   };
 

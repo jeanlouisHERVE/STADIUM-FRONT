@@ -8,7 +8,7 @@ const Footer = () => (
       <li className="footer-content-list-elem">Contact</li>
     </ul>
     <p className="footer-copyright"> 	&copy; Website by StadiumValkyries</p>
-</div>
-)
+  </div>
+);
 
 export default Footer;

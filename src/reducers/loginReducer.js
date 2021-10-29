@@ -16,6 +16,7 @@ function loginReducer(state = initialState, action) {
   // console.log('une action passe dans le reducer');
   switch (action.type) {
     case UPDATE_LOGIN_FIELD:
+<<<<<<< HEAD
       // si champ "email" remplir state.email avec la valeur (return)
       if (action.name === 'email') {
         return {
@@ -32,6 +33,12 @@ function loginReducer(state = initialState, action) {
         };
       }
       break;
+=======
+      return {
+        ...state,
+        [action.name]: action.value,
+      };
+>>>>>>> loginPage
 
     case SUCCESS_LOGIN:
       return {
