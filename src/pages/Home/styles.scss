@@ -283,7 +283,7 @@
 
   .stadium-img{   
     width:100%;
-    height: 17em;
+    height: 20em;
   }
 
   strong{
@@ -447,8 +447,9 @@
         width:100%;
         font-size: 1.4em;
         z-index:0;
-        margin-top: -3.8em;
+        margin-top: -4.2em;
         padding-bottom: 4em;
+        height: 40em;
       }
     
       .home-header-header{
@@ -477,7 +478,7 @@
       .imageLogo{
         border-radius:0.8em;
         margin-left: -2em;
-        width: 6em;
+        width: 7em;
       }
     
       .part-registration-title{
@@ -495,14 +496,10 @@
     
       .stadium-img{
         position: relative;
-        min-height: 115.5%;
+        min-height: 111.2%;
         width:100%;
       }
     
-      strong{
-        font-size:1.2em;
-      }
-      
       .part-association, .part-user{ 
         width:100%;
         padding-left: 4.3em;
@@ -513,7 +510,6 @@
       
       .part-association{
         background-color: vars.$turquoiseColor;
-        height: 100%;
       }
       
       .part-association-title{
@@ -563,13 +559,13 @@
     
       .part-association-img{
         width: 50%;
-        height: 70%;
+        height:70%;
         position: relative;
       }
     
       .dashboard-association-img{
-        width: 90%;
-        margin-right: auto;
+        max-width: 90%;
+        max-height: auto;
         margin-top: 4.3em;
         margin-bottom: 4em;
       }
@@ -595,12 +591,13 @@
       }
     
       .dashboard-user-img{
-        width: 90%;
+        max-width: 80%;
+        min-height: 35%;
         margin-bottom: 2em;
         margin-left: 3.5em;
       }
     
-      .material-icons{
+      .material-icons--association{
         font-family: 'Material Icons';
         font-size: 1.8em;
         display: inline-block;
@@ -610,8 +607,8 @@
         word-wrap: normal;
         white-space: nowrap;
         direction: ltr;
-        color: vars.$darkColor;
-        margin-top: 7em;
+        color: vars.$lightColor;
+        top:50%;
         position: absolute;
       }
       
@@ -625,20 +622,14 @@
         word-wrap: normal;
         white-space: nowrap;
         direction: ltr;
-        color: vars.$lightColor;
+        color: vars.$darkColor;
         margin-top: 9em;
         position: absolute;
         margin-left: -1.3em;
       }
     
-      .material-icons--user--right{
-        margin-right: -1.3em;
-        margin-top: 9em;
-        color: vars.$lightColor;
-      }
-    
       .part-user-btn-subscribe, .part-association-btn-subscribe{
         display: none;
       }
-      }
+  }
 }

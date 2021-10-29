@@ -64,11 +64,11 @@ const Home = () => (
         </div>
 
         <div className="part-association-img">
-          <span className="material-icons material-icons material-icons--user">
+          <span className="material-icons--association">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-association-img" />
-          <span className="material-icons material-icons--user--right">
+          <span className="material-icons--association">
             chevron_right
           </span>
         </div>
@@ -92,11 +92,11 @@ const Home = () => (
         </div>
 
         <div className="part-user-img">
-          <span className="material-icons">
+          <span className="material-icons--user">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons">
+          <span className="material-icons--user">
             chevron_right
           </span>
             <div className="part-user-btn-subscribe"> <ButtonFormSubscribe /> </div>
