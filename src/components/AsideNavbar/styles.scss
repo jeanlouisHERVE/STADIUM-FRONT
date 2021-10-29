@@ -91,6 +91,10 @@
         &:hover {
           text-decoration: underline;
         }
+
+        @media (max-width: 1550px) {
+          font-size: small;
+        }
       }
     }
     .AsideNavbar-Navbar-main {

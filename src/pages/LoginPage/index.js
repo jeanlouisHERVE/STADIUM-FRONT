@@ -21,10 +21,6 @@ const LoginPage = ({
 }) => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
-    console.log('coucou');
->>>>>>> loginPage
     handleSubmit();
   };
 
