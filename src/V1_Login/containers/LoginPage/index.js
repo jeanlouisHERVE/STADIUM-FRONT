@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import LoginPage from '../../pages/LoginPage';
 
-import { submitLogin, updateSettingsField } from '../../actions/connexion';
+import { submitLogin, updateLoginField } from '../../actions/login';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
@@ -18,7 +18,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   updateField: (value, identifier) => {
-    const action = updateSettingsField(value, identifier);
+    const action = updateLoginField(value, identifier);
     dispatch(action);
   },
   handleSubmit: () => {

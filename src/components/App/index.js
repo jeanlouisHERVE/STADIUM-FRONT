@@ -7,10 +7,11 @@ import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
 import Subscription from '../../pages/SignupPage';
-import LoginPage from '../../pages/LoginPage';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
+
+import LoginPage from '../../pages/LoginPage';
 
 import './styles.scss';
 
