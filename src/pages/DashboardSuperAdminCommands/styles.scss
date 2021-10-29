@@ -13,9 +13,9 @@ body {
   justify-content: center;
   align-self: center;
   border-radius: 20px;
-  display: flex;
   flex-direction: row;
-
+  background: #F5F5F5;
+  
   .dashboard-superadmin-rightside {
     display: flex;
     flex-direction: column;
