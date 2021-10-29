@@ -1,19 +1,68 @@
 @use 'src/styles/vars.scss';
 
-.footer-content{
-  background-color: vars.$turquoiseColor;
-  color: white;
-  text-align: center;
-  letter-spacing: 1px;
-  padding-top: 30px;
-  height: 200px;
+//smartphone
+@media(max-width:767px){
 
-  .footer-content-list-elem{
-    margin-bottom: 8px;
-    font-size: 1.2em;
+  .footer-content{
+    background-color: vars.$turquoiseColor;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 1em;
+  
+    .footer-content-list-elem{
+      padding-bottom: 0.7em;
+      font-size: 0.7em;
+    }
+  
+    .footer-copyright{
+      margin-top: 1em;
+      font-size: 0.6em;
+      padding-bottom: 2em;
+    }
   }
+}
 
-  .footer-copyright{
-    margin-top: 35px;
+// tablet
+@media(min-width:768px) and (max-width:1023px){
+
+  .footer-content{
+    background-color: vars.$turquoiseColor;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    height: 150px;
+    .footer-content-list-elem{
+      padding-bottom: 0.7em;
+      font-size: 0.9em;
+    }
+  
+    .footer-copyright{
+      margin-top: 1em;
+      font-size: 0.7em;
+    }
+  }
+}
+
+// desktop
+@media(min-width:1023px){
+
+  .footer-content{
+    background-color: vars.$turquoiseColor;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    height: 200px;
+
+    .footer-content-list-elem{
+      margin-bottom: 8px;
+      font-size: 1.2em;
+    }
+
+    .footer-copyright{
+      margin-top: 35px;
+    }
   }
 }
