@@ -12,7 +12,7 @@ import {
 const Sidebar = ({ isOpen, toggle }) => (
   <SidebarContainer isOpen={isOpen} onClick={toggle}>
     <Icon onClick={toggle}>
-      <span style={{color: 'white' }} className="material-icons">close</span>
+      <span style={{ color: 'white' }} className="material-icons">close</span>
     </Icon>
     <SidebarWrapper>
       <SidebarMenu>

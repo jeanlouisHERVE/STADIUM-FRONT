@@ -8,9 +8,7 @@ import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
-import Navbar from '../Navbar';
 import AsideNavbar from '../AsideNavbar';
-import Sidebar from '../Sidebar';
 
 import './styles.scss';
 
