@@ -11,12 +11,45 @@ import './styles.scss';
 // == Composant
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(false);
+  const [buttonEventIsActive, setButtonEventIsActive] = useState(false);
   const [showAdherents, setShowAdherents] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const adherentButtonFunction = () => {
+    setButtonEventIsActive(false);
+    setShowEvents(false);
+    setShowAdherents(!showAdherents);
+    setButtonAdherentIsActive(!buttonAdherentIsActive);
+  };
+
+  const eventButtonFunction = () => {
+    setButtonAdherentIsActive(false);
+    setShowAdherents(false);
+    setShowEvents(!showEvents);
+    setButtonEventIsActive(!buttonEventIsActive);
+  };
+
+  let buttonAdherentDiv;
+  let buttonEventDiv;
+
+  if (buttonAdherentIsActive) {
+    buttonAdherentDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  }
+  else {
+    buttonAdherentDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  }
+
+  if (buttonEventIsActive) {
+    buttonEventDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={eventButtonFunction}>Evénements</button>;
+  }
+  else {
+    buttonEventDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={eventButtonFunction}>Evénements</button>;
+  }
 
   return (
     <>
@@ -35,15 +68,17 @@ const DashboardSuperAdmin = () => {
               <p className="dashboard-superadmin-presentation-item">Prénom du Président : PresidentLastname</p>
               <p className="dashboard-superadmin-presentation-item">Adresse : Address</p>
               <p className="dashboard-superadmin-presentation-item">Téléphone : PhoneNumber</p>
-              <p className="dashboard-superadmin-presentation-item">Email : Email</p>
+              <p className="dashboard-superadmin-presentation-item">Email : Email</p> 
               <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : NumberofAdherents</p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
           <div className="dashboard-superadmin-buttonsList">
-            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShowAdherents(!showAdherents)}>Adhérents</button>
+            {buttonAdherentDiv}
             <button className="dashboard-superadmin-button" type="submit">Cours</button>
-            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShowEvents(!showEvents)}>Evénements</button>
+            {buttonEventDiv}
+            {/* <button className="dashboard-superadmin-button" type="submit"
+            onClick={() => setShowEvents(!showEvents), buttonFunction}>Evénements</button> */}
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
             {showAdherents ? <ListingAdherents adherents={adherentsData} /> : null}
