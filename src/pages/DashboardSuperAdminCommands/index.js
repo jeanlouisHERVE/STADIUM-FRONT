@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import AsideNavbar from '../../components/AsideNavbar';
-import Listing from '../../components/Listing';
+import ListingAdherents from '../../components/ListingAdherents';
+import ListingEvents from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import adherentsData from '../../utils/data/adherentsData';
+import eventsData from '../../utils/data/eventsData';
 import './styles.scss';
 
 // == Composant
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(true);
+  const [showAdherents, setShowAdherents] = useState(false);
+  const [showEvents, setShowEvents] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -38,12 +41,13 @@ const DashboardSuperAdmin = () => {
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
           <div className="dashboard-superadmin-buttonsList">
-            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShow(!show)}>Adhérents</button>
+            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShowAdherents(!showAdherents)}>Adhérents</button>
             <button className="dashboard-superadmin-button" type="submit">Cours</button>
-            <button className="dashboard-superadmin-button" type="submit">Evénements</button>
+            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShowEvents(!showEvents)}>Evénements</button>
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
-            {show ? <Listing adherents={adherentsData} /> : null}
+            {showAdherents ? <ListingAdherents adherents={adherentsData} /> : null}
+            {showEvents ? <ListingEvents events={eventsData} /> : null}
           </div>
         </div>
       </div>
