@@ -9,6 +9,7 @@ import './styles.scss';
 // == Composant
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(true);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -37,12 +38,12 @@ const DashboardSuperAdmin = () => {
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
           <div className="dashboard-superadmin-buttonsList">
-            <button className="dashboard-superadmin-button" type="submit">Adhérents</button>
+            <button className="dashboard-superadmin-button" type="submit" onClick={() => setShow(!show)}>Adhérents</button>
             <button className="dashboard-superadmin-button" type="submit">Cours</button>
             <button className="dashboard-superadmin-button" type="submit">Evénements</button>
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
-            <Listing adherents={adherentsData} />
+            {show ? <Listing adherents={adherentsData} /> : null}
           </div>
         </div>
       </div>
