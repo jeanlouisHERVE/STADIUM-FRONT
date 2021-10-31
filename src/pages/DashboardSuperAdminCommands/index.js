@@ -68,7 +68,7 @@ const DashboardSuperAdmin = () => {
               <p className="dashboard-superadmin-presentation-item">Prénom du Président : PresidentLastname</p>
               <p className="dashboard-superadmin-presentation-item">Adresse : Address</p>
               <p className="dashboard-superadmin-presentation-item">Téléphone : PhoneNumber</p>
-              <p className="dashboard-superadmin-presentation-item">Email : Email</p> 
+              <p className="dashboard-superadmin-presentation-item">Email : Email</p>
               <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : NumberofAdherents</p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>

@@ -25,13 +25,8 @@ const App = () => (
       </Route>
       {/* <Route path="/inscription" exact>
         <Subscription />
-<<<<<<< HEAD
-      </Route>
-      <Route path="/connexion" exact>
-=======
       </Route> */}
       <Route path="/connexion">
->>>>>>> loginPage
         <LoginPage />
       </Route>
       <Route path="/legalMention">
