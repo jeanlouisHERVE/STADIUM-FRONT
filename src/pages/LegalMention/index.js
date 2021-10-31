@@ -4,7 +4,7 @@ import ButtonFormLogin from '../../components/ButtonFormLogin';
 import Footer from '../../components/Footer';
 
 // == Composant
-const ConfidentialPolicy = () => (
+const LegalMention = () => (
   <div className="LegalMention-container">
     <div className="LegalMention-UpPart">
       <div className="LegalMention-leftside">
@@ -50,4 +50,4 @@ const ConfidentialPolicy = () => (
 );
 
 // == Export
-export default ConfidentialPolicy;
+export default LegalMention;

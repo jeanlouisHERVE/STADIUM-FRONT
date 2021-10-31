@@ -18,10 +18,10 @@ const ListingEvents = ({ events }) => (
     </div>
     <div className="listing-line-header">
       <div className="listing-line-header-leftside">
-        <div className="listing-line-header-items">Niveau</div>
-        <div className="listing-line-header-items">Jour</div>
-        <div className="listing-line-header-items">H-début</div>
-        <div className="listing-line-header-items">H-fin</div>
+        <div className="listing-line-header-items-level">Niveau</div>
+        <div className="listing-line-header-items-day">Jour</div>
+        <div className="listing-line-header-items-startTime">H-début</div>
+        <div className="listing-line-header-items-endTime">H-fin</div>
       </div>
       <div className="listing-line-header-rightside" />
     </div>
@@ -30,10 +30,10 @@ const ListingEvents = ({ events }) => (
         <>
           <div className="listing-line-container" key={item.id}>
             <div className="listing-line-leftside">
-              <div className="listing-line-items level">{item.level}</div>
-              <div className="listing-line-items day">{item.day}</div>
-              <div className="listing-line-items startTime">{item.startTime}</div>
-              <div className="listing-line-items endTime">{item.endTime}</div>
+              <div className="listing-line-items-level"><div className="listing-line-items-level-cartouche">{item.level}</div></div>
+              <div className="listing-line-items-day">{item.day}</div>
+              <div className="listing-line-items-startTime">{item.startTime}</div>
+              <div className="listing-line-items-endTime">{item.endTime}</div>
             </div>
             <div className="listing-line-rightside">
               <span className="listing-line-icon material-icons">border_color</span>
