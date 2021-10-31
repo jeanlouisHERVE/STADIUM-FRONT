@@ -1,65 +1,83 @@
 
 .ConfidentialPolicy-container {
   display: flex;
-  flex-direction: row;
-
-  .ConfidentialPolicy-leftside {
+  flex-direction: column;
+ 
+  .ConfidentialPolicy-UpPart {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    width: 50vw;
-    height: 100vh;
-    padding: 3em;
+    flex-direction: row;
 
-    .ConfidentialPolicy-leftside-logo {
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+
+    .ConfidentialPolicy-leftside {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: x-large;
-      width: 150px;
-      height: 100px;
-      background-color: greenyellow;
-    }
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: space-between;
+      width: 50vw;
+      height: 100vh;
+      padding: 3em;
+
+      @media (max-width: 1100px) {
+        width: 100vw;
+        
+      }
+
+      @media (max-width: 570px) {
+        width: 100vw;
+        height: 150vh;
+        padding: 2em;
+      }
+  
+      .ConfidentialPolicy-leftside-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        width: 150px;
+        height: 100px;
+        background-color: greenyellow;
+      }
+        
+      .ConfidentialPolicy-leftside-content {
+  
+        .ConfidentialPolicy-title {
+          font-size: xx-large;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 1em;
+        }
+    
+        .ConfidentialPolicy-text {
+          text-align: justify;
+          margin-bottom: 2em;
+          line-height: 1.5em;
+        }
       
-    .ConfidentialPolicy-leftside-content {
-
-      .ConfidentialPolicy-title {
-        font-size: xx-large;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 1em;
-  
       }
   
-      .ConfidentialPolicy-text {
-        text-align: justify;
-        margin-bottom: 2em;
-        line-height: 1.5em;
+    }
   
+    .ConfidentialPolicy-rightside {
+      width: 50vw;
+      height: 100vh;
 
+      @media (max-width: 1100px) {
+        width: 100vw;
       }
-    
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+
+      .ConfidentialPolicy-rightside-picture {
+        width: auto;
+        height: 100%;
+  
+        
+      }
     }
-
-    .ConfidentialPolicy-leftside-empty {
-
-
-
-    }
-
-  }
-
-  .ConfidentialPolicy-rightside {
-    width: 50vw;
-    height: 100vh;
-    background-color: blue;
-    
-    .ConfidentialPolicy-rightside-picture {
-      width: auto;
-      height: 100%;
-
-    }
-
   }
 }
