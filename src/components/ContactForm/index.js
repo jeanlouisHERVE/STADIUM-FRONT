@@ -1,5 +1,9 @@
-import './styles.scss';
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-return-assign */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+
 import { useState } from 'react';
+import './styles.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -8,21 +12,9 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    sendFeedback("template_5k1pxsz", {
-      name,
-      company,
-      phone,
-      email,
-      message,
-    });
-  };
-
   const sendFeedback = (templateId, variables) => {
     window.emailjs
-      .send("gmail", templateId, variables)
+      .send('service_to9395a', templateId, variables)
       .then((res) => {
         console.log('success !');
         setName('');
@@ -31,10 +23,42 @@ const ContactForm = () => {
         setEmail('');
         setMessage('');
       })
-      .catch(
-        (err) =>
-          document.querySelector('.form-message').innerHTML =
-            "Une erreur s'est produite, veuillez réessayer.")
+      .catch((err) => document.querySelector('.form-message').innerHTML = "Une erreur s'est produite, veuillez réessayer.");
+  };
+
+  const isEmail = () => {
+    const mail = document.getElementById('not-mail');
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (email.match(regex)) {
+      mail.style.display = 'none';
+      return true;
+    }
+    else {
+      mail.style.display = 'block';
+      mail.style.animation = 'dongle 1s';
+      setTimeout(() => {
+        mail.style.animation = 'none';
+      }, 1000)
+      return false;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name && isEmail() && message) {
+      sendFeedback('template_5k1pxsz', {
+        name,
+        company,
+        phone,
+        email,
+        message,
+      });
+    }
+    else {
+      console.log('tous les champs obligatoires ne sont pas remplis');
+    }
   };
 
   return (
