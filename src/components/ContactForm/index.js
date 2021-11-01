@@ -1,32 +1,100 @@
 import './styles.scss';
+import { useState } from 'react';
 
-const ContactForm = () => (
-  <form action="" onSubmit="">
-    <div className="formWord">
-      <h2>Say Hello!</h2>
-      <span>Full Name</span>
-      <br />
-      <input className="input100" type="text" name="fullName" required />
-      <br />
-      <span>Phone Number</span>
-      <br />
-      <input className="input100" type="text" name="phone" required />
-      <br />
-      <span>Enter Email</span>
-      <br />
-      <input className="input100" type="text" name="email" required />
-      <br />
-    </div>
-    <div className="formWord">
-      <span>Message</span>
-      <br />
-      <textarea name="message" required />
-      <br />
-      <button type="submit" attribut="">SUBMIT</button>
-      <div className="row">All Done</div>
-    </div>
-  </form>
-);
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [company, setCompany] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-// == Export
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    sendFeedback("template_5k1pxsz", {
+      name,
+      company,
+      phone,
+      email,
+      message,
+    });
+  };
+
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs
+      .send("gmail", templateId, variables)
+      .then((res) => {
+        console.log('success !');
+        setName('');
+        setCompany('');
+        setPhone('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch(
+        (err) =>
+          document.querySelector('.form-message').innerHTML =
+            "Une erreur s'est produite, veuillez réessayer.")
+  };
+
+  return (
+    <form className="contact-form">
+      <h2>Contactez-nous</h2>
+      <div className="form-content">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          onChange={(e) => setName(e.target.value)}
+          placeholder="nom *"
+          value={name}
+          autoComplete="off"
+        />
+        <input
+          type="text"
+          id="company"
+          name="company"
+          onChange={(e) => setCompany(e.target.value)}
+          placeholder="société"
+          value={company}
+        />
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder="téléphone"
+          value={phone}
+        />
+        <div className="email-content">
+          <label id="not-mail">Email non valide</label>
+          <input
+            type="mail"
+            id="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="email *"
+            value={email}
+            autoComplete="off"
+          />
+        </div>
+        <textarea
+          id="message"
+          name="message"
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="message *"
+          value={message}
+        />
+      </div>
+      <input
+        className="button"
+        type="button"
+        value="Envoyer"
+        onClick={handleSubmit}
+      />
+      <div className="form-message" />
+    </form>
+  );
+};
+
 export default ContactForm;
