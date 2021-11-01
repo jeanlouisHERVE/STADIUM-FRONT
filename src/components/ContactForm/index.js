@@ -12,18 +12,43 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const successMessage = () => {
+    const formMess = document.querySelector('.form-message');
+    formMess.innerHTML = 'Message envoyé ! Nous vous recontacterons dès que possible';
+    formMess.style.background = '#00c1ec';
+    formMess.style.opacity = '1';
+    document.getElementById('name').classList.remove('error');
+    document.getElementById('email').classList.remove('error');
+    document.getElementById('message').classList.remove('error');
+
+    setTimeout(() => {
+      formMess.style.opacity = '0';
+    }, 5000);
+  };
+
+  const failMessage = (Errormessage) => {
+    const formMessage = document.querySelector('.form-message');
+    formMessage.innerHTML = Errormessage;
+    formMessage.style.opacity = '1';
+    formMessage.style.background = 'rgb(253, 87, 87)';
+
+    document.getElementById('name').classList.add('error');
+    document.getElementById('email').classList.add('error');
+    document.getElementById('message').classList.add('error');
+  };
+
   const sendFeedback = (templateId, variables) => {
     window.emailjs
       .send('service_to9395a', templateId, variables)
       .then((res) => {
-        console.log('success !');
+        successMessage();
         setName('');
         setCompany('');
         setPhone('');
         setEmail('');
         setMessage('');
       })
-      .catch((err) => document.querySelector('.form-message').innerHTML = "Une erreur s'est produite, veuillez réessayer.");
+      .catch((err) => failMessage('Une erreur s\'est produite, Veuillez réessayer.'));
   };
 
   const isEmail = () => {
@@ -57,7 +82,7 @@ const ContactForm = () => {
       });
     }
     else {
-      console.log('tous les champs obligatoires ne sont pas remplis');
+      failMessage('Merci de remplir correctement les champs requis *');
     }
   };
 

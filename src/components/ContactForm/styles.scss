@@ -106,6 +106,9 @@
       padding: 24px 0;
     }
     
+    .error::placeholder {
+      color: #ff4d4d;
+    }
   }
 
   .button {
@@ -121,9 +124,7 @@
   .button:hover {
     letter-spacing: 2px;
   }
-  .error::placeholder {
-    color: #ff4d4d;
-  }
+  
   .form-message {
     margin-top: 10px;
     padding: 12px;
