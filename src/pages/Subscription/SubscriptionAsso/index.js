@@ -15,16 +15,7 @@ Objectif : valider les identifiants de l'utilisateur
 - (bonus) réserver la saisie de messages aux utilisateurs authentifiés
 */
 
-const SubscriptionAsso = ({
-  associationName,
-  presidentName,
-  presidentFirstName,
-  associationAdress,
-  associationZipCode,
-  associationTown,
-  updateField,
-  handleSubmit,
-}) => (
+const SubscriptionAsso = () => (
   <div className="registration-page">
     <div className="registration-header">
       <Link to="/" exact>
@@ -36,7 +27,9 @@ const SubscriptionAsso = ({
       onSubmit={(event) => {
         event.preventDefault();
         console.log('Submit actionned');
-        handleSubmit();
+      }}
+      handleSubmit={() => {
+        console.log('handleSubmit');
       }}
     >
       <h1 className="registration-title">Association</h1>
@@ -45,10 +38,10 @@ const SubscriptionAsso = ({
         placeholder="Tous aux jeux"
         label="Nom de l'association"
         changeField={(identifier, newValue) => {
-          // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+          console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={associationName}
+        // value={associationName}
       />
       <Field
         identifier="president-name"
@@ -58,7 +51,7 @@ const SubscriptionAsso = ({
           console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={presidentName}
+        // value={presidentName}
       />
 
       <Field
@@ -69,7 +62,7 @@ const SubscriptionAsso = ({
           console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={presidentFirstName}
+        // value={}
       />
 
       <Field
@@ -80,7 +73,7 @@ const SubscriptionAsso = ({
           console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={associationAdress}
+        // value={associationAdress}
       />
 
       <Field
@@ -91,7 +84,7 @@ const SubscriptionAsso = ({
           console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={associationZipCode}
+        // value={associationZipCode}
       />
 
       <Field
@@ -102,23 +95,23 @@ const SubscriptionAsso = ({
           console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
           updateField(newValue, identifier);
         }}
-        value={associationTown}
+        // value={associationTown}
       />
       <div className="registration-submit"> <ButtonFormSubscribe /> </div>
     </form>
   </div>
 );
 
-SubscriptionAsso.propTypes = {
-  associationName: PropTypes.string.isRequired,
-  presidentName: PropTypes.string.isRequired,
-  presidentFirstName: PropTypes.string.isRequired,
-  associationAdress: PropTypes.string.isRequired,
-  associationZipCode: PropTypes.number.isRequired,
-  associationTown: PropTypes.string.isRequired,
-  // 2 paramètres : nouvelle valeur, identifiant
-  updateField: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-};
+// SubscriptionAsso.propTypes = {
+//   associationName: PropTypes.string.isRequired,
+//   presidentName: PropTypes.string.isRequired,
+//   presidentFirstName: PropTypes.string.isRequired,
+//   associationAdress: PropTypes.string.isRequired,
+//   associationZipCode: PropTypes.number.isRequired,
+//   associationTown: PropTypes.string.isRequired,
+//   // 2 paramètres : nouvelle valeur, identifiant
+//   updateField: PropTypes.func.isRequired,
+//   handleSubmit: PropTypes.func.isRequired,
+// };
 
 export default SubscriptionAsso;
