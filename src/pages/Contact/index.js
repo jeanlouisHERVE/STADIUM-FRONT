@@ -16,7 +16,6 @@ const Contact = () => (
         <ButtonFormLogin />
         <div className="Contact-rightside-empty" />
         <div className="Contact-rightside-content">
-          <h1 className="Contact-title">Contact</h1>
           <ContactForm />
         </div>
         <div className="Contact-rightside-empty" />

@@ -5,17 +5,19 @@
   max-width: 50%;
   max-width: 350px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 1px solid #18dcff;
-  background: #363434;
+  border: 3px solid vars.$turquoiseColor;
+
   padding: 0 30px 10px;
   box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.637);
+  border-radius: 20px;
 
   h2 {
     margin-top: 35px;
     text-align: center;
     font-weight: 700;
     font-size: x-large;
-    color: vars.$turquoiseColor
+    color: vars.$turquoiseColor;
+    text-transform: uppercase;
   }
 
   .form-content {
@@ -28,13 +30,13 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 1.1rem;
       border-style: none;
-      border-bottom: 1px solid#cec950;
-      color: #18dcff;
+      border-bottom: 2px solid vars.$blueColor;
+      color: black;
     }
 
     input::placeholder, 
     textarea::placeholder {
-      color: rgb(190, 188, 188);
+      color: vars.$turquoiseColor;
     }
 
     input,
@@ -105,7 +107,7 @@
       resize: none;
       padding: 24px 0;
     }
-    
+
     .error::placeholder {
       color: #ff4d4d;
     }
@@ -113,16 +115,23 @@
 
   .button {
     font-size: 1.3rem;
-    margin-top: 15px;
-    color: #cec950;
-    border: none;
+    margin-top: 1em;
+    border: 3px solid vars.$turquoiseColor;
+    border-radius: 20px;
+    color: vars.$turquoiseColor;
+    font-weight: 800;
+    text-transform: uppercase;
     cursor: pointer;
     transition: .2s;
     width: 100%;
-    background-color: #363434;
+    height: 2em;
+    
+    
   }
   .button:hover {
     letter-spacing: 2px;
+    background-color: vars.$turquoiseColor;
+    color: white;
   }
   
   .form-message {
