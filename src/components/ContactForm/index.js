@@ -7,6 +7,7 @@ import './styles.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
+  const [firstname, setFirstname] = useState('');
   const [company, setCompany] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -43,6 +44,7 @@ const ContactForm = () => {
       .then((res) => {
         successMessage();
         setName('');
+        setFirstname('');
         setCompany('');
         setPhone('');
         setEmail('');
@@ -95,16 +97,24 @@ const ContactForm = () => {
           id="name"
           name="name"
           onChange={(e) => setName(e.target.value)}
-          placeholder="nom *"
+          placeholder="Nom *"
           value={name}
           autoComplete="off"
+        />
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          onChange={(e) => setFirstname(e.target.value)}
+          placeholder="Prénom"
+          value={firstname}
         />
         <input
           type="text"
           id="company"
           name="company"
           onChange={(e) => setCompany(e.target.value)}
-          placeholder="société"
+          placeholder="Société"
           value={company}
         />
         <input
