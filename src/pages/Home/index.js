@@ -37,7 +37,7 @@ const Home = () => (
       <div className="part-connexion">
 
         <img src={imageStade} alt="" className="stadium-img" />
-      </div> 
+      </div>
     </div>
     <div className="part-association">
       <div className="part-association-title">
