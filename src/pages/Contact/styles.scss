@@ -24,7 +24,7 @@
         display: none;
       }
     
-      .Contact-rightside-logo {
+      .Contact-leftside-logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,6 +33,8 @@
         height: 100px;
         background-color: greenyellow;
         z-index: 99;
+        margin-top: 15px;
+        margin-left: 15px;
       }
 
     }
