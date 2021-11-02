@@ -6,11 +6,12 @@ import Contact from '../../pages/Contact';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
-import Subscription from '../../pages/SignupPage';
+// import Subscription from '../../pages/SignupPage';
+import Subscription from '../../pages/Subscription';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
-
+import SubscriptionAsso from '../../pages/Subscription/SubscriptionAsso';
 import LoginPage from '../../pages/LoginPage';
 
 import './styles.scss';
@@ -25,6 +26,9 @@ const App = () => (
       </Route>
       <Route path="/inscription" exact>
         <Subscription />
+      </Route>
+      <Route path="/inscription/association" exact>
+        <SubscriptionAsso />
       </Route>
       <Route path="/connexion">
         <LoginPage />

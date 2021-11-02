@@ -1,0 +1,117 @@
+// mobile
+
+.registration-page{
+  padding-top: 1.5em;
+
+ .imageLogo{
+   margin-left: 1em;
+   border-radius: 0.8em;
+   width:5em;
+ }
+
+ .registration-title{
+   text-align: center;
+   font-size: 1.2em;
+   margin-top: 2.5em;
+   margin-bottom: 3.5em;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0.8em 1em;
+   border: 2px solid black;
+   border-radius: 5px;
+   width: 65%;
+   text-align: center;
+ }  
+   
+  .registration-form{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-form-subscribe{
+  border-radius:5px;
+  box-shadow: none;
+}
+
+.registration-submit{
+  font-size:1.2em;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.7em;
+  margin-bottom: 3em;
+  text-align: center;
+  }
+}
+
+//tablet
+@media(min-width: 767px) and (max-width:1023px){
+  .registration-page{
+
+  .imageLogo{
+    width:7em;
+    margin-left: 2em;
+  }
+
+  .registration-form{
+    width: 80%;
+  }
+
+  .registration-title{
+    font-size:1.2em;
+    padding:1em;
+    margin-bottom: 4em;
+  }
+
+  .registration-submit{
+    font-size: 0.9em;
+    width: 50%;
+    text-align: center;
+  }
+}
+}
+
+//desktop
+@media(min-width:1024px){
+  .registration-page{
+    padding-top: 1.5em;
+    position: relative;
+  
+  .imageLogo{
+    margin-left: 3em;
+    width:8em;
+    }
+
+  .registration-title{
+    font-size: 1.6em;
+    width: 45%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+    padding: 1em;
+  }
+
+  .registration-form{
+    width:40%;
+    position:relative;
+  
+  }
+
+  .registration-submit{
+    font-size: 1.3em;
+    margin-top: 3.5em; 
+    padding-bottom: 3em;
+  }
+
+  .btn-form-subscribe{
+    position:absolute; 
+    border-radius:5px;
+    box-shadow: none;
+    right: 0;
+    bottom: 0;
+  }
+
+  }
+}

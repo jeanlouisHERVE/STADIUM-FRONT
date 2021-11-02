@@ -1,8 +1,5 @@
 @use 'src/styles/vars.scss';
 
-//smartphone
-@media(max-width:767px){
-
   .footer-content{
     background-color: vars.$turquoiseColor;
     color: white;
@@ -21,25 +18,19 @@
       padding-bottom: 2em;
     }
   }
-}
 
 // tablet
 @media(min-width:768px) and (max-width:1023px){
 
   .footer-content{
-    background-color: vars.$turquoiseColor;
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
     padding-top: 30px;
     height: 150px;
+
     .footer-content-list-elem{
-      padding-bottom: 0.7em;
       font-size: 0.9em;
     }
   
     .footer-copyright{
-      margin-top: 1em;
       font-size: 0.7em;
     }
   }
@@ -49,10 +40,6 @@
 @media(min-width:1023px){
 
   .footer-content{
-    background-color: vars.$turquoiseColor;
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
     padding-top: 30px;
     height: 200px;
 
