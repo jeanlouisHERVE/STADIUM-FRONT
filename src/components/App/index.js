@@ -9,10 +9,11 @@ import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
-import SignupUser from '../../pages/SignupPage/SignupUser';
-import SignupMember from '../../pages/SignupPage/SignupMember';
-import SubscriptionAsso from '../../pages/Subscription/SubscriptionAsso';
-import LoginPage from '../../pages/LoginPage';
+import SignupAssociation from '../../pages/SignupPages/SignupAssociation';
+
+import SignupUser from '../../containers/SignupPages/SignupUser';
+import SignupMember from '../../containers/SignupPages/SignupMember';
+import LoginPage from '../../containers/LoginPage';
 
 import './styles.scss';
 
@@ -31,7 +32,7 @@ const App = () => (
         <SignupMember />
       </Route>
       <Route path="/inscription/association" exact>
-        <SubscriptionAsso />
+        <SignupAssociation />
       </Route>
       <Route path="/connexion">
         <LoginPage />
