@@ -3,14 +3,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-// .dashboard {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translateX(-50%) translateY(-50%);
-//   width: 95%;
-// }
-
 .dashboard-superadmin {
   position: absolute;
   top: 50%;
@@ -21,7 +13,21 @@ body {
   display: flex;
   margin: auto auto;
   border-radius: 20px;
+
 }
+
+// @media (min-width: 1600px) {
+  .cards {  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-gap: 1.5em;
+    justify-content: space-evenly;
+    justify-items: center;
+    overflow: auto;
+    width: 85%;
+  }
+
+// }
 
 // @media (max-width: 599px) {
 //   .cards-wrapper {
@@ -56,18 +62,3 @@ body {
 //   }
 // }
 
-// @media (min-width: 1600px) {
-  .cards {
-    display: grid;
-    // background: #F5F5F5;
-    grid-template-columns: repeat(4,1fr);
-    width: 100%;
-    place-content: space-evenly;
-    justify-items: center;
-  }
-
-  .cards-wrapper {
-    width: 100%;
-    place-self: center;
-  }
-// }

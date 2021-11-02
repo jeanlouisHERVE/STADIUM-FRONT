@@ -1,11 +1,11 @@
-import SubscriptionAccess from './SubscriptionAccess';
-import SubscriptionAdherent from './SubscriptionAdherent';
+import SignupUser from '../SignupPage/SignupUser';
+import SignupMember from '../SignupPage/SignupMember';
 import SuscriptionAsso from './SubscriptionAsso';
 
 const Subscription = () => (
   <div className="subscription">
-    <div><SubscriptionAccess /></div>
-    <div><SubscriptionAdherent /></div>
+    <div><SignupUser /></div>
+    <div><SignupMember /></div>
     <div><SuscriptionAsso /></div>
   </div>
 );

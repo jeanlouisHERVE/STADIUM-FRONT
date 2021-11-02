@@ -4,6 +4,7 @@
   height: 220px;
   padding: 1em;
   padding-top: 2em;
+  margin: 2em 0;
   border-radius: 20px;
   filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
 }
@@ -14,11 +15,12 @@
 }
 
 .card-association .image {
-  width: 150px;
-  height: 100px;
   background: #074666;
-  margin-left: 1em;
-  margin: 0 auto;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  width: 150px;
+  transform: translateX(-50%);
 }
 
 .details-association {
