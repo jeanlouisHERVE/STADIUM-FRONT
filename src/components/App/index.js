@@ -5,7 +5,7 @@ import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
-import Error404 from '../../pages/Error404';
+import Error404 from '../../pages/404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
