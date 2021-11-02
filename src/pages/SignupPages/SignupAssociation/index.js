@@ -13,7 +13,6 @@ const SignupAssociation = ({
   associationAddress,
   associationZipCode,
   associationTown,
-
   updateField,
   handleSubmit,
 }) => {
