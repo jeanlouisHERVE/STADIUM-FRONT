@@ -1,0 +1,83 @@
+
+.LegalMention-container {
+  display: flex;
+  flex-direction: column;
+ 
+  .LegalMention-UpPart {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+
+    .LegalMention-leftside {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: space-between;
+      width: 50vw;
+      height: 100vh;
+      padding: 3em;
+
+      @media (max-width: 1100px) {
+        width: 100vw;
+        
+      }
+
+      @media (max-width: 570px) {
+        width: 100vw;
+        height: 150vh;
+        padding: 2em;
+      }
+  
+      .LegalMention-leftside-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        width: 150px;
+        height: 100px;
+        background-color: greenyellow;
+      }
+        
+      .LegalMention-leftside-content {
+  
+        .LegalMention-title {
+          font-size: xx-large;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 1em;
+        }
+    
+        .LegalMention-text {
+          text-align: justify;
+          margin-bottom: 2em;
+          line-height: 1.5em;
+        }
+      
+      }
+  
+    }
+  
+    .LegalMention-rightside {
+      width: 50vw;
+      height: 100vh;
+
+      @media (max-width: 1100px) {
+        width: 100vw;
+      }
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+
+      .LegalMention-rightside-picture {
+        width: auto;
+        height: 100%;
+  
+        
+      }
+    }
+  }
+}

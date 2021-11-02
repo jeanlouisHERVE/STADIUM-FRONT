@@ -81,11 +81,11 @@ const Home = () => (
           </ul>
         </div>
         <div className="part-user-img">
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-left">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-right">
             chevron_right
           </span>
           <div className="part-user-btn-subscribe"> <Link to="/inscription"> <ButtonFormSubscribe /> </Link> </div>

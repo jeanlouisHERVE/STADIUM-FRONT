@@ -211,6 +211,7 @@
       position: absolute;
       margin-left: -1.3em;
       display: none;
+      
     }
   
     .part-user-btn-subscribe, .part-association-btn-subscribe{
@@ -493,6 +494,19 @@
       }
       .material-icons--user{
         color: vars.$darkColor;
+        position: absolute;
+        
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.arrow-left {
+          left: 10px;
+
+        }
+
+        &.arrow-right {
+          right: 10px;
+        }
       }
     
       .part-user-btn-subscribe, .part-association-btn-subscribe{
