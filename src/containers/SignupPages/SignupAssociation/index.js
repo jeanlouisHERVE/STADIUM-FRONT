@@ -9,19 +9,12 @@ import { submitSubscription, updateSubscriptionField } from '../../../actions/si
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: élément à récupérer dans le state
-  /** associationName,
-  presidentName,
-  presidentFirstName,
-  associationAdress,
-  associationZipCode,
-  associationTown,
-  */
-  associationName: state.signupMember.associationName,
-  presidentName: state.signupMember.presidentName,
-  presidentFirstName: state.signupMember.presidentFirstName,
-  associationAddress: state.signupMember.associationAddress,
-  associationZipCode: state.signupMember.associationZipCode,
-  associationTown: state.signupMember.associationTown,
+  associationName: state.signupAssociation.associationName,
+  presidentName: state.signupAssociation.presidentName,
+  presidentFirstName: state.signupAssociation.presidentFirstName,
+  associationAddress: state.signupAssociation.associationAddress,
+  associationZipCode: state.signupAssociation.associationZipCode,
+  associationTown: state.signupAssociation.associationTown,
 });
 
 // === mapDispatchToProps

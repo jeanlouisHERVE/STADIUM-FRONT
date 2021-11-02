@@ -9,7 +9,7 @@ import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
 import AsideNavbar from '../AsideNavbar';
-import SignupAssociation from '../../pages/SignupPages/SignupAssociation';
+import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
