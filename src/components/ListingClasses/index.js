@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 // == Composant
-const Listing = ({ adherents }) => (
+const ListingClasses = ({ adherents }) => (
   <div className="listing-container">
     <div className="listing-header">
       <div className="listing-header-leftside">
-        <div className="listing-title"><h2>TITLE</h2></div>
+        <div className="listing-title"><h2>Cours</h2></div>
         <div className="listing-addIcon"><span className=" material-icons">add</span></div>
       </div>
       <div className="listing-header-rightside">
@@ -44,9 +44,9 @@ const Listing = ({ adherents }) => (
   </div>
 );
 
-Listing.propTypes = {
+ListingClasses.propTypes = {
   adherents: PropTypes.array.isRequired,
 };
 
 // == Export
-export default Listing;
+export default ListingClasses;

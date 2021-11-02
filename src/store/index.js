@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import loginReducer from '../reducers/loginReducer';
+import reducer from '../reducers';
 
 import logMiddleware from '../middlewares/logMiddleware';
 import authMiddleware from '../middlewares/authMiddleware';
@@ -20,7 +20,7 @@ const enhancerAvecDevToolsEtMiddlewares = composeWithDevTools(enhancerAvecMiddle
 
 const store = createStore(
   // reducer
-  loginReducer,
+  reducer,
   // enhancer
   enhancer,
 );
