@@ -1,8 +1,8 @@
-import imageLogo from 'src/assets/images/imageLogo.png';
-
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Field from '../../../components/Field';
+
+import Logo from '../../../components/Logo';
 
 import '../styles.scss';
 
@@ -20,9 +20,7 @@ const SignupUser = ({
   return (
     <div className="signup-page">
       <div className="signup-header">
-        <Link to="/">
-          <img src={imageLogo} alt="" className="imageLogo" />
-        </Link>
+        <Logo />
       </div>
       <form
         className="signup-form"

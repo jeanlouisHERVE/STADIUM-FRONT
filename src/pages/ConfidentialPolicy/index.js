@@ -1,4 +1,5 @@
 import './styles.scss';
+import Logo from '../../components/Logo';
 import imageStade from '../../assets/images/imageStade.jpg';
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import Footer from '../../components/Footer';
@@ -8,10 +9,8 @@ const ConfidentialPolicy = () => (
   <div className="ConfidentialPolicy-container">
     <div className="ConfidentialPolicy-UpPart">
       <div className="ConfidentialPolicy-leftside">
+        <Logo />
         <ButtonFormLogin />
-        <div className="ConfidentialPolicy-leftside-logo">
-          <p>LOGO</p>
-        </div>
         <div className="ConfidentialPolicy-leftside-content">
           <h1 className="ConfidentialPolicy-title">Politique de confidentialité</h1>
           <p className="ConfidentialPolicy-text">
