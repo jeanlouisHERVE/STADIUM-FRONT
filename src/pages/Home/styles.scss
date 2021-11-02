@@ -395,8 +395,9 @@
       }
     
       .stadium-img{
-        min-height: 113.3%;
-        margin-top: -1em;
+        position: relative;
+        min-height: 111.2%;
+        width:auto;
       }
     
       .part-association, .part-user{ 
