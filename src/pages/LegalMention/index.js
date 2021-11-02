@@ -1,5 +1,6 @@
 import './styles.scss';
 import imageStade from '../../assets/images/imageStade.jpg';
+import Logo from '../../components/Logo';
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import Footer from '../../components/Footer';
 
@@ -8,10 +9,8 @@ const LegalMention = () => (
   <div className="LegalMention-container">
     <div className="LegalMention-UpPart">
       <div className="LegalMention-leftside">
+        <Logo />
         <ButtonFormLogin />
-        <div className="LegalMention-leftside-logo">
-          <p>LOGO</p>
-        </div>
         <div className="LegalMention-leftside-content">
           <h1 className="LegalMention-title">Mentions Légales</h1>
           <p className="LegalMention-text">
