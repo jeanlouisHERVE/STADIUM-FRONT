@@ -21,3 +21,14 @@
     text-transform: uppercase;
   }
 }
+
+// tablet
+@media(min-width:768px) and (max-width:1023px){
+  .error-title{
+    font-size: 4em;
+  } 
+
+  .error-text{
+    font-size:1.8em;
+  }
+}
