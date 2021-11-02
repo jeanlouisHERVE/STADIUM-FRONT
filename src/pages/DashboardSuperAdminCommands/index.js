@@ -12,10 +12,10 @@ import './styles.scss';
 // == Composant
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(false);
+  const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(true);
   const [buttonClasseIsActive, setButtonClasseIsActive] = useState(false);
   const [buttonEventIsActive, setButtonEventIsActive] = useState(false);
-  const [showAdherents, setShowAdherents] = useState(false);
+  const [showAdherents, setShowAdherents] = useState(true);
   const [showClasses, setShowClasses] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
 
@@ -23,6 +23,7 @@ const DashboardSuperAdmin = () => {
     setIsOpen(!isOpen);
   };
 
+  // actions lorsque l'on clique sur le bouton adhérents
   const adherentButtonFunction = () => {
     setButtonEventIsActive(false);
     setButtonClasseIsActive(false);
@@ -32,6 +33,7 @@ const DashboardSuperAdmin = () => {
     setShowAdherents(!showAdherents);
   };
 
+  // actions lorsque l'on clique sur le bouton cours
   const ClasseButtonFunction = () => {
     setButtonAdherentIsActive(false);
     setButtonEventIsActive(false);
@@ -41,6 +43,7 @@ const DashboardSuperAdmin = () => {
     setShowClasses(!showClasses);
   };
 
+  // actions lorsque l'on clique sur le bouton événements
   const eventButtonFunction = () => {
     setButtonAdherentIsActive(false);
     setButtonClasseIsActive(false);
@@ -50,6 +53,7 @@ const DashboardSuperAdmin = () => {
     setShowEvents(!showEvents);
   };
 
+  // gestion de l'affichage des boutons adhérents cours et événements
   let buttonAdherentDiv;
   let buttonEventDiv;
   let buttonClasseDiv;
