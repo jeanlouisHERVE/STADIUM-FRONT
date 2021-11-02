@@ -1,4 +1,26 @@
-@use 'src/styles/vars';
+@use 'src/styles/vars.scss';
+
+.error{
+  width: 50%;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 6em;
+  text-align: center;
+  line-height: 3em;
+  
+  .error-title{
+    font-size: 6em;
+    font-weight: 800;
+    margin-bottom: 0.2em;
+    color:vars.$turquoiseColor;
+  }
+
+  .error-text{
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
 
 .Error-container {
   display: flex;
@@ -101,5 +123,16 @@
         }
       }
     }
+  }
+}
+
+// tablet
+@media(min-width:768px) and (max-width:1023px){
+  .error-title{
+    font-size: 4em;
+  } 
+
+  .error-text{
+    font-size:1.8em;
   }
 }

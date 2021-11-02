@@ -1,11 +1,14 @@
-
 import './styles.scss';
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import Footer from '../../components/Footer';
 import Railway from './railway.jpg';
 
 // == Composant
-const Contact = () => (
+const Error404 = () => (
+  // <div className="error">
+  //   <h1 className="error-title">404</h1>
+  //   <p className="error-text"> <em>Oups!</em> <br /> Cette page n'existe pas</p>
+  // </div>
   <div className="Error-container">
     <div className="Error-UpPart">
       <div className="Error-leftside" style={{ backgroundImage: `url(${Railway})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -34,4 +37,4 @@ const Contact = () => (
 );
 
 // == Export
-export default Contact;
+export default Error404;

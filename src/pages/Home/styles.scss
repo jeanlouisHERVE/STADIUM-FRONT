@@ -1,13 +1,13 @@
 @use 'src/styles/vars.scss';
   
-// samrtphone
-@media(max-width:767px){
+// smartphone
   .home{
     width: 100%;
     
     .home-header{
       width: 100%;
       font-size: 1em;
+      margin-top: 6em;
     }
   
     .home-header-header{
@@ -29,10 +29,6 @@
       display: inline;
     }
 
-    .btn-form-login{
-      margin-left: 16.2em;
-    }
-
     .part-registration{
       width: 100%;
       padding-right: 2em; 
@@ -46,7 +42,11 @@
   
     .part-registration-text{
       line-height: 120%;
+      margin-bottom: 2em;
+      padding-left: 2em;
+      font-size: 1.1em;
     }
+
     .imageLogo{
       border-radius:0.8em;
       margin-left: -1.2em;
@@ -72,7 +72,7 @@
   
     .stadium-img{
       width:100%;
-      height: 15em;
+      height: 20em;
     }
   
     strong{
@@ -88,7 +88,7 @@
     .part-association{
       background-color: vars.$turquoiseColor;
       margin-top: -0.2em;
-      padding-bottom:2em;
+      padding-bottom:3em;
     }
     
     .part-association-title{
@@ -189,6 +189,13 @@
       display: none;
     }
     
+    .material-icons--association{
+      color: vars.$lightColor;
+    }
+    .material-icons--user{
+      color: vars.$darkColor;
+    }
+
     .material-icons--user{
       font-family: 'Material Icons';
       font-size: 1.8em;
@@ -218,56 +225,52 @@
     margin-top: -2.5em;
   }
 }
-}
 
 // tablet
 @media(min-width:768px) and (max-width:1023px){
 .home{
-  width: 100%;
-  
-  .home-header{
-    width:100%;
-    font-size: 1.4em;
-    z-index:0;
-    margin-top: -3.8em;
-  }
 
-  .home-header-header{
-    display:flex;
-    flex-direction: row;
-    padding-bottom: 1em;
-    background-color: vars.$turquoiseColor;
-    position: relative;
+  .home-header{
+    z-index:0;
   }
 
   .part-registration-logo{
     margin-left: 4em; 
     display: inline-block;
     margin-top: 2em;
-    height: min-content;
   }
 
   .part-registration{
     width: 100%;
     padding-right: 2em; 
     padding-left: 2em;
-    margin-top: 6em;  
+    margin-top: 7em;  
     padding-bottom: 4em;
     height: 25em;
   }
 
   .imageLogo{
-    border-radius:0.8em;
     margin-left: -2em;
-    width: 6em;
+    width: 7.2em;
   }
 
   .part-registration-title{
-    color:vars.$darkColor;
     font-size: 1.6em;
-    font-weight: 700;
-    margin-bottom: 1.2em;
-    padding-top: 2em;
+    margin-top: 2em;
+    margin-bottom:2em;
+  }
+
+  .part-registration-text{
+    font-size:1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5em;
+    line-height: 150%;
+    padding-right: 2em;
+  }
+
+  .part-registration-content .btn-form-subscribe{
+    margin-top: -2em;
   }
 
   .part-connexion{
@@ -276,8 +279,7 @@
   }
 
   .stadium-img{   
-    width:100%;
-    height: 20em;
+    height: 30em;
   }
 
   strong{
@@ -285,7 +287,6 @@
   }
   
   .part-association, .part-user{ 
-    width:100%;
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
@@ -302,34 +303,15 @@
 
   .part-association-title, .part-user-title{
     font-size: 1.6em;
-    margin-left: auto;
-    margin-left: auto;
-    text-align: center;
   }
 
   .part-association-title-title, .part-user-title-title{
     padding-top: 3em;
-    margin-bottom: 3em;
-    line-height: 140%;
-    text-align: center;
-    font-weight: 800;   
-  }
-
-  .part-association-content-content{
-    width: 100%;
-    color: vars.$lightColor;
-    text-align: justify;
-    padding-bottom: 3.5em;
-    padding-left: 1em;
-    padding-right: 1em;
   }
 
   .part-association-text, .part-user-text{
-    margin-bottom: 0.9em;
-    font-weight: 500;
     font-size: 1.3em;
-    line-height: 120%;
-    text-align: left;
+
   }
 
   .part-association-text-elem-list, .part-user-text-elem-list{
@@ -340,30 +322,8 @@
     font-size:1.3em;
   }
 
-  .part-association-img{
-    width: 100%;
-    height: 70%;
-    margin:0em;
-  }
-
   .dashboard-association-img{
-    width: 100%;
-    margin-right: auto;
-    margin-top: -0.7em;
     margin-bottom: 3.5em;
-  }
-
-  .part-user{
-    height: 150%;
-    padding-bottom: 3em;
-    padding-right: 2.3em;
-  }
- 
-  .part-user-content-content{
-    text-align:left;
-    padding-bottom: 3.5em;
-    padding-left: 1em;
-    padding-right: 1em;
   }
 
   .part-user-img{
@@ -372,69 +332,20 @@
   }
 
   .dashboard-user-img{
-    width: 100%;
     margin-right: auto;
     margin-top: -0.7em;
-    padding-bottom: 2.7em;
+    padding-bottom: 3.3em;
   }
-
-  .material-icons{
-    font-family: 'Material Icons';
-    font-size: 1.8em;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    color: vars.$darkColor;
-    margin-top: 7em;
-    position: absolute;
-    display: none;
-  }
-  
-  .material-icons--user{
-    font-family: 'Material Icons';
-    font-size: 1.8em;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    color: vars.$lightColor;
-    margin-top: 9em;
-    position: absolute;
-    margin-left: -1.3em;
-    display: none;
-  }
-
-  .material-icons--user--right{
-    margin-right: -1.3em;
-    margin-top: 9em;
-    color: vars.$lightColor;
-    display: none;
-  }
-
-  .part-user-btn-subscribe, .part-association-btn-subscribe{
-    text-align: center; 
-  }
-  .part-user-btn-subscribe{
-  margin-top:-3em;
-  }
-
+ 
 .part-association-btn-subscribe{
   margin-top: -2.5em;
-}
-}
+    }
+  }
 }
 
   // desktop
   @media(min-width:1024px){
     .home{
-      width: 100%;
       
       .home-header{
         display: flex; 
@@ -450,42 +361,37 @@
         display: flex;
         flex-direction: row;
         position: relative;
+        background-color: transparent;
       }
     
       .part-registration-logo{
         margin-left: 4em; 
         display: inline-block;
         margin-top: 2em;
-        height: min-content;
       }
-    
     
       .part-registration{
         width: 60%;
-        padding-right: 2em; 
-        padding-left: 2em;
         margin-top: 8em;  
-        position:relative;
-        z-index:0;
       }
     
       .imageLogo{
-        border-radius:0.8em;
         margin-left: -2em;
-        width: 7em;
+        width: 8em;
       }
     
       .part-registration-title{
-        color:vars.$darkColor;
         font-size: 1.6em;
-        font-weight: 700;
-        margin-bottom: 1.2em;
         padding-top: 2em;
       }
     
+      .part-registration-text{
+        line-height: 150%;
+      }
       .part-connexion{
         width: 40%;
         padding-right: 0px;
+        min-height: max-content;
       }
     
       .stadium-img{
@@ -495,34 +401,18 @@
       }
     
       .part-association, .part-user{ 
-        width:100%;
         padding-left: 4.3em;
         padding-right: 4.3em;
         font-size: 1.3em;
         line-height: 120%;
       }
       
-      .part-association{
-        background-color: vars.$turquoiseColor;
-      }
-      
-      .part-association-title{
-        color: vars.$lightColor;   
-      }
-    
       .part-association-title, .part-user-title{
         font-size: 1.6em;
-        margin-left: auto;
-        margin-left: auto;
-        text-align: center;
       }
     
       .part-association-title-title, .part-user-title-title{
         padding-top: 3.5em;
-        margin-bottom: 3em;
-        line-height: 140%;
-        text-align: center;
-        font-weight: 800;   
       }
     
       .part-association-content{
@@ -532,40 +422,36 @@
     
       .part-association-content-content{
         width: 50%;
-        color: vars.$lightColor;
         text-align: justify;
         padding-bottom: 7em;
       }
+
       .part-association-text, .part-user-text{
-        margin-bottom: 0.9em;
-        font-weight: 500;
         font-size: 1.1em;
         line-height: 130%;
       }
     
       .part-association-text-elem-list, .part-user-text-elem-list{
-        list-style-type:disc;
         margin-left: 1.3em;
         margin-top: 1.3em;
-        margin-bottom: 1em;
-        font-size:1.1em;
       }
     
       .part-association-img{
         width: 50%;
-        height:70%;
+        height:auto;
         position: relative;
       }
     
       .dashboard-association-img{
         max-width: 90%;
-        max-height: auto;
+        max-height: 100%;
+        width: auto; 
+        height: auto; 
         margin-top: 4.3em;
         margin-bottom: 4em;
       }
     
       .part-user{
-        height: 150%;
         padding-bottom: 7em;
         padding-right: 2.3em;
       }
@@ -581,7 +467,6 @@
     
       .part-user-img{
        width:50%;
-       position: relative;
       }
     
       .dashboard-user-img{
@@ -591,7 +476,7 @@
         margin-left: 3.5em;
       }
     
-      .material-icons--association{
+      .material-icons{
         font-family: 'Material Icons';
         font-size: 1.8em;
         display: inline-block;
@@ -601,21 +486,14 @@
         word-wrap: normal;
         white-space: nowrap;
         direction: ltr;
-        color: vars.$lightColor;
         top:50%;
         position: absolute;
       }
       
+      .material-icons--association{
+        color: vars.$lightColor;
+      }
       .material-icons--user{
-        font-family: 'Material Icons';
-        font-size: 1.8em;
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
         color: vars.$darkColor;
         position: absolute;
         
