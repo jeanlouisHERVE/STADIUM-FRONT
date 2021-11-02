@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingEvents from '../../components/ListingEvents';
+import ListingClasses from '../../components/ListingClasses';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import adherentsData from '../../utils/data/adherentsData';
@@ -12,8 +13,10 @@ import './styles.scss';
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(false);
+  const [buttonClasseIsActive, setButtonClasseIsActive] = useState(false);
   const [buttonEventIsActive, setButtonEventIsActive] = useState(false);
   const [showAdherents, setShowAdherents] = useState(false);
+  const [showClasses, setShowClasses] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
 
   const toggle = () => {
@@ -22,26 +25,47 @@ const DashboardSuperAdmin = () => {
 
   const adherentButtonFunction = () => {
     setButtonEventIsActive(false);
-    setShowEvents(false);
-    setShowAdherents(!showAdherents);
+    setButtonClasseIsActive(false);
     setButtonAdherentIsActive(!buttonAdherentIsActive);
+    setShowEvents(false);
+    setShowClasses(false);
+    setShowAdherents(!showAdherents);
+  };
+
+  const ClasseButtonFunction = () => {
+    setButtonAdherentIsActive(false);
+    setButtonEventIsActive(false);
+    setButtonClasseIsActive(!buttonClasseIsActive);
+    setShowAdherents(false);
+    setShowEvents(false);
+    setShowClasses(!showClasses);
   };
 
   const eventButtonFunction = () => {
     setButtonAdherentIsActive(false);
-    setShowAdherents(false);
-    setShowEvents(!showEvents);
+    setButtonClasseIsActive(false);
     setButtonEventIsActive(!buttonEventIsActive);
+    setShowAdherents(false);
+    setShowClasses(false);
+    setShowEvents(!showEvents);
   };
 
   let buttonAdherentDiv;
   let buttonEventDiv;
+  let buttonClasseDiv;
 
   if (buttonAdherentIsActive) {
     buttonAdherentDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;
   }
   else {
     buttonAdherentDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  }
+
+  if (buttonClasseIsActive) {
+    buttonClasseDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={ClasseButtonFunction}>Cours</button>;
+  }
+  else {
+    buttonClasseDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={ClasseButtonFunction}>Cours</button>;
   }
 
   if (buttonEventIsActive) {
@@ -75,13 +99,14 @@ const DashboardSuperAdmin = () => {
           </div>
           <div className="dashboard-superadmin-buttonsList">
             {buttonAdherentDiv}
-            <button className="dashboard-superadmin-button" type="submit">Cours</button>
+            {buttonClasseDiv}
             {buttonEventDiv}
             {/* <button className="dashboard-superadmin-button" type="submit"
             onClick={() => setShowEvents(!showEvents), buttonFunction}>Evénements</button> */}
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
             {showAdherents ? <ListingAdherents adherents={adherentsData} /> : null}
+            {showClasses ? <ListingClasses adherents={adherentsData} /> : null}
             {showEvents ? <ListingEvents events={eventsData} /> : null}
           </div>
         </div>
