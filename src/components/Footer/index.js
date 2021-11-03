@@ -1,16 +1,14 @@
-import './styles.scss';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 
 const Footer = () => (
   <div className="footer-content">
-    <div className="footer-content-list">
-      <div className="footer-content-list-elem"><Link to="/legalMention">Mentions légales</Link></div>
-      <div className="footer-content-list-elem"><Link to="/confidentialPolicy">Politique de confidentialité</Link></div>
-      <div className="footer-content-list-elem"><Link to="/contact">Contact</Link></div>
-    </div>
-    <div className="footer-bottom-content">
-      <p className="footer-copyright"> &copy; Website by StadiumValkyries</p>
-    </div>
+    <ul className="footer-content-list">
+      <li className="footer-content-list-elem"><Link to="/legalMention">Mentions légales</Link></li>
+      <li className="footer-content-list-elem"><Link to="/confidentialPolicy">Politique de confidentialité</Link></li>
+      <li className="footer-content-list-elem"><Link to="/contact">Contact</Link></li>
+    </ul>
+    <p className="footer-copyright">&copy; Website by StadiumValkyries</p>
   </div>
 );
 

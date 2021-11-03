@@ -1,10 +1,10 @@
-// import assets
-import dashboardUser from 'src/assets/images/dashboardUser.png';
-import imageStade from 'src/assets/images/imageStade.jpg';
-import imageLogo from 'src/assets/images/imageLogo.png';
-
 import { Link } from 'react-router-dom';
 
+// import assets
+import dashboardUser from '../../assets/images/dashboardUser.png';
+import imageStade from '../../assets/images/imageStade.jpg';
+
+import Logo from '../../components/Logo';
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import ButtonFormSubscribe from '../../components/ButtonFormSubscribe';
 import Footer from '../../components/Footer';
@@ -16,7 +16,7 @@ const Home = () => (
   <div className="home">
     <div className="home-header-header">
       <div className="part-registration-logo">
-        <img src={imageLogo} alt="" className="imageLogo" />
+        <Logo />
       </div>
       <div className="part-connexion-btn">
         <Link to="/connexion"> <ButtonFormLogin /> </Link>
