@@ -123,43 +123,11 @@
       display: flex;
       flex-direction: row;
 
-      .listing-line-header-items-level {
+      .listing-line-header-items {
         margin-left: 15px;
-        width: 100px;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width:100px;
+        font-weight: 700
       }
-
-      .listing-line-header-items-day {
-        margin-left: 15px;
-        width: 150px;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .listing-line-header-items-startTime{
-        margin-left: 15px;
-        width: 250px;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .listing-line-header-items-endTime {
-        margin-left: 15px;
-        width: 250px;
-        font-weight: 700;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-     
     }
 
     .listing-line-header-rightside {
@@ -188,41 +156,11 @@
     .listing-line-leftside {
       display: flex;
       flex-direction: row;
-      align-items: center;
       
-      .listing-line-items-level {
+      .listing-line-items {
         margin-left: 15px;
-        width: 100px;
-
-        .listing-line-items-level-cartouche {
-          height: 20px;
-          background-color: red;
-          border-radius: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 5px 10px;
-        }
+        width:100px;
       }
-
-      .listing-line-items-day {
-        margin-left: 15px;
-        width: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .listing-line-items-startTime {
-        margin-left: 15px;
-        width: 250px;
-      }
-
-      .listing-line-items-endTime{
-        margin-left: 15px;
-        width: 250px;
-      }
-
     }
 
     .listing-line-rightside {

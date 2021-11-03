@@ -4,6 +4,7 @@ import './styles.scss';
 // == Composant
 const ListingAdherents = ({ adherents }) => (
   <div className="listing-container">
+    {console.log(adherents)}
     <div className="listing-header">
       <div className="listing-header-leftside">
         <div className="listing-title"><h2>Adhérents</h2></div>
@@ -24,7 +25,7 @@ const ListingAdherents = ({ adherents }) => (
       <div className="listing-line-header-rightside" />
     </div>
     {
-      adherents.map((item, index) => (
+      adherents.map((item) => (
         <>
           <div className="listing-line-container" key={item.id}>
             <div className="listing-line-leftside">
