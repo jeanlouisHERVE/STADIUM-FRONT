@@ -87,7 +87,6 @@
     
     .part-association{
       background-color: vars.$turquoiseColor;
-      margin-top: -0.2em;
       padding-bottom:3em;
     }
     
@@ -293,7 +292,6 @@
   
   .part-association{
     background-color: vars.$turquoiseColor;
-    margin-top: -0.2em;
     padding-bottom:3em;
   }
   
@@ -395,8 +393,9 @@
       }
     
       .stadium-img{
-        margin-top: -4.1em;
-        height: 125.6vh;
+        position: relative;
+        height: 100%;
+        width:auto;
       }
     
       .part-association, .part-user{ 
