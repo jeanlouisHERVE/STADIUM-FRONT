@@ -5,11 +5,12 @@ import Sidebar from '../../components/Sidebar';
 import CardAssociation from '../../components/CardAssociation';
 
 import './styles.scss';
-import associationDatas from './data/associations';
+// import associationDatas from './data/associations';
 
 // == Composant
 const DashboardSuperAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState([]);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -19,7 +20,7 @@ const DashboardSuperAdmin = () => {
     async function loadData() {
       const rawResponse = await fetch('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations/');
       const response = await rawResponse.json();
-      console.log(response);
+      setData(response);
     }
     loadData();
   }, []);
@@ -31,7 +32,8 @@ const DashboardSuperAdmin = () => {
       <div className="dashboard-superadmin">
         <AsideNavbar />
         <div className="cards">
-          {associationDatas.map((association) => (
+          {console.log(data)}
+          {data.map((association) => (
             <CardAssociation key={association.id} association={association} />
           ))}
         </div>
