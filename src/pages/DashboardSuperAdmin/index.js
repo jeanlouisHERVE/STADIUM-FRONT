@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -14,6 +14,15 @@ const DashboardSuperAdmin = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    async function loadData() {
+      const rawResponse = await fetch('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations/');
+      const response = await rawResponse.json();
+      console.log(response);
+    }
+    loadData();
+  }, []);
 
   return (
     <>
