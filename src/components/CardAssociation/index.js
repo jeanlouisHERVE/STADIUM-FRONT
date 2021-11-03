@@ -8,7 +8,7 @@ const CardAssociation = ({ association }) => (
     <img src={association.image} alt="" className="image" />
     <h2>{association.name}</h2>
     <div className="details-association">
-      <Link to={`/superadmin/backoffice/association/${association.id}`} className="card-link">Voir le détail</Link>
+      <Link to={`/backoffice/superadmin/associations/${association.id}`} className="card-link">Voir le détail</Link>
     </div>
   </div>
 );

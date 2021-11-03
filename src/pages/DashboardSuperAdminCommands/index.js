@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
-import ListingEvents from '../../components/ListingEvents';
-import ListingClasses from '../../components/ListingClasses';
+import ListingEvents from '../../components/ListingClasses';
+import ListingClasses from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import adherentsData from '../../utils/data/adherentsData';
@@ -12,13 +13,9 @@ import eventsData from '../../utils/data/eventsData';
 import './styles.scss';
 
 // == Composant
-const DashboardSuperAdmin = ({
-  association,
-  // profils,
-}) => {
-  console.log(association);
-
+const DashboardSuperAdminCommands = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
   const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(true);
   const [buttonClasseIsActive, setButtonClasseIsActive] = useState(false);
@@ -61,17 +58,25 @@ const DashboardSuperAdmin = ({
     setShowEvents(!showEvents);
   };
 
+  const path = useLocation();
+  // console.log(path.pathname);
+
+  // const pathArray = window.location.pathname.split('/');
+  // console.log(pathArray);
+
   useEffect(() => {
     async function loadData() {
-      const URL = window.location.href;
-      console.log(URL);
-      const rawResponse = await fetch('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations/');
+      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}/`);
       const response = await rawResponse.json();
       setData(response);
+      setIsLoaded(true);
+      console.log(response);
     }
     loadData();
   }, []);
 
+  // console.log(data);
+  // console.log(data.name);
   // gestion de l'affichage des boutons adhérents cours et événements
   let buttonAdherentDiv;
   let buttonEventDiv;
@@ -107,16 +112,14 @@ const DashboardSuperAdmin = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-rightside">
-          <h1 className="dashboard-superadmin-title">Tableau de bord : {association}</h1>
+          <h1 className="dashboard-superadmin-title">Tableau de bord : {data.name}</h1>
           <div className="dashboard-superadmin-presentation">
             <div className="dashboard-superadmin-presentation-leftside">
-              {/* <p className="dashboard-superadmin-presentation-title">Informations : {association.account}</p>
-              <p className="dashboard-superadmin-presentation-item">Nom du Président : {association.presidentFirstName}</p>
-              <p className="dashboard-superadmin-presentation-item">Prénom du Président : {association.presidentLastName}</p>
-              <p className="dashboard-superadmin-presentation-item">Adresse : {association.address}</p>
-              <p className="dashboard-superadmin-presentation-item">Téléphone : {association.phoneNumber}</p>
-              <p className="dashboard-superadmin-presentation-item">Email : {association.account.email}</p>
-              <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : 12</p> */}
+              <p className="dashboard-superadmin-presentation-title">Informations : </p>
+              <p className="dashboard-superadmin-presentation-item">Nom du Président : {data.presidentFirstName}</p>
+              <p className="dashboard-superadmin-presentation-item">Prénom du Président : {data.presidentLastName}</p>
+              <p className="dashboard-superadmin-presentation-item">Adresse : {data.address}</p>
+              <p className="dashboard-superadmin-presentation-item">Téléphone : </p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
@@ -124,13 +127,15 @@ const DashboardSuperAdmin = ({
             {buttonAdherentDiv}
             {buttonClasseDiv}
             {buttonEventDiv}
-            {/* <button className="dashboard-superadmin-button" type="submit"
-            onClick={() => setShowEvents(!showEvents), buttonFunction}>Evénements</button> */}
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
-            {showAdherents ? <ListingAdherents adherents={adherentsData} /> : null}
-            {showClasses ? <ListingClasses adherents={adherentsData} /> : null}
-            {showEvents ? <ListingEvents events={eventsData} /> : null}
+            {showAdherents && isLoaded
+              ? (<ListingAdherents adherents={data.profils} />) : null}
+            {/* {showClasses && data.activities
+              ? (<ListingClasses classes={data.activities} />) : null} */}
+            {console.log(data.events)}
+            {showEvents && isLoaded
+              ? <ListingEvents events={data.events} /> : null}
           </div>
         </div>
       </div>
@@ -138,19 +143,19 @@ const DashboardSuperAdmin = ({
   );
 };
 
-DashboardSuperAdmin.propTypes = {
-  association: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    presidentFirstName: PropTypes.string.isRequired,
-    presidentLastName: PropTypes.string.isRequired,
-    phoneNumber: PropTypes.number.isRequired,
-    address: PropTypes.string.isRequired,
-    account: PropTypes.shape({
-      email: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  // profils: PropTypes.array.isRequired,
-};
+// DashboardSuperAdmin.propTypes = {
+//   association: PropTypes.shape({
+//     name: PropTypes.string.isRequired,
+//     presidentFirstName: PropTypes.string.isRequired,
+//     presidentLastName: PropTypes.string.isRequired,
+//     phoneNumber: PropTypes.number.isRequired,
+//     address: PropTypes.string.isRequired,
+//     account: PropTypes.shape({
+//       email: PropTypes.string.isRequired,
+//     }).isRequired,
+//   }).isRequired,
+// profils: PropTypes.array.isRequired,
+// };
 
 // == Export
-export default DashboardSuperAdmin;
+export default DashboardSuperAdminCommands;

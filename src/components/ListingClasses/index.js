@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 // == Composant
-const ListingClasses = ({ adherents }) => (
+const ListingClasses = ({ classes }) => (
   <div className="listing-container">
     <div className="listing-header">
       <div className="listing-header-leftside">
-        <div className="listing-title"><h2>Cours</h2></div>
+        <div className="listing-title"><h2>Evénements</h2></div>
         <div className="listing-addIcon"><span className=" material-icons">add</span></div>
       </div>
       <div className="listing-header-rightside">
@@ -18,21 +18,24 @@ const ListingClasses = ({ adherents }) => (
     </div>
     <div className="listing-line-header">
       <div className="listing-line-header-leftside">
-        <div className="listing-line-header-items">Nom</div>
-        <div className="listing-line-header-items">Prénom</div>
+        <div className="listing-line-header-items-level">Niveau</div>
+        <div className="listing-line-header-items-day">Jour</div>
+        <div className="listing-line-header-items-startTime">H-début</div>
+        <div className="listing-line-header-items-endTime">H-fin</div>
       </div>
       <div className="listing-line-header-rightside" />
     </div>
     {
-      adherents.map((item, index) => (
+      classes.map((item, index) => (
         <>
           <div className="listing-line-container" key={item.id}>
             <div className="listing-line-leftside">
-              <div className="listing-line-items">{item.firstName}</div>
-              <div className="listing-line-items">{item.lastName}</div>
+              <div className="listing-line-items-level"><div className="listing-line-items-level-cartouche">{item.level}</div></div>
+              <div className="listing-line-items-day">{item.day}</div>
+              <div className="listing-line-items-startTime">{item.startTime}</div>
+              <div className="listing-line-items-endTime">{item.endTime}</div>
             </div>
             <div className="listing-line-rightside">
-              <span className="listing-line-icon material-icons">email</span>
               <span className="listing-line-icon material-icons">border_color</span>
               <span className="listing-line-icon material-icons">visibility</span>
               <span className="listing-line-icon material-icons">delete</span>
@@ -45,7 +48,7 @@ const ListingClasses = ({ adherents }) => (
 );
 
 ListingClasses.propTypes = {
-  adherents: PropTypes.array.isRequired,
+  classes: PropTypes.array.isRequired,
 };
 
 // == Export

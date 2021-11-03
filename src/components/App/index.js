@@ -46,10 +46,10 @@ const App = () => (
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
       </Route>
-      <Route path="/backoffice/superadmin" exact>
+      <Route path="/backoffice/superadmin/associations" exact>
         <DashboardSuperAdmin />
       </Route>
-      <Route path="/backoffice/superadmin/association/:id">
+      <Route path="/backoffice/superadmin/associations/:id">
         <SuperAdminCommand />
       </Route>
       <Route path="/associations/backoffice">
