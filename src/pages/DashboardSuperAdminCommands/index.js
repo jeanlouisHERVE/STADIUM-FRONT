@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingEvents from '../../components/ListingEvents';
@@ -10,8 +12,14 @@ import eventsData from '../../utils/data/eventsData';
 import './styles.scss';
 
 // == Composant
-const DashboardSuperAdmin = () => {
+const DashboardSuperAdmin = ({
+  association,
+  // profils,
+}) => {
+  console.log(association);
+
   const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState([]);
   const [buttonAdherentIsActive, setButtonAdherentIsActive] = useState(true);
   const [buttonClasseIsActive, setButtonClasseIsActive] = useState(false);
   const [buttonEventIsActive, setButtonEventIsActive] = useState(false);
@@ -53,6 +61,17 @@ const DashboardSuperAdmin = () => {
     setShowEvents(!showEvents);
   };
 
+  useEffect(() => {
+    async function loadData() {
+      const URL = window.location.href;
+      console.log(URL);
+      const rawResponse = await fetch('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations/');
+      const response = await rawResponse.json();
+      setData(response);
+    }
+    loadData();
+  }, []);
+
   // gestion de l'affichage des boutons adhérents cours et événements
   let buttonAdherentDiv;
   let buttonEventDiv;
@@ -88,16 +107,16 @@ const DashboardSuperAdmin = () => {
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-rightside">
-          <h1 className="dashboard-superadmin-title">Tableau de bord NameOfTheAssociation</h1>
+          <h1 className="dashboard-superadmin-title">Tableau de bord : {association}</h1>
           <div className="dashboard-superadmin-presentation">
             <div className="dashboard-superadmin-presentation-leftside">
-              <p className="dashboard-superadmin-presentation-title">Informations :</p>
-              <p className="dashboard-superadmin-presentation-item">Nom du Président : PresidentLastname</p>
-              <p className="dashboard-superadmin-presentation-item">Prénom du Président : PresidentLastname</p>
-              <p className="dashboard-superadmin-presentation-item">Adresse : Address</p>
-              <p className="dashboard-superadmin-presentation-item">Téléphone : PhoneNumber</p>
-              <p className="dashboard-superadmin-presentation-item">Email : Email</p>
-              <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : NumberofAdherents</p>
+              {/* <p className="dashboard-superadmin-presentation-title">Informations : {association.account}</p>
+              <p className="dashboard-superadmin-presentation-item">Nom du Président : {association.presidentFirstName}</p>
+              <p className="dashboard-superadmin-presentation-item">Prénom du Président : {association.presidentLastName}</p>
+              <p className="dashboard-superadmin-presentation-item">Adresse : {association.address}</p>
+              <p className="dashboard-superadmin-presentation-item">Téléphone : {association.phoneNumber}</p>
+              <p className="dashboard-superadmin-presentation-item">Email : {association.account.email}</p>
+              <p className="dashboard-superadmin-presentation-item">Nombre d'adhérents : 12</p> */}
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
@@ -117,6 +136,20 @@ const DashboardSuperAdmin = () => {
       </div>
     </>
   );
+};
+
+DashboardSuperAdmin.propTypes = {
+  association: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    presidentFirstName: PropTypes.string.isRequired,
+    presidentLastName: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.number.isRequired,
+    address: PropTypes.string.isRequired,
+    account: PropTypes.shape({
+      email: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  // profils: PropTypes.array.isRequired,
 };
 
 // == Export

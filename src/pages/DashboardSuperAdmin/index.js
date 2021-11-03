@@ -32,7 +32,6 @@ const DashboardSuperAdmin = () => {
       <div className="dashboard-superadmin">
         <AsideNavbar />
         <div className="cards">
-          {console.log(data)}
           {data.map((association) => (
             <CardAssociation key={association.id} association={association} />
           ))}
