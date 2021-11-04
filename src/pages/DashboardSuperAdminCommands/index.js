@@ -4,12 +4,10 @@ import { useLocation } from 'react-router-dom';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
-import ListingEvents from '../../components/ListingClasses';
-import ListingClasses from '../../components/ListingEvents';
+// import ListingClasses from '../../components/ListingClasses';
+import ListingEvents from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
-import adherentsData from '../../utils/data/adherentsData';
-import eventsData from '../../utils/data/eventsData';
 import './styles.scss';
 
 // == Composant
@@ -66,7 +64,7 @@ const DashboardSuperAdminCommands = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}/`);
+      const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response = await rawResponse.json();
       setData(response);
       setIsLoaded(true);
@@ -119,7 +117,7 @@ const DashboardSuperAdminCommands = () => {
               <p className="dashboard-superadmin-presentation-item">Nom du Président : {data.presidentFirstName}</p>
               <p className="dashboard-superadmin-presentation-item">Prénom du Président : {data.presidentLastName}</p>
               <p className="dashboard-superadmin-presentation-item">Adresse : {data.address}</p>
-              <p className="dashboard-superadmin-presentation-item">Téléphone : </p>
+              <p className="dashboard-superadmin-presentation-item">Téléphone : {data.phoneNumber}</p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
