@@ -6,10 +6,14 @@ import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
-
+import SuperAdminSettings from '../../pages/DashboardSuperAdminSettings';
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
+import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
+import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
+import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
+
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
@@ -63,19 +67,19 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/adherent/add" exact>
         <SuperAdminAddAdherent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/adherent/modify">
+      <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
       </Route>
-      {/* <Route path="/backoffice/superadmin/associations/event">
+      <Route path="/backoffice/superadmin/associations/event" exact>
         <SuperAdminEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/event/add">
-        <SuperAdminAddEvent  />
+      <Route path="/backoffice/superadmin/associations/event/add" exact>
+        <SuperAdminAddEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/event/modify">
-        <SuperAdminModifyEvent  />
+      <Route path="/backoffice/superadmin/associations/event/modify" exact>
+        <SuperAdminModifyEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/classe">
+      {/* <Route path="/backoffice/superadmin/associations/classe">
         <SuperAdminClasse />
       </Route>
       <Route path="/backoffice/superadmin/associations/classe/add">
@@ -83,10 +87,10 @@ const App = () => (
       </Route>
       <Route path="/backoffice/superadmin/associations/classe/modify">
         <SuperAdminModifyClasse />
-      </Route>
-      <Route path="/backoffice/superadmin/settings">
-        <SuperAdminSettings />
       </Route> */}
+      <Route path="/backoffice/superadmin/settings" exact>
+        <SuperAdminSettings />
+      </Route>
       <Route>
         <Error404 />
       </Route>
