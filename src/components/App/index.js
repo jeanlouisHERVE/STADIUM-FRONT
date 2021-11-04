@@ -1,15 +1,21 @@
 // == Import
 import { Route, Switch } from 'react-router-dom';
 
+// Pages
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
-import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
+import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
+
+import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
+import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
-import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
+// Containers
+import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import LoginPage from '../../containers/LoginPage';
@@ -48,9 +54,39 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations" exact>
         <DashboardSuperAdmin />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id">
-        <SuperAdminCommand />
+      <Route path="/backoffice/superadmin/associations/:id" exact>
+        <SuperAdminAssociationCommands />
       </Route>
+      <Route path="/backoffice/superadmin/associations/adherent" exact>
+        <SuperAdminAdherent />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/adherent/add" exact>
+        <SuperAdminAddAdherent />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/adherent/modify">
+        <SuperAdminModifyAdherent />
+      </Route>
+      {/* <Route path="/backoffice/superadmin/associations/event">
+        <SuperAdminEvent />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/event/add">
+        <SuperAdminAddEvent  />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/event/modify">
+        <SuperAdminModifyEvent  />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/classe">
+        <SuperAdminClasse />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/classe/add">
+        <SuperAdminAddClasse />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/classe/modify">
+        <SuperAdminModifyClasse />
+      </Route>
+      <Route path="/backoffice/superadmin/settings">
+        <SuperAdminSettings />
+      </Route> */}
       <Route>
         <Error404 />
       </Route>

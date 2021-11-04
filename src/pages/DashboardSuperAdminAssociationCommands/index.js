@@ -11,7 +11,7 @@ import Sidebar from '../../components/Sidebar';
 import './styles.scss';
 
 // == Composant
-const DashboardSuperAdminCommands = () => {
+const SuperAdminAssociationCommands = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
@@ -157,4 +157,4 @@ const DashboardSuperAdminCommands = () => {
 // };
 
 // == Export
-export default DashboardSuperAdminCommands;
+export default SuperAdminAssociationCommands;

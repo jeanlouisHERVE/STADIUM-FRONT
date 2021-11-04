@@ -5,7 +5,7 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
-const SuperAdminAddAdherent = () => {
+const SuperAdminAdherent = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -16,15 +16,15 @@ const SuperAdminAddAdherent = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-adherent-add">
+      <div className="dashboard-superadmin-adherent">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <h1>DashboardSuperAdminAdherentADDING</h1>
+        <h1>DashboardSuperAdminAdherent</h1>
       </div>
     </>
   );
 };
 
 // == Export
-export default SuperAdminAddAdherent;
+export default SuperAdminAdherent;
