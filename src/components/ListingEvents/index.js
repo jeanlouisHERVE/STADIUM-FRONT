@@ -2,42 +2,47 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 // == Composant
 const ListingEvents = ({ events }) => (
-  <div className="listing-container">
-  {console.log(events)};
-    <div className="listing-header">
-      <div className="listing-header-leftside">
-        <div className="listing-title"><h2>événements</h2></div>
-        <div className="listing-addIcon"><span className=" material-icons">add</span></div>
+  <div className="listingEvent-container">
+  {console.log(events)}
+    <div className="listingEvent-header">
+      <div className="listingEvent-header-leftside">
+        <div className="listingEvent-title"><h2>événements</h2></div>
+        <div className="listingEvent-addIcon"><span className=" material-icons">add</span></div>
       </div>
-      <div className="listing-header-rightside">
-        <div className="listing-filter">
-          <button className="listing-filter-button" type="submit">A - Z </button>
-          <button className="listing-filter-button" type="submit">Z - A</button>
+      <div className="listingEvent-header-rightside">
+        <div className="listingEvent-filter">
+          <button className="listingEvent-filter-button" type="submit"><span className="material-icons">date_range</span></button>
+          <button className="listingEvent-filter-button" type="submit">A - Z</button>
         </div>
       </div>
     </div>
-    <div className="listing-line-header">
-      <div className="listing-line-header-leftside">
-        <div className="listing-line-header-items">Nom</div>
-        <div className="listing-line-header-items">Prénom</div>
+    <div className="listingEvent-line-header">
+      <div className="listingEvent-line-header-leftside">
+        <div className="listingEvent-line-header-name">Nom</div>
+        <div className="listingEvent-line-header-place">Emplacement</div>
+        
+        <div className="listingEvent-line-header-startDate">Date-début</div>
+        <div className="listingEvent-line-header-endDate">Date-Fin</div>
+        <div className="listingEvent-line-header-schedule">Heure</div>
+        <div className="listingEvent-line-header-maxParticipants">Participants</div>
       </div>
-      <div className="listing-line-header-rightside" />
+      <div className="listingEvent-line-header-rightside" />
     </div>
     { events.map((item) => (
-      <div className="listing-line-container">
-        <div className="listing-line-leftside">
-          <div className="listing-line-items-name">{item.name}</div>
-          <div className="listing-line-items-place">{item.place}</div>
-          <div className="listing-line-items-startDate">{item.startDate}</div>
-          <div className="listing-line-items-endDate">{item.endDate}</div>
-          <div className="listing-line-items-schedule">{item.schedule}</div>
-          <div className="listing-line-items-maxParticipants">{item.maxParticipants}</div>
+      <div className="listingEvent-line-container">
+        <div className="listingEvent-line-leftside">
+          <div className="listingEvent-line-items-name">{item.name}</div>
+          <div className="listingEvent-line-items-place">{item.place}</div>
+          <div className="listingEvent-line-items-startDate">{item.startDate}</div>
+          <div className="listingEvent-line-items-endDate">{item.endDate}</div>
+          <div className="listingEvent-line-items-schedule">{item.schedule}</div>
+          <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
         </div>
-        <div className="listing-line-rightside">
-          <span className="listing-line-icon material-icons">email</span>
-          <span className="listing-line-icon material-icons">border_color</span>
-          <span className="listing-line-icon material-icons">visibility</span>
-          <span className="listing-line-icon material-icons">delete</span>
+        <div className="listingEvent-line-rightside">
+          <span className="listingEvent-line-icon material-icons">email</span>
+          <span className="listingEvent-line-icon material-icons">border_color</span>
+          <span className="listingEvent-line-icon material-icons">visibility</span>
+          <span className="listingEvent-line-icon material-icons">delete</span>
         </div>
       </div>
     ))}
