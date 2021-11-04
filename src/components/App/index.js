@@ -8,7 +8,6 @@ import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
 import Error404 from '../../pages/Error404';
 import Home from '../../pages/Home';
 import LegalMention from '../../pages/LegalMention';
-import AsideNavbar from '../AsideNavbar';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
 import SignupUser from '../../containers/SignupPages/SignupUser';
@@ -51,9 +50,6 @@ const App = () => (
       </Route>
       <Route path="/backoffice/superadmin/associations/:id">
         <SuperAdminCommand />
-      </Route>
-      <Route path="/associations/backoffice">
-        <AsideNavbar />
       </Route>
       <Route>
         <Error404 />

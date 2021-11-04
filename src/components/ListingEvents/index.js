@@ -3,7 +3,6 @@ import './styles.scss';
 // == Composant
 const ListingEvents = ({ events }) => (
   <div className="listingEvent-container">
-  {console.log(events)}
     <div className="listingEvent-header">
       <div className="listingEvent-header-leftside">
         <div className="listingEvent-title"><h2>événements</h2></div>
@@ -20,7 +19,6 @@ const ListingEvents = ({ events }) => (
       <div className="listingEvent-line-header-leftside">
         <div className="listingEvent-line-header-name">Nom</div>
         <div className="listingEvent-line-header-place">Emplacement</div>
-        
         <div className="listingEvent-line-header-startDate">Date-début</div>
         <div className="listingEvent-line-header-endDate">Date-Fin</div>
         <div className="listingEvent-line-header-schedule">Heure</div>

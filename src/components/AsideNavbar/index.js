@@ -1,4 +1,5 @@
 import './styles.scss';
+
 import Avatar from './avataaars.svg';
 import Avatar2 from './avataaars2.svg';
 import Avatar3 from './avataaars3.svg';

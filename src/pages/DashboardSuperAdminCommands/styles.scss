@@ -6,7 +6,7 @@ body {
 }
 
 .dashboard-superadmin {
-  width: 95%;
+  width: 80%;
   height: 95vh;
   display: flex;
   background: #F5F5F5;
@@ -78,7 +78,7 @@ body {
     .dashboard-superadmin-buttonsList {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: center;
       align-content: center;
       width: 100%;
       padding-left: 65px;
