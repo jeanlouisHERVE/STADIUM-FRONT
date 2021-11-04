@@ -23,8 +23,10 @@ const DashboardSuperAdmin = () => {
   useEffect(() => {
     async function loadData() {
       const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response = await rawResponse.json();
       setData(response);
+      console.log(data);
     }
     loadData();
   }, []);
