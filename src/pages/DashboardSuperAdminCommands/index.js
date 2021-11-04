@@ -4,8 +4,8 @@ import { useLocation } from 'react-router-dom';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
-import ListingEvents from '../../components/ListingClasses';
-import ListingClasses from '../../components/ListingEvents';
+import ListingEvents from '../../components/ListingEvents';
+// import ListingClasses from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
