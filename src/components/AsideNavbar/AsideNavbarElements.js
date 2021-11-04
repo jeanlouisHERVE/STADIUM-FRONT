@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-margin-top: 100px;
 `;
 
 export const NavMenu = styled.div`

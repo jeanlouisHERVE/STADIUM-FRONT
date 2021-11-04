@@ -8,8 +8,7 @@ import ListingEvents from '../../components/ListingClasses';
 import ListingClasses from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
-import adherentsData from '../../utils/data/adherentsData';
-import eventsData from '../../utils/data/eventsData';
+
 import './styles.scss';
 
 // == Composant
