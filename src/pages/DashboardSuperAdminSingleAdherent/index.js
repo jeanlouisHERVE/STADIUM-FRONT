@@ -16,12 +16,23 @@ const SuperAdminAdherent = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <AsideNavbar />
       <div className="dashboard-superadmin-adherent">
         <div className="aside-navbar">
-          
+          <AsideNavbar />
         </div>
-        <h1>DashboardSuperAdminAdherent</h1>
+        <div className="dashboard-superadmin-rightside">
+          <h1 className="dashboard-superadmin-title">ADHERENT : Nom</h1>
+          <div className="dashboard-superadmin-presentation">
+            <div className="dashboard-superadmin-presentation-leftside">
+              <p className="dashboard-superadmin-presentation-title">Informations : </p>
+              <p className="dashboard-superadmin-presentation-item">Nom du Président : </p>
+              <p className="dashboard-superadmin-presentation-item">Prénom du Président : </p>
+              <p className="dashboard-superadmin-presentation-item">Adresse : </p>
+              <p className="dashboard-superadmin-presentation-item">Téléphone : </p>
+            </div>
+            <div className="dashboard-superadmin-presentation-picture">Picture</div>
+          </div>
+        </div>
       </div>
     </>
   );

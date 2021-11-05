@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
-// import ListingClasses from '../../components/ListingClasses';
+import ListingClasses from '../../components/ListingClasses';
 import ListingEvents from '../../components/ListingEvents';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -130,8 +130,8 @@ const SuperAdminAssociationCommands = () => {
           <div className="dashboard-superadmin-listing-wrapper">
             {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null}
-            {/* {showClasses && data.activities
-              ? (<ListingClasses classes={data.activities} />) : null} */}
+            {showClasses && data.activities
+              ? (<ListingClasses classes={data.activities} />) : null}
             {console.log(data.events)}
             {showEvents && isLoaded
               ? <ListingEvents events={data.events} /> : null}

@@ -61,7 +61,7 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations" exact>
         <DashboardSuperAdmin />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id">
+      <Route path="/backoffice/superadmin/associations/:id" exact>
         <SuperAdminAssociationCommands />
       </Route>
       <Route path="/backoffice/superadmin/add/associations/adherent">
