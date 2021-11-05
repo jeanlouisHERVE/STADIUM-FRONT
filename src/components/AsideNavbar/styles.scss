@@ -1,13 +1,13 @@
 @use 'src/styles/vars';
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .AsideNavbar {
     display : none;
   }
 }
 
 
-@media (min-width: 1301px) {
+@media (min-width: 1501px) {
 
   .AsideNavbar {
     width: 15vw;

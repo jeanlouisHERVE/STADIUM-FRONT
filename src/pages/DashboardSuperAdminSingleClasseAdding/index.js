@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import './styles.scss';
-import useState from 'react';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
