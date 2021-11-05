@@ -66,10 +66,10 @@ const ListingAdherents = ({ adherents }) => {
                 <div className="listingAdherent-line-items">{item.lastName}</div>
               </div>
               <div className="listingAdherent-line-rightside">
-                <span className="listingAdherent-line-icon material-icons">email</span>
-                <span className="listingAdherent-line-icon material-icons">border_color</span>
-                <span className="listingAdherent-line-icon material-icons">visibility</span>
-                <span className="listingAdherent-line-icon material-icons">delete</span>
+                <span className="listingAdherent-line-icon-message material-icons">email</span>
+                <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
+                <span className="listingAdherent-line-icon-view material-icons">visibility</span>
+                <span className="listingAdherent-line-icon-delete material-icons">delete</span>
               </div>
             </div>
           </>

@@ -165,29 +165,99 @@
 
     .listingAdherent-line-rightside {
 
-      span {
+      .listingAdherent-line-icon-message {
+        
         cursor: pointer;
+
+        @media (max-width: 1100px) {
+          display: none;
+        }
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
       }
 
-      .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px; 
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-        margin-left: 5px;
+      .listingAdherent-line-icon-modify {
+        
+        cursor: pointer;
+
+        @media (max-width: 1100px) {
+          display: none;
+        }
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
+      }
+    
+      .listingAdherent-line-icon-view {
+      
+        cursor: pointer;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
       }
 
+      .listingAdherent-line-icon-delete {
+      
+        cursor: pointer;
+
+        @media (max-width: 1100px) {
+          display: none;
+        }
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
+      }
     }
-
   }
-
 }
 
   
