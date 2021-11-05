@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import moment from 'moment';
+
 import './styles.scss';
 // == Composant
 const ListingEvents = ({ events }) => (
@@ -31,9 +33,9 @@ const ListingEvents = ({ events }) => (
         <div className="listingEvent-line-leftside">
           <div className="listingEvent-line-items-name">{item.name}</div>
           <div className="listingEvent-line-items-place">{item.place}</div>
-          <div className="listingEvent-line-items-startDate">{item.startDate}</div>
-          <div className="listingEvent-line-items-endDate">{item.endDate}</div>
-          <div className="listingEvent-line-items-schedule">{item.schedule}</div>
+          <div className="listingEvent-line-items-startDate">{moment(item.startDate).format('L')}</div>
+          <div className="listingEvent-line-items-endDate">{moment(item.endDate).format('L')}</div>
+          <div className="listingEvent-line-items-schedule">{moment(item.schedule).format('LT')}</div>
           <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
         </div>
         <div className="listingEvent-line-rightside">
