@@ -57,7 +57,7 @@ const DashboardSuperAdminCommands = () => {
   };
 
   const path = useLocation();
-  // console.log(path.pathname);
+  console.log(path.pathname);
 
   // const pathArray = window.location.pathname.split('/');
   // console.log(pathArray);
@@ -69,7 +69,7 @@ const DashboardSuperAdminCommands = () => {
       const response = await rawResponse.json();
       setData(response);
       setIsLoaded(true);
-      console.log(response);
+      // console.log(response);
     }
     loadData();
   }, []);
@@ -131,8 +131,9 @@ const DashboardSuperAdminCommands = () => {
             {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null}
             {/* {showClasses && data.activities
-              ? (<ListingClasses classes={data.activities} />) : null} */}
-            {console.log(data.events)}
+              ? (<ListingClasses classes={data.activities} />) : null}
+
+            console.log(data.events) */}
             {showEvents && isLoaded
               ? <ListingEvents events={data.events} /> : null}
           </div>
