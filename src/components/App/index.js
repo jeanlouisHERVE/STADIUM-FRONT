@@ -64,7 +64,7 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id" exact>
         <SuperAdminAssociationCommands />
       </Route>
-      <Route path="/backoffice/superadmin/add/associations/adherent">
+      <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
       </Route>
       {/* <Route path="/backoffice/superadmin/associations/adherent/add" exact>

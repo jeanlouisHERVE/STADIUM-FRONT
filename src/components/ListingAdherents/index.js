@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link, useLocation } from 'react-router-dom';
 import './styles.scss';
 
 // == Composant
@@ -28,6 +29,9 @@ const ListingAdherents = ({ adherents }) => {
 
   // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
   // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 );
+
+  const path = useLocation();
+  console.log(path);
 
   return (
     <div className="listingAdherent-container">
@@ -68,7 +72,7 @@ const ListingAdherents = ({ adherents }) => {
               <div className="listingAdherent-line-rightside">
                 <span className="listingAdherent-line-icon-message material-icons">email</span>
                 <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
-                <span className="listingAdherent-line-icon-view material-icons">visibility</span>
+                <Link to={`${path.pathname}/adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
                 <span className="listingAdherent-line-icon-delete material-icons">delete</span>
               </div>
             </div>
