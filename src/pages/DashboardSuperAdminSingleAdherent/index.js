@@ -28,6 +28,8 @@ const SuperAdminAdherent = () => {
     loadData();
   }, []);
 
+  const activities = adherentData.activity
+
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -46,19 +48,19 @@ const SuperAdminAdherent = () => {
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"> Date de naissance : </p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Adresse : {adherentData.file.address}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Téléphone : {adherentData.file.phoneNumber}</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet :  {adherentData.file.isComplete ? "bien" : "pas bien" }</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour :  {adherentData.file.isPaid ? "bien" : "pas bien" }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet :  {adherentData.file.isComplete ? 'bien' : 'pas bien' }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour :  {adherentData.file.isPaid ? 'bien' : 'pas bien' }</p>}
               {adherentData.association && <p className="dashboard-superadmin-presentation-item">Association Sportive : {adherentData.association.name} </p>}
-
-
-
-
-
-
+              <p className="dashboard-superadmin-presentation-title">Cours : </p>
+              {adherentData.activity
+                && activities.map((activity) => (
+                  <p className="dashboard-superadmin-presentation-item">{activity.name}</p>
+                ))}
+              <p className="dashboard-superadmin-presentation-title">Evénements : </p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
-          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}>Evénements</button>
+          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}>Retour</button>
         </div>
       </div>
     </>

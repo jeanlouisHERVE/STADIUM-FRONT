@@ -53,7 +53,7 @@ body {
         .dashboard-superadmin-presentation-title {
           text-transform: uppercase;
           font-weight: 700;
-          margin-bottom: 1em;
+          margin-bottom: 2em;
         }  
   
         .dashboard-superadmin-presentation-item {
@@ -71,20 +71,18 @@ body {
           display: none;
         }
       }
-
-      .dashboard-superadmin-button {
-        margin-right: 10px;
-        border: 2px solid vars.$turquoiseColor;
-        border-radius: 20px;
-        width: 120px;
-        height: 40px;
-        color: vars.$turquoiseColor;
-        font-weight: 700;
-        font-size: small;
-        text-transform: uppercase;
     }
 
+    .dashboard-superadmin-button {
+      margin-right: 10px;
+      border: 2px solid vars.$turquoiseColor;
+      border-radius: 20px;
+      width: 120px;
+      height: 40px;
+      color: vars.$turquoiseColor;
+      font-weight: 700;
+      font-size: small;
+      text-transform: uppercase;
     }
-    
   }
 }
