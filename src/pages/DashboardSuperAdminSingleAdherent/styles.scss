@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow-y: scroll;
 
     h1 {
       font-size: xx-large;
@@ -49,21 +50,60 @@ body {
       filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
 
       .dashboard-superadmin-presentation-leftside {
-        
+        width: 50%;
+
         .dashboard-superadmin-presentation-title {
           text-transform: uppercase;
           font-weight: 700;
-          margin-bottom: 2em;
+          font-size: x-large;
+          margin-top: 1em;
+          margin-bottom: 1em;
         }  
   
         .dashboard-superadmin-presentation-item {
           margin-bottom: 1em;
         }
+
+        .dashboard-superadmin-adherent-classes-container {
+          
+          .dashboard-superadmin-adherent-activity-container {
+            background-color: vars.$blueColor;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            padding: 0px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-left: 2em;
+            margin-bottom: 2em;
+            width: 80%;
+          }
+        }
+
+        .dashboard-superadmin-adherent-events-container {
+
+          .dashboard-superadmin-adherent-event {
+            background-color: vars.$blueColor;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            padding: 0px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-left: 2em;
+            margin-bottom: 2em;
+            width: 80%;
+          }
+        }
       }
 
       .dashboard-superadmin-presentation-picture {
-        width:500px;
-        height: 100%;
+        width:50%;
+        height: 40%;
         background-color: vars.$salmonColor;
         border-radius: 20px;
 
@@ -75,6 +115,7 @@ body {
 
     .dashboard-superadmin-button {
       margin-right: 10px;
+      margin-bottom: 2em;
       border: 2px solid vars.$turquoiseColor;
       border-radius: 20px;
       width: 120px;
@@ -83,6 +124,7 @@ body {
       font-weight: 700;
       font-size: small;
       text-transform: uppercase;
+      
     }
   }
 }
