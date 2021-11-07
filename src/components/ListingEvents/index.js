@@ -29,7 +29,7 @@ const ListingEvents = ({ events }) => (
       <div className="listingEvent-line-header-rightside" />
     </div>
     { events.map((item) => (
-      <div className="listingEvent-line-container">
+      <div className="listingEvent-line-container" key={item.id}>
         <div className="listingEvent-line-leftside">
           <div className="listingEvent-line-items-name">{item.name}</div>
           <div className="listingEvent-line-items-place">{item.place}</div>

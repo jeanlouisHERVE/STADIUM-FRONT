@@ -63,20 +63,18 @@ const ListingAdherents = ({ adherents }) => {
       </div>
       {
         adherents.map((item) => (
-          <>
-            <div className="listingAdherent-line-container" key={item.id}>
-              <div className="listingAdherent-line-leftside">
-                <div className="listingAdherent-line-items">{item.firstName}</div>
-                <div className="listingAdherent-line-items">{item.lastName}</div>
-              </div>
-              <div className="listingAdherent-line-rightside">
-                <span className="listingAdherent-line-icon-message material-icons">email</span>
-                <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
-                <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
-                <span className="listingAdherent-line-icon-delete material-icons">delete</span>
-              </div>
+          <div className="listingAdherent-line-container" key={item.id}>
+            <div className="listingAdherent-line-leftside">
+              <div className="listingAdherent-line-items">{item.firstName}</div>
+              <div className="listingAdherent-line-items">{item.lastName}</div>
             </div>
-          </>
+            <div className="listingAdherent-line-rightside">
+              <span className="listingAdherent-line-icon-message material-icons">email</span>
+              <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
+              <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+              <span className="listingAdherent-line-icon-delete material-icons">delete</span>
+            </div>
+          </div>
         ))
       }
     </div>

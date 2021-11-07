@@ -32,28 +32,26 @@ const ListingClasses = ({ activities }) => {
         <div className="listingClasses-line-header-rightside" />
       </div>
       {activities.map((activity) => (
-        <>
-          <div className="listingClasses-line-container" key={activity.id}>
-            <div className="listingClasses-line-leftside">
-              <div className="listingClasses-line-items-name">{activity.name}</div>
-              {/* { activities
-              && classes.map((lesson) => (
-                <div className="listingClasses-line-classe-container" key={lesson.id}>
-                  <div className="listingClasses-line-items-level"><div className="listing-line-items-level-cartouche">{lesson.level}</div></div>
-                  <div className="listingClasses-line-items-day">{lesson.day}</div>
-                  <div className="listingClasses-line-items-startTime">{moment(lesson.startDate).format('LT')}</div>
-                  <div className="listingClasses-line-items-endTime">{moment(lesson.endDate).format('LT')}</div>
-                </div>
-              ))}; */}
-            </div>
-            <div className="listing-line-rightside">
-              <span className="listingClasses-line-icon-message material-icons">email</span>
-              <span className="listingClasses-line-icon-modify material-icons">border_color</span>
-              <span className="listingClasses-line-icon-view material-icons">visibility</span>
-              <span className="listingClasses-line-icon-delete material-icons">delete</span>
-            </div>
+        <div className="listingClasses-line-container" key={activity.id}>
+          <div className="listingClasses-line-leftside">
+            <div className="listingClasses-line-items-name">{activity.name}</div>
+            {/* { activities
+            && classes.map((lesson) => (
+              <div className="listingClasses-line-classe-container" key={lesson.id}>
+                <div className="listingClasses-line-items-level"><div className="listing-line-items-level-cartouche">{lesson.level}</div></div>
+                <div className="listingClasses-line-items-day">{lesson.day}</div>
+                <div className="listingClasses-line-items-startTime">{moment(lesson.startDate).format('LT')}</div>
+                <div className="listingClasses-line-items-endTime">{moment(lesson.endDate).format('LT')}</div>
+              </div>
+            ))}; */}
           </div>
-        </>
+          <div className="listing-line-rightside">
+            <span className="listingClasses-line-icon-message material-icons">email</span>
+            <span className="listingClasses-line-icon-modify material-icons">border_color</span>
+            <span className="listingClasses-line-icon-view material-icons">visibility</span>
+            <span className="listingClasses-line-icon-delete material-icons">delete</span>
+          </div>
+        </div>
       ))}
     </div>
   );
