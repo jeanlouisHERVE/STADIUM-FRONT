@@ -14,6 +14,7 @@ const SuperAdminAdherent = () => {
 
   const activities = adherentData.activity;
   const events = adherentData.event;
+ 
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -46,14 +47,14 @@ const SuperAdminAdherent = () => {
           <div className="dashboard-superadmin-presentation">
             <div className="dashboard-superadmin-presentation-leftside">
               <p className="dashboard-superadmin-presentation-title">Informations : </p>
-              <p className="dashboard-superadmin-presentation-item">Nom : {adherentData.lastName}</p>
-              <p className="dashboard-superadmin-presentation-item">Prénom : {adherentData.firstName}</p>
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item"> Date de naissance : </p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Adresse : {adherentData.file.address}</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Téléphone : {adherentData.file.phoneNumber}</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet : &nbsp;{adherentData.file.isComplete ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour : &nbsp;{adherentData.file.isPaid ? <span className="material-icons" style={{ color: 'green' }}> credit_score</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
-              {adherentData.association && <p className="dashboard-superadmin-presentation-item">Association Sportive : {adherentData.association.name} </p>}
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Nom : </p>&nbsp; {adherentData.lastName}</p>
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Prénom : </p>&nbsp; {adherentData.firstName}</p>
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Date de naissance : </p>  &nbsp;{moment(adherentData.file.dateOfBirth).subtract(10, 'days').calendar()}</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Adresse : </p> &nbsp;{adherentData.file.address}</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Téléphone : </p> &nbsp;{adherentData.file.phoneNumber}</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Dossier complet :</p> &nbsp;{adherentData.file.isComplete ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Cotisation à jour : </p> &nbsp;{adherentData.file.isPaid ? <span className="material-icons" style={{ color: 'green' }}> credit_score</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
+              {adherentData.association && <p className="dashboard-superadmin-presentation-item"><p className="strong">Association Sportive : </p> &nbsp;{adherentData.association.name} </p>}
               <p className="dashboard-superadmin-presentation-title">Cours : </p>
               <div className="dashboard-superadmin-adherent-classes-container">
                 {adherentData.activity
@@ -76,6 +77,7 @@ const SuperAdminAdherent = () => {
                     </div>
                   ))}
               </div>
+              <p className="dashboard-superadmin-presentation-title">Documents : </p>
             </div>
             <img className="dashboard-superadmin-presentation-picture" src={Avatar} alt="" />
           </div>

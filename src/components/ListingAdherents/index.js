@@ -100,7 +100,7 @@ const ListingAdherents = () => {
             <div className="listingAdherent-line-items">{item.lastName}</div>
           </div>
           <div className="listingAdherent-line-rightside">
-            <Link to={`${path.pathname}/adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+            <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
           </div>
         </div>
       ))}
