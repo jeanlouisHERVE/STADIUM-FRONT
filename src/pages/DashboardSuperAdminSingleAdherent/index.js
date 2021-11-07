@@ -49,8 +49,8 @@ const SuperAdminAdherent = () => {
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"> Date de naissance : </p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Adresse : {adherentData.file.address}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Téléphone : {adherentData.file.phoneNumber}</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet :  {adherentData.file.isComplete ? 'bien' : 'pas bien' }</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour :  {adherentData.file.isPaid ? 'bien' : 'pas bien' }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet :  {adherentData.file.isComplete ? <span className="material-icons">task</span> : <span className="material-icons">quiz</span> }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour :  {adherentData.file.isPaid ? <span className="material-icons">credit_score</span> : <span className="material-icons">quiz</span> }</p>}
               {adherentData.association && <p className="dashboard-superadmin-presentation-item">Association Sportive : {adherentData.association.name} </p>}
               <p className="dashboard-superadmin-presentation-title">Cours : </p>
               <div className="dashboard-superadmin-adherent-classes-container">

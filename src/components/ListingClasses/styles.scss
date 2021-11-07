@@ -112,9 +112,19 @@
       display: flex;
       flex-direction: row;
 
-      .listing-line-header-items-level {
+      .listingClasses-line-header-items-classe {
         margin-left: 15px;
-        width: 100px;
+        width: 150px;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+      }
+
+      .listingClasses-line-header-items-level {
+        margin-left: 15px;
+        width: 150px;
         font-weight: 700;
         display: flex;
         justify-content: center;
@@ -132,7 +142,7 @@
 
       .listingClasses-line-header-items-startTime{
         margin-left: 15px;
-        width: 250px;
+        width: 150px;
         font-weight: 700;
         display: flex;
         justify-content: center;
@@ -141,7 +151,7 @@
 
       .listingClasses-line-header-items-endTime {
         margin-left: 15px;
-        width: 250px;
+        width: 150px;
         font-weight: 700;
         display: flex;
         justify-content: center;
@@ -173,37 +183,64 @@
       flex-direction: row;
       align-items: center;
       
-      .listingClasses-line-items-level {
-        margin-left: 15px;
-        width: 100px;
-
-        .listingClasses-line-items-level-cartouche {
-          height: 20px;
-          background-color: red;
-          border-radius: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 5px 10px;
-        }
-      }
-      
-      .listingClasses-line-items-day {
+      .listingClasses-line-items-name{
         margin-left: 15px;
         width: 150px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
       }
-      .listingClasses-line-items-startTime {
-        margin-left: 15px;
-        width: 250px;
+
+      .listingClasses-line-classe-container {
+        display: flex;
+        flex-direction: row;
+        background-color: aqua;
+
+
+        .listingClasses-line-items-level {
+          margin-left: 15px;
+          width: 150px;
+  
+          .listingClasses-line-items-level-cartouche {
+            height: 20px;
+            background-color: red;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+          }
+        }
+        
+        .listingClasses-line-items-day {
+          margin-left: 15px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .listingClasses-line-items-startTime {
+          margin-left: 15px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .listingClasses-line-items-endTime{
+          margin-left: 15px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
       }
-      .listingClasses-line-items-endTime{
-        margin-left: 15px;
-        width: 250px;
-      }
+
+      
     }
+
     .listingClasses-line-rightside {
 
       .listingClasses-line-icon-message {

@@ -131,7 +131,7 @@ const SuperAdminAssociationCommands = () => {
             {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null}
             {showClasses && data.activities
-              ? (<ListingClasses classes={data.activities} />) : null}
+              ? (<ListingClasses activities={data.activities} />) : null}
             {console.log(data.events)}
             {showEvents && isLoaded
               ? <ListingEvents events={data.events} /> : null}
