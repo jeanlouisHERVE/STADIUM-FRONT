@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './styles.scss';
@@ -51,7 +51,7 @@ const ListingAdherents = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}/DESC`);
+      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response2 = await rawResponse.json();
       setData(response2);
@@ -100,10 +100,7 @@ const ListingAdherents = () => {
             <div className="listingAdherent-line-items">{item.lastName}</div>
           </div>
           <div className="listingAdherent-line-rightside">
-            <span className="listingAdherent-line-icon-message material-icons">email</span>
-            <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
-            <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
-            <span className="listingAdherent-line-icon-delete material-icons">delete</span>
+            <Link to={`${path.pathname}/adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
           </div>
         </div>
       ))}

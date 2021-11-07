@@ -134,10 +134,8 @@ body {
       .dashboard-superadmin-presentation-picture {
         width:50%;
         height: 40%;
-        background-color: vars.$salmonColor;
-        border-radius: 20px;
-
-        @media (max-width: 1300px) {
+      
+        @media (max-width: 800px) {
           display: none;
         }
       }
