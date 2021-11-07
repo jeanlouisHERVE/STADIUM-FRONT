@@ -128,8 +128,10 @@ const SuperAdminAssociationCommands = () => {
             {buttonEventDiv}
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
+            {/* {showAdherents && isLoaded
+              ? (<ListingAdherents adherents={data.profils} />) : null} */}
             {showAdherents && isLoaded
-              ? (<ListingAdherents adherents={data.profils} />) : null}
+              ? (<ListingAdherents />) : null}
             {showClasses && data.activities
               ? (<ListingClasses activities={data.activities} />) : null}
             {console.log(data.events)}

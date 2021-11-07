@@ -1,37 +1,69 @@
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './styles.scss';
 
 // == Composant
-const ListingAdherents = ({ adherents }) => {
-  function compare(a, b) {
-    if (a.lastName > b.lastName) {
-      return 1;
-    }
-    if (a.lastName < b.lastName) {
-      return -1;
-    }
-    if (a.lastName === b.lastName) {
-      if (a.firstName > b.firstName) {
-        return 1;
-      }
-      if (a.firstName < b.firstName) {
-        return -1;
-      }
-    }
-    return 0;
-  }
+const ListingAdherents = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
+  const [select, setSelect] = useState(false)
 
-  const sortingList = () => {
-    console.log('fonction appelée');
-    adherents.sort(compare);
-  };
+  const adherents = data.profils;
+  // function compare(a, b) {
+  //   if (a.lastName > b.lastName) {
+  //     return 1;
+  //   }
+  //   if (a.lastName < b.lastName) {
+  //     return -1;
+  //   }
+  //   if (a.lastName === b.lastName) {
+  //     if (a.firstName > b.firstName) {
+  //       return 1;
+  //     }
+  //     if (a.firstName < b.firstName) {
+  //       return -1;
+  //     }
+  //   }
+  //   return 0;
+  // }
 
-  // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
-  // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 );
+  // const sortingList = () => {
+  //   console.log('fonction appelée');
+  //   adherents.sort(compare);
+  // };
 
   const path = useLocation();
   console.log(path);
+
+  useEffect(() => {
+    async function loadData() {
+      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+      const response = await rawResponse.json();
+      setData(response);
+      setIsLoaded(true);
+      setSelect(true);
+      console.log(response);
+    }
+    loadData();
+  }, []);
+
+  useEffect(() => {
+    async function loadData() {
+      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}/DESC`);
+      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+      const response2 = await rawResponse.json();
+      setData(response2);
+      setIsLoaded(true);
+      setSelect(false);
+      console.log(response2);
+    }
+    loadData();
+  }, []);
+
+  // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
+  // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 );
 
   return (
     <div className="listingAdherent-container">
@@ -44,7 +76,7 @@ const ListingAdherents = ({ adherents }) => {
           <div className="listingAdherent-filter">
             <button
               className="listingAdherent-filter-button"
-              onClick={sortingList}
+              // onClick={sortingList}
               type="button"
             >
               A - Z
@@ -60,29 +92,28 @@ const ListingAdherents = ({ adherents }) => {
         </div>
         <div className="listingAdherent-line-header-rightside" />
       </div>
-      {
-        adherents.map((item) => (
-          <div className="listingAdherent-line-container" key={item.id}>
-            <div className="listingAdherent-line-leftside">
-              <div className="listingAdherent-line-items">{item.firstName}</div>
-              <div className="listingAdherent-line-items">{item.lastName}</div>
-            </div>
-            <div className="listingAdherent-line-rightside">
-              <span className="listingAdherent-line-icon-message material-icons">email</span>
-              <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
-              <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
-              <span className="listingAdherent-line-icon-delete material-icons">delete</span>
-            </div>
+      { adherents
+      && adherents.map((item) => (
+        <div className="listingAdherent-line-container" key={item.id}>
+          <div className="listingAdherent-line-leftside">
+            <div className="listingAdherent-line-items">{item.firstName}</div>
+            <div className="listingAdherent-line-items">{item.lastName}</div>
           </div>
-        ))
-      }
+          <div className="listingAdherent-line-rightside">
+            <span className="listingAdherent-line-icon-message material-icons">email</span>
+            <span className="listingAdherent-line-icon-modify material-icons">border_color</span>
+            <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+            <span className="listingAdherent-line-icon-delete material-icons">delete</span>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
 
-ListingAdherents.propTypes = {
-  adherents: PropTypes.array.isRequired,
-};
+// ListingAdherents.propTypes = {
+//   adherents: PropTypes.array.isRequired,
+// };
 
 // == Export
 export default ListingAdherents;
