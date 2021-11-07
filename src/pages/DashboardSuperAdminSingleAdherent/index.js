@@ -1,5 +1,6 @@
 import './styles.scss';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -74,11 +75,10 @@ const SuperAdminAdherent = () => {
                     </div>
                   ))}
               </div>
-              
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
-          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}>Retour</button>
+          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}><Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link">retour</Link></button>
         </div>
       </div>
     </>
