@@ -52,6 +52,10 @@ body {
       .dashboard-superadmin-presentation-leftside {
         width: 50%;
 
+        @media (max-width: 1300px) {
+          width: 100%;
+        }
+
         .dashboard-superadmin-presentation-title {
           text-transform: uppercase;
           font-weight: 700;
@@ -62,10 +66,20 @@ body {
   
         .dashboard-superadmin-presentation-item {
           margin-bottom: 1em;
+          display: flex;
+          align-items: center;
         }
 
         .dashboard-superadmin-adherent-classes-container {
           
+          @media (max-width: 1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+
           .dashboard-superadmin-adherent-activity-container {
             background-color: vars.$blueColor;
             height: 50px;
@@ -76,13 +90,25 @@ body {
             justify-content: space-between;
             align-items: center;
             color: white;
-            margin-left: 2em;
             margin-bottom: 2em;
-            width: 80%;
+            width: 100%;
+
+            @media (min-width: 800px) {
+              margin-left: 2em;
+              width: 80%;
+            }
           }
         }
 
         .dashboard-superadmin-adherent-events-container {
+
+          @media (max-width: 1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
 
           .dashboard-superadmin-adherent-event {
             background-color: vars.$blueColor;
@@ -94,9 +120,13 @@ body {
             justify-content: space-between;
             align-items: center;
             color: white;
-            margin-left: 2em;
             margin-bottom: 2em;
-            width: 80%;
+            width: 100%;
+
+            @media (min-width: 800px) {
+              margin-left: 2em;
+              width: 80%;
+            }
           }
         }
       }

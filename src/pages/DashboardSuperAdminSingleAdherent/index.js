@@ -50,14 +50,14 @@ const SuperAdminAdherent = () => {
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"> Date de naissance : </p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Adresse : {adherentData.file.address}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item">Téléphone : {adherentData.file.phoneNumber}</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet :  {adherentData.file.isComplete ? <span className="material-icons">task</span> : <span className="material-icons">quiz</span> }</p>}
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour :  {adherentData.file.isPaid ? <span className="material-icons">credit_score</span> : <span className="material-icons">quiz</span> }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Dossier complet : &nbsp;{adherentData.file.isComplete ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item">Cotisation à jour : &nbsp;{adherentData.file.isPaid ? <span className="material-icons" style={{ color: 'green' }}> credit_score</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
               {adherentData.association && <p className="dashboard-superadmin-presentation-item">Association Sportive : {adherentData.association.name} </p>}
               <p className="dashboard-superadmin-presentation-title">Cours : </p>
               <div className="dashboard-superadmin-adherent-classes-container">
                 {adherentData.activity
                   && activities.map((activity) => (
-                    <div className="dashboard-superadmin-adherent-activity-container">
+                    <div className="dashboard-superadmin-adherent-activity-container" key={activity.id}>
                       <span className="material-icons">pool</span>
                       <p className="dashboard-superadmin-adherent-activity-name">{activity.name}</p>
                       <p className="dashboard-superadmin-adherent-activity-level">Niveau</p>
@@ -68,7 +68,7 @@ const SuperAdminAdherent = () => {
               <div className="dashboard-superadmin-adherent-events-container">
                 {adherentData.event
                   && events.map((event) => (
-                    <div className="dashboard-superadmin-adherent-event">
+                    <div className="dashboard-superadmin-adherent-event" key={event.id}>
                       <span className="material-icons">emoji_events</span>
                       <p className="dashboard-superadmin-adherent-activity-name">{event.name}</p>
                       <p className="dashboard-superadmin-adherent-activity-level">{moment(event.startDate).format('L')}</p>

@@ -35,7 +35,6 @@ const ListingAdherents = ({ adherents }) => {
 
   return (
     <div className="listingAdherent-container">
-      {/* {console.log(adherents)} */}
       <div className="listingAdherent-header">
         <div className="listingAdherent-header-leftside">
           <div className="listingAdherent-title"><h2>Adhérents</h2></div>
