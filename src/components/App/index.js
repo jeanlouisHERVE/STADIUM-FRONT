@@ -11,7 +11,7 @@ import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 // import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
 // import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
-// import SuperAdminClasse from '../../pages/DashboardSuperAdminSingleClasse';
+import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 // import SuperAdminAddClasse from '../../pages/DashboardSuperAdminSingleClasseAdding';
 // import SuperAdminModifyClasse from '../../pages/DashboardSuperAdminSingleClasseModifying';
 import Home from '../../pages/Home';
@@ -81,11 +81,11 @@ const App = () => (
       </Route>
       <Route path="/backoffice/superadmin/associations/event/modify" exact>
         <SuperAdminModifyEvent />
+      </Route> */}
+      <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
+        <SuperAdminLesson />
       </Route>
-      <Route path="/backoffice/superadmin/associations/classe" exact>
-        <SuperAdminClasse />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/classe/add" exact>
+      {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
         <SuperAdminAddClasse />
       </Route>
       <Route path="/backoffice/superadmin/associations/classe/modify" exact>

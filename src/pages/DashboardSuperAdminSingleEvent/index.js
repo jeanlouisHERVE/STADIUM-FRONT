@@ -54,9 +54,9 @@ const SuperAdminEvent = () => {
                     <p className="dashboard-superadmin-event-profile-lastname">{profile.lastName}</p>
                   </div>
                 ))}
-              </div>
+            </div>
           </div>
-          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}>retour</button>
+          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}><Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link">retour</Link></button>
         </div>
       </div>
     </>

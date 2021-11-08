@@ -48,7 +48,7 @@ const ListingClasses = ({ activities }) => {
             ))}
           </div>
           <div className="listingClasses-line-rightside">
-            {/* <Link to={`${path.pathname}/event/${activity.id}`} className="card-link"><span className="listingClasses-line-icon-view material-icons">visibility</span></Link> */}
+            <Link to={`${path.pathname}/lesson/${activity.id}`} className="card-link"><span className="listingClasses-line-icon-view material-icons">visibility</span></Link>
           </div>
         </div>
       ))}
