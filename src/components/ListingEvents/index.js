@@ -28,7 +28,7 @@ const ListingEvents = ({ events }) => {
           <div className="listingEvent-line-header-startDate">Date-début</div>
           <div className="listingEvent-line-header-endDate">Date-Fin</div>
           <div className="listingEvent-line-header-schedule">Heure</div>
-          <div className="listingEvent-line-header-maxParticipants">Participants</div>
+          <div className="listingEvent-line-header-maxParticipants">Max Participants</div>
         </div>
         <div className="listingEvent-line-header-rightside" />
       </div>

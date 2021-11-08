@@ -158,8 +158,10 @@
 
       .listingEvent-line-header-maxParticipants {
         margin-left: 15px;
-        width:100px;
+        width:150px;
         font-weight: 700;
+        display: flex;
+        text-align: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -239,10 +241,10 @@
 
       .listingEvent-line-items-maxParticipants {
         margin-left: 15px;
-        width:100px;
-        text-align: center;
+        width:150px;
         display: flex;
-        align-self: center;
+        justify-content: center;
+        align-items: center;
 
         @media (max-width: 1200px) {
           display: none;
