@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import App from '../../components/App';
+import DashboardsuperAdmin from '../../pages/DashboardSuperAdmin';
 import { fetchAssociations } from '../../actions/superadmin';
 
 // === mapStateToProps
@@ -9,6 +9,7 @@ import { fetchAssociations } from '../../actions/superadmin';
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: élément à récupérer dans le state
   loading: state.associations.loading,
+  associations: state.associations.list,
 });
 
 // === mapDispatchToProps
@@ -21,4 +22,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardsuperAdmin);
