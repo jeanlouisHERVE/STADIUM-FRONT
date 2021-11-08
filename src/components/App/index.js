@@ -8,7 +8,7 @@ import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssoci
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 // import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 // import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
-// import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
+import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 // import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
 // import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
 // import SuperAdminClasse from '../../pages/DashboardSuperAdminSingleClasse';
@@ -72,11 +72,11 @@ const App = () => (
       </Route>
       <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/event" exact>
+      </Route> */}
+      <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
         <SuperAdminEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/event/add" exact>
+      {/* <Route path="/backoffice/superadmin/associations/event/add" exact>
         <SuperAdminAddEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/event/modify" exact>
