@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+// import { useLocation } from 'react-router-dom';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -9,27 +10,27 @@ import './styles.scss';
 // import associationDatas from './data/associations';
 
 // == Composant
-const DashboardSuperAdmin = () => {
+const DashboardSuperAdmin = ({ associations }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const path = useLocation();
+  // const path = useLocation();
   // console.log(path.pathname);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
-      console.log(data);
-    }
-    loadData();
-  }, []);
+  // useEffect(() => {
+  //   async function loadData() {
+  //     const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+  //     const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+  //     const response = await rawResponse.json();
+  //     setData(response);
+  //     console.log(data);
+  //   }
+  //   loadData();
+  // }, []);
 
   return (
     <>
@@ -38,13 +39,17 @@ const DashboardSuperAdmin = () => {
       <div className="dashboard-superadmin">
         <AsideNavbar />
         <div className="cards">
-          {data.map((association) => (
+          {associations.map((association) => (
             <CardAssociation key={association.id} association={association} />
           ))}
         </div>
       </div>
     </>
   );
+};
+
+DashboardSuperAdmin.propTypes = {
+  associations: PropTypes.array.isRequired,
 };
 
 // == Export
