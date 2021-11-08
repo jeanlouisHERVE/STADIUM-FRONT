@@ -5,11 +5,11 @@ import './styles.scss';
 
 // == Composant
 const ListingAdherents = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
-  const [select, setSelect] = useState(false);
-  const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
-  const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
+  // const [select, setSelect] = useState(false);
+  // const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
+  // const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
 
   const adherents = data.profils;
   // function compare(a, b) {
@@ -47,42 +47,37 @@ const ListingAdherents = () => {
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response = await rawResponse.json();
       setData(response);
-      setIsLoaded(true);
-      setSelect(true);
+      // setIsLoaded(true);
+      // setSelect(true);
       console.log(response);
     }
     loadData();
   }, []);
 
-  useEffect(() => {
-    async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response2 = await rawResponse.json();
-      setData(response2);
-      setIsLoaded(true);
-      setSelect(false);
-      console.log(response2);
-    }
-    loadData();
-  }, []);
-
   // Costumization des bouton du selecteur AZ - ZA
-  let buttonAZDiv;
-  let buttonZADiv;
+  // let buttonAZDiv;
+  // let buttonZADiv;
 
   // if (buttonAZIsActive) {
-  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;
-  // }
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: '#02A5A5', color: 'white' }}
+  // onClick={adherentButtonFunction}>Adhérents</button>;
+  // // }
   // else {
-  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: 'white', color: '#02A5A5' }}
+  // onClick={adherentButtonFunction}>Adhérents</button>;
   // }
 
   // if (buttonZAIsActive) {
-  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={ClasseButtonFunction}>Cours</button>;
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: '#02A5A5', color: 'white' }}
+  // onClick={ClasseButtonFunction}>Cours</button>;
   // }
   // else {
-  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={ClasseButtonFunction}>Cours</button>;
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: 'white', color: '#02A5A5' }}
+  // onClick={ClasseButtonFunction}>Cours</button>;
   // }
 
   return (
