@@ -10,9 +10,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 95%;
+  width: 80%;
+  height: 95vh;
   display: flex;
-  margin: auto auto;
+  align-self: center;
   border-radius: 20px;
   background: #F5F5F5;
 
