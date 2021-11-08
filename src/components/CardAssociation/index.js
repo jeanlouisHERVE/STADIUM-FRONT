@@ -16,7 +16,7 @@ const CardAssociation = ({ association }) => (
 CardAssociation.propTypes = {
   association: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
