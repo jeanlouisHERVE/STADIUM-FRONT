@@ -1,13 +1,13 @@
 @use 'src/styles/vars';
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .AsideNavbar {
     display : none;
   }
 }
 
 
-@media (min-width: 1301px) {
+@media (min-width: 1501px) {
 
   .AsideNavbar {
     width: 15vw;
@@ -97,37 +97,50 @@
         }
       }
     }
-    .AsideNavbar-Navbar-main {
-      margin-top: 2em;
 
-      .AsideNavbar-Navbar-ul {
-        
-        .AsideNavbar-Navbar-item {
+    .AsideNavbar-Navbar-container {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: auto;
+      height: 45vh;
 
-          .material-icons {
-            font-family: 'Material Icons';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;  /* Preferred icon size */
-            display: inline-block;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
+      .AsideNavbar-Navbar-main {
+        margin-top: 2em;
+  
+        .AsideNavbar-Navbar-ul {
+          
+          .AsideNavbar-Navbar-item {
+  
+            .material-icons {
+              font-family: 'Material Icons';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 24px;  /* Preferred icon size */
+              display: inline-block;
+              line-height: 1;
+              text-transform: none;
+              letter-spacing: normal;
+              word-wrap: normal;
+              white-space: nowrap;
+              direction: ltr;
+  
+            }
+  
+            .AsideNavbar-Navbar-category {
+              align-self: center;
+              margin-left: 10px;
+            }
 
           }
-
-          .AsideNavbar-Navbar-category {
-            align-self: center;
-            margin-left: 10px;
-          }
+  
         }
-
+  
       }
 
     }
 
   }
+
 }

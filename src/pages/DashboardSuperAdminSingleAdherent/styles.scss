@@ -1,0 +1,184 @@
+@use 'src/styles/vars';
+
+body {
+  background: #E4E7EC;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-superadmin-adherent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+  height: 95vh;
+  display: flex;
+  align-self: center;
+  border-radius: 20px;
+  background: #F5F5F5;
+
+  @media (max-width: 1300px) {
+    margin-top: 90px;
+  }
+
+  .dashboard-superadmin-rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: scroll;
+
+    h1 {
+      font-size: xx-large;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .dashboard-superadmin-presentation{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 2px solid black;
+      height: auto;
+      width: 90%;
+      margin: 0px 30px 30px 30px;
+      padding: 2em;
+      border-radius: 20px;
+      filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
+
+      .dashboard-superadmin-presentation-leftside {
+        width: 50%;
+
+        @media (max-width: 1300px) {
+          width: 100%;
+        }
+
+        .dashboard-superadmin-presentation-title {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: x-large;
+          margin-top: 1em;
+          margin-bottom: 1em;
+        }  
+  
+        .dashboard-superadmin-presentation-item {
+          margin-bottom: 1em;
+          display: flex;
+          align-items: center;
+        }
+
+        .strong {
+          font-weight: bold;
+        }
+
+        .dashboard-superadmin-adherent-classes-container {
+          
+          @media (max-width: 1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+
+          .dashboard-superadmin-adherent-activity-container {
+            background-color: vars.$blueColor;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            padding: 0px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-bottom: 1em;
+            width: 100%;
+
+            @media (min-width: 900px) {
+              margin-left: 2em;
+              width: 80%;
+            }
+
+            .dashboard-superadmin-adherent-activity-leftside {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 50%;
+            }
+          }
+        }
+
+        .dashboard-superadmin-adherent-events-container {
+
+          @media (max-width: 1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+
+          .dashboard-superadmin-adherent-event {
+            background-color: vars.$blueColor;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            padding: 0px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-bottom: 1em;
+            width: 100%;
+
+            @media (min-width: 900px) {
+              margin-left: 2em;
+              width: 80%;
+            }
+          }
+        }
+        .dashboard-superadmin-adherent-documents-container {
+
+          .dashboard-superadmin-adherent-document {
+
+            margin-bottom: 1em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+      }
+
+      .dashboard-superadmin-presentation-picture {
+        width:50%;
+        height: 40%;
+      
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+    }
+    
+    .dashboard-superadmin-button {
+      
+      margin-bottom: 2em;
+      border: 2px solid vars.$turquoiseColor;
+      border-radius: 20px;
+      width: 120px;
+      height: 80px;
+      color: vars.$turquoiseColor;
+      font-weight: 700;
+      font-size: small;
+      text-transform: uppercase;
+      
+    }
+    
+  }
+
+  
+}

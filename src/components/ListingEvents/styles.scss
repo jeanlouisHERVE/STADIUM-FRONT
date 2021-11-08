@@ -1,13 +1,11 @@
 @use 'src/styles/vars';
-
-.listing-container {
+.listingEvent-container {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin-top: 10px;
 
-
-  .listing-header {
+  .listingEvent-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,8 +13,7 @@
     height: 40px;
     align-items: center;
     
-
-    .listing-header-leftside {
+    .listingEvent-header-leftside {
       display: flex;
       flex-direction: row;
       align-content: center;
@@ -24,10 +21,9 @@
       padding-bottom: 5px;
       width:30%;
 
-      .listing-title {
+      .listingEvent-title {
         margin-right: 15px;
         
-
          h2 {
           font-weight: 600;
           font-size: x-large;
@@ -35,9 +31,8 @@
          }
       }
   
-      .listing-addIcon {
+      .listingEvent-addIcon {
         cursor: pointer;
-
         .material-icons {
           font-family: 'Material Icons';
           font-weight: normal;
@@ -54,15 +49,15 @@
       
       }
     }
-
-    .listing-header-rightside {
+    .listingEvent-header-rightside {
       display: flex;
       flex-direction: row;
       align-items: center;
+      .listingEvent-filter {
+        display: flex;
+        align-content: center;
 
-      .listing-filter {
-
-        .listing-filter-button {
+        .listingEvent-filter-button {
           background-color: white;
           border: 2px solid vars.$salmonColor;
           height: 30px;
@@ -78,35 +73,29 @@
             color: white;
           }
         }
-
       }
-
-      .listing-filterIcon {
-        margin-right: 10px;
+      // .listing-filterIcon {
+      //   margin-right: 10px;
         
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px;  /* Preferred icon size */
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
-          cursor: pointer;
-        }
+      //   .material-icons {
+      //     font-family: 'Material Icons';
+      //     font-weight: normal;
+      //     font-style: normal;
+      //     font-size: 24px;  /* Preferred icon size */
+      //     display: inline-block;
+      //     line-height: 1;
+      //     text-transform: none;
+      //     letter-spacing: normal;
+      //     word-wrap: normal;
+      //     white-space: nowrap;
+      //     direction: ltr;
+      //     cursor: pointer;
+      //   }
       
-      }
-
     }
-
   }
-
-  .listing-line-header {
+  
+  .listingEvent-line-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -119,29 +108,72 @@
       margin-left: 0px;
     }
 
-    .listing-line-header-leftside {
+    .listingEvent-line-header-leftside {
       display: flex;
       flex-direction: row;
 
-      .listing-line-header-items {
+      .listingEvent-line-header-name {
         margin-left: 15px;
         width:100px;
-        font-weight: 700
+        font-weight: 700;
+        display:flex;
+        align-content: center;
+        
+      }
+      .listingEvent-line-header-place {
+        margin-left: 15px;
+        width:150px;
+        font-weight: 700;
+
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-header-schedule {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-header-startDate {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700;
+      }
+
+      .listingEvent-line-header-endDate {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-header-maxParticipants {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
       }
     }
-
-    .listing-line-header-rightside {
-
-
-    }
   }
-
-  .listing-line-container {
+  
+  .listingEvent-line-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 35px;
+    height: 100px;
     border-bottom: 1px black solid;
     margin-left: 30px;
 
@@ -153,43 +185,92 @@
     @media (max-width: 1300px) {
       margin-left: 0px;
     }
-    .listing-line-leftside {
+
+    .listingEvent-line-leftside {
       display: flex;
       flex-direction: row;
       
-      .listing-line-items {
+      .listingEvent-line-items-name {
         margin-left: 15px;
         width:100px;
+        display: flex;
+        align-self: center;
+      }
+
+      .listingEvent-line-items-place {
+        margin-left: 15px;
+        width:150px;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-items-startDate {
+        margin-left: 15px;
+        width:100px;
+        display: flex;
+        align-self: center;
+      }
+
+      .listingEvent-line-items-endDate {
+        margin-left: 15px;
+        width:100px;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-items-schedule {
+        margin-left: 15px;
+        width:100px;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      .listingEvent-line-items-maxParticipants {
+        margin-left: 15px;
+        width:100px;
+        text-align: center;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
       }
     }
+    .listingEvent-line-rightside {
+    
+      .listingEvent-line-icon-view {
+        margin-right: 1em;
 
-    .listing-line-rightside {
-
-      span {
         cursor: pointer;
-      }
 
-      .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 24px; 
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-        margin-left: 5px;
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
       }
-
     }
-
   }
-
 }
-
-  
-  
-

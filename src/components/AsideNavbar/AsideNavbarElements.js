@@ -1,27 +1,25 @@
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-margin-top: 100px;
 `;
 
 export const NavMenu = styled.div`
 list-style-type: none;
-
 `;
 
 export const NavLink = styled.div`
     
     @media (max-width: 1549px) {
-      display: flex;
+    display: flex;
     flex-direction: row;
-    align-content: center;
-    width: 90%;
+    align-items: center;
+    width: 80%;
     color: #ECF5D2;
     text-transform: uppercase;
     background-color: #02A5A5;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -36,16 +34,16 @@ export const NavLink = styled.div`
   }
 
     @media (min-width: 1550px) {
-      display: flex;
+    display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     width: 75%;
     color: #ECF5D2;
     text-transform: uppercase;
     background-color: #02A5A5;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
