@@ -7,7 +7,9 @@ import './styles.scss';
 const ListingAdherents = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
-  const [select, setSelect] = useState(false)
+  const [select, setSelect] = useState(false);
+  const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
+  const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
 
   const adherents = data.profils;
   // function compare(a, b) {
@@ -32,6 +34,9 @@ const ListingAdherents = () => {
   //   console.log('fonction appelée');
   //   adherents.sort(compare);
   // };
+
+  // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
+  // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 )
 
   const path = useLocation();
   console.log(path);
@@ -62,8 +67,23 @@ const ListingAdherents = () => {
     loadData();
   }, []);
 
-  // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
-  // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 );
+  // Costumization des bouton du selecteur AZ - ZA
+  let buttonAZDiv;
+  let buttonZADiv;
+
+  // if (buttonAZIsActive) {
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  // }
+  // else {
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  // }
+
+  // if (buttonZAIsActive) {
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={ClasseButtonFunction}>Cours</button>;
+  // }
+  // else {
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={ClasseButtonFunction}>Cours</button>;
+  // }
 
   return (
     <div className="listingAdherent-container">
@@ -96,11 +116,11 @@ const ListingAdherents = () => {
       && adherents.map((item) => (
         <div className="listingAdherent-line-container" key={item.id}>
           <div className="listingAdherent-line-leftside">
+            <div className="listingAdherent-line-items lastname">{item.lastName}</div>
             <div className="listingAdherent-line-items">{item.firstName}</div>
-            <div className="listingAdherent-line-items">{item.lastName}</div>
           </div>
           <div className="listingAdherent-line-rightside">
-            <Link to={`${path.pathname}adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+            <Link to={`${path.pathname}/adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
           </div>
         </div>
       ))}

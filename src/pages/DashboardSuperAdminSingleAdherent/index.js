@@ -14,7 +14,6 @@ const SuperAdminAdherent = () => {
 
   const activities = adherentData.activity;
   const events = adherentData.event;
- 
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -60,9 +59,15 @@ const SuperAdminAdherent = () => {
                 {adherentData.activity
                   && activities.map((activity) => (
                     <div className="dashboard-superadmin-adherent-activity-container" key={activity.id}>
-                      <span className="material-icons">pool</span>
-                      <p className="dashboard-superadmin-adherent-activity-name">{activity.name}</p>
-                      <p className="dashboard-superadmin-adherent-activity-level">Niveau</p>
+                      <div className="dashboard-superadmin-adherent-activity-leftside">
+                        <span className="material-icons">pool</span>
+                        <p className="dashboard-superadmin-adherent-activity-name">{activity.name}</p>
+                      </div>
+                      { activity && activity.lessons && activity.lessons.map((lesson) => (
+                        <div className="dashboard-superadmin-adherent-activity-rightside">
+                          <p className="dashboard-superadmin-adherent-activity-level">{lesson.level}</p>
+                        </div>
+                      ))}
                     </div>
                   ))}
               </div>

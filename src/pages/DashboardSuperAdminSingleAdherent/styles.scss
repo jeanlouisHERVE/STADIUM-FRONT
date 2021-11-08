@@ -72,7 +72,6 @@ body {
 
         .strong {
           font-weight: bold;
-
         }
 
         .dashboard-superadmin-adherent-classes-container {
@@ -101,6 +100,14 @@ body {
             @media (min-width: 800px) {
               margin-left: 2em;
               width: 80%;
+            }
+
+            .dashboard-superadmin-adherent-activity-leftside {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 50%;
             }
           }
         }

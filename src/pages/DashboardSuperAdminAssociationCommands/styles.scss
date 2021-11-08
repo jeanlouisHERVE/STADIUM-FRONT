@@ -58,6 +58,12 @@ body {
   
         .dashboard-superadmin-presentation-item {
           margin-bottom: 1em;
+          display: flex;
+          flex-direction: row;
+
+          .strong {
+            font-weight: bold;
+          }
         }
       }
 

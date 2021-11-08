@@ -39,10 +39,7 @@ const ListingEvents = ({ events }) => (
           <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
         </div>
         <div className="listingEvent-line-rightside">
-          <span className="listingEvent-line-icon-message material-icons">email</span>
-          <span className="listingEvent-line-icon-modify material-icons">border_color</span>
           <span className="listingEvent-line-icon-view material-icons">visibility</span>
-          <span className="listingEvent-line-icon-delete material-icons">delete</span>
         </div>
       </div>
     ))}

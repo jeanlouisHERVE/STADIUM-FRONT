@@ -69,7 +69,6 @@ const SuperAdminAssociationCommands = () => {
       const response = await rawResponse.json();
       setData(response);
       setIsLoaded(true);
-      console.log(response);
     }
     loadData();
   }, []);
@@ -115,10 +114,10 @@ const SuperAdminAssociationCommands = () => {
           <div className="dashboard-superadmin-presentation">
             <div className="dashboard-superadmin-presentation-leftside">
               <p className="dashboard-superadmin-presentation-title">Informations : </p>
-              <p className="dashboard-superadmin-presentation-item">Nom du Président : {data.presidentFirstName}</p>
-              <p className="dashboard-superadmin-presentation-item">Prénom du Président : {data.presidentLastName}</p>
-              <p className="dashboard-superadmin-presentation-item">Adresse : {data.address}</p>
-              <p className="dashboard-superadmin-presentation-item">Téléphone : {data.phoneNumber}</p>
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Nom du Président : </p> &nbsp; {data.presidentFirstName}</p>
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Prénom du Président : </p> &nbsp; {data.presidentLastName}</p>
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Adresse : </p> &nbsp; {data.address}</p>
+              <p className="dashboard-superadmin-presentation-item"><p className="strong">Téléphone : </p> &nbsp; {data.phoneNumber}</p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
@@ -134,7 +133,6 @@ const SuperAdminAssociationCommands = () => {
               ? (<ListingAdherents />) : null}
             {showClasses && data.activities
               ? (<ListingClasses activities={data.activities} />) : null}
-            {console.log(data.events)}
             {showEvents && isLoaded
               ? <ListingEvents events={data.events} /> : null}
           </div>

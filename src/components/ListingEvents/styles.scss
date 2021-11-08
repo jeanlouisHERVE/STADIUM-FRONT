@@ -176,6 +176,7 @@
     height: 100px;
     border-bottom: 1px black solid;
     margin-left: 30px;
+
     &:hover {
       background-color: black;
       color: white;
@@ -192,11 +193,15 @@
       .listingEvent-line-items-name {
         margin-left: 15px;
         width:100px;
+        display: flex;
+        align-self: center;
       }
 
       .listingEvent-line-items-place {
         margin-left: 15px;
         width:150px;
+        display: flex;
+        align-self: center;
 
         @media (max-width: 800px) {
           display: none;
@@ -206,11 +211,15 @@
       .listingEvent-line-items-startDate {
         margin-left: 15px;
         width:100px;
+        display: flex;
+        align-self: center;
       }
 
       .listingEvent-line-items-endDate {
         margin-left: 15px;
         width:100px;
+        display: flex;
+        align-self: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -220,6 +229,8 @@
       .listingEvent-line-items-schedule {
         margin-left: 15px;
         width:100px;
+        display: flex;
+        align-self: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -230,6 +241,8 @@
         margin-left: 15px;
         width:100px;
         text-align: center;
+        display: flex;
+        align-self: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -237,82 +250,11 @@
       }
     }
     .listingEvent-line-rightside {
-
-      .listingEvent-line-icon-message {
-        
-        cursor: pointer;
-
-        @media (max-width: 1100px) {
-          display: none;
-        }
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px; 
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
-          margin-left: 5px;
-        }
-      }
-
-      .listingEvent-line-icon-modify {
-        
-        cursor: pointer;
-
-        @media (max-width: 1100px) {
-          display: none;
-        }
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px; 
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
-          margin-left: 5px;
-        }
-      }
     
       .listingEvent-line-icon-view {
-      
+        margin-right: 1em;
+
         cursor: pointer;
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px; 
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
-          margin-left: 5px;
-        }
-      }
-
-      .listingEvent-line-icon-delete {
-      
-        cursor: pointer;
-
-        @media (max-width: 1100px) {
-          display: none;
-        }
 
         .material-icons {
           font-family: 'Material Icons';
