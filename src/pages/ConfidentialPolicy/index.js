@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 // == Composant
 const ConfidentialPolicy = () => (
   <div className="ConfidentialPolicy-container">
+    {window.scrollTo(0, 0)}
     <div className="ConfidentialPolicy-UpPart">
       <div className="ConfidentialPolicy-leftside">
         <Logo />

@@ -21,8 +21,9 @@ body {
   justify-content: space-around;
   overflow: auto;
   width: 85%;
+  padding: 2em;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1500px) {
     position: relative;
     left: 50%;
     transform: translateX(-50%);

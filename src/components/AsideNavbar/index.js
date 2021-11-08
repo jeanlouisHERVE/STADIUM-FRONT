@@ -32,9 +32,18 @@ const AsideNavbar = () => (
     <Nav className="AsideNavbar-Navbar-main">
       <NavMenu className="AsideNavbar-Navbar-ul">
         <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/associations">home</Link></span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">calendar_today</span><span className="AsideNavbar-Navbar-category">planning</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">sports_martial_arts</span><span className="AsideNavbar-Navbar-category">cours</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">today</span><span className="AsideNavbar-Navbar-category">evenements</span></NavLink>
+        {/* <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">calendar_today</span>
+          <span className="AsideNavbar-Navbar-category">planning</span>
+        </NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">sports_martial_arts</span>
+          <span className="AsideNavbar-Navbar-category">cours</span>
+        </NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">today</span>
+          <span className="AsideNavbar-Navbar-category">evenements</span>
+        </NavLink> */}
         <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">mark_email_unread</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/messages">messages</Link></span></NavLink>
         <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/reglages">réglages</Link></span></NavLink>
       </NavMenu>
