@@ -83,6 +83,10 @@ const SuperAdminAdherent = () => {
                   ))}
               </div>
               <p className="dashboard-superadmin-presentation-title">Documents : </p>
+              <div className="dashboard-superadmin-adherent-documents-container">
+                {adherentData.file && <p className="dashboard-superadmin-adherent-document"><p className="strong">Certificat médical :</p> &nbsp;{adherentData.file.medicalCertificate ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
+                {adherentData.file && <p className="dashboard-superadmin-adherent-document"><p className="strong">Règlement intérieur : </p> &nbsp;{adherentData.file.rulesOfProcedure ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
+              </div>
             </div>
             <img className="dashboard-superadmin-presentation-picture" src={Avatar} alt="" />
           </div>

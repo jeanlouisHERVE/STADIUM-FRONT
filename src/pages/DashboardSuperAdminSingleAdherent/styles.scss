@@ -95,10 +95,10 @@ body {
             justify-content: space-between;
             align-items: center;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
             width: 100%;
 
-            @media (min-width: 800px) {
+            @media (min-width: 900px) {
               margin-left: 2em;
               width: 80%;
             }
@@ -133,13 +133,23 @@ body {
             justify-content: space-between;
             align-items: center;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
             width: 100%;
 
-            @media (min-width: 800px) {
+            @media (min-width: 900px) {
               margin-left: 2em;
               width: 80%;
             }
+          }
+        }
+        .dashboard-superadmin-adherent-documents-container {
+
+          .dashboard-superadmin-adherent-document {
+
+            margin-bottom: 1em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
           }
         }
       }
@@ -153,19 +163,22 @@ body {
         }
       }
     }
-
+    
     .dashboard-superadmin-button {
-      margin-right: 10px;
+      
       margin-bottom: 2em;
       border: 2px solid vars.$turquoiseColor;
       border-radius: 20px;
       width: 120px;
-      height: 40px;
+      height: 80px;
       color: vars.$turquoiseColor;
       font-weight: 700;
       font-size: small;
       text-transform: uppercase;
       
     }
+    
   }
+
+  
 }

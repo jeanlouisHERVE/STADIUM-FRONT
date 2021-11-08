@@ -11,11 +11,11 @@ export const Nav = styled.nav`
   top:0;
   z-index: 10;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     transition : 0,8 all ease;
   }
 
-  @media screen and (min-width: 1301px) {
+  @media screen and (min-width: 1501px) {
     display: none;
   }
 `;
@@ -45,7 +45,7 @@ export const NavLogo = styled(LinkR)`
 export const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1500px) {
     display: block;
     position: absolute;
     top: 0;
@@ -61,7 +61,7 @@ export const NavBtn = styled.nav`
   display:flex;
   align-items: center;
 
-  @media screen and (max-width : 1300px){
+  @media screen and (max-width : 1500px){
     display: none;
   }
 `;
