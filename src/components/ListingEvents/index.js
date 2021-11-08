@@ -33,8 +33,8 @@ const ListingEvents = ({ events }) => (
         <div className="listingEvent-line-leftside">
           <div className="listingEvent-line-items-name">{item.name}</div>
           <div className="listingEvent-line-items-place">{item.place}</div>
-          <div className="listingEvent-line-items-startDate">{moment(item.startDate).format('L')}</div>
-          <div className="listingEvent-line-items-endDate">{moment(item.endDate).format('L')}</div>
+          <div className="listingEvent-line-items-startDate">{moment(item.startDate).format('DD/MM/YYYY')}</div>
+          <div className="listingEvent-line-items-endDate">{moment(item.endDate).format('DD/MM/YYYY')}</div>
           <div className="listingEvent-line-items-schedule">{moment(item.schedule).format('LT')}</div>
           <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
         </div>
