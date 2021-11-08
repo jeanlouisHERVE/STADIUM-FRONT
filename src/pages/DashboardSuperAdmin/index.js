@@ -13,7 +13,7 @@ const DashboardSuperAdmin = () => {
   const [data, setData] = useState([]);
 
   const path = useLocation();
-  console.log(path.pathname);
+  // console.log(path.pathname);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -25,7 +25,7 @@ const DashboardSuperAdmin = () => {
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response = await rawResponse.json();
       setData(response);
-      console.log(data);
+      // console.log(data);
     }
     loadData();
   }, []);

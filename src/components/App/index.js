@@ -3,13 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 // Pages
 import Home from '../../pages/Home';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
-import SuperAdminCommand from '../../pages/DashboardSuperAdminCommands';
+import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 
-import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 // import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 // import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
@@ -22,7 +21,6 @@ import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 
 // import SuperAdminSettings from '../../pages/DashboardSuperAdminSettings';
 
-import AsideNavbar from '../AsideNavbar';
 import Messages from '../Messages';
 
 // Containers
@@ -95,7 +93,7 @@ const App = () => (
       </Route>
       <Route path="/backoffice/superadmin/associations/classe/modify" exact>
         <SuperAdminModifyClasse />
-      </Route>*/}
+      </Route> */}
       <Route path="/backoffice/superadmin/messages">
         <Messages />
       </Route>

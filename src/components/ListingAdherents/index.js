@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -5,11 +6,11 @@ import './styles.scss';
 
 // == Composant
 const ListingAdherents = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
-  const [select, setSelect] = useState(false);
-  const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
-  const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
+  // const [select, setSelect] = useState(false);
+  // const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
+  // const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
 
   const adherents = data.profils;
   // function compare(a, b) {
@@ -39,7 +40,7 @@ const ListingAdherents = () => {
   // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 )
 
   const path = useLocation();
-  console.log(path);
+  // console.log(path);
 
   useEffect(() => {
     async function loadData() {
@@ -47,9 +48,9 @@ const ListingAdherents = () => {
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response = await rawResponse.json();
       setData(response);
-      setIsLoaded(true);
-      setSelect(true);
-      console.log(response);
+      // setIsLoaded(true);
+      // setSelect(true);
+      // console.log(response);
     }
     loadData();
   }, []);
@@ -60,16 +61,16 @@ const ListingAdherents = () => {
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
       const response2 = await rawResponse.json();
       setData(response2);
-      setIsLoaded(true);
-      setSelect(false);
-      console.log(response2);
+      // setIsLoaded(true);
+      // setSelect(false);
+      // console.log(response2);
     }
     loadData();
   }, []);
 
   // Costumization des bouton du selecteur AZ - ZA
-  let buttonAZDiv;
-  let buttonZADiv;
+  // let buttonAZDiv;
+  // let buttonZADiv;
 
   // if (buttonAZIsActive) {
   //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;

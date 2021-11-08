@@ -4,7 +4,7 @@ import './styles.scss';
 // == Composant
 const ListingClasses = ({ activities }) => (
   <div className="listingClasses-container">
-    {console.log(activities)}
+    {/* {console.log(activities)} */}
     <div className="listingClasses-header">
       <div className="listingClasses-header-leftside">
         <div className="listingClasses-title"><h2>cours</h2></div>
@@ -34,7 +34,7 @@ const ListingClasses = ({ activities }) => (
           { activity && activity.lessons
           && activity.lessons.map((lesson) => (
             <div className="listingClasses-line-classe-container" key={lesson.id}>
-              {console.log(lesson)}
+              {/* {console.log(lesson)} */}
               <div className="listingClasses-line-items-level"><div className="listing-line-items-level-cartouche">{lesson.level}</div></div>
               <div className="listingClasses-line-items-day">{lesson.day}</div>
               <div className="listingClasses-line-items-startTime">{moment(lesson.startDate).format('LT')}</div>
