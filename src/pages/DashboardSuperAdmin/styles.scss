@@ -18,12 +18,14 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 280px);
   grid-gap: 1.5em;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: auto;
   width: 85%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 5em;
+
+  @media (max-width: 1300px) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5em;
+  }
 }
-  
