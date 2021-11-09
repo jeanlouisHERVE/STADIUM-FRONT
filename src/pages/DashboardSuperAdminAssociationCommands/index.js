@@ -69,6 +69,7 @@ const SuperAdminAssociationCommands = () => {
       const response = await rawResponse.json();
       setData(response);
       setIsLoaded(true);
+      console.log(response);
     }
     loadData();
   }, []);
@@ -130,7 +131,7 @@ const SuperAdminAssociationCommands = () => {
             {/* {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null} */}
             {showAdherents && isLoaded
-              ? (<ListingAdherents />) : null}
+              ? (<ListingAdherents adherents={data.profils} />) : null}
             {showClasses && data.activities
               ? (<ListingClasses activities={data.activities} />) : null}
             {showEvents && isLoaded

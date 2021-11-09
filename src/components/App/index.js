@@ -6,10 +6,10 @@ import { Route, Switch } from 'react-router-dom';
 import DashboardSuperAdmin from '../../pages/DashboardSuperAdmin';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
-// import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 // import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
-// import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
+import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
 // import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
 import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 // import SuperAdminAddClasse from '../../pages/DashboardSuperAdminSingleClasseAdding';
@@ -67,19 +67,19 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
       </Route>
-      {/* <Route path="/backoffice/superadmin/associations/adherent/add" exact>
+      <Route path="/backoffice/superadmin/associations/:id/addAdherent">
         <SuperAdminAddAdherent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+      {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
       </Route> */}
       <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
         <SuperAdminEvent />
       </Route>
-      {/* <Route path="/backoffice/superadmin/associations/event/add" exact>
+      <Route path="/backoffice/superadmin/associations/:id/addEvent">
         <SuperAdminAddEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/event/modify" exact>
+      {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
         <SuperAdminModifyEvent />
       </Route> */}
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
