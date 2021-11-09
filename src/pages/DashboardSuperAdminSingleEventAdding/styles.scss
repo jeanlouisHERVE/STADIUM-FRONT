@@ -1,3 +1,5 @@
+@use 'src/styles/vars';
+
 body {
   background: #E4E7EC;
   font-family: 'Poppins', sans-serif;
@@ -14,6 +16,49 @@ body {
   align-self: center;
   border-radius: 20px;
   background: #F5F5F5;
+
+  .dashboard-superadmin-event-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    width: 100%;
+
+    h1 {
+      font-size: xx-large;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .dashboard-superadmin-event-add-form {
+      width: 40%;
+
+      .dashboard-superadmin-event-button {
+
+        margin-bottom: 2em;
+        border: 2px solid vars.$turquoiseColor;
+        border-radius: 20px;
+        width: 120px;
+        height: 80px;
+        color: vars.$turquoiseColor;
+        font-weight: 700;
+        font-size: small;
+        text-transform: uppercase;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+      }
+    }
+
+  }
 }
 
 

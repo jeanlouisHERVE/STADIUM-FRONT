@@ -9,7 +9,7 @@ import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 // import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
-import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
+
 // import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
 import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 // import SuperAdminAddClasse from '../../pages/DashboardSuperAdminSingleClasseAdding';
@@ -26,6 +26,7 @@ import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import LoginPage from '../../containers/LoginPage';
+import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
 
 import './styles.scss';
 
