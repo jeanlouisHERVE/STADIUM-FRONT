@@ -48,7 +48,7 @@ const SuperAdminAdherent = () => {
               <p className="dashboard-superadmin-presentation-title">Informations : </p>
               <p className="dashboard-superadmin-presentation-item"><p className="strong">Nom : </p>&nbsp; {adherentData.lastName}</p>
               <p className="dashboard-superadmin-presentation-item"><p className="strong">Prénom : </p>&nbsp; {adherentData.firstName}</p>
-              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Date de naissance : </p>  &nbsp;{moment(adherentData.file.dateOfBirth).subtract(10, 'days').calendar()}</p>}
+              {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Date de naissance : </p>  &nbsp;{moment(adherentData.file.dateOfBirth).format('DD/MM/YYYY')}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Adresse : </p> &nbsp;{adherentData.file.address}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Téléphone : </p> &nbsp;{adherentData.file.phoneNumber}</p>}
               {adherentData.file && <p className="dashboard-superadmin-presentation-item"><p className="strong">Dossier complet :</p> &nbsp;{adherentData.file.isComplete ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
@@ -78,7 +78,7 @@ const SuperAdminAdherent = () => {
                     <div className="dashboard-superadmin-adherent-event" key={event.id}>
                       <span className="material-icons">emoji_events</span>
                       <p className="dashboard-superadmin-adherent-activity-name">{event.name}</p>
-                      <p className="dashboard-superadmin-adherent-activity-level">{moment(event.startDate).format('L')}</p>
+                      <p className="dashboard-superadmin-adherent-activity-level">{moment(event.startDate).format('DD/MM/YYYY')}</p>
                     </div>
                   ))}
               </div>

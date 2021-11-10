@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 import Avatar from './avataaars.svg';
 import Avatar2 from './avataaars2.svg';
@@ -28,7 +29,6 @@ const AsideNavbar = () => (
       <a className="AsideNavbar-ProfileCard-Link" href="">changer de profil</a>
       <a className="AsideNavbar-ProfileCard-Link" href="">gestion de profil</a>
     </div>
-
     <Nav className="AsideNavbar-Navbar-main">
       <NavMenu className="AsideNavbar-Navbar-ul">
         <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/associations">home</Link></span></NavLink>

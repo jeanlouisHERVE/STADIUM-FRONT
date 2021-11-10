@@ -5,6 +5,7 @@ import loginReducer from './loginReducer';
 import signupUserReducer from './signupUserReducer';
 import signupMemberReducer from './signupMemberReducer';
 import signupAssociationReducer from './signupAssociationReducer';
+import eventReducer from './eventReducer';
 import settingsSuperAdminReducer from './Settings/settingsSuperAdminReducer';
 import associationsReducer from './associationsReducer';
 
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   signupUser: signupUserReducer,
   signupMember: signupMemberReducer,
   signupAssociation: signupAssociationReducer,
+  event: eventReducer,
   settingsSuperAdmin: settingsSuperAdminReducer,
   associations: associationsReducer,
   // ci dessous on ajoute tous les reducers dont on a besoin

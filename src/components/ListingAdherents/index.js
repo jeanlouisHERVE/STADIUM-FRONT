@@ -1,18 +1,15 @@
-/* eslint-disable max-len */
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './styles.scss';
 
 // == Composant
-const ListingAdherents = () => {
+const ListingAdherents = ({ adherents }) => {
   // const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState([]);
   // const [select, setSelect] = useState(false);
   // const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
   // const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
 
-  const adherents = data.profils;
   // function compare(a, b) {
   //   if (a.lastName > b.lastName) {
   //     return 1;
@@ -42,48 +39,56 @@ const ListingAdherents = () => {
   const path = useLocation();
   // console.log(path);
 
-  useEffect(() => {
-    async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+//  useEffect(() => {
+//    async function loadData() {
+//      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
+//      const response = await rawResponse.json();
+//      setData(response);
       // setIsLoaded(true);
       // setSelect(true);
       // console.log(response);
-    }
-    loadData();
-  }, []);
+//    }
+//    loadData();
+//  }, []);
 
-  useEffect(() => {
-    async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+//  useEffect(() => {
+//    async function loadData() {
+//      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
       // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response2 = await rawResponse.json();
-      setData(response2);
+//      const response2 = await rawResponse.json();
+//      setData(response2);
       // setIsLoaded(true);
       // setSelect(false);
       // console.log(response2);
-    }
-    loadData();
-  }, []);
+//    }
+//    loadData();
+//  }, []);
 
   // Costumization des bouton du selecteur AZ - ZA
   // let buttonAZDiv;
   // let buttonZADiv;
 
   // if (buttonAZIsActive) {
-  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={adherentButtonFunction}>Adhérents</button>;
-  // }
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: '#02A5A5', color: 'white' }}
+  // onClick={adherentButtonFunction}>Adhérents</button>;
+  // // }
   // else {
-  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={adherentButtonFunction}>Adhérents</button>;
+  //   buttonAZDiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: 'white', color: '#02A5A5' }}
+  // onClick={adherentButtonFunction}>Adhérents</button>;
   // }
 
   // if (buttonZAIsActive) {
-  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }} onClick={ClasseButtonFunction}>Cours</button>;
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: '#02A5A5', color: 'white' }}
+  // onClick={ClasseButtonFunction}>Cours</button>;
   // }
   // else {
-  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: 'white', color: '#02A5A5' }} onClick={ClasseButtonFunction}>Cours</button>;
+  //   buttonZADiv = <button className="dashboard-superadmin-button" type="submit"
+  // style={{ backgroundColor: 'white', color: '#02A5A5' }}
+  // onClick={ClasseButtonFunction}>Cours</button>;
   // }
 
   return (
@@ -91,7 +96,7 @@ const ListingAdherents = () => {
       <div className="listingAdherent-header">
         <div className="listingAdherent-header-leftside">
           <div className="listingAdherent-title"><h2>Adhérents</h2></div>
-          <div className="listingAdherent-addIcon"><span className=" material-icons">add</span></div>
+          <Link to={`${path.pathname}/addAdherent`} className="listingAdherent-addIcon"><span className=" material-icons">add</span></Link>
         </div>
         <div className="listingAdherent-header-rightside">
           <div className="listingAdherent-filter">
@@ -129,9 +134,9 @@ const ListingAdherents = () => {
   );
 };
 
-// ListingAdherents.propTypes = {
-//   adherents: PropTypes.array.isRequired,
-// };
+ListingAdherents.propTypes = {
+  adherents: PropTypes.array.isRequired,
+};
 
 // == Export
 export default ListingAdherents;

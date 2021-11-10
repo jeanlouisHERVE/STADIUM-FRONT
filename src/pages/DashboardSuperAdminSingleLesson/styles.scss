@@ -38,7 +38,7 @@ body {
       margin-left: 20px;
     }
 
-    .dashboard-superadmin-event{
+    .dashboard-superadmin-lesson{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -50,7 +50,7 @@ body {
       border-radius: 20px;
       filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
 
-        .dashboard-superadmin-event-title {
+        .dashboard-superadmin-lesson-title {
           text-transform: uppercase;
           font-weight: 700;
           font-size: x-large;
@@ -58,7 +58,7 @@ body {
           margin-bottom: 1em;
         }  
   
-        .dashboard-superadmin-event-item {
+        .dashboard-superadmin-lesson-item {
           margin-bottom: 1em;
           display: flex;
           align-items: center;
@@ -66,23 +66,6 @@ body {
 
         .strong {
           font-weight: bold;
-        }
-      
-        .dashboard-superadmin-event-profiles-container {
-
-          .dashboard-superadmin-event-profile {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 10px;
-
-            .dashboard-superadmin-event-profile-firstname {
-              margin-right: 10px;
-            }
-
-            .dashboard-superadmin-event-profile-lastname {
-              text-transform: uppercase;
-            }
-          }
         }
       
     }
