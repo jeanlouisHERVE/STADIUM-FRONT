@@ -121,12 +121,12 @@ const SuperAdminAddEvent = ({
 
 SuperAdminAddEvent.propTypes = {
   name: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
+  startDate: PropTypes.instanceOf(Date).isRequired,
   schedule: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  endDate: PropTypes.instanceOf(Date).isRequired,
   place: PropTypes.string.isRequired,
-  maxParticipant: PropTypes.bool.isRequired,
-  association: PropTypes.string.isRequired,
+  maxParticipant: PropTypes.number.isRequired,
+  association: PropTypes.number.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

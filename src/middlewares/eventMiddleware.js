@@ -14,7 +14,7 @@ const authMiddleware = (store) => (next) => (action) => {
       console.log('on va envoyer la requête à l\'API');
       axios.post(
         // URL
-        'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events',
         // paramètres
         {
           name: state.event.name,
