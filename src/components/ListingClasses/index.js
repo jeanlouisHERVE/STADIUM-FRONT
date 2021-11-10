@@ -13,7 +13,7 @@ const ListingClasses = ({ activities }) => {
       <div className="listingClasses-header">
         <div className="listingClasses-header-leftside">
           <div className="listingClasses-title"><h2>cours</h2></div>
-          <div className="listingClasses-addIcon"><span className=" material-icons">add</span></div>
+          <Link to={`${path.pathname}/addLesson`} className="card-link"><span className="material-icons">add</span></Link>
         </div>
         <div className="listingClasses-header-rightside">
           <div className="listingClasses-filter">

@@ -120,7 +120,7 @@ import Error404 from '../../pages/Error404';
 
 import Home from '../../pages/Home';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
-import Messages from '../Messages';
+// import Messages from '../Messages';
 
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
@@ -128,11 +128,14 @@ import SignupMember from '../../containers/SignupPages/SignupMember';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
-import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
+// import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
+// pages événements
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
+// pages cours
 import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
-
+import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLessonAddingPage';
+// pages adhérent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 
@@ -186,17 +189,14 @@ const App = () => (
         <SuperAdminEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
-     
       {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
         <SuperAdminModifyEvent />
       </Route> */}
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
         <SuperAdminLesson />
       </Route>
-      {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
-        <SuperAdminAddClasse />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/classe/modify" exact>
+      <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
+      {/* <Route path="/backoffice/superadmin/associations/classe/modify" exact>
         <SuperAdminModifyClasse />
       </Route>
       <Route path="/backoffice/superadmin/settings" exact>
