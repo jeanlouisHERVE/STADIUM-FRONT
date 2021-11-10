@@ -8,6 +8,7 @@ import Sailing from './sailing.jpg';
 // == Composant
 const Contact = () => (
   <div className="Contact-container">
+    {window.scrollTo(0, 0)}
     <div className="Contact-UpPart">
       <div className="Contact-leftside" style={{ backgroundImage: `url(${Sailing})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="Contact-logo">

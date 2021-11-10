@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 // == Composant
 const LegalMention = () => (
   <div className="LegalMention-container">
+    {window.scrollTo(0, 0)}
     <div className="LegalMention-UpPart">
       <div className="LegalMention-leftside">
         <Logo />

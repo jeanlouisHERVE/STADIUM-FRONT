@@ -9,6 +9,7 @@ const ListingAdherents = ({ adherents }) => {
   // const [select, setSelect] = useState(false);
   // const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
   // const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
+
   // function compare(a, b) {
   //   if (a.lastName > b.lastName) {
   //     return 1;
@@ -36,7 +37,33 @@ const ListingAdherents = ({ adherents }) => {
   // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 )
 
   const path = useLocation();
-  console.log(path);
+  // console.log(path);
+
+//  useEffect(() => {
+//    async function loadData() {
+//      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+//      const response = await rawResponse.json();
+//      setData(response);
+      // setIsLoaded(true);
+      // setSelect(true);
+      // console.log(response);
+//    }
+//    loadData();
+//  }, []);
+
+//  useEffect(() => {
+//    async function loadData() {
+//      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+//      const response2 = await rawResponse.json();
+//      setData(response2);
+      // setIsLoaded(true);
+      // setSelect(false);
+      // console.log(response2);
+//    }
+//    loadData();
+//  }, []);
 
   // Costumization des bouton du selecteur AZ - ZA
   // let buttonAZDiv;

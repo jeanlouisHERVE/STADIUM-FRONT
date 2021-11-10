@@ -9,6 +9,12 @@
 
 @media (min-width: 1501px) {
 
+  .AsideNavbar-Navbar-ul {
+    position: relative;
+    top: -50%;
+    transform: translateY(50%);
+  }
+  
   .AsideNavbar {
     width: 15vw;
     height: 100%;
@@ -108,7 +114,7 @@
 
       .AsideNavbar-Navbar-main {
         margin-top: 2em;
-  
+
         .AsideNavbar-Navbar-ul {
           
           .AsideNavbar-Navbar-item {

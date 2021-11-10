@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import imageLogo from '../../assets/images/imageLogo.png';
+import Logo from '../../components/Logo';
 import Field from '../../components/Field';
 
 import './styles.scss';
@@ -27,9 +26,7 @@ const LoginPage = ({
   return (
     <div className="login-page">
       <div className="login-header">
-        <Link to="/">
-          <img src={imageLogo} alt="" className="imageLogo" />
-        </Link>
+        <Logo />
       </div>
       <form
         className="login-form"

@@ -20,6 +20,7 @@ const ListingClasses = ({ activities }) => {
             <button className="listingClasses-filter-button" type="submit">A - Z </button>
             <button className="listingClasses-filter-button" type="submit">Z - A</button>
           </div>
+
         </div>
       </div>
       <div className="listingClasses-line-header">
@@ -59,5 +60,6 @@ const ListingClasses = ({ activities }) => {
 ListingClasses.propTypes = {
   activities: PropTypes.array.isRequired,
 };
+
 // == Export
 export default ListingClasses;
