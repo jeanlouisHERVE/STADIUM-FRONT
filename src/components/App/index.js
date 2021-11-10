@@ -120,7 +120,6 @@ import Error404 from '../../pages/Error404';
 
 import Home from '../../pages/Home';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
-import AsideNavbar from '../AsideNavbar';
 import Messages from '../Messages';
 
 import LoginPage from '../../containers/LoginPage';
@@ -130,14 +129,18 @@ import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
 import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
+import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
+import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 
 import './styles.scss';
 
+// == Composant
 const App = () => (
+
   <div className="App">
     <Switch>
       <Route path="/" exact>
@@ -146,10 +149,10 @@ const App = () => (
       <Route path="/inscription" exact>
         <SignupUser />
       </Route>
-      <Route path="/inscription/adherent" exact>
+      <Route path="/inscription/adherent">
         <SignupMember />
       </Route>
-      <Route path="/inscription/association" exact>
+      <Route path="/inscription/association">
         <SignupAssociation />
       </Route>
       <Route path="/connexion">
@@ -167,7 +170,7 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations" exact>
         <DashboardSuperAdmin />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id">
+      <Route path="/backoffice/superadmin/associations/:id" exact>
         <SuperAdminAssociationCommands />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
@@ -192,12 +195,14 @@ const App = () => (
         <SuperAdminLesson />
       </Route>
       {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
-        <SuperAdminAddClasse /> */}
-
+        <SuperAdminAddClasse />
       </Route>
-      <Route path="/backoffice/superadmin/reglages">
-        <SettingsSuperAdmin />
+      <Route path="/backoffice/superadmin/associations/classe/modify" exact>
+        <SuperAdminModifyClasse />
       </Route>
+      <Route path="/backoffice/superadmin/settings" exact>
+        <SuperAdminSettings />
+      </Route> */}
       <Route>
         <Error404 />
       </Route>

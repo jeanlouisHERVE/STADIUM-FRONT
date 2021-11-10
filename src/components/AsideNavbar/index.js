@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './styles.scss';
-import { Link } from 'react-router-dom';
 
 import Avatar from './avataaars.svg';
 import Avatar2 from './avataaars2.svg';
