@@ -1,5 +1,6 @@
 import './styles.scss';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
@@ -7,15 +8,15 @@ import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
 
 const SuperAdminAddEvent = ({
-  name, 
-  startDate, 
-  schedule, 
-  endDate, 
-  place, 
+  name,
+  startDate,
+  schedule,
+  endDate,
+  place,
   maxParticipant,
   association,
   updateField,
-  handleSubmit
+  handleSubmit,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -116,6 +117,18 @@ const SuperAdminAddEvent = ({
       </div>
     </>
   );
+};
+
+SuperAdminAddEvent.propTypes = {
+  name: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  schedule: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
+  maxParticipant: PropTypes.bool.isRequired,
+  association: PropTypes.string.isRequired,
+  updateField: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 // == Export
