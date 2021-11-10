@@ -1,515 +1,538 @@
 @use 'src/styles/vars.scss';
-  
-// smartphone
-  .home{
-    width: 100%;
-    
-    .home-header{
-      width: 100%;
-      font-size: 1em;
-      margin-top: 6em;
-    }
-  
-    .home-header-header{
-      display:flex;
-      flex-direction: row;
-      padding-bottom: 1em;
-      background-color: vars.$turquoiseColor;
-      position: relative;
-    }
 
-    .part-registration-logo{
-      margin-left: 2.3em;
-      height: min-content;
-      margin-top: 1em;
-    }
 
-    .part-connexion-btn{ 
-      margin-left: 3.5em; 
-      display: inline;
-    }
+.home {
+  width: 100%;
 
-    .part-registration{
-      width: 100%;
-      padding-right: 2em; 
-      padding-left: 2em;
-      margin-top: 3em; 
-      padding-bottom: 2em; 
-      position:relative;
-      z-index:0;
-      text-align: center;
-    }
-  
-    .part-registration-text{
-      line-height: 120%;
-      margin-bottom: 2em;
-      padding-left: 2em;
-      font-size: 1.1em;
-    }
-
-    .imageLogo{
-      border-radius:0.8em;
-      margin-left: -1.2em;
-      width: 5em;
-    }
-  
-    .part-registration-title{
-      color:vars.$darkColor;
-      font-size: 1.3em;
-      font-weight: 700;
-      margin-bottom: 1.2em;
-    }
-
-    .part-registration-content{
-      margin-left: auto;
-      margin-left: auto;
-      padding-bottom: 2em;
-    }
-  
-    .part-connexion{
-      width: 100%;
-    }
-  
-    .stadium-img{
-      width:100%;
-      height: 20em;
-    }
-  
-    strong{
-      font-size:1.2em;
-    }
-    
-    .part-association, .part-user{ 
-      width:100%;
-      padding-left: 1.3em;
-      padding-right: 1.3em;
-    }
-    
-    .part-association{
-      background-color: vars.$turquoiseColor;
-      padding-bottom:3em;
-    }
-    
-    .part-association-title{
-      color: vars.$lightColor;   
-    }
-  
-    .part-association-title, .part-user-title{
-      font-size: 1em;
-      margin-left: auto;
-      margin-left: auto;
-      text-align: center;
-    }
-  
-    .part-association-title-title, .part-user-title-title{
-      padding-top: 2em;
-      margin-bottom: 3em;
-      line-height: 140%;
-      text-align: center;
-      font-weight: 800;   
-    }
-  
-    .part-association-content-content{
-      width: 100%;
-      color: vars.$lightColor;
-      text-align: justify;
-      padding-bottom: 3.5em;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-
-    .part-association-text, .part-user-text{
-      margin-bottom: 0.9em;
-      font-weight: 500;
-      font-size: 1em;
-      line-height: 120%;
-      text-align: left;
-    }
-  
-    .part-association-text-elem-list, .part-user-text-elem-list{
-      list-style-type:disc;
-      margin-left: 1em;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      font-size:1em;
-    }
-  
-    .part-association-img{
-      width: 100%;
-      height: 70%;
-      margin:0em;
-    }
-  
-    .dashboard-association-img{
-      width: 100%;
-      margin-right: auto;
-      margin-top: -0.7em;
-      margin-bottom: 2.7em;
-    }
-  
-    .part-user{
-      height: 150%;
-      padding-bottom: 3em;
-      padding-right: 2.3em;
-    }
-   
-    .part-user-content-content{
-      text-align:left;
-      padding-bottom: 3.5em;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-  
-    .part-user-img{
-     width:100%;
-     position: relative;
-    }
-  
-    .dashboard-user-img{
-      width: 100%;
-      margin-right: auto;
-      margin-top: -0.7em;
-      padding-bottom: 2.7em;
-    }
-  
-    .material-icons{
-      font-family: 'Material Icons';
-      font-size: 1.8em;
-      display: inline-block;
-      line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
-      color: vars.$darkColor;
-      margin-top: 7em;
-      position: absolute;
-      display: none;
-    }
-    
-    .material-icons--association{
-      color: vars.$lightColor;
-    }
-    .material-icons--user{
-      color: vars.$darkColor;
-    }
-
-    .material-icons--user{
-      font-family: 'Material Icons';
-      font-size: 1.8em;
-      display: inline-block;
-      line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
-      color: vars.$lightColor;
-      margin-top: 9em;
-      position: absolute;
-      margin-left: -1.3em;
-      display: none;
-      
-    }
-  
-    .part-user-btn-subscribe, .part-association-btn-subscribe{
-      text-align: center; 
-    }
-    .part-user-btn-subscribe{
-    margin-top:-3em;
-    }
-
-  .part-association-btn-subscribe{
-    margin-top: -2.5em;
-  }
-}
-
-// tablet
-@media(min-width:768px) and (max-width:1023px){
-.home{
-
-  .home-header{
-    z-index:0;
+  @media(min-width:1024px) {   
+  position: relative;
+  font-size: 1.2em;
   }
 
-  .part-registration-logo{
-    margin-left: 4em; 
-    display: inline-block;
-    margin-top: 2em;
-  }
-
-  .part-registration{
-    width: 100%;
-    padding-right: 2em; 
-    padding-left: 2em;
-    margin-top: 7em;  
-    padding-bottom: 4em;
-    height: 25em;
-  }
-
-  .imageLogo{
-    margin-left: -2em;
-    width: 7.2em;
-  }
-
-  .part-registration-title{
-    font-size: 1.6em;
-    margin-top: 2em;
-    margin-bottom:2em;
-  }
-
-  .part-registration-text{
-    font-size:1.3em;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1.5em;
-    line-height: 150%;
-    padding-right: 2em;
-  }
-
-  .part-registration-content .btn-form-subscribe{
-    margin-top: -2em;
-  }
-
-  .part-connexion{
-    width: 100%;
-    padding-right: 0px;
-  }
-
-  .stadium-img{   
-    height: 30em;
-  }
-
-  strong{
-    font-size:1.2em;
-  }
-  
-  .part-association, .part-user{ 
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  }
-  
-  .part-association{
+  .home-header-header {
+    display: flex;
+    padding-bottom: 1em;
     background-color: vars.$turquoiseColor;
-    padding-bottom:3em;
-  }
-  
-  .part-association-title{
-    color: vars.$lightColor;   
-  }
+    position: relative;
 
-  .part-association-title, .part-user-title{
-    font-size: 1.6em;
+  @media(min-width:1024px){
+    padding-bottom: 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
   }
+    .part-registration-logo {
+      .imageLogo {
+        width: 9em;
+        border-radius: 20px;
+        margin: 1em auto auto 1em;
 
-  .part-association-title-title, .part-user-title-title{
-    padding-top: 3em;
-  }
+        @media(min-width:1024px){
+          margin: 2em auto auto 2em;
+        }
+      }
+    }
+    .part-connexion-btn {
 
-  .part-association-text, .part-user-text{
-    font-size: 1.3em;
-
-  }
-
-  .part-association-text-elem-list, .part-user-text-elem-list{
-    list-style-type:disc;
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size:1.3em;
-  }
-
-  .dashboard-association-img{
-    margin-bottom: 3.5em;
-  }
-
-  .part-user-img{
-   width:100%;
-   position: relative;
-  }
-
-  .dashboard-user-img{
-    margin-right: auto;
-    margin-top: -0.7em;
-    padding-bottom: 3.3em;
-  }
- 
-.part-association-btn-subscribe{
-  margin-top: -2.5em;
+      .btn-login {
+        margin-top: 1.5em;
+        position: absolute;
+        right: 1em;
+      }
     }
   }
-}
 
-  // desktop
-  @media(min-width:1024px){
-    .home{
+  .home-content{
+
+    .home-header {
+      margin-top: 6em;
+      text-align: center;
+    
+    @media(min-width:1024px){
+      display: flex;
+      text-align:left;
+    }
+      .part-registration {
+        margin-top: 3em;
       
-      .home-header{
-        display: flex; 
-        width:100%;
-        font-size: 1.4em;
-        z-index:0;
-        margin-top: -4.2em;
-        padding-bottom: 4em;
-        height: 40em;
-      }
-    
-      .home-header-header{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        background-color: transparent;
-      }
-    
-      .part-registration-logo{
-        margin-left: 4em; 
-        display: inline-block;
-        margin-top: 2em;
-      }
-    
-      .part-registration{
+      @media(min-width:1024px){
+        padding-top: 2em auto 4em 4em;
         width: 60%;
-        margin-top: 8em;  
-      }
-    
-      .imageLogo{
-        margin-left: -2em;
-        width: 8em;
-      }
-    
-      .part-registration-title{
-        font-size: 1.6em;
-        padding-top: 2em;
-      }
-    
-      .part-registration-text{
-        line-height: 150%;
-      }
-      .part-connexion{
-        width: 40%;
-        padding-right: 0px;
-        min-height: max-content;
-      }
-    
-      .stadium-img{
         position: relative;
-        height: 100%;
-        width:auto;
-      }
-    
-      .part-association, .part-user{ 
-        padding-left: 4.3em;
-        padding-right: 4.3em;
-        font-size: 1.3em;
-        line-height: 120%;
-      }
-      
-      .part-association-title, .part-user-title{
-        font-size: 1.6em;
-      }
-    
-      .part-association-title-title, .part-user-title-title{
-        padding-top: 3.5em;
-      }
-    
-      .part-association-content{
-        display: flex; 
-        flex-direction: row-reverse;
-      }
-    
-      .part-association-content-content{
-        width: 50%;
-        text-align: justify;
-        padding-bottom: 7em;
       }
 
-      .part-association-text, .part-user-text{
-        font-size: 1.1em;
-        line-height: 130%;
+        .part-registration-content {
+          text-align: justify;
+          padding-bottom: 4em;
+          margin: 1em 2em auto 2em;
+          color: vars.$blueColor;
+
+        @media(min-width:1024px){
+          margin: 2em 2em 2em 4em;
+        }
+          
+          .part-registration-title {
+            font-size: 1.3em;
+            font-weight: 800;
+            margin-bottom: 1.2em;
+            line-height: 140%;
+          }
+
+          .part-registration-text {
+            line-height: 120%;
+            margin-bottom: 2em;
+            font-size: 1.1em;
+            font-weight: 500;
+          
+            @media(min-width:768px) and (min-width:1023px){
+              font-size: 1.3em;
+              line-height: 150%;
+              margin-bottom: 3em;
+            }  
+          }
+            .part-registration-btn-subscribe {
+              text-align: center;
+            
+            @media(min-width:1024px){
+              margin-top: 2.5em auto 7em auto;
+            }
+            }    
+        }
       }
-    
-      .part-association-text-elem-list, .part-user-text-elem-list{
-        margin-left: 1.3em;
-        margin-top: 1.3em;
+      .part-connexion {
+        width: 100%;
+
+      @media(min-width:1024px){
+        width: 40%;
+        position:relative;
       }
-    
-      .part-association-img{
-        width: 50%;
-        height:auto;
-        position: relative;
+        .stadium-img {
+          width: 100%;
+
+        @media(min-width:1024px){
+          position: absolute;
+          height: max-content;
+          top:10;
+        }   
+        }
       }
+    }
+    .part-association {
+      background-color: vars.$turquoiseColor;
+      padding: 2em 2em 2em;
+      margin-top: -1em;
     
-      .dashboard-association-img{
-        max-width: 90%;
-        max-height: 100%;
-        width: auto; 
-        height: auto; 
-        margin-top: 4.3em;
-        margin-bottom: 4em;
+      @media(min-width:1024px){
+        font-size: 1em;
+        line-height: 120%; 
       }
-    
-      .part-user{
+
+      .part-association-title {
+
+        @media(min-width:768px){
+          font-size: 1em;
+        }
+        .part-association-title-title {
+        color: vars.$lightColor;
+        padding-top: 2em;
+        margin-bottom: 3em;
+        line-height: 140%;
+        text-align: center;
+        font-weight: 800;
+
+        @media(min-width:1024px){
+          padding-top: 3.5em;
+          font-size: 1.6em;
+        }
+          strong {
+            font-size: 1.2em;
+          }
+        }
+      }
+      .part-association-content{
+        @media(min-width:1024px){
+          display: flex;
+          flex-direction: row-reverse;
+          margin: 2em 2em 2em 2em;
+          }
+        
+        
+        .part-association-content-content {
+          width: 100%;
+          color: vars.$lightColor;
+          text-align:justify;
+          padding-bottom:1em;
+        
+        @media(min-width:1024px){
+          width: 50%;
+          text-align: justify;
+          padding-bottom: 7em;
+          height: max-content;
+        }
+      
+        .part-association-text{
+          margin-bottom: 0.9em;
+          font-weight: 500;
+          font-size: 1em;
+          line-height: 120%;
+          text-align: left;
+
+          @media(min-width:768px){
+            font-size:1.3em;
+          }
+
+          @media(min-width:1023px){
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 120%;
+            margin-bottom: .9em;
+          }
+        }
+
+        ul {
+
+          .part-association-text-elem-list {
+            list-style-type: disc;
+            margin: 1em auto 1em 1em;
+            font-size: 1em;
+
+            @media(min-width:768px){
+              font-size:1.3em;
+            }
+          }
+        }
+      }
+        .part-association-img {
+          width: 100%;
+          height: 70%;
+          justify-content: center;
+
+        @media(min-width:1024px){
+          width: 50%;
+        }
+
+          .dashboard-association-img {
+            width: 100%;
+            margin-bottom: 2em;
+
+            @media(min-width:768px){
+              margin-bottom: 3.5em;
+            }
+
+            @media(min-width:1023px){
+              width: 70%;
+              height: min-content;
+              margin: auto auto auto 5em;
+            }
+          }
+        }
+
+        .part-association-btn-subscribe{
+          text-align:center;
+
+        @media(min-width:1023px){
+          display: none;
+        }
+        }
+      }        
+    }
+
+    .part-user {
+      padding: 2em;
+
+      @media(min-width:1024px){
         padding-bottom: 7em;
-        padding-right: 2.3em;
       }
-     
+  
+      .part-user-title{
+
+        .part-user-title-title{
+          padding-top: 2em;
+          margin-bottom: 3em;
+          line-height: 140%;
+          text-align: center;
+          font-weight: 800;
+
+        @media(min-width:1024px){
+          padding-top: 3.5em;
+          font-size: 1.6em;
+          
+            strong {
+              font-size: 1.2em;
+            }
+          }   
+        }
+      }
+
       .part-user-content{
+
+      @media(min-width:1024px){
         display: flex;
       }
-    
-      .part-user-content-content{
-        width: 50%;
-        margin-top: 2em;
-      }
-    
-      .part-user-img{
-       width:50%;
-      }
-    
-      .dashboard-user-img{
-        max-width: 80%;
-        min-height: 35%;
-        margin-bottom: 2em;
-        margin-left: 3.5em;
-      }
-    
-      .material-icons{
-        font-family: 'Material Icons';
-        font-size: 1.8em;
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-        top:50%;
-        position: absolute;
-      }
-      
-      .material-icons--association{
-        color: vars.$lightColor;
-      }
-      .material-icons--user{
-        color: vars.$darkColor;
-        position: absolute;
+        .part-user-content-content {
+          width: 100%;
+          text-align: left;
+          padding: auto 1em 3.5em 1em;
         
-        top: 50%;
-        transform: translateY(-50%);
-
-        &.arrow-left {
-          left: 10px;
-
+        @media(min-width:1024px){
+          width: 50%;
+          margin-top: 2em;
+          text-align: justify;
+          padding-bottom: 7em;
+          height: max-content;
         }
 
-        &.arrow-right {
-          right: 10px;
+          .part-user-text{
+            font-weight: 500;
+            margin-bottom: 0.9em;
+            font-size: 1em;
+            line-height: 120%;
+            text-align: left;
+          
+          @media(min-width:768px){
+            font-size:1.3em;
+          }
+
+          @media(min-width:1024px){
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 120%;
+            margin-bottom: .9em;
+          }
         }
-      }
-    
-      .part-user-btn-subscribe, .part-association-btn-subscribe{
-        display: none;
-      }
+
+          ul{
+
+          .part-user-text-elem-list{
+            list-style-type: disc;
+            margin: 1em auto 1em 1em;
+            font-size: 1em;
+            
+            @media(min-width:768px){
+              font-size:1.3em;
+            }
+          }
+        }
+    }  
+        .part-user-img{
+          width: 100%;
+          height: 70%;
+          justify-content: center;
+
+          @media(min-width:1023px){
+            width: 50%;
+          }
+          .dashboard-user-img {
+            width: 100%;
+            margin: 2em auto 2em auto;
+
+            @media(min-width:768px) and (min-width:1023px){
+              margin: -0.7em auto 3.3em auto;
+            }
+
+            @media(min-width:1024px){
+              width: 70%;
+              height: min-content;
+              margin: auto auto auto 5em;
+            }   
+          }
+        }
+        
+        .part-user-btn-subscribe {
+        margin-top: 0.5em;
+        text-align: center;
+
+        @media(min-width:1023px){
+          display: none;
+        }
+        }                 
+    }
+  }
   }
 }
+// // tablet
+// @media(min-width:768px) and (max-width:1023px) {
+//   .home {
+    
+//     .part-registration-text {
+//       font-size: 1.3em;
+//       line-height: 150%;
+//       margin-bottom: 3em;
+//     }
+
+//     .part-connexion{
+//     .stadium-img {
+//       height: 30em;
+//     }
+//   }
+//     strong {
+//       font-size: 1.2em;
+//     }
+
+    
+//     .part-association-title{
+//       font-size: 1.6em;
+//     }
+
+//     .part-association-content{
+//     .part-association-text{
+//       font-size: 1.3em;
+//     }
+//   }
+
+//     .part-association-text-elem-list{
+//       font-size: 1.3em;
+//     }
+
+//     .dashboard-association-img {
+//       margin-bottom: 3.5em;
+//     }
+
+//     .dashboard-user-img {
+//       margin: -0.7em auto 3.3em auto;
+//     }
+//   }
+// }
+
+// // desktop
+// @media(min-width:1024px) {
+//   .home {
+//     position: relative;
+//     font-size: 1.2em;
+
+//     .home-header-header{
+//       display: flex;
+//       padding-bottom: 0;
+//       background-color: transparent;
+//       position: relative;
+//       z-index: 1;
+
+//       .part-registration{
+//         .part-registration-content{
+//           margin: 2em 2em 2em 4em;
+//         }
+//       }
+//       .part-registration-logo {
+//         .imageLogo {
+//           margin: 2em auto auto 2em;
+//         }
+//       }
+//     }
+
+//     .home-header {
+//       display: flex;
+//       text-align:left;
+  
+
+//   .part-connexion {
+//     width: 40%;
+//     position:relative;
+
+//   .stadium-img {
+//     position: absolute;
+//     width: 100%;
+//     height: max-content;
+//     top:10;
+//   }
+// }
+//     .btn-form-subscribe {
+//       margin-top: 2.5em auto 7em auto;
+//     }
+
+//     .part-registration {
+//       padding-top: 2em auto 4em 4em;
+//       width: 60%;
+//       position: relative;
+//     }
+
+//     .btn-form-login {
+//       margin-top: 2em;
+//     }
+
+//     .part-registration-title {
+//       .part-registration-title-title{
+//       font-size: 1.6em;
+//     }
+//   }
+//  }   
+//     .part-association{
+//       padding:auto 4.3 auto 4.3em;
+//       font-size: 1.3em;
+//       line-height: 120%;
+//     }
+
+//     .part-association-title{
+//       .part-association-title-title{
+//       padding-top: 3.5em;
+//       font-size: 1.6em;
+//     }
+//   }
+
+//     .part-association-content {
+//       display: flex;
+//       flex-direction: row-reverse;
+
+//       .part-association-content-content {
+//       width: 50%;
+//       text-align: justify;
+//       padding-bottom: 7em;
+//       height: max-content;
+//     }
+//   }
+//     .part-association-img {
+//       width: 50%;
+
+//       .dashboard-association-img {
+//       width: 70%;
+//       height: min-content;
+//       margin: auto auto auto 5em;
+//     }
+//   }
+
+//     .part-association-btn-subscribe{
+//       display: none;
+//     }
+
+//     .part-user {
+//       padding-bottom: 7em;
+    
+//     .part-user-title{
+//       .part-user-title-title{
+//         padding-top: 3.5em;
+//          font-size: 1.6em;
+//       }
+//     }
+//     .part-user-content {
+//       display: flex;
+
+//     .part-user-content-content {
+//       width: 50%;
+//       margin-top: 2em;
+
+//       .part-user-text{
+//         font-size: 1em;
+//         font-weight: 500;
+//         line-height: 120%;
+//         margin-bottom: .9em;
+//       }
+//     } 
+    
+//     .part-user-img {
+//       width: 50%;
+
+//       .dashboard-user-img {
+//       width: 70%;
+//       height: min-content;
+//       margin: auto auto auto 5em;
+//     }
+//     }
+  
+//     .part-user-btn-subscribe{
+//       display: none;
+//     }
+//   }
+//   }
+//  }
+// }
+// }
+ 

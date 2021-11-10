@@ -13,7 +13,7 @@ const LegalMention = () => (
         <ButtonFormLogin />
         <div className="LegalMention-leftside-content">
           <h1 className="LegalMention-title">Mentions Légales</h1>
-          <p className="LegalMention-text">
+          <p className="LegalMention-text titre">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -21,7 +21,7 @@ const LegalMention = () => (
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
             qui officia deserunt mollit anim id est laborum."
           </p>
-          <p className="LegalMention-text">
+          <p className="LegalMention-text titre">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute

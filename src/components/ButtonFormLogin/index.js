@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const ButtonFormLogin = () => (
-  <button className="btn-form-login" type="button">
-    <Link to="/connexion">Connexion</Link>
-  </button>
+  <>
+    <div className="btn-login">
+      <button className="btn-form-login" type="button">
+        <Link to="/connexion">Connexion</Link>
+      </button>
+    </div>
+    <div className="btn-form-login-border" />
+  </>
 );
 
 export default ButtonFormLogin;
