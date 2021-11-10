@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 // on importe le composant de présentation
 import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
@@ -7,15 +8,17 @@ import { updateEventField, submitEvent } from '../../actions/event';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
-const mapStateToProps = (state) => ({
-  name: state.event.name,
-  startDate: state.event.startDate,
-  schedule: state.event.schedule,
-  endDate: state.event.endDate,
-  place: state.event.place,
-  maxParticipant: state.event.maxParticipant,
-  association: state.event.association,
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    name: state.event.name,
+    startDate: state.event.startDate,
+    schedule: state.event.schedule,
+    endDate: state.event.endDate,
+    place: state.event.place,
+    maxParticipant: state.event.maxParticipant,
+    association: ownProps.match.params.id,
+  };
+};
 
 // === mapDispatchToProps
 // si on a besoin de dispatcher des actions vers le store (modifier le state)

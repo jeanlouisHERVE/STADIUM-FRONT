@@ -185,9 +185,8 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
         <SuperAdminEvent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id/addEvent">
-        <SuperAdminAddEvent />
-      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
+     
       {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
         <SuperAdminModifyEvent />
       </Route> */}

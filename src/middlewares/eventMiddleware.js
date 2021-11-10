@@ -15,14 +15,16 @@ const authMiddleware = (store) => (next) => (action) => {
       axios.post(
         // URL
         'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events',
+        // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
         // paramètres
         {
           name: state.event.name,
           startDate: state.event.startDate,
-          schedule: state.event.scheduled,
+          schedule: state.event.schedule,
           endDate: state.event.endDate,
           place: state.event.place,
-          maxParticipants: state.event.maxParticipant,
+          maxParticipants: Number(state.event.maxParticipant),
+          association: Number(state.event.association),
         },
       )
         .then((response) => {
