@@ -11,7 +11,7 @@ const ListingActivities = ({ activities }) => {
       <div className="listingActivity-header">
         <div className="listingActivity-header-leftside">
           <div className="listingActivity-title"><h2>Activités</h2></div>
-          <Link to={`${path.pathname}/addAdherent`} className="listingActivity-addIcon"><span className=" material-icons">add</span></Link>
+          <Link to={`${path.pathname}/addActivity`} className="listingActivity-addIcon"><span className=" material-icons">add</span></Link>
         </div>
         <div className="listingActivity-header-rightside">
           <div className="listingActivity-filter">

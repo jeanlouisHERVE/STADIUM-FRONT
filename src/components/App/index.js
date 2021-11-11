@@ -139,9 +139,11 @@ import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventA
 
 // activité
 import SuperAdminActivity from '../../pages/DashboardSuperAdminSingleActivity';
+import SuperAdminAddActivity from '../../containers/DashboardSuperAdminSingleActivityAddingPage';
 
 // cours
 import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
+import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLessonAddingPage';
 
 // adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
@@ -207,9 +209,11 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
         <SuperAdminLesson />
       </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
       <Route path="/backoffice/superadmin/associations/:id/activity/:id" exact>
         <SuperAdminActivity />
       </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addActivity" component={SuperAdminAddActivity} />
       {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
         <SuperAdminAddClasse />
       </Route>
