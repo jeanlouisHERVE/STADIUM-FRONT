@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -28,6 +28,13 @@ const SuperAdminAddEvent = ({
     evt.preventDefault();
     handleSubmit();
   };
+
+  useEffect(() => {
+    updateField(association, 'association');
+  }, []);
+
+  // console.log(association);
+  // let association = pathArray[4];
 
   return (
     <>
@@ -71,7 +78,7 @@ const SuperAdminAddEvent = ({
               value={schedule}
             />
             <Field
-              type="D - M - Y"
+              // type="D - M - Y"
               identifier="endDate"
               placeholder="21/08/2021"
               label="Date de fin"
@@ -99,17 +106,7 @@ const SuperAdminAddEvent = ({
                 // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
-              value={maxParticipant}
-            />
-            <Field
-              identifier="association"
-              placeholder="1"
-              label="association"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={association}
+              value={Number(maxParticipant)}
             />
             <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
           </form>
@@ -121,9 +118,9 @@ const SuperAdminAddEvent = ({
 
 SuperAdminAddEvent.propTypes = {
   name: PropTypes.string.isRequired,
-  startDate: PropTypes.instanceOf(Date).isRequired,
+  startDate: PropTypes.string.isRequired,
   schedule: PropTypes.string.isRequired,
-  endDate: PropTypes.instanceOf(Date).isRequired,
+  endDate: PropTypes.string.isRequired,
   place: PropTypes.string.isRequired,
   maxParticipant: PropTypes.number.isRequired,
   association: PropTypes.number.isRequired,

@@ -15,6 +15,8 @@ const initialState = {
   place: '',
   // indique si l'utilisateur est authentifié
   maxParticipant: '',
+  // indique si l'utilisateur est authentifié
+  association: '',
 };
 
 function addEventReducer(state = initialState, action) {
