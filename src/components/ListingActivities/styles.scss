@@ -1,0 +1,199 @@
+@use 'src/styles/vars';
+
+.listingAdherent-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 10px;
+
+
+  .listingAdherent-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 40px;
+    align-items: center;
+    
+
+    .listingAdherent-header-leftside {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+      width:30%;
+
+      .listingAdherent-title {
+        margin-right: 15px;
+        
+
+         h2 {
+          font-weight: 600;
+          font-size: x-large;
+          text-transform: uppercase;
+         }
+      }
+  
+      .listingAdherent-addIcon {
+        cursor: pointer;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+        }
+      
+      }
+    }
+
+    .listingAdherent-header-rightside {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .listingAdherent-filter {
+
+        .listingAdherent-filter-button {
+          background-color: white;
+          border: 2px solid vars.$salmonColor;
+          height: 30px;
+          width: 60px;
+          color: vars.$salmonColor;
+          font-weight: 700;
+          cursor: pointer;
+          margin-left: 10px;
+          border-radius: 20px;
+         
+          &:hover {
+            background-color: vars.$salmonColor;
+            color: white;
+          }
+        }
+
+      }
+
+      .listingAdherent-filterIcon {
+        margin-right: 10px;
+        
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          cursor: pointer;
+        }
+      
+      }
+
+    }
+
+  }
+
+  .listingAdherent-line-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border-bottom: 1px black solid;
+    margin-left: 30px;
+
+    @media (max-width: 1300px) {
+      margin-left: 0px;
+    }
+
+    .listingAdherent-line-header-leftside {
+      display: flex;
+      flex-direction: row;
+
+      .listingAdherent-line-header-items {
+        margin-left: 15px;
+        width:100px;
+        font-weight: 700
+      }
+    }
+
+    .listingAdherent-line-header-rightside {
+
+
+    }
+  }
+
+  .listingAdherent-line-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border-bottom: 1px black solid;
+    margin-left: 30px;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    @media (max-width: 1300px) {
+      margin-left: 0px;
+    }
+    .listingAdherent-line-leftside {
+      display: flex;
+      flex-direction: row;
+      
+      .listingAdherent-line-items {
+        margin-left: 15px;
+        width:100px; 
+      }
+      
+      .lastname {
+        text-transform: uppercase;
+      }
+    }
+
+    .listingAdherent-line-rightside {
+
+      .listingAdherent-line-icon-view {
+       
+        margin-right: 1em;
+        
+        cursor: pointer;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+  
+  
+
