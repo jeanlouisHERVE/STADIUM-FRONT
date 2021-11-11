@@ -8,12 +8,12 @@ import { updateLessonField, submitLesson } from '../../actions/lesson';
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state, ownProps) => ({
-  level: state.event.level,
-  startTime: state.event.startTime,
-  endTime: state.event.endTime,
-  day: state.event.day,
-  place: state.event.place,
-  activity: state.event.activity,
+  level: state.lesson.level,
+  startTime: state.lesson.startTime,
+  endTime: state.lesson.endTime,
+  day: state.lesson.day,
+  place: state.lesson.place,
+  activity: state.lesson.activity,
   association: ownProps.match.params.id,
 });
 

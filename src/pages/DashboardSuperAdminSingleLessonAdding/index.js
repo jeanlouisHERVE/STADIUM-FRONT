@@ -23,7 +23,7 @@ const SuperAdminAddLesson = ({
     setIsOpen(!isOpen);
   };
 
-  const handleEventSubmit = (evt) => {
+  const handleLessonSubmit = (evt) => {
     evt.preventDefault();
     handleSubmit();
   };
@@ -42,7 +42,7 @@ const SuperAdminAddLesson = ({
         </div>
         <div className="dashboard-superadmin-event-add-container">
           <h1>Ajouter un cours à l'association XXXXXXX</h1>
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleEventSubmit}>
+          <form className="dashboard-superadmin-event-add-form" onSubmit={handleLessonSubmit}>
             <Field
               identifier="level"
               placeholder="Beginner"

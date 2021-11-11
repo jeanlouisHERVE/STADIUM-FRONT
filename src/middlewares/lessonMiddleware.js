@@ -18,13 +18,13 @@ const lessonMiddleware = (store) => (next) => (action) => {
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/lessons',
         // paramètres
         {
-          level: state.event.level,
-          startTime: state.event.startTime,
-          endTime: state.event.endTime,
-          day: Number(state.event.day),
-          place: state.event.place,
-          activity: Number(state.event.activity),
-          association: Number(state.event.association),
+          level: state.lesson.level,
+          startTime: state.lesson.startTime,
+          endTime: state.lesson.endTime,
+          day: Number(state.lesson.day),
+          place: state.lesson.place,
+          activity: Number(state.lesson.activity),
+          association: Number(state.lesson.association),
         },
       )
         .then((response) => {
