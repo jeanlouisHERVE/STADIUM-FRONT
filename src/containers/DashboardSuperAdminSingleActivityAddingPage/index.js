@@ -1,19 +1,15 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import SuperAdminAddEvent from '../../pages/DashboardSuperAdminSingleEventAdding';
+import SuperAdminAddActivity from '../../pages/dashboardSuperAdminSingleActivityAdding';
 
-import { updateEventField, submitEvent } from '../../actions/event';
+import { updateActivityField, submitActivity } from '../../actions/activity';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state, ownProps) => ({
-  name: state.event.name,
-  startDate: state.event.startDate,
-  schedule: state.event.schedule,
-  endDate: state.event.endDate,
-  place: state.event.place,
-  maxParticipant: state.event.maxParticipant,
+  name: state.activity.level,
+  picture: state.activity.picture,
   association: ownProps.match.params.id,
 });
 
@@ -22,13 +18,13 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   updateField: (value, name) => {
-    const action = updateEventField(value, name);
+    const action = updateActivityField(value, name);
     dispatch(action);
   },
   handleSubmit: () => {
-    dispatch(submitEvent());
+    dispatch(submitActivity());
   },
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(SuperAdminAddEvent);
+export default connect(mapStateToProps, mapDispatchToProps)(SuperAdminAddActivity);
