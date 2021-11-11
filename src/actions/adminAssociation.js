@@ -5,7 +5,7 @@ export const getAssociationInformations = () => ({
   type: GET_ASSOCIATION_INFORMATIONS,
 });
 
-export const saveAssociations = (associations) => ({
+export const saveAssociation = (association) => ({
   type: SAVE_ASSOCIATION,
-  associations: associations,
+  association: association,
 });

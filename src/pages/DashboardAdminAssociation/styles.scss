@@ -3,6 +3,9 @@
 body {
   background: #E4E7EC;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+
+
 }
 
 .dashboard-superadmin {
@@ -18,7 +21,7 @@ body {
     margin-top: 90px;
   }
   
-  .dashboard-superadmin-rightside {
+  .dashboard-adminAssociation-rightside {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +38,7 @@ body {
       margin-left: 20px;
     }
 
-    .dashboard-superadmin-presentation{
+    .dashboard-adminAssociation-presentation{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -47,15 +50,15 @@ body {
       border-radius: 20px;
       filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
 
-      .dashboard-superadmin-presentation-leftside {
+      .dashboard-adminAssociation-presentation-leftside {
         
-        .dashboard-superadmin-presentation-title {
+        .dashboard-adminAssociation-presentation-title {
           text-transform: uppercase;
           font-weight: 700;
           margin-bottom: 1em;
         }  
   
-        .dashboard-superadmin-presentation-item {
+        .dashboard-adminAssociation-presentation-item {
           margin-bottom: 1em;
           display: flex;
           flex-direction: row;
@@ -66,7 +69,7 @@ body {
         }
       }
 
-      .dashboard-superadmin-presentation-picture {
+      .dashboard-adminAssociation-presentation-picture {
         width:500px;
         height: 100%;
         background-color: vars.$salmonColor;
@@ -79,7 +82,7 @@ body {
     }
       
 
-    .dashboard-superadmin-buttonsList {
+    .dashboard-adminAssociation-buttonsList {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -93,7 +96,7 @@ body {
         padding-left: 0px;
       }
 
-      .dashboard-superadmin-button {
+      .dashboard-adminAssociation-button {
         margin-right: 10px;
         border: 2px solid vars.$turquoiseColor;
         border-radius: 20px;
@@ -111,7 +114,7 @@ body {
       }
     }
 
-    .dashboard-superadmin-listing-wrapper {
+    .dashboard-adminAssociation-listing-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
