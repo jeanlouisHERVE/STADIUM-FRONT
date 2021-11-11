@@ -4,144 +4,224 @@
 .home {
   width: 100%;
 
-  @media(min-width:1024px) {   
-  position: relative;
-  font-size: 1.2em;
-  }
+  // @media(min-width:1024px) {  
+  //   font-size: 1.2em;
+  //   position: relative;
+  // }
 
-  .home-header-header {
-    display: flex;
-    padding-bottom: 1em;
-    background-color: vars.$turquoiseColor;
+  @media(min-width:768px){
+    font-size: 1.2em;
     position: relative;
-
-  @media(min-width:1024px){
-    padding-bottom: 0;
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-  }
-    .part-registration-logo {
-      .imageLogo {
-        width: 9em;
-        border-radius: 20px;
-        margin: 1em auto auto 1em;
-
-        @media(min-width:1024px){
-          margin: 2em auto auto 2em;
-        }
-      }
-    }
-    .part-connexion-btn {
-
-      .btn-login {
-        margin-top: 1.5em;
-        position: absolute;
-        right: 1em;
-      }
-    }
   }
 
   .home-content{
+    height: 100vh;
 
-    .home-header {
-      margin-top: 6em;
-      text-align: center;
-    
-    @media(min-width:1024px){
-      display: flex;
-      text-align:left;
-    }
+  @media(min-width:768px){
+    display: flex;
+    position: relative;
+    z-index:0; 
+  }
+  // @media(min-width:1024px){
+  //   display: flex;
+  //   position: relative;
+  //   z-index:0; 
+  // }
       .part-registration {
-        margin-top: 3em;
-      
-      @media(min-width:1024px){
-        padding-top: 2em auto 4em 4em;
-        width: 60%;
-        position: relative;
-      }
+        margin:12em 2em 2em 2em;
 
-        .part-registration-content {
-          text-align: justify;
-          padding-bottom: 4em;
-          margin: 1em 2em auto 2em;
-          color: vars.$blueColor;
-
-        @media(min-width:1024px){
-          margin: 2em 2em 2em 4em;
+        @media(min-width:768px) and (max-width:1023px){
+          margin: 11em 4em auto 2em;
+          height: 70vh;
+          width:50%;
         }
-          
+      
+        @media(min-width:1024px){
+          margin: 14em 3em 4em 4em;
+          width: 60%;
+        }  
           .part-registration-title {
-            font-size: 1.3em;
-            font-weight: 800;
+            font-weight: 700;
+            font-size:1em;
             margin-bottom: 1.2em;
             line-height: 140%;
+
+          @media(min-width:768px) and (max-width:1023px){
+            font-size:1.3em;
           }
 
+          @media(min-width:1024px){
+            font-size:1.6em;
+            text-align: left;
+          }
+        }
           .part-registration-text {
-            line-height: 120%;
+            line-height: 130%;
             margin-bottom: 2em;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 500;
           
-            @media(min-width:768px) and (min-width:1023px){
-              font-size: 1.3em;
+            @media(min-width:768px) and (max-width:1023px){
+              //font-size: 1.3em;
               line-height: 150%;
-              margin-bottom: 3em;
+              font-weight: normal;
             }  
+            @media(min-width:1024px){
+              font-size:1em;
+            }
           }
             .part-registration-btn-subscribe {
               text-align: center;
+              margin:3em auto 3em auto;
+              
             
-            @media(min-width:1024px){
-              margin-top: 2.5em auto 7em auto;
+            @media(min-width:768px) and (max-width:1023px){
+              text-align: left;    
             }
-            }    
+
+            @media(min-width:1024px){
+              margin: 4em auto 7em auto;
+              font-size: 1.1em;
+              font-weight: 700;
+              text-align: left;
+            }
+          }    
         }
+      
+      .home-header-header {
+        display: flex;
+        padding-bottom: 1em;
+        background-color: vars.$turquoiseColor;
+        position: absolute;
+        top:0;
+        width: 100%;
+    
+      // @media(min-width:768px) and (max-width: 1023px){
+      //   height: 19vh;
+      // }
+      // @media(min-width:1024px){
+      //   padding-bottom: 0;
+      //   background-color: transparent;
+      //   position: absolute;
+      //   z-index:1; 
+      // }
+
+      @media(min-width:768px){
+        height: 19vh;
+        padding-bottom: 0;
+        background-color: transparent;
+        position: absolute;
+        z-index:1; 
       }
+        .part-registration-logo {
+          .imageLogo {
+            width: 8em;
+            border-radius: 20px;
+            margin: 1em auto auto 1em;
+    
+            // @media(min-width:768px) and (max-width: 1023px){
+            //   width: 9em;
+            // }
+            @media(min-width:1024px){
+              margin: 2em auto auto 2em;
+            }
+          }
+        }
+        .part-connexion-btn {
+         
+          .btn-login {
+            margin-top: 1.8em;
+            right: 1em;
+            font-size: small;
+      
+          // @media(min-width:768px){
+          //   font-size:1em;
+          //   } 
+
+          @media(min-width:768px){
+            font-size:1em;
+            } 
+          }
+            .btn-form-login{
+
+            // @media(min-width:1024px){
+            //   position: absolute;
+            //   right:1.4em;
+            // }
+
+            @media(min-width:768px)and (max-width:1023px){
+              position: absolute;
+              right:1.4em;
+              font-size: 0.9em;
+            }
+
+            @media(min-width:1024px){
+              position: absolute;
+              right:1.4em;
+            }
+            }
+          }
+        }
       .part-connexion {
         width: 100%;
+      
+      // @media(min-width:1024px){
+      //   width: 40%;
+      //   max-height:100%;
+      //   position: relative;
+      // }
+      //   .stadium-img {
+      //     width: 100%;
 
-      @media(min-width:1024px){
-        width: 40%;
-        position:relative;
-      }
-        .stadium-img {
-          width: 100%;
 
-        @media(min-width:1024px){
-          position: absolute;
-          height: max-content;
-          top:10;
-        }   
+      //   @media(min-width:1024px){
+      //   width: 100%;
+      //   height:100%;
+        
+      //   }   
+      //   }
+
+        @media(min-width:768px){
+          width: 40%;
+          max-height:100%;
+          position: relative;
         }
+          .stadium-img {
+            width: 100%;
+  
+  
+          @media(min-width:768px){
+          width: 100%;
+          height:100%;
+          
+          }   
+          }
       }
     }
     .part-association {
       background-color: vars.$turquoiseColor;
-      padding: 2em 2em 2em;
-      margin-top: -1em;
+      padding: 1em 3em 2em 3em;
+      position: relative;
     
       @media(min-width:1024px){
         font-size: 1em;
         line-height: 120%; 
+        padding: 1em 2em 2em 1em;
       }
 
       .part-association-title {
 
-        @media(min-width:768px){
-          font-size: 1em;
+        @media(min-width:768px) and (max-width:1023px){
+          font-size:1.3em;
         }
         .part-association-title-title {
         color: vars.$lightColor;
-        padding-top: 2em;
-        margin-bottom: 3em;
+        margin:2em auto 3em auto;
         line-height: 140%;
         text-align: center;
-        font-weight: 800;
+        font-weight: 700;
 
         @media(min-width:1024px){
-          padding-top: 3.5em;
           font-size: 1.6em;
         }
           strong {
@@ -153,10 +233,8 @@
         @media(min-width:1024px){
           display: flex;
           flex-direction: row-reverse;
-          margin: 2em 2em 2em 2em;
+          margin: 2em 2em 1em 2em;
           }
-        
-        
         .part-association-content-content {
           width: 100%;
           color: vars.$lightColor;
@@ -166,24 +244,24 @@
         @media(min-width:1024px){
           width: 50%;
           text-align: justify;
-          padding-bottom: 7em;
+          padding-bottom: 3em;
           height: max-content;
         }
       
         .part-association-text{
           margin-bottom: 0.9em;
-          font-weight: 500;
+          // font-weight: 500;
           font-size: 1em;
           line-height: 120%;
           text-align: left;
 
-          @media(min-width:768px){
-            font-size:1.3em;
+          @media(min-width:768px) and (max-width: 1023px){
+            font-size:1.1em;
           }
 
-          @media(min-width:1023px){
+          @media(min-width:1024px){
             font-size: 1em;
-            font-weight: 500;
+            // font-weight: 500;
             line-height: 120%;
             margin-bottom: .9em;
           }
@@ -194,11 +272,11 @@
           .part-association-text-elem-list {
             list-style-type: disc;
             margin: 1em auto 1em 1em;
-            font-size: 1em;
-
-            @media(min-width:768px){
-              font-size:1.3em;
-            }
+            // font-weight: 500;
+          
+          @media(min-width:768px) and (max-width: 1023px){
+            font-size:1.1em;
+          }
           }
         }
       }
@@ -213,22 +291,27 @@
 
           .dashboard-association-img {
             width: 100%;
-            margin-bottom: 2em;
+            margin: auto auto 2em auto;
 
-            @media(min-width:768px){
-              margin-bottom: 3.5em;
+            @media(min-width:768px) and (max-width: 1023px){
+              margin: 2em auto 3.5em auto;
             }
 
-            @media(min-width:1023px){
-              width: 70%;
-              height: min-content;
-              margin: auto auto auto 5em;
+            @media(min-width:1024px){
+              width: 90%;
+              height:60vh;
+              margin: 2em 4em auto 1em;
             }
           }
         }
 
         .part-association-btn-subscribe{
           text-align:center;
+
+        @media(min-width:768px) and (max-width: 1023px){
+          font-size:1.1em;
+          margin: -1em auto 2em auto;
+        }
 
         @media(min-width:1023px){
           display: none;
@@ -241,20 +324,22 @@
       padding: 2em;
 
       @media(min-width:1024px){
-        padding-bottom: 7em;
+        font-size: 1em;
+        line-height: 120%; 
+        padding: 2.2em 2em 2em auto;
       }
   
       .part-user-title{
-
+        @media(min-width:768px) and (max-width:1023px){
+          font-size:1.3em;
+        }
         .part-user-title-title{
-          padding-top: 2em;
-          margin-bottom: 3em;
+          margin:.7em auto 3em auto;
           line-height: 140%;
           text-align: center;
-          font-weight: 800;
+          font-weight: 700;
 
         @media(min-width:1024px){
-          padding-top: 3.5em;
           font-size: 1.6em;
           
             strong {
@@ -263,20 +348,19 @@
           }   
         }
       }
-
+      
       .part-user-content{
-
       @media(min-width:1024px){
         display: flex;
+        margin: 2em 2em 4em 2em;
       }
         .part-user-content-content {
           width: 100%;
           text-align: left;
-          padding: auto 1em 3.5em 1em;
+          padding-bottom:1em;
         
         @media(min-width:1024px){
           width: 50%;
-          margin-top: 2em;
           text-align: justify;
           padding-bottom: 7em;
           height: max-content;
@@ -289,8 +373,8 @@
             line-height: 120%;
             text-align: left;
           
-          @media(min-width:768px){
-            font-size:1.3em;
+          @media(min-width:768px) and (max-width: 1023px){
+            font-size:1.1em;
           }
 
           @media(min-width:1024px){
@@ -306,11 +390,11 @@
           .part-user-text-elem-list{
             list-style-type: disc;
             margin: 1em auto 1em 1em;
-            font-size: 1em;
-            
-            @media(min-width:768px){
-              font-size:1.3em;
-            }
+            //font-weight: 500;
+
+          @media(min-width:768px) and (max-width: 1023px){
+            font-size:1.1em;
+          }
           }
         }
     }  
@@ -319,21 +403,21 @@
           height: 70%;
           justify-content: center;
 
-          @media(min-width:1023px){
+          @media(min-width:1024px){
             width: 50%;
           }
           .dashboard-user-img {
             width: 100%;
-            margin: 2em auto 2em auto;
+            margin: auto auto 2em auto;
 
-            @media(min-width:768px) and (min-width:1023px){
-              margin: -0.7em auto 3.3em auto;
+            @media(min-width:768px) and (max-width:1023px){
+              margin: 2em auto 3.5em auto;
             }
 
             @media(min-width:1024px){
-              width: 70%;
-              height: min-content;
-              margin: auto auto auto 5em;
+              width: 90%;
+              height:60vh;
+              margin: -1em 4em auto 4em;
             }   
           }
         }
@@ -342,197 +426,16 @@
         margin-top: 0.5em;
         text-align: center;
 
+        @media(min-width:768px) and (max-width:1023px){
+          font-size:1.1em;
+          margin:-1em auto 2em;
+        }
+
         @media(min-width:1023px){
           display: none;
         }
         }                 
     }
   }
-  }
 }
-// // tablet
-// @media(min-width:768px) and (max-width:1023px) {
-//   .home {
-    
-//     .part-registration-text {
-//       font-size: 1.3em;
-//       line-height: 150%;
-//       margin-bottom: 3em;
-//     }
 
-//     .part-connexion{
-//     .stadium-img {
-//       height: 30em;
-//     }
-//   }
-//     strong {
-//       font-size: 1.2em;
-//     }
-
-    
-//     .part-association-title{
-//       font-size: 1.6em;
-//     }
-
-//     .part-association-content{
-//     .part-association-text{
-//       font-size: 1.3em;
-//     }
-//   }
-
-//     .part-association-text-elem-list{
-//       font-size: 1.3em;
-//     }
-
-//     .dashboard-association-img {
-//       margin-bottom: 3.5em;
-//     }
-
-//     .dashboard-user-img {
-//       margin: -0.7em auto 3.3em auto;
-//     }
-//   }
-// }
-
-// // desktop
-// @media(min-width:1024px) {
-//   .home {
-//     position: relative;
-//     font-size: 1.2em;
-
-//     .home-header-header{
-//       display: flex;
-//       padding-bottom: 0;
-//       background-color: transparent;
-//       position: relative;
-//       z-index: 1;
-
-//       .part-registration{
-//         .part-registration-content{
-//           margin: 2em 2em 2em 4em;
-//         }
-//       }
-//       .part-registration-logo {
-//         .imageLogo {
-//           margin: 2em auto auto 2em;
-//         }
-//       }
-//     }
-
-//     .home-header {
-//       display: flex;
-//       text-align:left;
-  
-
-//   .part-connexion {
-//     width: 40%;
-//     position:relative;
-
-//   .stadium-img {
-//     position: absolute;
-//     width: 100%;
-//     height: max-content;
-//     top:10;
-//   }
-// }
-//     .btn-form-subscribe {
-//       margin-top: 2.5em auto 7em auto;
-//     }
-
-//     .part-registration {
-//       padding-top: 2em auto 4em 4em;
-//       width: 60%;
-//       position: relative;
-//     }
-
-//     .btn-form-login {
-//       margin-top: 2em;
-//     }
-
-//     .part-registration-title {
-//       .part-registration-title-title{
-//       font-size: 1.6em;
-//     }
-//   }
-//  }   
-//     .part-association{
-//       padding:auto 4.3 auto 4.3em;
-//       font-size: 1.3em;
-//       line-height: 120%;
-//     }
-
-//     .part-association-title{
-//       .part-association-title-title{
-//       padding-top: 3.5em;
-//       font-size: 1.6em;
-//     }
-//   }
-
-//     .part-association-content {
-//       display: flex;
-//       flex-direction: row-reverse;
-
-//       .part-association-content-content {
-//       width: 50%;
-//       text-align: justify;
-//       padding-bottom: 7em;
-//       height: max-content;
-//     }
-//   }
-//     .part-association-img {
-//       width: 50%;
-
-//       .dashboard-association-img {
-//       width: 70%;
-//       height: min-content;
-//       margin: auto auto auto 5em;
-//     }
-//   }
-
-//     .part-association-btn-subscribe{
-//       display: none;
-//     }
-
-//     .part-user {
-//       padding-bottom: 7em;
-    
-//     .part-user-title{
-//       .part-user-title-title{
-//         padding-top: 3.5em;
-//          font-size: 1.6em;
-//       }
-//     }
-//     .part-user-content {
-//       display: flex;
-
-//     .part-user-content-content {
-//       width: 50%;
-//       margin-top: 2em;
-
-//       .part-user-text{
-//         font-size: 1em;
-//         font-weight: 500;
-//         line-height: 120%;
-//         margin-bottom: .9em;
-//       }
-//     } 
-    
-//     .part-user-img {
-//       width: 50%;
-
-//       .dashboard-user-img {
-//       width: 70%;
-//       height: min-content;
-//       margin: auto auto auto 5em;
-//     }
-//     }
-  
-//     .part-user-btn-subscribe{
-//       display: none;
-//     }
-//   }
-//   }
-//  }
-// }
-// }
- 
