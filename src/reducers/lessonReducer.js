@@ -9,6 +9,7 @@ const initialState = {
   day: '',
   place: '',
   activity: '',
+  association: '',
 };
 
 function addLessonReducer(state = initialState, action) {

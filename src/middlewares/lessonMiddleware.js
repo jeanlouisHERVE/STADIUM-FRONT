@@ -24,6 +24,7 @@ const lessonMiddleware = (store) => (next) => (action) => {
           day: Number(state.event.day),
           place: state.event.place,
           activity: Number(state.event.activity),
+          association: Number(state.event.association),
         },
       )
         .then((response) => {

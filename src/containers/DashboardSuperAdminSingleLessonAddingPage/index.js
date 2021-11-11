@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
   day: state.event.day,
   place: state.event.place,
   activity: state.event.activity,
+  association: ownProps.match.params.id,
 });
 
 // === mapDispatchToProps
