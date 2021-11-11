@@ -119,8 +119,8 @@ import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 
 import Home from '../../pages/Home';
-import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
-// import Messages from '../Messages';
+import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
+import Messages from '../Messages';
 
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
@@ -138,6 +138,8 @@ import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLesso
 // pages adhérent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+
+import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 
 import './styles.scss';
 
@@ -170,11 +172,12 @@ const App = () => (
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
       </Route>
+      {/* Every Pages of the SuperAdmin Dashboard */}
       <Route path="/backoffice/superadmin/associations" exact>
         <DashboardSuperAdmin />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id" exact>
-        <SuperAdminAssociationCommands />
+        <SuperAdminAssociation />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
@@ -202,6 +205,10 @@ const App = () => (
       <Route path="/backoffice/superadmin/settings" exact>
         <SuperAdminSettings />
       </Route> */}
+      {/* Every Pages of the AdminAssociation Dashboard */}
+      <Route path="/backoffice/admin/association/:id" exact>
+        <DashboardAdminAssociation />
+      </Route>
       <Route>
         <Error404 />
       </Route>
