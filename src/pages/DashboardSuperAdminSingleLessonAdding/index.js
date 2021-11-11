@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -32,9 +32,6 @@ const SuperAdminAddLesson = ({
   //   updateField(association, 'association');
   // }, []);
 
-  // console.log(association);
-  // let association = pathArray[4];
-
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
@@ -44,7 +41,7 @@ const SuperAdminAddLesson = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-event-add-container">
-          <h1>DashboardSuperAdminEventADDING</h1>
+          <h1>Ajouter un cours à l'association XXXXXXX</h1>
           <form className="dashboard-superadmin-event-add-form" onSubmit={handleEventSubmit}>
             <Field
               identifier="level"

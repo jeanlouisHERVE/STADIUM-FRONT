@@ -33,9 +33,6 @@ const SuperAdminAddEvent = ({
     updateField(association, 'association');
   }, []);
 
-  // console.log(association);
-  // let association = pathArray[4];
-
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
