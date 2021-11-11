@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
 import './styles.scss';
 
 import AsideNavbar from '../../components/AsideNavbar';
