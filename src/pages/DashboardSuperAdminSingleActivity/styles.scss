@@ -42,7 +42,7 @@ body {
       margin-left: 20px;
     }
 
-    .dashboard-superadmin-lesson{
+    .dashboard-superadmin-activity{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -54,7 +54,7 @@ body {
       border-radius: 20px;
       filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
 
-        .dashboard-superadmin-lesson-title {
+        .dashboard-superadmin-activity-title {
           text-transform: uppercase;
           font-weight: 700;
           font-size: x-large;
@@ -62,7 +62,7 @@ body {
           margin-bottom: 1em;
         }  
   
-        .dashboard-superadmin-lesson-item {
+        .dashboard-superadmin-activity-item {
           margin-bottom: 1em;
           display: flex;
           align-items: center;
@@ -74,7 +74,7 @@ body {
       
     }
     
-    .dashboard-superadmin-button {
+    .dashboard-superadmin-activity-button {
       
       margin-bottom: 2em;
       border: 2px solid vars.$turquoiseColor;

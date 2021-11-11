@@ -37,13 +37,13 @@ const SuperAdminLesson = () => {
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-rightside">
-          {activityData.activity && <h1 className="dashboard-superadmin-title">COURS: {activityData.name}</h1>}
-          <div className="dashboard-superadmin-lesson">
-            <p className="dashboard-superadmin-lesson-title">Informations : </p>
-            <p className="dashboard-superadmin-lesson-item"><p className="strong">Emplacement : </p>&nbsp; {activityData.name}</p>
-            <p className="dashboard-superadmin-lesson-item"><p className="strong">Emplacement : </p>&nbsp; {activityData.picture} </p>
+          <h1 className="dashboard-superadmin-title">ACTIVITE: {activityData.name}</h1>
+          <div className="dashboard-superadmin-activity">
+            <p className="dashboard-superadmin-activity-title">Informations : </p>
+            <p className="dashboard-superadmin-activity-item"><p className="strong">nom : </p>&nbsp; {activityData.name}</p>
+            <p className="dashboard-superadmin-activity-item"><p className="strong">photo : </p>&nbsp; {activityData.picture} </p>
           </div>
-          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}><Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link">retour</Link></button>
+          <button className="dashboard-superadmin-activity-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}><Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link">retour</Link></button>
         </div>
       </div>
     </>
