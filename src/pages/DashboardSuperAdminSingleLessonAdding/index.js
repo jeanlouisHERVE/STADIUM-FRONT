@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -8,6 +8,7 @@ import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
 import FieldTime from '../../components/FieldTime';
 import FieldDaySelector from '../../components/FieldLevelSelector';
+import FieldCategorySelector from '../../components/FieldCategorySelector';
 import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
 
 const SuperAdminAddLesson = ({
@@ -17,11 +18,12 @@ const SuperAdminAddLesson = ({
   day,
   place,
   activity,
+  association,
   updateField,
   handleSubmit,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [lessonData, setLessonData] = useState([]);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -31,9 +33,22 @@ const SuperAdminAddLesson = ({
     handleSubmit();
   };
 
-  // useEffect(() => {
-  //   updateField(association, 'association');
-  // }, []);
+  const pathArray = window.location.pathname.split('/');
+  console.log(pathArray);
+
+  useEffect(() => {
+    async function loadData() {
+      const rawResponse = await fetch('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/backoffice/superadmin/activities');
+      const response = await rawResponse.json();
+      setLessonData(response);
+      console.log(response);
+    }
+    loadData();
+  }, []);
+
+  useEffect(() => {
+    updateField(association, 'association');
+  }, []);
 
   return (
     <>
@@ -44,7 +59,7 @@ const SuperAdminAddLesson = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-lesson-add-container">
-          <h1>Ajouter un cours à l'association XXXXXXX</h1>
+          <h1>Ajout d'un cours</h1>
           <form className="dashboard-superadmin-lesson-add-form" onSubmit={handleLessonSubmit}>
             <FieldDaySelector
               data={daysOfWeekSelectorData}
@@ -98,7 +113,8 @@ const SuperAdminAddLesson = ({
               }}
               value={place}
             />
-            <Field
+            <FieldCategorySelector
+              data={lessonData}
               identifier="activity"
               placeholder="3"
               label="Activité"
@@ -123,7 +139,7 @@ SuperAdminAddLesson.propTypes = {
   activity: PropTypes.number.isRequired,
   place: PropTypes.string.isRequired,
   day: PropTypes.number.isRequired,
-  // association: PropTypes.number.isRequired,
+  association: PropTypes.number.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

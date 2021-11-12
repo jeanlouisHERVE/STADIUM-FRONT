@@ -6,8 +6,8 @@ const levelSelectorData = [
   },
   {
     id: 2,
-    name: 'Confirmé',
-    value: 'Confirmed',
+    name: 'Normal',
+    value: 'Normal',
   },
   {
     id: 3,
