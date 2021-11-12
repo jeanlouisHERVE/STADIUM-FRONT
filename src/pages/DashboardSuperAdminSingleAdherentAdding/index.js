@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
@@ -11,6 +11,19 @@ const SuperAdminAddAdherent = () => {
 
   const toggle = () => {
     setIsOpen(!isOpen);
+
+    useEffect(() => {
+      async function loadData() {
+        // const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
+        const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+        // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+        const response = await rawResponse.json();
+        setData(response);
+        setIsLoaded(true);
+        console.log(response);
+      }
+      loadData();
+    }, []);
   };
 
   return (

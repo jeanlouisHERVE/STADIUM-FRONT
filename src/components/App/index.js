@@ -113,29 +113,43 @@
 
 import { Route, Switch } from 'react-router-dom';
 
+// HOMEPAGE ET DEPENDANCES
+import Home from '../../pages/Home';
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 
-import Home from '../../pages/Home';
-import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
 import Messages from '../Messages';
 
+// SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
+// SUPER ADMINISTRATEUR
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
+import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
 import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
+
+// événements
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
-import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 
+// activité
+import SuperAdminActivity from '../../pages/DashboardSuperAdminSingleActivity';
+import SuperAdminAddActivity from '../../containers/DashboardSuperAdminSingleActivityAddingPage';
+
+// cours
+import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
+import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLessonAddingPage';
+
+// adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 
+// ADMINISTRATEUR ASSOCIATION
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 
 import './styles.scss';
@@ -195,6 +209,11 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
         <SuperAdminLesson />
       </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
+      <Route path="/backoffice/superadmin/associations/:id/activity/:id" exact>
+        <SuperAdminActivity />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addActivity" component={SuperAdminAddActivity} />
       {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
         <SuperAdminAddClasse />
       </Route>

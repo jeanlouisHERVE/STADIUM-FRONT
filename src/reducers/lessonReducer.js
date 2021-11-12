@@ -1,21 +1,21 @@
 import {
-  UPDATE_EVENT_FIELD,
-} from '../actions/event';
+  UPDATE_LESSON_FIELD,
+} from '../actions/lesson';
 
 const initialState = {
-  name: '',
-  startDate: '',
-  schedule: '',
-  endDate: '',
+  level: '',
+  startTime: '',
+  endTime: '',
+  day: '',
   place: '',
-  maxParticipant: '',
+  activity: '',
   association: '',
 };
 
-function addEventReducer(state = initialState, action) {
+function addLessonReducer(state = initialState, action) {
   // console.log('une action passe dans le reducer');
   switch (action.type) {
-    case UPDATE_EVENT_FIELD:
+    case UPDATE_LESSON_FIELD:
       return {
         ...state,
         [action.name]: action.value,
@@ -25,4 +25,4 @@ function addEventReducer(state = initialState, action) {
   }
 }
 
-export default addEventReducer;
+export default addLessonReducer;
