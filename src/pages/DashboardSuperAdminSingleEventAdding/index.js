@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
 import FieldDate from '../../components/FieldDate';
+import FieldTime from '../../components/FieldTime';
 
 const SuperAdminAddEvent = ({
   name,
@@ -65,7 +66,7 @@ const SuperAdminAddEvent = ({
               }}
               value={startDate}
             />
-            <Field
+            <FieldTime
               identifier="schedule"
               placeholder="14:00"
               label="Heure de début"

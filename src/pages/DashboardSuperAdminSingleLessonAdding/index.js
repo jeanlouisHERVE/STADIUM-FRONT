@@ -6,6 +6,7 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
+import FieldTime from '../../components/FieldTime';
 
 const SuperAdminAddLesson = ({
   level,
@@ -53,7 +54,7 @@ const SuperAdminAddLesson = ({
               }}
               value={level}
             />
-            <Field
+            <FieldTime
               identifier="startTime"
               placeholder="14:00"
               label="Heure de début"
@@ -63,7 +64,7 @@ const SuperAdminAddLesson = ({
               }}
               value={startTime}
             />
-            <Field
+            <FieldTime
               identifier="endTime"
               placeholder="15:00"
               label="Heure de fin"
