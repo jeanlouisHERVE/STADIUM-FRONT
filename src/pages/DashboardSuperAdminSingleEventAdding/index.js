@@ -6,6 +6,7 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
+import FieldDate from '../../components/FieldDate';
 
 const SuperAdminAddEvent = ({
   name,
@@ -54,7 +55,7 @@ const SuperAdminAddEvent = ({
               }}
               value={name}
             />
-            <Field
+            <FieldDate
               identifier="startDate"
               placeholder="20/08/2021"
               label="Date de début"
@@ -74,7 +75,7 @@ const SuperAdminAddEvent = ({
               }}
               value={schedule}
             />
-            <Field
+            <FieldDate
               // type="D - M - Y"
               identifier="endDate"
               placeholder="21/08/2021"
