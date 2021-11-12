@@ -54,7 +54,7 @@ const SuperAdminAddAdherent = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-adherent-add-container">
-          <h1>DashboardSuperAdminAdherentADDING</h1>
+          <h1>Ajout d'un adhérent</h1>
           <form className="dashboard-superadmin-adherent-add-form" onSubmit={handleAdherentSubmit}>
             <Field
               identifier="lastname"
@@ -79,7 +79,7 @@ const SuperAdminAddAdherent = ({
             <Field
               identifier="picture"
               placeholder="picture23.jpeg"
-              label="Jour"
+              label="Photo"
               changeField={(identifier, newValue) => {
                 // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);

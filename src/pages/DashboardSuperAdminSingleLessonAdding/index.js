@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
 import FieldTime from '../../components/FieldTime';
-import FieldDaySelector from '../../components/FieldDaySelector';
+import FieldDaySelector from '../../components/FieldLevelSelector';
 import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
 
 const SuperAdminAddLesson = ({
@@ -39,13 +39,13 @@ const SuperAdminAddLesson = ({
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-event-add">
+      <div className="dashboard-superadmin-lesson-add">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <div className="dashboard-superadmin-event-add-container">
+        <div className="dashboard-superadmin-lesson-add-container">
           <h1>Ajouter un cours à l'association XXXXXXX</h1>
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleLessonSubmit}>
+          <form className="dashboard-superadmin-lesson-add-form" onSubmit={handleLessonSubmit}>
             <FieldDaySelector
               data={daysOfWeekSelectorData}
               identifier="level"
@@ -77,10 +77,10 @@ const SuperAdminAddLesson = ({
               }}
               value={endTime}
             />
-            <Field
-              // type="D - M - Y"
-              identifier="day"
-              placeholder="2"
+            <FieldDaySelector
+              data={daysOfWeekSelectorData}
+              identifier="level"
+              placeholder="Lundi"
               label="Jour"
               changeField={(identifier, newValue) => {
                 // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
@@ -108,7 +108,7 @@ const SuperAdminAddLesson = ({
               }}
               value={Number(activity)}
             />
-            <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
+            <button className="dashboard-superadmin-lesson-button" type="submit">Envoyer</button>
           </form>
         </div>
       </div>

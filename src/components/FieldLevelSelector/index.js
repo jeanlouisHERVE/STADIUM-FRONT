@@ -16,10 +16,6 @@ const FieldDaySelector = ({
 }) => {
   const handleChange = (event) => {
     const { value: inputValue, name } = event.target;
-    /*
-      - on crée une variable inputValue qui contient event.target.value
-      - on crée une variable name qui contient event.target.name
-    */
 
     changeField(name, inputValue);
   };
@@ -57,14 +53,12 @@ FieldDaySelector.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   value: PropTypes.string,
-  hidden: PropTypes.bool,
   changeField: PropTypes.func.isRequired,
 };
 
 FieldDaySelector.defaultProps = {
   type: 'time',
   value: '',
-  hidden: false,
 };
 
 export default FieldDaySelector;

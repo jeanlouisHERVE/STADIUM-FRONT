@@ -33,13 +33,13 @@ const SuperAdminAddActivity = ({
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-event-add">
+      <div className="dashboard-superadmin-activity-add">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <div className="dashboard-superadmin-event-add-container">
-          <h1>Ajouter d'une activité à l'association XXXXXXX</h1>
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleActivitySubmit}>
+        <div className="dashboard-superadmin-activity-add-container">
+          <h1>Ajout d'une activité</h1>
+          <form className="dashboard-superadmin-activity-add-form" onSubmit={handleActivitySubmit}>
             <Field
               identifier="name"
               placeholder="Judo"
@@ -60,7 +60,7 @@ const SuperAdminAddActivity = ({
               }}
               value={picture}
             />
-            <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
+            <button className="dashboard-superadmin-activity-button" type="submit">Envoyer</button>
           </form>
         </div>
       </div>

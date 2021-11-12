@@ -22,18 +22,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     overflow-y: scroll;
     width: 100%;
 
     h1 {
       font-size: xx-large;
       text-transform: uppercase;
-      margin-bottom: 30px;
       font-weight: 700;
-      align-self: flex-start;
-      margin-top: 20px;
-      margin-left: 20px;
+      margin: 20px 0px;
     }
 
     .dashboard-superadmin-adherent-add-form {
@@ -46,10 +42,9 @@ body {
         width: 100%;
       }
 
+      .dashboard-superadmin-adherent-button {
 
-      .dashboard-superadmin-event-button {
-
-        margin-bottom: 2em;
+        margin: 2em 0em;
         border: 2px solid vars.$turquoiseColor;
         border-radius: 20px;
         width: 50%;
@@ -64,6 +59,10 @@ body {
         align-items: center;
         background-color: white;
         
+        &:hover {
+          background-color: vars.$turquoiseColor;
+          color: white;
+        } 
       }
     }
   }

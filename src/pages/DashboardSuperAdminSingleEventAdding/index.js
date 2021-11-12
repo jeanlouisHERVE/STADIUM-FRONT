@@ -44,7 +44,7 @@ const SuperAdminAddEvent = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-event-add-container">
-          <h1>DashboardSuperAdminEventADDING</h1>
+          <h1>Ajout d'un événement</h1>
           <form className="dashboard-superadmin-event-add-form" onSubmit={handleEventSubmit}>
             <Field
               identifier="name"
