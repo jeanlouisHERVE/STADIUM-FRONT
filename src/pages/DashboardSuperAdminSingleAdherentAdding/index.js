@@ -8,6 +8,7 @@ import Field from '../../components/Field';
 
 const SuperAdminAddAdherent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [data, ]
 
   const toggle = () => {
     setIsOpen(!isOpen);
