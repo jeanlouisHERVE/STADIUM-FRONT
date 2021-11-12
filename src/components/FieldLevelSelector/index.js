@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-
+import levelSelectorData from '../../utils/data/levelData';
 import './styles.scss';
 
-/**
- * A field to be used inside a form : label and input
- */
-const FieldDaySelector = ({
-  data,
+const FieldLevelSelector = ({
   identifier,
   placeholder,
   label,
@@ -32,7 +28,7 @@ const FieldDaySelector = ({
         onChange={handleChange}
       >
         <option value="">--Please choose an option--</option>
-        {data.map((item) => (
+        {levelSelectorData.map((item) => (
           <option key={item.id} value={item.value}>{item.name}</option>
         ))};
       </select>
@@ -46,8 +42,7 @@ const FieldDaySelector = ({
   );
 };
 
-FieldDaySelector.propTypes = {
-  data: PropTypes.array.isRequired,
+FieldLevelSelector.propTypes = {
   identifier: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
@@ -56,9 +51,9 @@ FieldDaySelector.propTypes = {
   changeField: PropTypes.func.isRequired,
 };
 
-FieldDaySelector.defaultProps = {
+FieldLevelSelector.defaultProps = {
   type: 'time',
   value: '',
 };
 
-export default FieldDaySelector;
+export default FieldLevelSelector;
