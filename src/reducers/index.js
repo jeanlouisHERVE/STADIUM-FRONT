@@ -14,8 +14,8 @@ const rootReducer = combineReducers({
   signupUser: signupUserReducer,
   signupMember: signupMemberReducer,
   signupAssociation: signupAssociationReducer,
-  event: eventReducer,
   settingsSuperAdmin: settingsSuperAdminReducer,
+  event: eventReducer,
   associations: associationsReducer,
   // ci dessous on ajoute tous les reducers dont on a besoin
 });

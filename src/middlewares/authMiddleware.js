@@ -7,6 +7,7 @@ import { SUBMIT_LOGIN, successLogin } from '../actions/login';
 
 const authMiddleware = (store) => (next) => (action) => {
   // console.log('authMiddleware', action);
+  // const user = JSON.parse(localStorage.getItem('user'));
 
   switch (action.type) {
     case SUBMIT_LOGIN:
@@ -17,19 +18,28 @@ const authMiddleware = (store) => (next) => (action) => {
 
       axios.post(
         // URL
-        'http://localhost:3001/login',
+        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/login_check',
+        //     let user = JSON.parse(localStorage.getItem('user'));
+
+        // if (user && user.token) {
+        //     return { 'Authorization': 'Bearer ' + user.token };
         // paramètres
         {
-          email: store.getState().email,
-          password: store.getState().password,
+          username: store.getState().login.username,
+          password: store.getState().login.password,
         },
       )
         .then((response) => {
+          console.log(response.data.token);
+
+          if (response.data.token) {
+            localStorage.setItem('user', JSON.stringify(response.data.token));
+          }
           console.log(response);
           // on veut traiter la réponse en modifiant le state => dispatch une action
           // qui sera traitée par le reducer
-          const actionSuccess = successLogin(response.data.pseudo);
-          store.dispatch(actionSuccess);
+          // const actionSuccess = successLogin(response.data.pseudo);
+          store.dispatch(successLogin(response.data));
         })
         .catch((error) => {
           console.warn(error);

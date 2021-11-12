@@ -26,7 +26,7 @@ const authMiddleware = (store) => (next) => (action) => {
         },
       )
         .then((response) => {
-          console.log(response);
+          console.log(response.data.token);
           // on veut traiter la réponse en modifiant le state => dispatch une action
           // qui sera traitée par le reducer
           // const actionSuccess = successLogin(response.data.pseudo);

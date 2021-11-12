@@ -111,7 +111,7 @@
 //* data with Middleware
 //* -------------------------------------------------------------------------
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
@@ -120,7 +120,6 @@ import Error404 from '../../pages/Error404';
 
 import Home from '../../pages/Home';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
-import Messages from '../Messages';
 
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
@@ -139,7 +138,7 @@ import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherent
 import './styles.scss';
 
 // == Composant
-const App = () => (
+const App = ({ userAuthentified }) => (
 
   <div className="App">
     <Switch>
@@ -155,8 +154,9 @@ const App = () => (
       <Route path="/inscription/association">
         <SignupAssociation />
       </Route>
-      <Route path="/connexion">
-        <LoginPage />
+      <Route exact path="/connexion">
+        {userAuthentified ? <Redirect to="/backoffice/superadmin/associations" /> : <LoginPage />}
+        {/* <LoginPage /> */}
       </Route>
       <Route path="/legalMention">
         <LegalMention />
@@ -167,46 +167,51 @@ const App = () => (
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
       </Route>
-      <Route path="/backoffice/superadmin/associations" exact>
-        <DashboardSuperAdmin />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/:id" exact>
-        <SuperAdminAssociationCommands />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
-        <SuperAdminAdherent />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/:id/addAdherent">
-        <SuperAdminAddAdherent />
-      </Route>
-      {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
-        <SuperAdminModifyAdherent />
-      </Route> */}
-      <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
-        <SuperAdminEvent />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/:id/addEvent">
-        <SuperAdminAddEvent />
-      </Route>
-      {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
-        <SuperAdminModifyEvent />
-      </Route> */}
-      <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
-        <SuperAdminLesson />
-      </Route>
-      {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
-        <SuperAdminAddClasse />
-      </Route>
-      <Route path="/backoffice/superadmin/associations/classe/modify" exact>
-        <SuperAdminModifyClasse />
-      </Route>
-      <Route path="/backoffice/superadmin/settings" exact>
-        <SuperAdminSettings />
-      </Route> */}
-      <Route>
-        <Error404 />
-      </Route>
     </Switch>
+
+    {userAuthentified && (
+      <Switch>
+        <Route path="/backoffice/superadmin/associations" exact>
+          <DashboardSuperAdmin />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id" exact>
+          <SuperAdminAssociationCommands />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
+          <SuperAdminAdherent />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/addAdherent">
+          <SuperAdminAddAdherent />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+          <SuperAdminModifyAdherent />
+        </Route> */}
+        <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
+          <SuperAdminEvent />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/addEvent">
+          <SuperAdminAddEvent />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
+          <SuperAdminModifyEvent />
+        </Route> */}
+        <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
+          <SuperAdminLesson />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
+          <SuperAdminAddClasse />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/classe/modify" exact>
+          <SuperAdminModifyClasse />
+        </Route> */}
+        <Route path="/backoffice/superadmin/reglages" exact>
+          <SettingsSuperAdmin />
+        </Route>
+        <Route>
+          <Error404 />
+        </Route>
+      </Switch>
+    )}
   </div>
 );
 

@@ -103,7 +103,7 @@ DashboardSuperAdmin.propTypes = {
 };
 
 DashboardSuperAdmin.defaultProps = {
-  loading: false,
+  loading: true,
 };
 
 export default DashboardSuperAdmin;
