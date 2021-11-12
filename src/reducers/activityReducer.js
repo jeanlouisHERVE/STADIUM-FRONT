@@ -3,7 +3,7 @@ import { UPDATE_ACTIVITY_FIELD } from '../actions/activity';
 const initialState = {
   name: '',
   picture: '',
-  association: '',
+  association: 0,
 };
 
 function addActivityReducer(state = initialState, action) {

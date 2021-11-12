@@ -2,10 +2,7 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-/**
- * A field to be used inside a form : label and input
- */
-const FieldSelector = ({
+const FieldUserSelector = ({
   data,
   identifier,
   placeholder,
@@ -16,13 +13,11 @@ const FieldSelector = ({
 }) => {
   const handleChange = (event) => {
     const { value: inputValue, name } = event.target;
-    /*
-      - on crée une variable inputValue qui contient event.target.value
-      - on crée une variable name qui contient event.target.name
-    */
 
     changeField(name, inputValue);
   };
+
+  console.log(data);
 
   return (
     <div className="fieldSelector">
@@ -36,8 +31,13 @@ const FieldSelector = ({
         onChange={handleChange}
       >
         <option value="">--Please choose an option--</option>
-        {data.map((item) => (
-          <option key={item.id} value={item.value}>{item.name}</option>
+        { data && data.map((item) => (
+          <option
+            key={item.id}
+            value={item.id}
+          >
+            {item.email}
+          </option>
         ))};
       </select>
       <label
@@ -50,21 +50,19 @@ const FieldSelector = ({
   );
 };
 
-FieldSelector.propTypes = {
+FieldUserSelector.propTypes = {
   data: PropTypes.array.isRequired,
   identifier: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   value: PropTypes.string,
-  hidden: PropTypes.bool,
   changeField: PropTypes.func.isRequired,
 };
 
-FieldSelector.defaultProps = {
+FieldUserSelector.defaultProps = {
   type: 'time',
   value: '',
-  hidden: false,
 };
 
-export default FieldSelector;
+export default FieldUserSelector;

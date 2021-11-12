@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -10,6 +10,7 @@ import Field from '../../components/Field';
 const SuperAdminAddActivity = ({
   name,
   picture,
+  association,
   updateField,
   handleSubmit,
 }) => {
@@ -24,9 +25,9 @@ const SuperAdminAddActivity = ({
     handleSubmit();
   };
 
-  // useEffect(() => {
-  //   updateField(association, 'association');
-  // }, []);
+  useEffect(() => {
+    updateField(association, 'association');
+  }, []);
 
   return (
     <>
@@ -70,6 +71,7 @@ const SuperAdminAddActivity = ({
 SuperAdminAddActivity.propTypes = {
   name: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
+  association: PropTypes.number.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

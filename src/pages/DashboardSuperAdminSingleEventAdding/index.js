@@ -105,7 +105,7 @@ const SuperAdminAddEvent = ({
                 // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
-              value={Number(maxParticipant)}
+              value={String(maxParticipant)}
             />
             <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
           </form>

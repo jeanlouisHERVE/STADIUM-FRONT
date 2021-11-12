@@ -147,7 +147,7 @@ import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLesso
 
 // adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
-import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminAddAdherent from '../../containers/DashboardSuperAdminSingleAdherentAddingPage';
 
 // ADMINISTRATEUR ASSOCIATION
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
@@ -193,9 +193,7 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id/addAdherent">
-        <SuperAdminAddAdherent />
-      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
       {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
       </Route> */}
