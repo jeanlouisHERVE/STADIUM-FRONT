@@ -22,7 +22,7 @@ const ListingActivities = ({ activities }) => {
       </div>
       <div className="listingActivity-line-header">
         <div className="listingActivity-line-header-leftside">
-          <div className="listingActivity-line-header-items">Discipline</div>
+          <div className="listingActivity-line-header-items">Sport</div>
         </div>
         <div className="listingActivity-line-header-rightside" />
       </div>
@@ -30,7 +30,7 @@ const ListingActivities = ({ activities }) => {
       && activities.map((activity) => (
         <div className="listingActivity-line-container" key={activity.id}>
           <div className="listingActivity-line-leftside">
-            <div className="listingActivity-line-items lastname">{activity.name}</div>
+            <div className="listingActivity-line-items">{activity.name}</div>
           </div>
           <div className="listingActivity-line-rightside">
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">visibility</span></Link>

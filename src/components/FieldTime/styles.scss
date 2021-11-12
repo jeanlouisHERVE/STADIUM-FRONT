@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.field {
+  margin: 2rem 0;
+  position: relative;
+  color: #05221E;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -1.4em;
+  }
+
+  .input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 2px solid #05221E;
+    font-size: 1.2em;
+    
+    
+    &:focus {
+      border-color: #02A5A5;
+      & + .label {
+        color: #02A5A5;
+      }
+    }
+  }
+}
