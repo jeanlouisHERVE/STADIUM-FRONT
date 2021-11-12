@@ -6,6 +6,9 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
+import FieldTime from '../../components/FieldTime';
+import FieldSelector from '../../components/FieldSelector';
+import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
 
 const SuperAdminAddLesson = ({
   level,
@@ -43,7 +46,8 @@ const SuperAdminAddLesson = ({
         <div className="dashboard-superadmin-event-add-container">
           <h1>Ajouter un cours à l'association XXXXXXX</h1>
           <form className="dashboard-superadmin-event-add-form" onSubmit={handleLessonSubmit}>
-            <Field
+            <FieldSelector
+              data={daysOfWeekSelectorData}
               identifier="level"
               placeholder="Beginner"
               label="Niveau"
@@ -53,7 +57,7 @@ const SuperAdminAddLesson = ({
               }}
               value={level}
             />
-            <Field
+            <FieldTime
               identifier="startTime"
               placeholder="14:00"
               label="Heure de début"
@@ -63,7 +67,7 @@ const SuperAdminAddLesson = ({
               }}
               value={startTime}
             />
-            <Field
+            <FieldTime
               identifier="endTime"
               placeholder="15:00"
               label="Heure de fin"
