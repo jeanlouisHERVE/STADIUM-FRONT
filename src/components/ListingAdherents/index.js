@@ -127,6 +127,7 @@ const ListingAdherents = ({ adherents }) => {
           </div>
           <div className="listingAdherent-line-rightside">
             <Link to={`${path.pathname}/adherent/${item.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+            <span className="listingAdherent-line-icon-view material-icons">delete</span>
           </div>
         </div>
       ))}
