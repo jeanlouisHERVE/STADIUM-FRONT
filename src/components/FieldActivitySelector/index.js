@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const FieldCategorySelector = ({
+const FieldActivitySelector = ({
   data,
   identifier,
   placeholder,
@@ -36,7 +36,7 @@ const FieldCategorySelector = ({
             key={item.id}
             value={item.id}
           >
-            {item.email}
+            {item.name}
           </option>
         ))};
       </select>
@@ -50,7 +50,7 @@ const FieldCategorySelector = ({
   );
 };
 
-FieldCategorySelector.propTypes = {
+FieldActivitySelector.propTypes = {
   data: PropTypes.array.isRequired,
   identifier: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
@@ -60,9 +60,9 @@ FieldCategorySelector.propTypes = {
   changeField: PropTypes.func.isRequired,
 };
 
-FieldCategorySelector.defaultProps = {
+FieldActivitySelector.defaultProps = {
   type: 'text',
   value: '',
 };
 
-export default FieldCategorySelector;
+export default FieldActivitySelector;
