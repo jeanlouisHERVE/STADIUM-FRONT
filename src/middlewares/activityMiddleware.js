@@ -21,6 +21,7 @@ const activityMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response);
         })
+
         .catch((error) => {
           console.warn(error);
           // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
