@@ -112,6 +112,7 @@
 //* -------------------------------------------------------------------------
 
 import { Route, Switch } from 'react-router-dom';
+import './styles.scss';
 
 // HOMEPAGE ET DEPENDANCES
 import Home from '../../pages/Home';
@@ -151,8 +152,7 @@ import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherent
 
 // ADMINISTRATEUR ASSOCIATION
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
-
-import './styles.scss';
+import DashboardAdminAssociationGestionnaire from '../../page/DashboardAdminAssociationGestionnaire';
 
 // == Composant
 const App = () => (
@@ -225,6 +225,9 @@ const App = () => (
       </Route> */}
       {/* Every Pages of the AdminAssociation Dashboard */}
       <Route path="/backoffice/admin/association/:id" exact>
+        <DashboardAdminAssociation />
+      </Route>
+      <Route path="/backoffice/admin/association/:id/gestionnaire">
         <DashboardAdminAssociation />
       </Route>
       <Route>

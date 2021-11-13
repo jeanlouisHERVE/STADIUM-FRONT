@@ -24,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
+    overflow-y: scroll;
 
     @media (max-width: 1500px) {
       width: 100%;
@@ -36,14 +37,12 @@ body {
       background-color: aquamarine;
       padding: 20px;
       width: 100%;
-      height: 100%;
+      height: 70%;
 
       .dashboard-adminAssociation-top {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 45%;
-        align-items: center;
       }
 
       .dashboard-adminAssociation-down {
@@ -51,8 +50,6 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 45%;
-        align-items: center;
       }
     }
   

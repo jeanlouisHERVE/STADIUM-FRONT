@@ -96,7 +96,7 @@ const ListingAdherents = ({ adherents }) => {
       <div className="listingAdherent-header">
         <div className="listingAdherent-header-leftside">
           <div className="listingAdherent-title"><h2>Adhérents</h2></div>
-          <Link to={`${path.pathname}/addAdherent`} className="listingAdherent-addIcon"><span className=" material-icons">add</span></Link>
+          <Link to={`${path.pathname}/addAdherent`} className="listingAdherent-addIcon"><span className=" material-icons">person_add</span></Link>
         </div>
         <div className="listingAdherent-header-rightside">
           <div className="listingAdherent-filter">
