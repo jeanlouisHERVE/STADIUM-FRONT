@@ -35,6 +35,7 @@ export const NavLink = styled.div`
 
     @media (min-width: 1550px) {
     display: flex;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
     width: 75%;
