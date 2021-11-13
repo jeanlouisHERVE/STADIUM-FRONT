@@ -113,6 +113,7 @@ const ListingAdherents = ({ adherents }) => {
       </div>
       <div className="listingAdherent-line-header">
         <div className="listingAdherent-line-header-leftside">
+          <div className="listingAdherent-line-header-status">Status</div>
           <div className="listingAdherent-line-header-items">Nom</div>
           <div className="listingAdherent-line-header-items">Prénom</div>
         </div>
@@ -121,7 +122,9 @@ const ListingAdherents = ({ adherents }) => {
       { adherents
       && adherents.map((item) => (
         <div className="listingAdherent-line-container" key={item.id}>
+          {console.log(item)}
           <div className="listingAdherent-line-leftside">
+            <div className="listingAdherent-line-status"><div className="status" /></div>
             <div className="listingAdherent-line-items lastname">{item.lastName}</div>
             <div className="listingAdherent-line-items">{item.firstName}</div>
           </div>

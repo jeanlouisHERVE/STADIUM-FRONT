@@ -34,6 +34,7 @@ const ListingActivities = ({ activities }) => {
           </div>
           <div className="listingActivity-line-rightside">
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">visibility</span></Link>
+            <span className="listingActivity-line-icon-view  material-icons">delete</span>
           </div>
         </div>
       ))}
