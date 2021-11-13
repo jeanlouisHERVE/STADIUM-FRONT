@@ -100,7 +100,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 35px;
+    height: 60px;
     border-bottom: 1px black solid;
     margin-left: 30px;
 
@@ -108,7 +108,7 @@
       margin-left: 0px;
     }
 
-    .listingEvent-line-header-leftside {
+    .listingEvent-line-header-leftside {  
       display: flex;
       flex-direction: row;
 
@@ -117,13 +117,17 @@
         width:100px;
         font-weight: 700;
         display:flex;
-        align-content: center;
+        align-items: center;
+        justify-content: center;
         
       }
       .listingEvent-line-header-place {
         margin-left: 15px;
         width:150px;
         font-weight: 700;
+        display:flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: 800px) {
           display: none;
@@ -134,6 +138,9 @@
         margin-left: 15px;
         width:100px;
         font-weight: 700;
+        display:flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -144,12 +151,18 @@
         margin-left: 15px;
         width:100px;
         font-weight: 700;
+        display:flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .listingEvent-line-header-endDate {
         margin-left: 15px;
         width:100px;
         font-weight: 700;
+        display:flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -158,9 +171,10 @@
 
       .listingEvent-line-header-maxParticipants {
         margin-left: 15px;
-        width:150px;
+        width:100px;
         font-weight: 700;
-        display: flex;
+        display:flex;
+        align-items: center;
         text-align: center;
 
         @media (max-width: 1200px) {
@@ -213,15 +227,17 @@
       .listingEvent-line-items-startDate {
         margin-left: 15px;
         width:100px;
-        display: flex;
-        align-self: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .listingEvent-line-items-endDate {
         margin-left: 15px;
         width:100px;
-        display: flex;
-        align-self: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -232,7 +248,8 @@
         margin-left: 15px;
         width:100px;
         display: flex;
-        align-self: center;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: 1200px) {
           display: none;
@@ -241,7 +258,7 @@
 
       .listingEvent-line-items-maxParticipants {
         margin-left: 15px;
-        width:150px;
+        width:100px;
         display: flex;
         justify-content: center;
         align-items: center;
