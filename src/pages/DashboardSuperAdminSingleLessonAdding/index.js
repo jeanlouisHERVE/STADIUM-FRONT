@@ -39,13 +39,15 @@ const SuperAdminAddLesson = ({
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/backoffice/superadmin/activities/desc');
+      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/${pathArray[4]}`);
       const response = await rawResponse.json();
       setLessonData(response);
       console.log(response);
     }
     loadData();
   }, []);
+
+  const { activities } = lessonData;
 
   useEffect(() => {
     updateField(association, 'association');
@@ -109,7 +111,7 @@ const SuperAdminAddLesson = ({
               value={place}
             />
             <FieldActivitySelector
-              data={lessonData}
+              data={activities}
               identifier="activity"
               placeholder="3"
               label="Activité"
