@@ -24,7 +24,7 @@ const AsideNavbar = () => (
     </div>
     <Nav className="AsideNavbarAdmin-Navbar-main">
       <NavMenu className="AsideNavbarAdmin-Navbar-ul">
-        <NavLink className="AsideNavbarAdmin-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/associations">home</Link></span></NavLink>
+        <NavLink className="AsideNavbarAdmin-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association/14">home</Link></span></NavLink>
         <NavLink className="AsideNavbarAdmin-Navbar-item">
           <span className="material-icons">dvr</span>
           <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association/14/gestionnaire">Gestionnaire</Link></span>

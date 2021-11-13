@@ -152,7 +152,7 @@ import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherent
 
 // ADMINISTRATEUR ASSOCIATION
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
-import DashboardAdminAssociationGestionnaire from '../../page/DashboardAdminAssociationGestionnaire';
+import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
 // == Composant
 const App = () => (
@@ -227,9 +227,7 @@ const App = () => (
       <Route path="/backoffice/admin/association/:id" exact>
         <DashboardAdminAssociation />
       </Route>
-      <Route path="/backoffice/admin/association/:id/gestionnaire">
-        <DashboardAdminAssociation />
-      </Route>
+      <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
       <Route>
         <Error404 />
       </Route>
