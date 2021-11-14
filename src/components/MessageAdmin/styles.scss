@@ -43,6 +43,10 @@
     background-color: #5E7F90;
     border-radius: 20px;
 
+    &:hover {
+      border: solid 3px vars.$turquoiseColor;
+    }
+
     .dashboard-admin-Message-UserPicture {
       display: flex;
       flex-direction: column;
