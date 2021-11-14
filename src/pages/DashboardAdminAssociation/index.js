@@ -8,6 +8,8 @@ import Sidebar from '../../components/Sidebar';
 import PlanningAdmin from '../../components/PlanningAdmin';
 import CarousselPictureAdmin from '../../components/CarousselPicturesAdmin';
 import EventAdmin from '../../components/EventAdmin';
+import MessageAdmin from '../../components/MessageAdmin';
+import LessonAdmin from '../../components/LessonAdmin';
 import './styles.scss';
 
 // == Composant
@@ -53,9 +55,9 @@ const DashboardAdminAssociation = () => {
               <CarousselPictureAdmin />
             </div>
             <div className="dashboard-adminAssociation-down">
-              <EventAdmin />
-              <EventAdmin />
-              <EventAdmin />
+              <LessonAdmin />
+              <EventAdmin events={data.events} />
+              <MessageAdmin />
             </div>
           </div>
         </div>
