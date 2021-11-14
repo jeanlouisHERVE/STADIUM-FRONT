@@ -7,9 +7,9 @@ import Stade from './imageStade.jpg';
 const EventAdmin = ({ events }) => (
   <div className="dashboard-admin-Event">
     <h1>Mes événements</h1>
-    { events && events.map((event, index) => index < 4 && (
-      <>
-        <div className="dashboard-admin-Event-container">
+    <div className="dashboard-admin-Event-container">
+      { events && events.map((event) => (
+        <div className="dashboard-admin-Event-card">
           <img className="dashboard-admin-Event-UserPicture" src={Stade} alt="" />
           <div className="dashboard-admin-Event-content">
             <div className="dashboard-admin-Event-title">
@@ -22,8 +22,8 @@ const EventAdmin = ({ events }) => (
             </div>
           </div>
         </div>
-      </>
-    ))}
+      ))}
+    </div>
   </div>
 );
 

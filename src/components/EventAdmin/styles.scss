@@ -16,70 +16,78 @@
     font-size: x-large;
     font-weight: 700;
     color: white;
+    margin : 10px 0px;
 
   }
-
+  
   .dashboard-admin-Event-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px 10px;
-    background-color: #5E7F90;
-    border-radius: 20px;
-    width: 100%;
+    overflow-y: scroll;
+    width: 100%;  
+    scrollbar-width: none;
 
-    &:hover {
-      border: solid 3px vars.$turquoiseColor;
-    }
-
-    .dashboard-admin-Event-UserPicture {
+    .dashboard-admin-Event-card {
       display: flex;
-      flex-direction: column;
-      height: 30px;
-      width: auto;
-      margin-right: 7px;
-    }
-
-    .dashboard-admin-Event-content {
-
-      .dashboard-admin-Event-title {
-        
-        font-weight: bold;
-        font-size: medium;
-        color: white;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px 10px;
+      background-color: #5E7F90;
+      border-radius: 20px;
+      width: 100%;
+      margin: 10px 10px 10px 0px;
+  
+      &:hover {
+        border: solid 3px vars.$turquoiseColor;
       }
-
-      .dashboard-admin-Event-text {
+  
+      .dashboard-admin-Event-UserPicture {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: small;
-        color: white;
-
-        .material-icons {
-          font-family: 'Material Icons';
-          font-weight: normal;
-          font-style: normal;
-          font-size: 24px;
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          letter-spacing: normal;
-          word-wrap: normal;
-          white-space: nowrap;
-          direction: ltr;
+        flex-direction: column;
+        height: 30px;
+        width: auto;
+        margin-right: 7px;
+      }
+  
+      .dashboard-admin-Event-content {
+  
+        .dashboard-admin-Event-title {
+          
+          font-weight: bold;
+          font-size: medium;
           color: white;
         }
-
-        .dashboard-admin-Event-StartDate {
-          font-weight: 500;
-          margin-right: 5px;
-          margin-left: 5px;
-        }
-
-        .dashboard-admin-Event-StartTime {
-
-
+  
+        .dashboard-admin-Event-text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: small;
+          color: white;
+  
+          .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            color: white;
+          }
+  
+          .dashboard-admin-Event-StartDate {
+            font-weight: 500;
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+  
+          .dashboard-admin-Event-StartTime {
+  
+  
+          }
         }
       }
     }
