@@ -1,7 +1,7 @@
 import './styles.scss';
 import PropTypes from 'prop-types';
-import Stade from './imageStade.jpg';
 import moment from 'moment';
+import Stade from './imageStade.jpg';
 
 // == Composant
 const EventAdmin = ({ events }) => (

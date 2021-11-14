@@ -1,9 +1,71 @@
-@use 'src/styles/vars';
-
-.dashboard-admin-lesson {
-  background-color: pink;
+.dashboard-admin-Lesson {
+  background-color: #698EA0 ;
   height: 100%;
   width: 20vw;
   margin: 10px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+
+  h1 {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+  }
+
+  .dashboard-admin-Lesson-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #5E7F90;
+    border-radius: 20px;
+    width: 100%;
+
+    .dashboard-admin-Lesson-content {
+
+      .dashboard-admin-Lesson-title {
+        
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+      }
+
+      .dashboard-admin-Lesson-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: small;
+        color: white;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          color: white;
+        }
+
+        .dashboard-admin-Lesson-StartDate {
+          font-weight: 500;
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+
+        .dashboard-admin-Lesson-StartTime {
+
+        }
+      }
+    }
+  }
 }

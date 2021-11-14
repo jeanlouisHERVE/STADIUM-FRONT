@@ -55,7 +55,7 @@ const DashboardAdminAssociation = () => {
               <CarousselPictureAdmin />
             </div>
             <div className="dashboard-adminAssociation-down">
-              <LessonAdmin />
+              <LessonAdmin activities={data.activities} />
               <EventAdmin events={data.events} />
               <MessageAdmin />
             </div>
