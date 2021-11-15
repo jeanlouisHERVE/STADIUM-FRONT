@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 import daysOfWeek from '../../utils/data/daysOfWeek';
 // == Composant
-const ListingClasses = ({ activities }) => {
+const ListingClasses = ({ activities, sort, asort }) => {
   const path = useLocation();
 
   return (
@@ -17,8 +17,8 @@ const ListingClasses = ({ activities }) => {
         </div>
         <div className="listingClasses-header-rightside">
           <div className="listingClasses-filter">
-            <button className="listingClasses-filter-button" type="submit">A - Z </button>
-            <button className="listingClasses-filter-button" type="submit">Z - A</button>
+            <button className="listingClasses-filter-button" type="submit" onClick={sort}>A - Z </button>
+            <button className="listingClasses-filter-button" type="submit" onClick={asort}>Z - A</button>
           </div>
 
         </div>
@@ -60,6 +60,8 @@ const ListingClasses = ({ activities }) => {
 
 ListingClasses.propTypes = {
   activities: PropTypes.array.isRequired,
+  sort: PropTypes.func.isRequired,
+  asort: PropTypes.func.isRequired,
 };
 
 // == Export

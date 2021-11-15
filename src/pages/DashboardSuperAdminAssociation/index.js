@@ -101,14 +101,14 @@ const SuperAdminAssociationCommands = () => {
     });
   };
 
-  const sortCategories = () => {
+  const sortActivities = () => {
     setData({
       ...data,
       activities: data.activities.sort(sortNameAsc),
     });
   };
 
-  const asortCategories = () => {
+  const asortActivities = () => {
     setData({
       ...data,
       profils: data.activities.sort(sortNameDesc),
@@ -261,8 +261,8 @@ const SuperAdminAssociationCommands = () => {
               ? (
                 <ListingActivities
                   activities={data.activities}
-                  asort={asortCategories}
-                  sort={sortCategories}
+                  asort={asortActivities}
+                  sort={sortActivities}
                   reloadData={loadData}
                 />
               ) : null}
@@ -270,6 +270,8 @@ const SuperAdminAssociationCommands = () => {
               ? (
                 <ListingClasses
                   activities={data.activities}
+                  asort={asortActivities}
+                  sort={sortActivities}
                   reloadData={loadData}
                 />
               ) : null}
