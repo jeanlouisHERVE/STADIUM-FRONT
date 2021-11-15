@@ -112,6 +112,7 @@
 //* -------------------------------------------------------------------------
 
 import { Route, Switch, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
@@ -119,6 +120,7 @@ import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 
 import Home from '../../pages/Home';
+import Home2 from '../../pages/Home2';
 import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
 
 import LoginPage from '../../containers/LoginPage';
@@ -145,6 +147,9 @@ const App = ({ userAuthentified }) => (
       <Route path="/" exact>
         <Home />
       </Route>
+      <Route path="/2" exact>
+        <Home2 />
+      </Route>
       <Route path="/inscription" exact>
         <SignupUser />
       </Route>
@@ -156,7 +161,6 @@ const App = ({ userAuthentified }) => (
       </Route>
       <Route exact path="/connexion">
         {userAuthentified ? <Redirect to="/backoffice/superadmin/associations" /> : <LoginPage />}
-        {/* <LoginPage /> */}
       </Route>
       <Route path="/legalMention">
         <LegalMention />
@@ -214,5 +218,9 @@ const App = ({ userAuthentified }) => (
     )}
   </div>
 );
+
+App.propTypes = {
+  userAuthentified: PropTypes.bool.isRequired,
+};
 
 export default App;

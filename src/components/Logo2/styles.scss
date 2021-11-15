@@ -1,0 +1,45 @@
+@use 'src/styles/vars.scss';
+
+.logo-wrapper {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+
+  display: flex;
+  flex-direction: row;
+  width: 12em;
+  background-color: vars.$blueColor;
+  border-radius: 15px;
+
+  .logo-image{
+    margin: 1.2em;
+    width: 85%;
+  }
+
+  .logo-text{
+    display: none;
+  }
+
+  @media(min-width:768px){
+    .logo-image {
+      width: 25%;
+      margin: .7em 0 .7em .7em;
+    }
+
+    .logo-text {
+      display: block;
+      color: #02a5a5;
+      margin: 1.6em 1.2em 1.6em 1.2em;
+      font-size: 1.2em;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      align-self: center;
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .logo-wrapper{
+    width: 6em;
+  }
+}

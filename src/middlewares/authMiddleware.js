@@ -27,6 +27,8 @@ const authMiddleware = (store) => (next) => (action) => {
         {
           username: store.getState().login.username,
           password: store.getState().login.password,
+          userAuthentified: store.getState().login.userAuthentified,
+
         },
       )
         .then((response) => {
