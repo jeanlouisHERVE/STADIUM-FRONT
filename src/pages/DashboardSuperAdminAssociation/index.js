@@ -87,16 +87,16 @@ const SuperAdminAssociationCommands = () => {
     return 0;
   }
 
-  function sortDateAsc(a, b) {
-    if (a.startDate > b.startDate) {
-      return 1;
-    }
-    if (a.startDate < b.startDate) {
-      return -1;
-    }
+  // function sortDateAsc(a, b) {
+  //   if (a.startDate > b.startDate) {
+  //     return 1;
+  //   }
+  //   if (a.startDate < b.startDate) {
+  //     return -1;
+  //   }
 
-    return 0;
-  }
+  //   return 0;
+  // }
 
   const sortAdherents = () => {
     setData({
@@ -182,22 +182,23 @@ const SuperAdminAssociationCommands = () => {
   };
 
   const path = useLocation();
-  console.log(path.pathname);
-  const pathArray = window.location.pathname.split('/');
-  console.log(pathArray);
+  // console.log(path.pathname);
+  // const pathArray = window.location.pathname.split('/');
+  // console.log(pathArray);
 
-   useEffect(() => {
-    async function loadData() {
-      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
-      // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+  async function loadData() {
+    const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
+    // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
 
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
-      setIsLoaded(true);
-      console.log(response);
-    }
-    loadData();
+    // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+    const response = await rawResponse.json();
+    setData(response);
+    setIsLoaded(true);
+    // console.log(response);
+  }
+
+  useEffect(() => {
+    (!isLoaded ? loadData() : setIsLoaded(false));
   }, []);
 
   // console.log(data);
@@ -263,15 +264,13 @@ const SuperAdminAssociationCommands = () => {
             {buttonEventDiv}
           </div>
           <div className="dashboard-superadmin-listing-wrapper">
-            {/* {showAdherents && isLoaded
-              ? (<ListingAdherents adherents={data.profils} />) : null} */}
             {showAdherents && isLoaded
               ? (
                 <ListingAdherents
                   adherents={data.profils}
                   asort={asortAdherents}
                   sort={sortAdherents}
-                  reloadData={loadData}
+                  reloadData={loadData()}
                 />
               ) : null}
             {showActivities && data.activities
@@ -280,7 +279,7 @@ const SuperAdminAssociationCommands = () => {
                   activities={data.activities}
                   asort={asortActivities}
                   sort={sortActivities}
-                  reloadData={loadData}
+                  reloadData={loadData()}
                 />
               ) : null}
             {showClasses && data.activities
@@ -289,7 +288,7 @@ const SuperAdminAssociationCommands = () => {
                   activities={data.activities}
                   asort={asortActivities}
                   sort={sortActivities}
-                  reloadData={loadData}
+                  reloadData={loadData()}
                 />
               ) : null}
             {showEvents && isLoaded
@@ -297,7 +296,7 @@ const SuperAdminAssociationCommands = () => {
                 <ListingEvents
                   events={data.events}
                   sortDate={sortDates}
-                  reloadData={loadData}
+                  reloadData={loadData()}
                 />
               ) : null}
           </div>
