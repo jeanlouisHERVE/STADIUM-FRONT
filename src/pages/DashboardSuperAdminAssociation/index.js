@@ -87,6 +87,17 @@ const SuperAdminAssociationCommands = () => {
     return 0;
   }
 
+  function sortDateAsc(a, b) {
+    if (a.startDate > b.startDate) {
+      return 1;
+    }
+    if (a.startDate < b.startDate) {
+      return -1;
+    }
+
+    return 0;
+  }
+
   const sortAdherents = () => {
     setData({
       ...data,
@@ -112,6 +123,13 @@ const SuperAdminAssociationCommands = () => {
     setData({
       ...data,
       profils: data.activities.sort(sortNameDesc),
+    });
+  };
+
+  const sortDates = () => {
+    setData({
+      ...data,
+      events: data.events.sort(sortNameAsc),
     });
   };
 
@@ -279,6 +297,7 @@ const SuperAdminAssociationCommands = () => {
               ? (
                 <ListingEvents
                   events={data.events}
+                  sortDate={sortDates}
                   reloadData={loadData}
                 />
               ) : null}

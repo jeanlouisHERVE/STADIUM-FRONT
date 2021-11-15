@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './styles.scss';
 
 // == Composant
-const ListingEvents = ({ events, reloadData }) => {
+const ListingEvents = ({ events, reloadData, sortDate }) => {
   const path = useLocation();
 
   const deleteEventItem = (id) => {
@@ -18,20 +18,12 @@ const ListingEvents = ({ events, reloadData }) => {
       .then((response) => {
         console.log(response);
         reloadData();
-        // on veut traiter la réponse en modifiant le state => dispatch une action
-        // qui sera traitée par le reducer
-        // const actionSuccess = successLogin(response.data.pseudo);
-        // store.dispatch(actionSuccess);
       })
       .catch((error) => {
         console.warn(error);
         // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
-        // qui serait traitée par le reducer
-        // On aurait une case dans le state pour piloter l'affichage d'un
-        // message d'erreur sur l'application
       });
   };
-  
   return (
     <div className="listingEvent-container">
       <div className="listingEvent-header">
@@ -41,7 +33,7 @@ const ListingEvents = ({ events, reloadData }) => {
         </div>
         <div className="listingEvent-header-rightside">
           <div className="listingEvent-filter">
-            <button className="listingEvent-filter-button" type="submit"><span className="material-icons">date_range</span></button>
+            <button className="listingEvent-filter-button" type="submit" onClick={sortDate}><span className="material-icons">date_range</span></button>
             <button className="listingEvent-filter-button" type="submit">A - Z</button>
           </div>
         </div>
@@ -74,7 +66,13 @@ const ListingEvents = ({ events, reloadData }) => {
           <div className="listingEvent-line-rightside">
             <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
             <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">mode_edit</span></Link>
-            <span className="listingEvent-line-icon-delete material-icons" onClick={() => {deleteEventItem(item.id)}}>delete</span>
+            <span
+              className="listingEvent-line-icon-delete material-icons"
+              onClick={() => {
+                deleteEventItem(item.id);
+              }}
+            >delete
+            </span>
           </div>
         </div>
       ))}
@@ -84,6 +82,8 @@ const ListingEvents = ({ events, reloadData }) => {
 
 ListingEvents.propTypes = {
   events: PropTypes.array.isRequired,
+  reloadData: PropTypes.func.isRequired,
+  sortDate: PropTypes.func.isRequired,
 };
 // == Export
 export default ListingEvents;

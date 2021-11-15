@@ -1,11 +1,29 @@
 import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import './styles.scss';
 import daysOfWeek from '../../utils/data/daysOfWeek';
 // == Composant
-const ListingClasses = ({ activities, sort, asort }) => {
+const ListingClasses = ({ activities, reloadData, sort, asort }) => {
   const path = useLocation();
+
+  const deleteLessonItem = (id) => {
+    axios.delete(
+      // URL
+      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/lessons/${id}`,
+      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+      // paramètres
+    )
+      .then((response) => {
+        console.log(response);
+        reloadData();
+      })
+      .catch((error) => {
+        console.warn(error);
+        // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
+      });
+  };
 
   return (
     <div className="listingClasses-container">
@@ -35,6 +53,7 @@ const ListingClasses = ({ activities, sort, asort }) => {
       </div>
       {activities.map((activity) => (
         <div className="listingClasses-line-container" key={activity.id}>
+          {console.log(activity)}
           <div className="listingClasses-line-leftside">
             <div className="listingClasses-line-items-name">{activity.name}</div>
             { activity && activity.lessons
@@ -50,7 +69,13 @@ const ListingClasses = ({ activities, sort, asort }) => {
           </div>
           <div className="listingClasses-line-rightside">
             <Link to={`${path.pathname}/lesson/${activity.id}`} className="card-link"><span className="listingClasses-line-icon-view material-icons">visibility</span></Link>
-            <span className="listingLesson-line-icon-delete material-icons">delete</span>
+            <span
+              className="listingClasses-line-icon-delete material-icons"
+              onClick={() => {
+                deleteLessonItem(activity.lesson.id);
+              }}
+            >delete
+            </span>
           </div>
         </div>
       ))}
@@ -62,6 +87,7 @@ ListingClasses.propTypes = {
   activities: PropTypes.array.isRequired,
   sort: PropTypes.func.isRequired,
   asort: PropTypes.func.isRequired,
+  reloadData: PropTypes.func.isRequired,
 };
 
 // == Export
