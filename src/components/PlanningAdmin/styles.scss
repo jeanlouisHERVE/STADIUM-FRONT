@@ -1,6 +1,10 @@
 @use 'src/styles/vars';
 
-.dashboard-admin-planning-container {
+
+.dashboard-admin-planning {
   background-color: aqua;
-  
+  height: 100%;
+  width: 62%;
+  margin:10px;
+  border-radius: 10px;
 }

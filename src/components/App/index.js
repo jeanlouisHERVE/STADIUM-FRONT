@@ -111,8 +111,11 @@
 //* data with Middleware
 //* -------------------------------------------------------------------------
 
+
+import './styles.scss';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 
 // HOMEPAGE ET DEPENDANCES
 import Home from '../../pages/Home';
@@ -122,13 +125,16 @@ import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 import Error403 from '../../pages/Error403';
 
+
 // SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
+// --------------------
 // SUPER ADMINISTRATEUR
+// --------------------
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
 import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
 import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
@@ -136,6 +142,7 @@ import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
 // événements
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
+import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
 
 // activité
 import SuperAdminActivity from '../../pages/DashboardSuperAdminSingleActivity';
@@ -147,12 +154,14 @@ import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLesso
 
 // adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
-import SuperAdminAddAdherent from '../../containers/DashboardSuperAdminSingleAdherentAddingPage';
+import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 
+// --------------------------
 // ADMINISTRATEUR ASSOCIATION
+// --------------------------
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
-
-import './styles.scss';
+import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
 // == Composant
 const App = ({ userAuthentified }) => (
@@ -193,17 +202,18 @@ const App = ({ userAuthentified }) => (
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
       </Route>
+      <Route path="/backoffice/superadmin/associations/:id/adherent/:id/modify" exact>
       <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
       {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
-      </Route> */}
+      </Route>
       <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
         <SuperAdminEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
-      {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
+      <Route path="/backoffice/superadmin/associations/:associationId/event/:eventId/modify" exact>
         <SuperAdminModifyEvent />
-      </Route> */}
+      </Route>
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
         <SuperAdminLesson />
       </Route>
@@ -225,6 +235,7 @@ const App = ({ userAuthentified }) => (
       <Route path="/backoffice/admin/association/:id" exact>
         <DashboardAdminAssociation />
       </Route>
+      <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
       <Route>
         <Error403 />
       </Route>

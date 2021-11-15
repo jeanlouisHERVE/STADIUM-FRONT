@@ -2,7 +2,7 @@ import './styles.scss';
 
 // == Composant
 const PlanningAdmin = () => (
-  <div className="dashboard-admin-planning" />
+  <div className="dashboard-admin-caroussel" />
 );
 
 // == Export

@@ -1,12 +1,29 @@
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
-
 import './styles.scss';
+
 // == Composant
-const ListingEvents = ({ events }) => {
+const ListingEvents = ({ events, reloadData, sortDate }) => {
   const path = useLocation();
 
+  const deleteEventItem = (id) => {
+    axios.delete(
+      // URL
+      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${id}`,
+      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+      // paramètres
+    )
+      .then((response) => {
+        console.log(response);
+        reloadData();
+      })
+      .catch((error) => {
+        console.warn(error);
+        // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
+      });
+  };
   return (
     <div className="listingEvent-container">
       <div className="listingEvent-header">
@@ -16,7 +33,7 @@ const ListingEvents = ({ events }) => {
         </div>
         <div className="listingEvent-header-rightside">
           <div className="listingEvent-filter">
-            <button className="listingEvent-filter-button" type="submit"><span className="material-icons">date_range</span></button>
+            <button className="listingEvent-filter-button" type="submit" onClick={sortDate}><span className="material-icons">date_range</span></button>
             <button className="listingEvent-filter-button" type="submit">A - Z</button>
           </div>
         </div>
@@ -33,6 +50,10 @@ const ListingEvents = ({ events }) => {
         <div className="listingEvent-line-header-rightside" />
       </div>
       { events.map((item) => (
+        // <ListingItem  itemInfos={{
+        //   name: item.name,
+        //   place: item.place
+        // }}/>
         <div className="listingEvent-line-container" key={item.id}>
           <div className="listingEvent-line-leftside">
             <div className="listingEvent-line-items-name">{item.name}</div>
@@ -44,7 +65,14 @@ const ListingEvents = ({ events }) => {
           </div>
           <div className="listingEvent-line-rightside">
             <Link to={`${path.pathname}/event/${item.id}`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
-            <span className="listingEvent-line-icon-delete material-icons" attribut={item.id}>delete</span>
+            <Link to={`${path.pathname}/event/${item.id}/modify`} className="card-link"><span className="listingEvent-line-icon-view material-icons">mode_edit</span></Link>
+            <span
+              className="listingEvent-line-icon-delete material-icons"
+              onClick={() => {
+                deleteEventItem(item.id);
+              }}
+            >delete
+            </span>
           </div>
         </div>
       ))}
@@ -54,6 +82,8 @@ const ListingEvents = ({ events }) => {
 
 ListingEvents.propTypes = {
   events: PropTypes.array.isRequired,
+  reloadData: PropTypes.func.isRequired,
+  sortDate: PropTypes.func.isRequired,
 };
 // == Export
 export default ListingEvents;

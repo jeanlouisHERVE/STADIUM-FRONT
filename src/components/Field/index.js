@@ -76,7 +76,10 @@ Field.propTypes = {
   /** type of the input */
   type: PropTypes.string,
   /** text used as value for the input */
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   /** called when onChange event is received by the input, two parameters :
    * - identifier
    * - new value

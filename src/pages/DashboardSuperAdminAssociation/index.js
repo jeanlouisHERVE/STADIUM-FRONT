@@ -29,6 +29,110 @@ const SuperAdminAssociationCommands = () => {
     setIsOpen(!isOpen);
   };
 
+  function sortAsc(a, b) {
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    if (a.lastName < b.lastName) {
+      return -1;
+    }
+    if (a.lastName === b.lastName) {
+      if (a.firstName > b.firstName) {
+        return 1;
+      }
+      if (a.firstName < b.firstName) {
+        return -1;
+      }
+    }
+
+    return 0;
+  }
+
+  function sortDesc(a, b) {
+    if (a.lastName > b.lastName) {
+      return -1;
+    }
+    if (a.lastName < b.lastName) {
+      return 1;
+    }
+    if (a.lastName === b.lastName) {
+      if (a.firstName > b.firstName) {
+        return -1;
+      }
+      if (a.firstName < b.firstName) {
+        return 1;
+      }
+    }
+    return 0;
+  }
+
+  function sortNameAsc(a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+
+    return 0;
+  }
+
+  function sortNameDesc(a, b) {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  }
+
+  function sortDateAsc(a, b) {
+    if (a.startDate > b.startDate) {
+      return 1;
+    }
+    if (a.startDate < b.startDate) {
+      return -1;
+    }
+
+    return 0;
+  }
+
+  const sortAdherents = () => {
+    setData({
+      ...data,
+      profils: data.profils.sort(sortAsc),
+    });
+  };
+
+  const asortAdherents = () => {
+    setData({
+      ...data,
+      profils: data.profils.sort(sortDesc),
+    });
+  };
+
+  const sortActivities = () => {
+    setData({
+      ...data,
+      activities: data.activities.sort(sortNameAsc),
+    });
+  };
+
+  const asortActivities = () => {
+    setData({
+      ...data,
+      profils: data.activities.sort(sortNameDesc),
+    });
+  };
+
+  const sortDates = () => {
+    setData({
+      ...data,
+      events: data.events.sort(sortNameAsc),
+    });
+  };
+
   // actions lorsque l'on clique sur le bouton adhérents
   const adherentButtonFunction = () => {
     setButtonEventIsActive(false);
@@ -78,12 +182,11 @@ const SuperAdminAssociationCommands = () => {
   };
 
   const path = useLocation();
-  // console.log(path.pathname);
+  console.log(path.pathname);
+  const pathArray = window.location.pathname.split('/');
+  console.log(pathArray);
 
-  // const pathArray = window.location.pathname.split('/');
-  // console.log(pathArray);
-
-  useEffect(() => {
+   useEffect(() => {
     async function loadData() {
       const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
       // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
@@ -163,13 +266,40 @@ const SuperAdminAssociationCommands = () => {
             {/* {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null} */}
             {showAdherents && isLoaded
-              ? (<ListingAdherents adherents={data.profils} />) : null}
+              ? (
+                <ListingAdherents
+                  adherents={data.profils}
+                  asort={asortAdherents}
+                  sort={sortAdherents}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showActivities && data.activities
-              ? (<ListingActivities activities={data.activities} />) : null}
+              ? (
+                <ListingActivities
+                  activities={data.activities}
+                  asort={asortActivities}
+                  sort={sortActivities}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showClasses && data.activities
-              ? (<ListingClasses activities={data.activities} />) : null}
+              ? (
+                <ListingClasses
+                  activities={data.activities}
+                  asort={asortActivities}
+                  sort={sortActivities}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showEvents && isLoaded
-              ? <ListingEvents events={data.events} /> : null}
+              ? (
+                <ListingEvents
+                  events={data.events}
+                  sortDate={sortDates}
+                  reloadData={loadData}
+                />
+              ) : null}
           </div>
         </div>
       </div>

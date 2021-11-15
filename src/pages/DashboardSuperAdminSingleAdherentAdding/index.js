@@ -22,7 +22,13 @@ const SuperAdminAddAdherent = ({
 
   const toggle = () => {
     setIsOpen(!isOpen);
-  };
+  }; 
+  
+    const path = useLocation();
+    console.log(path.pathname);
+    const pathArray = window.location.pathname.split('/');
+    console.log(pathArray);
+
 
   useEffect(() => {
     async function loadData() {

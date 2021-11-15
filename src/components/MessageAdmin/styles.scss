@@ -1,0 +1,83 @@
+@use 'src/styles/vars';
+
+.dashboard-admin-Message {
+  background-color: #698EA0 ;
+  height: 100%;
+  width: 20vw;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  
+
+
+  h1 {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+  }
+
+  .dashboard-admin-Message-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #5E7F90;
+    border-radius: 20px;
+
+    &:hover {
+      border: solid 3px vars.$turquoiseColor;
+    }
+
+    .dashboard-admin-Message-UserPicture {
+      display: flex;
+      flex-direction: column;
+      height: 30px;
+      width: auto;
+      margin-right: 7px;
+    }
+
+    .dashboard-admin-Message-content {
+
+      .dashboard-admin-Message-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+
+        .dashboard-admin-Message-indicator {
+          border-radius: 50%;
+          height: 10px;
+          width: 10px;
+          background-color: yellowgreen;
+          margin-left: 10px;
+        }
+      }
+
+      .dashboard-admin-Message-text {
+        font-size: small;
+        color: white;
+      }
+    }
+  }
+}
