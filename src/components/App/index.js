@@ -111,8 +111,11 @@
 //* data with Middleware
 //* -------------------------------------------------------------------------
 
-import { Route, Switch } from 'react-router-dom';
+
 import './styles.scss';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 // HOMEPAGE ET DEPENDANCES
 import Home from '../../pages/Home';
@@ -120,6 +123,8 @@ import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
+import Error403 from '../../pages/Error403';
+
 
 // SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
@@ -159,7 +164,7 @@ import DashboardAdminAssociation from '../../containers/DashboardAdminAssociatio
 import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
 // == Composant
-const App = () => (
+const App = ({ userAuthentified }) => (
 
   <div className="App">
     <Switch>
@@ -175,8 +180,8 @@ const App = () => (
       <Route path="/inscription/association">
         <SignupAssociation />
       </Route>
-      <Route path="/connexion">
-        <LoginPage />
+      <Route exact path="/connexion">
+        {userAuthentified ? <Redirect to="/backoffice/superadmin/associations" /> : <LoginPage />}
       </Route>
       <Route path="/legalMention">
         <LegalMention />
@@ -197,10 +202,9 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
         <SuperAdminAdherent />
       </Route>
-      <Route path="/backoffice/superadmin/associations/:id/addAdherent">
-        <SuperAdminAddAdherent />
-      </Route>
       <Route path="/backoffice/superadmin/associations/:id/adherent/:id/modify" exact>
+      <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
+      {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
         <SuperAdminModifyAdherent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
@@ -233,10 +237,58 @@ const App = () => (
       </Route>
       <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
       <Route>
-        <Error404 />
+        <Error403 />
       </Route>
     </Switch>
+
+    {userAuthentified && (
+      <Switch>
+        <Route path="/backoffice/superadmin/associations" exact>
+          <DashboardSuperAdmin />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id" exact>
+          <SuperAdminAssociation />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
+          <SuperAdminAdherent />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/addAdherent">
+          <SuperAdminAddAdherent />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+          <SuperAdminModifyAdherent />
+        </Route> */}
+        <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
+          <SuperAdminEvent />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/:id/addEvent">
+          <SuperAdminAddEvent />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
+          <SuperAdminModifyEvent />
+        </Route> */}
+        <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
+          <SuperAdminLesson />
+        </Route>
+        {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
+          <SuperAdminAddClasse />
+        </Route>
+        <Route path="/backoffice/superadmin/associations/classe/modify" exact>
+          <SuperAdminModifyClasse />
+        </Route> */}
+        <Route path="/backoffice/superadmin/reglages" exact>
+          <SettingsSuperAdmin />
+        </Route>
+        <Route>
+          <Error404 />
+        </Route>
+      </Switch>
+    )}
   </div>
 );
+
+App.propTypes = {
+  userAuthentified: PropTypes.bool.isRequired,
+};
 
 export default App;

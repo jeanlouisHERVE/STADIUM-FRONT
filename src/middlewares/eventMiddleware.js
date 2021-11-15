@@ -5,16 +5,8 @@ import { SUBMIT_EVENT, DELETE_EVENT } from '../actions/event';
 // du coup on a accès seulement aux méthodes basiques du store, dont getState()
 // qui permet de récupérer le state actuel
 
-// const api = axios.create({baseUrl: 'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1'} );
+const eventMiddleware = (store) => (next) => (action) => {
 
-// // récup le token en localStorage
-// const token = storage.get('token');
-
-// if(token) {
-//   api.defaults.headers.Authorization = `Bearer ${token}`
-// }
-
-const authMiddleware = (store) => (next) => (action) => {
   // console.log('authMiddleware', action);
   const state = store.getState();
 
@@ -60,7 +52,7 @@ const authMiddleware = (store) => (next) => (action) => {
         },
       )
         .then((response) => {
-          console.log(response);
+          console.log(response.data.token);
           // on veut traiter la réponse en modifiant le state => dispatch une action
           // qui sera traitée par le reducer
           // const actionSuccess = successLogin(response.data.pseudo);
@@ -83,4 +75,4 @@ const authMiddleware = (store) => (next) => (action) => {
   next(action);
 };
 
-export default authMiddleware;
+export default eventMiddleware;

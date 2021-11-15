@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 // import assets
 import dashboardUser from '../../assets/images/dashboardUser.png';
 import imageStade from '../../assets/images/imageStade.jpg';
@@ -14,85 +12,85 @@ import './styles.scss';
 // == Composant
 const Home = () => (
   <div className="home">
-    <div className="home-header-header">
-      <div className="part-registration-logo">
-        <Logo />
+    <div className="wrapper-top">
+      <Logo />
+      <div className="wrapper-top-left">
+        <h1 className="wrapper-top-left-title">
+          Stadium est la solution simple, pratique et gratuite au service de la vie associative.
+        </h1>
+        <p className="wrapper-top-left-text">
+          Rejoignez un réseau d'associations sportives, présentes partout en France.<br />
+          Inscrivez-vous pour bénéficiez d'un service de qualité et optimisé pour vous
+          faciliter le quotidien.
+        </p>
+        <ButtonFormSubscribe />
       </div>
-      <div className="part-connexion-btn">
-        <Link to="/connexion"> <ButtonFormLogin /> </Link>
+      <div className="wrapper-top-right">
+        <ButtonFormLogin />
+        <img src={imageStade} alt="" className="wrapper-top-right-img" />
       </div>
     </div>
-    <div className="home-header">
-      <div className="part-registration">
-        <div className="part-registration-content">
-          <h1 className="part-registration-title"> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
-          <p className="part-registration-text">
-            Rejoignez un réseau d'associations sportives, présentes partout en France.<br />
-            Inscrivez-vous pour bénéficiez d'un service de qualité et optimisé pour vous
-            faciliter le quotidien.
+    <div className="wrapper-mid">
+      <div className="wrapper-mid-header">
+        <h1 className="wrapper-mid-header-title">
+          <strong>Vous êtes une association ?</strong><br />
+          Stadium est la solution simple, pratique et gratuite pour suivre votre association
+          et vos activités.
+        </h1>
+      </div>
+      <div className="wrapper-mid-content">
+        <div className="wrapper-mid-left">
+          <img src={dashboardUser} alt="" className="wrapper-mid-left-img" />
+        </div>
+        <div className="wrapper-mid-right">
+          <p className="wrapper-mid-right-text">
+            Stadium permet aux associations de gagner du temps dans leur gestion quotidienne afin de
+            se concentrer sur le développement de leur activité. L’inscription sur la plateforme
+            permet automatiquement à une association d’avoir un site internet accessible et visible
+            par tous les membres de Stadium. Stadium réunit sur sa plateforme tant les associations
+            que les personnes en recherche d’une activité sportive. De quoi gagner en visibilité et
+            se faire connaître.
           </p>
-          <Link to="/inscription"> <ButtonFormSubscribe /> </Link>
-        </div>
-      </div>
-      <div className="part-connexion">
-
-        <img src={imageStade} alt="" className="stadium-img" />
-      </div>
-    </div>
-    <div className="part-association">
-      <div className="part-association-title">
-        <h1 className="part-association-title-title"> <strong> Vous êtes une association? </strong> <br /> Stadium est la solution simple, pratique et gratuite au service de la vie associative. </h1>
-      </div>
-      <div className="part-association-content">
-        <div className="part-association-content-content">
-          <p className="part-association-text"> Stadium vous permet de dématérialiser entièrement la gestion de vos contrats d'adhérents.</p>
-          <p className="part-association-text"> Opter pour Stadium, c'est choisir de se simplifier la vie face aux tâches administratives et chronophages que représente la gestion de centaines voir de milliers de contrats. </p>
-          <p className="part-association-text"> Notre plateforme est un outil qui vous permet de réaliser un panel de tâches de façon simple et intuitive : </p>
           <ul>
-            <li className="part-association-text-elem-list"> gestion des membres,</li>
-            <li className="part-association-text-elem-list"> adhésion en ligne,</li>
-            <li className="part-association-text-elem-list"> gestion du planning de cours,</li>
-            <li className="part-association-text-elem-list"> gestion de la communication sur vos évènements,</li>
-            <li className="part-association-text-elem-list"> site internet </li>
-          </ul>
-          <p className="part-association-text"> Stadium permet aux associations de gagner du temps dans leur gestion quotidienne afin de se concentrer sur le développement de leur activité. </p>
-          <p className="part-association-text"> L’inscription sur la plateforme permet automatiquement à une association d’avoir un site internet accessible et visible par tous les membres de Stadium.</p>
-          <p className="part-association-text"> Stadium réunit sur sa plateforme tant les associations que les personnes en recherche d’une activité sportive. De quoi gagner en visibilité et se faire connaître. </p>
-
-        </div>
-        <div className="part-association-img">
-          <img src={dashboardUser} alt="" className="dashboard-association-img" />
-        </div>
-        <div className="part-association-btn-subscribe"> <Link to="/inscription"> <ButtonFormSubscribe /> </Link> </div>
-      </div>
-    </div>
-    <div className="part-user">
-      <div className="part-user-title">
-        <h1 className="part-user-title-title"> <strong> Vous êtes un adhérent?</strong> <br /> Stadium est la solution simple, pratique et gratuite pour suivre votre association et vos activités. </h1>
-      </div>
-      <div className="part-user-content">
-        <div className="part-user-content-content">
-          <p className="part-user-text"> Inscrivez-vous sur Stadium et : </p>
-          <ul>
-            <li className="part-user-text-elem-list"> Retrouvez facilement les associations sportives autour de chez vous,</li>
-            <li className="part-user-text-elem-list">Inscrivez-vous à vos activités favorites depuis votre domicile, </li>
-            <li className="part-user-text-elem-list"> Gérer vos contrats à distance,</li>
-            <li className="part-user-text-elem-list"> Renseignez-vous et inscrivez-vous aux évènements qui vous intéressent en un clic.</li>
+            <li> gestion des membres,</li>
+            <li> adhésion en ligne,</li>
+            <li> gestion du planning de cours,</li>
+            <li> gestion de la communication sur vos évènements,</li>
+            <li> site internet </li>
           </ul>
         </div>
-        <div className="part-user-img">
-          <span className="material-icons--user arrow-left">
-            chevron_left
-          </span>
-          <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons--user arrow-right">
-            chevron_right
-          </span>
-          <div className="part-user-btn-subscribe"> <Link to="/inscription"> <ButtonFormSubscribe /> </Link> </div>
+      </div>
+    </div>
+    <div className="wrapper-bot">
+      <div className="wrapper-bot-header">
+        <h1 className="wrapper-bot-header-title">
+          <strong> Vous êtes un adhérent ? </strong><br />
+          Stadium est la solution simple, pratique et gratuite au service de la vie associative.
+        </h1>
+      </div>
+      <div className="wrapper-bot-content">
+        <div className="wrapper-bot-content-left">
+          <p className="wrapper-bot-content-left-text">
+            Inscrivez-vous sur Stadium et :
+          </p>
+          <p className="wrapper-bot-content-left-text">
+            Retrouvez facilement une association sportive près de chez vous.
+          </p>
+          <p className="wrapper-bot-content-left-text">
+            Inscrivez-vous à vos activités favorites depuis votre domicile,
+            gérez vos contrats à distance, suivez l’actualité de votre association
+            et les activités qu’elle propose.
+          </p>
+          <p className="wrapper-bot-content-left-text">
+            Renseignez-vous et inscrivez-vous aux évènements qui vous intéressent en un clic.
+          </p>
+        </div>
+        <div className="wrapper-bot-right">
+          <img src={dashboardUser} alt="" className="wrapper-bot-right-img" />
         </div>
       </div>
     </div>
-    <div className="footer">
+    <div className="home-footer">
       <Footer />
     </div>
   </div>
@@ -100,41 +98,3 @@ const Home = () => (
 
 // == Export
 export default Home;
-
-//* ScrolltoTop Element
-
-// import React, { useEffect, useState } from "react";
-
-// export default function ScrollToTop() {
-//   const [isVisible, setIsVisible] = useState(false);
-
-// Show button when page is scorlled upto given distance
-// const toggleVisibility = () => {
-//   if (window.pageYOffset > 300) {
-//     setIsVisible(true);
-//   } else {
-//     setIsVisible(false);
-//   }
-// };
-// Set the top cordinate to 0
-// make scrolling smooth
-// const scrollToTop = () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth"
-//   });
-// };
-
-// useEffect(() => {
-//   window.addEventListener("scroll", toggleVisibility);
-// }, []);
-
-// return (
-//   <div className="scroll-to-top">
-//     {isVisible &&
-//       <div onClick={scrollToTop}>
-//         <img src='https://i.postimg.cc/44Ytsk8Z/top-arrow-emoj.png' alt='Go to top'/>
-//       </div>}
-//   </div>
-// );
-// }

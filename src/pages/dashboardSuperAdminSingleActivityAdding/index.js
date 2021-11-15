@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -10,6 +10,7 @@ import Field from '../../components/Field';
 const SuperAdminAddActivity = ({
   name,
   picture,
+  association,
   updateField,
   handleSubmit,
 }) => {
@@ -24,21 +25,21 @@ const SuperAdminAddActivity = ({
     handleSubmit();
   };
 
-  // useEffect(() => {
-  //   updateField(association, 'association');
-  // }, []);
+  useEffect(() => {
+    updateField(association, 'association');
+  }, []);
 
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-event-add">
+      <div className="dashboard-superadmin-activity-add">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <div className="dashboard-superadmin-event-add-container">
-          <h1>Ajouter d'une activité à l'association XXXXXXX</h1>
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleActivitySubmit}>
+        <div className="dashboard-superadmin-activity-add-container">
+          <h1>Ajout d'une activité</h1>
+          <form className="dashboard-superadmin-activity-add-form" onSubmit={handleActivitySubmit}>
             <Field
               identifier="name"
               placeholder="Judo"
@@ -59,7 +60,7 @@ const SuperAdminAddActivity = ({
               }}
               value={picture}
             />
-            <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
+            <button className="dashboard-superadmin-activity-button" type="submit">Envoyer</button>
           </form>
         </div>
       </div>
@@ -70,6 +71,7 @@ const SuperAdminAddActivity = ({
 SuperAdminAddActivity.propTypes = {
   name: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
+  association: PropTypes.number.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

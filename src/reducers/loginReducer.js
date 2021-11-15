@@ -5,7 +5,7 @@ import {
 
 const initialState = {
   // valeur de l'input pour l'adresse e-mail
-  email: '',
+  username: '',
   // valeur de l'input pour le mot de passe
   password: '',
   // indique si l'utilisateur est authentifié

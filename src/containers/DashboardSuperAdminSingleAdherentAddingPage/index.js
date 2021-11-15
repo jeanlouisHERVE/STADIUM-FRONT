@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import SuperAdminAddActivity from '../../pages/dashboardSuperAdminSingleActivityAdding';
+import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
 
-import { updateActivityField, submitActivity } from '../../actions/activity';
+import { updateAdherentField, submitAdherent } from '../../actions/adherent';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state, ownProps) => ({
-  name: state.activity.name,
-  picture: state.activity.picture,
+  firstname: state.adherent.firstname,
+  lastname: state.adherent.lastname,
+  picture: state.adherent.picture,
+  accountId: Number(state.adherent.accountId),
   association: Number(ownProps.match.params.id),
 });
 
@@ -18,13 +20,14 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: fonction qui dispatch l'action
   updateField: (value, name) => {
-    const action = updateActivityField(value, name);
+    const action = updateAdherentField(value, name);
     dispatch(action);
   },
   handleSubmit: () => {
-    dispatch(submitActivity());
+    console.log('appel handle submit');
+    dispatch(submitAdherent());
   },
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(SuperAdminAddActivity);
+export default connect(mapStateToProps, mapDispatchToProps)(SuperAdminAddAdherent);

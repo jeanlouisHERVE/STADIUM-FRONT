@@ -13,8 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
   schedule: state.event.schedule,
   endDate: state.event.endDate,
   place: state.event.place,
-  maxParticipant: state.event.maxParticipant,
-  association: ownProps.match.params.id,
+  maxParticipant: Number(state.event.maxParticipant),
+  association: Number(ownProps.match.params.id),
 });
 
 // === mapDispatchToProps

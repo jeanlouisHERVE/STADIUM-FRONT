@@ -30,7 +30,7 @@ const SignupUser = ({
         <Field
           identifier="email"
           placeholder="association@mail.com"
-          label="Addresse mail de connexion"
+          label="Adresse mail de connexion"
           type="email"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);

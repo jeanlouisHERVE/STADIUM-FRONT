@@ -55,7 +55,7 @@ const ListingActivities = ({ activities, reloadData, sort, asort }) => {
       && activities.map((activity) => (
         <div className="listingActivity-line-container" key={activity.id}>
           <div className="listingActivity-line-leftside">
-            <div className="listingActivity-line-items">{activity.name}</div>
+            <div className="listingActivity-line-items" data-Id={activity.id}>{activity.name}</div>
           </div>
           <div className="listingActivity-line-rightside">
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">visibility</span></Link>

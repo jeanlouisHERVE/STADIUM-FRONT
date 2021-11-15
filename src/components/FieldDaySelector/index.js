@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-
+import daysOfWeekSelectorData from '../../utils/staticDatas/daysOfWeekSelectorData';
 import './styles.scss';
 
-/**
- * A field to be used inside a form : label and input
- */
-const FieldSelector = ({
-  data,
+const FieldDaySelector = ({
   identifier,
   placeholder,
   label,
@@ -16,10 +12,6 @@ const FieldSelector = ({
 }) => {
   const handleChange = (event) => {
     const { value: inputValue, name } = event.target;
-    /*
-      - on crée une variable inputValue qui contient event.target.value
-      - on crée une variable name qui contient event.target.name
-    */
 
     changeField(name, inputValue);
   };
@@ -36,7 +28,7 @@ const FieldSelector = ({
         onChange={handleChange}
       >
         <option value="">--Please choose an option--</option>
-        {data.map((item) => (
+        {daysOfWeekSelectorData.map((item) => (
           <option key={item.id} value={item.value}>{item.name}</option>
         ))};
       </select>
@@ -50,21 +42,18 @@ const FieldSelector = ({
   );
 };
 
-FieldSelector.propTypes = {
-  data: PropTypes.array.isRequired,
+FieldDaySelector.propTypes = {
   identifier: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   value: PropTypes.string,
-  hidden: PropTypes.bool,
   changeField: PropTypes.func.isRequired,
 };
 
-FieldSelector.defaultProps = {
+FieldDaySelector.defaultProps = {
   type: 'time',
   value: '',
-  hidden: false,
 };
 
-export default FieldSelector;
+export default FieldDaySelector;

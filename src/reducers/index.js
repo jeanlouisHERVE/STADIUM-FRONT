@@ -10,6 +10,7 @@ import lessonReducer from './lessonReducer';
 import activityReducer from './activityReducer';
 import settingsSuperAdminReducer from './Settings/settingsSuperAdminReducer';
 import associationsReducer from './associationsReducer';
+import AdherentReducer from './adherentReducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   activity: activityReducer,
   settingsSuperAdmin: settingsSuperAdminReducer,
   associations: associationsReducer,
+  adherent: AdherentReducer,
   // ci dessous on ajoute tous les reducers dont on a besoin
 });
 

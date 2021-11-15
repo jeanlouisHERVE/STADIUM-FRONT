@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import './styles.scss';
-import daysOfWeek from '../../utils/data/daysOfWeek';
+import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
 // == Composant
 const ListingClasses = ({ activities, reloadData, sort, asort }) => {
   const path = useLocation();

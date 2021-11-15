@@ -1,5 +1,5 @@
 import './styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import AsideNavbar from '../../components/AsideNavbar';
@@ -7,8 +7,10 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
 import FieldTime from '../../components/FieldTime';
-import FieldSelector from '../../components/FieldSelector';
-import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
+import FieldDaySelector from '../../components/FieldDaySelector';
+import FieldLevelSelector from '../../components/FieldLevelSelector';
+import FieldActivitySelector from '../../components/FieldActivitySelector';
+import daysOfWeekSelectorData from '../../utils/staticDatas/daysOfWeekSelectorData';
 
 const SuperAdminAddLesson = ({
   level,
@@ -17,11 +19,12 @@ const SuperAdminAddLesson = ({
   day,
   place,
   activity,
+  association,
   updateField,
   handleSubmit,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [lessonData, setLessonData] = useState([]);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -31,28 +34,41 @@ const SuperAdminAddLesson = ({
     handleSubmit();
   };
 
-  // useEffect(() => {
-  //   updateField(association, 'association');
-  // }, []);
+  const pathArray = window.location.pathname.split('/');
+  console.log(pathArray);
+
+  useEffect(() => {
+    async function loadData() {
+      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/${pathArray[4]}`);
+      const response = await rawResponse.json();
+      setLessonData(response);
+      console.log(response);
+    }
+    loadData();
+  }, []);
+
+  const { activities } = lessonData;
+
+  useEffect(() => {
+    updateField(association, 'association');
+  }, []);
 
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-event-add">
+      <div className="dashboard-superadmin-lesson-add">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <div className="dashboard-superadmin-event-add-container">
-          <h1>Ajouter un cours à l'association XXXXXXX</h1>
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleLessonSubmit}>
-            <FieldSelector
-              data={daysOfWeekSelectorData}
+        <div className="dashboard-superadmin-lesson-add-container">
+          <h1>Ajout d'un cours</h1>
+          <form className="dashboard-superadmin-lesson-add-form" onSubmit={handleLessonSubmit}>
+            <FieldLevelSelector
               identifier="level"
               placeholder="Beginner"
               label="Niveau"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={level}
@@ -62,7 +78,6 @@ const SuperAdminAddLesson = ({
               placeholder="14:00"
               label="Heure de début"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={startTime}
@@ -72,18 +87,16 @@ const SuperAdminAddLesson = ({
               placeholder="15:00"
               label="Heure de fin"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={endTime}
             />
-            <Field
-              // type="D - M - Y"
-              identifier="day"
-              placeholder="2"
+            <FieldDaySelector
+              data={daysOfWeekSelectorData}
+              identifier="level"
+              placeholder="Lundi"
               label="Jour"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={Number(day)}
@@ -93,22 +106,21 @@ const SuperAdminAddLesson = ({
               placeholder="Scotland"
               label="Emplacement"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={place}
             />
-            <Field
+            <FieldActivitySelector
+              data={activities}
               identifier="activity"
               placeholder="3"
               label="Activité"
               changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
               value={Number(activity)}
             />
-            <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
+            <button className="dashboard-superadmin-lesson-button" type="submit">Envoyer</button>
           </form>
         </div>
       </div>
@@ -123,7 +135,7 @@ SuperAdminAddLesson.propTypes = {
   activity: PropTypes.number.isRequired,
   place: PropTypes.string.isRequired,
   day: PropTypes.number.isRequired,
-  // association: PropTypes.number.isRequired,
+  association: PropTypes.number.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };
