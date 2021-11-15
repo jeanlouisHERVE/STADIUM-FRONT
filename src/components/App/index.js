@@ -118,6 +118,7 @@ import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
+import Error403 from '../../pages/Error403';
 
 import Home from '../../pages/Home';
 import Home2 from '../../pages/Home2';
@@ -170,6 +171,9 @@ const App = ({ userAuthentified }) => (
       </Route>
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
+      </Route>
+      <Route>
+        <Error403 />
       </Route>
     </Switch>
 
