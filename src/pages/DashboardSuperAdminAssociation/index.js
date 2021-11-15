@@ -65,6 +65,28 @@ const SuperAdminAssociationCommands = () => {
     }
     return 0;
   }
+
+  function sortNameAsc(a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+
+    return 0;
+  }
+
+  function sortNameDesc(a, b) {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  }
+
   const sortAdherents = () => {
     setData({
       ...data,
@@ -76,6 +98,20 @@ const SuperAdminAssociationCommands = () => {
     setData({
       ...data,
       profils: data.profils.sort(sortDesc),
+    });
+  };
+
+  const sortCategories = () => {
+    setData({
+      ...data,
+      activities: data.activities.sort(sortNameAsc),
+    });
+  };
+
+  const asortCategories = () => {
+    setData({
+      ...data,
+      profils: data.activities.sort(sortNameDesc),
     });
   };
 
@@ -222,11 +258,28 @@ const SuperAdminAssociationCommands = () => {
                 />
               ) : null}
             {showActivities && data.activities
-              ? (<ListingActivities activities={data.activities} reloadData={loadData} />) : null}
+              ? (
+                <ListingActivities
+                  activities={data.activities}
+                  asort={asortCategories}
+                  sort={sortCategories}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showClasses && data.activities
-              ? (<ListingClasses activities={data.activities} reloadData={loadData} />) : null}
+              ? (
+                <ListingClasses
+                  activities={data.activities}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showEvents && isLoaded
-              ? <ListingEvents events={data.events} reloadData={loadData} /> : null}
+              ? (
+                <ListingEvents
+                  events={data.events}
+                  reloadData={loadData}
+                />
+              ) : null}
           </div>
         </div>
       </div>

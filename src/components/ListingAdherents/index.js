@@ -100,7 +100,6 @@ const ListingAdherents = ({ adherents, sort, asort }) => {
       { adherents
       && adherents.map((item) => (
         <div className="listingAdherent-line-container" key={item.id}>
-          {console.log(item)}
           <div className="listingAdherent-line-leftside">
             <div className="listingAdherent-line-status"><div className="status" /></div>
             <div className="listingAdherent-line-items lastname">{item.lastName}</div>
@@ -118,6 +117,8 @@ const ListingAdherents = ({ adherents, sort, asort }) => {
 
 ListingAdherents.propTypes = {
   adherents: PropTypes.array.isRequired,
+  sort: PropTypes.func.isRequired,
+  asort: PropTypes.func.isRequired,
 };
 
 // == Export

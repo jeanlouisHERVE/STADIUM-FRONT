@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './styles.scss';
 
 // == Composant
-const ListingActivities = ({ activities, reloadData }) => {
+const ListingActivities = ({ activities, reloadData, sort, asort }) => {
   const path = useLocation();
 
   const deleteActivity = (id) => {
@@ -40,8 +40,8 @@ const ListingActivities = ({ activities, reloadData }) => {
         </div>
         <div className="listingActivity-header-rightside">
           <div className="listingActivity-filter">
-            <button className="listingActivity-filter-button" type="button">A - Z</button>
-            <button className="listingActivity-filter-button" type="submit">Z - A</button>
+            <button className="listingActivity-filter-button" type="button" onClick={asort}>A - Z</button>
+            <button className="listingActivity-filter-button" type="submit" onClick={sort}>Z - A</button>
           </div>
         </div>
       </div>
@@ -70,6 +70,8 @@ const ListingActivities = ({ activities, reloadData }) => {
 
 ListingActivities.propTypes = {
   activities: PropTypes.array.isRequired,
+  sort: PropTypes.func.isRequired,
+  asort: PropTypes.func.isRequired,
 };
 
 // == Export
