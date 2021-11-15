@@ -29,6 +29,56 @@ const SuperAdminAssociationCommands = () => {
     setIsOpen(!isOpen);
   };
 
+  function sortAsc(a, b) {
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    if (a.lastName < b.lastName) {
+      return -1;
+    }
+    if (a.lastName === b.lastName) {
+      if (a.firstName > b.firstName) {
+        return 1;
+      }
+      if (a.firstName < b.firstName) {
+        return -1;
+      }
+    }
+
+    return 0;
+  }
+
+  function sortDesc(a, b) {
+    if (a.lastName > b.lastName) {
+      return -1;
+    }
+    if (a.lastName < b.lastName) {
+      return 1;
+    }
+    if (a.lastName === b.lastName) {
+      if (a.firstName > b.firstName) {
+        return -1;
+      }
+      if (a.firstName < b.firstName) {
+        return 1;
+      }
+    }
+    return 0;
+  }
+  const sortAdherents = () => {
+    setData({
+      ...data,
+      profils: data.profils.sort(sortAsc),
+    });
+  };
+
+  const asortAdherents = () => {
+    setData({
+      ...data,
+      profils: data.profils.sort(sortDesc),
+    });
+  };
+
   // actions lorsque l'on clique sur le bouton adhérents
   const adherentButtonFunction = () => {
     setButtonEventIsActive(false);
@@ -83,16 +133,17 @@ const SuperAdminAssociationCommands = () => {
   // const pathArray = window.location.pathname.split('/');
   // console.log(pathArray);
 
+  async function loadData() {
+    const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
+    // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+    // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+    const response = await rawResponse.json();
+    setData(response);
+    setIsLoaded(true);
+    console.log(response);
+  }
+
   useEffect(() => {
-    async function loadData() {
-      // const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
-      setIsLoaded(true);
-      console.log(response);
-    }
     loadData();
   }, []);
 
@@ -162,13 +213,20 @@ const SuperAdminAssociationCommands = () => {
             {/* {showAdherents && isLoaded
               ? (<ListingAdherents adherents={data.profils} />) : null} */}
             {showAdherents && isLoaded
-              ? (<ListingAdherents adherents={data.profils} />) : null}
+              ? (
+                <ListingAdherents
+                  adherents={data.profils}
+                  asort={asortAdherents}
+                  sort={sortAdherents}
+                  reloadData={loadData}
+                />
+              ) : null}
             {showActivities && data.activities
-              ? (<ListingActivities activities={data.activities} />) : null}
+              ? (<ListingActivities activities={data.activities} reloadData={loadData} />) : null}
             {showClasses && data.activities
-              ? (<ListingClasses activities={data.activities} />) : null}
+              ? (<ListingClasses activities={data.activities} reloadData={loadData} />) : null}
             {showEvents && isLoaded
-              ? <ListingEvents events={data.events} /> : null}
+              ? <ListingEvents events={data.events} reloadData={loadData} /> : null}
           </div>
         </div>
       </div>

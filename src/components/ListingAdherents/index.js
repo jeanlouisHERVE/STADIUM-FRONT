@@ -4,34 +4,12 @@ import { useEffect, useState } from 'react';
 import './styles.scss';
 
 // == Composant
-const ListingAdherents = ({ adherents }) => {
+const ListingAdherents = ({ adherents, sort, asort }) => {
   // const [isLoaded, setIsLoaded] = useState(false);
   // const [select, setSelect] = useState(false);
   // const [buttonAZIsActive, setButtonAZIsActive] = useState(true);
   // const [buttonZAIsActive, setButtonZAIsActive] = useState(false);
 
-  // function compare(a, b) {
-  //   if (a.lastName > b.lastName) {
-  //     return 1;
-  //   }
-  //   if (a.lastName < b.lastName) {
-  //     return -1;
-  //   }
-  //   if (a.lastName === b.lastName) {
-  //     if (a.firstName > b.firstName) {
-  //       return 1;
-  //     }
-  //     if (a.firstName < b.firstName) {
-  //       return -1;
-  //     }
-  //   }
-  //   return 0;
-  // }
-
-  // const sortingList = () => {
-  //   console.log('fonction appelée');
-  //   adherents.sort(compare);
-  // };
 
   // const sortingList = adherents.sort((a, b) => (a.lastName > b.lastName)
   // ? 1 : (a.lastName === b.lastName) ? ((a.firstNamAdherente > b.firstName) ? 1 : -1) : -1 )
@@ -102,12 +80,12 @@ const ListingAdherents = ({ adherents }) => {
           <div className="listingAdherent-filter">
             <button
               className="listingAdherent-filter-button"
-              // onClick={sortingList}
+              onClick={sort}
               type="button"
             >
               A - Z
             </button>
-            <button className="listingAdherent-filter-button" type="submit">Z - A</button>
+            <button className="listingAdherent-filter-button" type="submit" onClick={asort}>Z - A</button>
           </div>
         </div>
       </div>

@@ -1,12 +1,37 @@
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
-
 import './styles.scss';
+
 // == Composant
-const ListingEvents = ({ events }) => {
+const ListingEvents = ({ events, reloadData }) => {
   const path = useLocation();
 
+  const deleteEventItem = (id) => {
+    axios.delete(
+      // URL
+      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${id}`,
+      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+      // paramètres
+    )
+      .then((response) => {
+        console.log(response);
+        reloadData();
+        // on veut traiter la réponse en modifiant le state => dispatch une action
+        // qui sera traitée par le reducer
+        // const actionSuccess = successLogin(response.data.pseudo);
+        // store.dispatch(actionSuccess);
+      })
+      .catch((error) => {
+        console.warn(error);
+        // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
+        // qui serait traitée par le reducer
+        // On aurait une case dans le state pour piloter l'affichage d'un
+        // message d'erreur sur l'application
+      });
+  };
+  
   return (
     <div className="listingEvent-container">
       <div className="listingEvent-header">
@@ -33,6 +58,10 @@ const ListingEvents = ({ events }) => {
         <div className="listingEvent-line-header-rightside" />
       </div>
       { events.map((item) => (
+        // <ListingItem  itemInfos={{
+        //   name: item.name,
+        //   place: item.place
+        // }}/>
         <div className="listingEvent-line-container" key={item.id}>
           <div className="listingEvent-line-leftside">
             <div className="listingEvent-line-items-name">{item.name}</div>
@@ -43,8 +72,9 @@ const ListingEvents = ({ events }) => {
             <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
           </div>
           <div className="listingEvent-line-rightside">
-            <Link to={`${path.pathname}/event/${item.id}`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
-            <span className="listingEvent-line-icon-delete material-icons">delete</span>
+            <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
+            <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">mode_edit</span></Link>
+            <span className="listingEvent-line-icon-delete material-icons" onClick={() => {deleteEventItem(item.id)}}>delete</span>
           </div>
         </div>
       ))}

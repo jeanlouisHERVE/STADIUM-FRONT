@@ -137,6 +137,7 @@ import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
 // événements
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
+import SuperAdminModifyEvent from '../../pages/DashboardSuperAdminSingleEventModifying';
 
 // activité
 import SuperAdminActivity from '../../pages/DashboardSuperAdminSingleActivity';
@@ -203,9 +204,9 @@ const App = () => (
         <SuperAdminEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
-      {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
+      <Route path="/backoffice/superadmin/associations/:associationId/event/:eventId/modify/" exact>
         <SuperAdminModifyEvent />
-      </Route> */}
+      </Route>
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
         <SuperAdminLesson />
       </Route>
