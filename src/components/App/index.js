@@ -121,15 +121,15 @@ import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 
-import Messages from '../Messages';
-
 // SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
+// --------------------
 // SUPER ADMINISTRATEUR
+// --------------------
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
 import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
 import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
@@ -150,8 +150,11 @@ import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLesso
 // adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
 import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 
+// --------------------------
 // ADMINISTRATEUR ASSOCIATION
+// --------------------------
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
@@ -197,14 +200,14 @@ const App = () => (
       <Route path="/backoffice/superadmin/associations/:id/addAdherent">
         <SuperAdminAddAdherent />
       </Route>
-      {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+      <Route path="/backoffice/superadmin/associations/:id/adherent/:id/modify" exact>
         <SuperAdminModifyAdherent />
-      </Route> */}
+      </Route>
       <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
         <SuperAdminEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
-      <Route path="/backoffice/superadmin/associations/:associationId/event/:eventId/modify/" exact>
+      <Route path="/backoffice/superadmin/associations/:associationId/event/:eventId/modify" exact>
         <SuperAdminModifyEvent />
       </Route>
       <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>

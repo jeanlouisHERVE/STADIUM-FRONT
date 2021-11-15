@@ -64,8 +64,8 @@ const ListingEvents = ({ events, reloadData, sortDate }) => {
             <div className="listingEvent-line-items-maxParticipants">{item.maxParticipants}</div>
           </div>
           <div className="listingEvent-line-rightside">
-            <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
-            <Link to={`${path.pathname}/event/${item.id}/modify/`} className="card-link"><span className="listingEvent-line-icon-view material-icons">mode_edit</span></Link>
+            <Link to={`${path.pathname}/event/${item.id}`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
+            <Link to={`${path.pathname}/event/${item.id}/modify`} className="card-link"><span className="listingEvent-line-icon-view material-icons">mode_edit</span></Link>
             <span
               className="listingEvent-line-icon-delete material-icons"
               onClick={() => {

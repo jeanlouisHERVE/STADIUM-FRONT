@@ -182,10 +182,9 @@ const SuperAdminAssociationCommands = () => {
   };
 
   const path = useLocation();
-  // console.log(path.pathname);
-
-  // const pathArray = window.location.pathname.split('/');
-  // console.log(pathArray);
+  console.log(path.pathname);
+  const pathArray = window.location.pathname.split('/');
+  console.log(pathArray);
 
   async function loadData() {
     const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);

@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import './styles.scss';
 
 // == Composant
-const ListingAdherents = ({ adherents, sort, asort, reloadData }) => {
+const ListingAdherents = ({
+  adherents,
+  sort,
+  asort,
+  reloadData,
+}) => {
   const path = useLocation();
   const deleteAdherentItem = (id) => {
     axios.delete(
@@ -40,7 +44,13 @@ const ListingAdherents = ({ adherents, sort, asort, reloadData }) => {
             >
               A - Z
             </button>
-            <button className="listingAdherent-filter-button" type="submit" onClick={asort}>Z - A</button>
+            <button
+              className="listingAdherent-filter-button"
+              type="submit"
+              onClick={asort}
+            >
+              Z - A
+            </button>
           </div>
         </div>
       </div>
@@ -62,6 +72,7 @@ const ListingAdherents = ({ adherents, sort, asort, reloadData }) => {
           </div>
           <div className="listingAdherent-line-rightside">
             <Link to={`${path.pathname}/adherent/${adherent.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
+            <Link to={`${path.pathname}/adherent/${adherent.id}/modify`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">mode_edit</span></Link>
             <span
               className="listingEvent-line-icon-delete material-icons"
               onClick={() => {

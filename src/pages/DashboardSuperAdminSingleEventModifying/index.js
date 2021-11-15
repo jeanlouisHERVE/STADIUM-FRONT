@@ -77,8 +77,6 @@ const SuperAdminModifyEvent = () => {
         startDate: eventData.startDate.replaceAll('/', '-'),
         endDate: eventData.endDate.replaceAll('/', '-'),
       },
-      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
-      // paramètres
     )
       .then((response) => {
         console.log(response.data);
@@ -106,79 +104,81 @@ const SuperAdminModifyEvent = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <div className="dashboard-superadmin-adherent-add">
+      <div className="dashboard-superadmin-event-modify">
         <div className="aside-navbar">
           <AsideNavbar />
         </div>
-        <h1>DashboardSuperAdminEventMODIFY</h1>
-        {!isLoading && (
-          <form className="dashboard-superadmin-event-add-form" onSubmit={handleEventModifySubmit}>
-            <Field
-              identifier="name"
-              placeholder="Coupe de Quidditch"
-              label="Nom"
-              changeField={(identifier, newValue) => {
-                updateField(newValue, identifier);
-              }}
-              value={eventData.name}
-            />
-            <FieldDate
-              type="D - M - Y"
-              identifier="startDate"
-              placeholder="20/08/2021"
-              label="Date de début"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={eventData.startDate}
-              // value={eventData.startDate}
-            />
-            <FieldTime
-              type="HH:MM"
-              identifier="schedule"
-              placeholder="14:00"
-              label="Heure de début"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={eventData.schedule}
-            />
-            <FieldDate
-              type="D - M - Y"
-              identifier="endDate"
-              placeholder="21/08/2021"
-              label="Date de fin"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={eventData.endDate}
-            />
-            <Field
-              identifier="place"
-              placeholder="Scotland"
-              label="Emplacement"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={eventData.place}
-            />
-            <Field
-              identifier="maxParticipants"
-              placeholder="92"
-              label="Nombre de participants maximum"
-              changeField={(identifier, newValue) => {
-                // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
-                updateField(newValue, identifier);
-              }}
-              value={Number(eventData.maxParticipants)}
-            />
-            <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
-          </form>
-        )}
+        <div className="dashboard-superadmin-event-modify-container">
+          <h1>DashboardSuperAdminEventMODIFY</h1>
+          {!isLoading && (
+            <form className="dashboard-superadmin-event-modify-form" onSubmit={handleEventModifySubmit}>
+              <Field
+                identifier="name"
+                placeholder="Coupe de Quidditch"
+                label="Nom"
+                changeField={(identifier, newValue) => {
+                  updateField(newValue, identifier);
+                }}
+                value={eventData.name}
+              />
+              <FieldDate
+                type="D - M - Y"
+                identifier="startDate"
+                placeholder="20/08/2021"
+                label="Date de début"
+                changeField={(identifier, newValue) => {
+                  // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+                  updateField(newValue, identifier);
+                }}
+                value={eventData.startDate}
+                // value={eventData.startDate}
+              />
+              <FieldTime
+                type="HH:MM"
+                identifier="schedule"
+                placeholder="14:00"
+                label="Heure de début"
+                changeField={(identifier, newValue) => {
+                  // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+                  updateField(newValue, identifier);
+                }}
+                value={eventData.schedule}
+              />
+              <FieldDate
+                type="D - M - Y"
+                identifier="endDate"
+                placeholder="21/08/2021"
+                label="Date de fin"
+                changeField={(identifier, newValue) => {
+                  // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+                  updateField(newValue, identifier);
+                }}
+                value={eventData.endDate}
+              />
+              <Field
+                identifier="place"
+                placeholder="Scotland"
+                label="Emplacement"
+                changeField={(identifier, newValue) => {
+                  // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+                  updateField(newValue, identifier);
+                }}
+                value={eventData.place}
+              />
+              <Field
+                identifier="maxParticipants"
+                placeholder="92"
+                label="Nombre de participants maximum"
+                changeField={(identifier, newValue) => {
+                  // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
+                  updateField(newValue, identifier);
+                }}
+                value={Number(eventData.maxParticipants)}
+              />
+              <button className="dashboard-superadmin-event-modify-button" type="submit">Envoyer</button>
+            </form>
+          )}
+        </div>
       </div>
     </>
   );
