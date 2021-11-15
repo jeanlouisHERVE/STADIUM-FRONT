@@ -44,6 +44,7 @@ const ListingEvents = ({ events }) => {
           </div>
           <div className="listingEvent-line-rightside">
             <Link to={`${path.pathname}/event/${item.id}`} className="card-link"><span className="listingEvent-line-icon-view material-icons">visibility</span></Link>
+            <span className="listingEvent-line-icon-delete material-icons" attribut={item.id}>delete</span>
           </div>
         </div>
       ))}

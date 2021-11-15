@@ -44,7 +44,7 @@ const SuperAdminAddEvent = ({
           <AsideNavbar />
         </div>
         <div className="dashboard-superadmin-event-add-container">
-          <h1>DashboardSuperAdminEventADDING</h1>
+          <h1>Ajout d'un événement</h1>
           <form className="dashboard-superadmin-event-add-form" onSubmit={handleEventSubmit}>
             <Field
               identifier="name"
@@ -105,7 +105,7 @@ const SuperAdminAddEvent = ({
                 // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
                 updateField(newValue, identifier);
               }}
-              value={Number(maxParticipant)}
+              value={String(maxParticipant)}
             />
             <button className="dashboard-superadmin-event-button" type="submit">Envoyer</button>
           </form>

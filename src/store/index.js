@@ -7,6 +7,8 @@ import authMiddleware from '../middlewares/authMiddleware';
 import eventMiddleware from '../middlewares/eventMiddleware';
 import lessonMiddleware from '../middlewares/lessonMiddleware';
 import superAdminMiddleware from '../middlewares/superAdminMiddleware';
+import adherentMiddleware from '../middlewares/adherentMiddleware';
+import activityMiddleware from '../middlewares/activityMiddleware';
 
 // on construit un enhancer avec à la fois les dev tools et les middlewares
 const enhancer = composeWithDevTools(
@@ -16,6 +18,8 @@ const enhancer = composeWithDevTools(
     eventMiddleware,
     lessonMiddleware,
     superAdminMiddleware,
+    adherentMiddleware,
+    activityMiddleware,
   ),
 );
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import daysOfWeek from '../../utils/data/daysOfWeek';
+import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
 import './styles.scss';
 
 import AsideNavbar from '../../components/AsideNavbar';

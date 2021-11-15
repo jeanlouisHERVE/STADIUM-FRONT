@@ -19,7 +19,7 @@ export const submitLogin = () => ({
   type: SUBMIT_LOGIN,
 });
 
-export const successLogin = (nickname) => ({
+export const successLogin = () => ({
   type: SUCCESS_LOGIN,
-  nickname: nickname,
+  userAuthentified: true,
 });

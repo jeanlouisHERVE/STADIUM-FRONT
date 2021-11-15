@@ -8,11 +8,13 @@ const superAdminMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_ASSOCIATIONS:
 
+      // axios.get('http://localhost:8000/api/v1/backoffice/superadmin/associations/')
       // axios.get(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`)
       axios.get('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations')
       // axios.get('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/')
         .then((response) => {
-          // console.log(response);
+          console.log(response.data);
+          // localStorage.removeItem('user');
 
           // on veut enregistrer response.data dans le state => c'est les reducers
           // qui permettent de mettre à jour le state => les reducers choisissent

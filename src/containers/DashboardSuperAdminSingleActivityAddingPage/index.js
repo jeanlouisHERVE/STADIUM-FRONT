@@ -8,9 +8,9 @@ import { updateActivityField, submitActivity } from '../../actions/activity';
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state, ownProps) => ({
-  name: state.activity.level,
+  name: state.activity.name,
   picture: state.activity.picture,
-  association: ownProps.match.params.id,
+  association: Number(ownProps.match.params.id),
 });
 
 // === mapDispatchToProps

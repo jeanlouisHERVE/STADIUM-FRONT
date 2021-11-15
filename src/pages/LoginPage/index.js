@@ -13,7 +13,7 @@ Objectif : valider les identifiants de l'utilisateur
 */
 
 const LoginPage = ({
-  email,
+  username,
   password,
   updateField,
   handleSubmit,
@@ -34,14 +34,14 @@ const LoginPage = ({
       >
         <h1>Se connecter</h1>
         <Field
-          identifier="email"
+          identifier="username"
           placeholder="jean_michel@oclock.io"
           label="E-mail"
           changeField={(identifier, newValue) => {
             // console.log(`changeField : identifier=${identifier}, newValue=${newValue}`);
             updateField(newValue, identifier);
           }}
-          value={email}
+          value={username}
         />
         <Field
           identifier="password"
@@ -54,14 +54,16 @@ const LoginPage = ({
           }}
           value={password}
         />
-        <button type="submit" className="login-submit">Connexion</button>
+        <button type="submit" className="login-submit">
+          Connexion
+        </button>
       </form>
     </div>
   );
 };
 
 LoginPage.propTypes = {
-  email: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   // 2 paramètres : nouvelle valeur, identifiant
   updateField: PropTypes.func.isRequired,

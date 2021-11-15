@@ -5,7 +5,7 @@ import { SUBMIT_EVENT } from '../actions/event';
 // du coup on a accès seulement aux méthodes basiques du store, dont getState()
 // qui permet de récupérer le state actuel
 
-const authMiddleware = (store) => (next) => (action) => {
+const eventMiddleware = (store) => (next) => (action) => {
   // console.log('authMiddleware', action);
   const state = store.getState();
 
@@ -28,7 +28,7 @@ const authMiddleware = (store) => (next) => (action) => {
         },
       )
         .then((response) => {
-          console.log(response);
+          console.log(response.data.token);
           // on veut traiter la réponse en modifiant le state => dispatch une action
           // qui sera traitée par le reducer
           // const actionSuccess = successLogin(response.data.pseudo);
@@ -51,4 +51,4 @@ const authMiddleware = (store) => (next) => (action) => {
   next(action);
 };
 
-export default authMiddleware;
+export default eventMiddleware;

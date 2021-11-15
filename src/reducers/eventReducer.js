@@ -8,8 +8,8 @@ const initialState = {
   schedule: '',
   endDate: '',
   place: '',
-  maxParticipant: '',
-  association: '',
+  maxParticipant: 0,
+  association: 0,
 };
 
 function addEventReducer(state = initialState, action) {
