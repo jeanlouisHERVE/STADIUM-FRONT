@@ -114,29 +114,45 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+// HOMEPAGE ET DEPENDANCES
+import Home from '../../pages/Home';
 import ConfidentialPolicy from '../../pages/ConfidentialPolicy';
 import Contact from '../../pages/Contact';
 import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 import Error403 from '../../pages/Error403';
 
-import Home from '../../pages/Home';
 import Home2 from '../../pages/Home2';
-import SuperAdminAssociationCommands from '../../pages/DashboardSuperAdminAssociationCommands';
 
+// SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
 import SignupMember from '../../containers/SignupPages/SignupMember';
 import SignupAssociation from '../../containers/SignupPages/SignupAssociation';
 
+// SUPER ADMINISTRATEUR
 import DashboardSuperAdmin from '../../containers/DashboardSuperAdmin';
+import SuperAdminAssociation from '../../pages/DashboardSuperAdminAssociation';
 import SettingsSuperAdmin from '../../containers/Settings/SettingsSuperAdmin';
+
+// événements
 import SuperAdminEvent from '../../pages/DashboardSuperAdminSingleEvent';
 import SuperAdminAddEvent from '../../containers/DashboardSuperAdminSingleEventAddingPage';
-import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
 
+// activité
+import SuperAdminActivity from '../../pages/DashboardSuperAdminSingleActivity';
+import SuperAdminAddActivity from '../../containers/DashboardSuperAdminSingleActivityAddingPage';
+
+// cours
+import SuperAdminLesson from '../../pages/DashboardSuperAdminSingleLesson';
+import SuperAdminAddLesson from '../../containers/DashboardSuperAdminSingleLessonAddingPage';
+
+// adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
-import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminAddAdherent from '../../containers/DashboardSuperAdminSingleAdherentAddingPage';
+
+// ADMINISTRATEUR ASSOCIATION
+import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 
 import './styles.scss';
 
@@ -172,6 +188,48 @@ const App = ({ userAuthentified }) => (
       <Route path="/confidentialPolicy">
         <ConfidentialPolicy />
       </Route>
+      {/* Every Pages of the SuperAdmin Dashboard */}
+      <Route path="/backoffice/superadmin/associations" exact>
+        <DashboardSuperAdmin />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id" exact>
+        <SuperAdminAssociation />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
+        <SuperAdminAdherent />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
+      {/* <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+        <SuperAdminModifyAdherent />
+      </Route> */}
+      <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
+        <SuperAdminEvent />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
+      {/* <Route path="/backoffice/superadmin/associations/event/modify" exact>
+        <SuperAdminModifyEvent />
+      </Route> */}
+      <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
+        <SuperAdminLesson />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
+      <Route path="/backoffice/superadmin/associations/:id/activity/:id" exact>
+        <SuperAdminActivity />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/:id/addActivity" component={SuperAdminAddActivity} />
+      {/* <Route path="/backoffice/superadmin/associations/classe/add" exact>
+        <SuperAdminAddClasse />
+      </Route>
+      <Route path="/backoffice/superadmin/associations/classe/modify" exact>
+        <SuperAdminModifyClasse />
+      </Route>
+      <Route path="/backoffice/superadmin/settings" exact>
+        <SuperAdminSettings />
+      </Route> */}
+      {/* Every Pages of the AdminAssociation Dashboard */}
+      <Route path="/backoffice/admin/association/:id" exact>
+        <DashboardAdminAssociation />
+      </Route>
       <Route>
         <Error403 />
       </Route>
@@ -183,7 +241,7 @@ const App = ({ userAuthentified }) => (
           <DashboardSuperAdmin />
         </Route>
         <Route path="/backoffice/superadmin/associations/:id" exact>
-          <SuperAdminAssociationCommands />
+          <SuperAdminAssociation />
         </Route>
         <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
           <SuperAdminAdherent />

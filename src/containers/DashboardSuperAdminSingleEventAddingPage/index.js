@@ -7,14 +7,14 @@ import { updateEventField, submitEvent } from '../../actions/event';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   name: state.event.name,
   startDate: state.event.startDate,
   schedule: state.event.schedule,
   endDate: state.event.endDate,
   place: state.event.place,
-  maxParticipant: state.event.maxParticipant,
-  association: state.event.association,
+  maxParticipant: Number(state.event.maxParticipant),
+  association: Number(ownProps.match.params.id),
 });
 
 // === mapDispatchToProps

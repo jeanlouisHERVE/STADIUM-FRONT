@@ -28,6 +28,10 @@ body {
     width: 100%;
     overflow-y: scroll;
 
+    @media (max-width: 1500px) {
+      margin-top: 70px;
+    }
+
     h1 {
       font-size: xx-large;
       text-transform: uppercase;

@@ -5,7 +5,7 @@ import { SUBMIT_EVENT } from '../actions/event';
 // du coup on a accès seulement aux méthodes basiques du store, dont getState()
 // qui permet de récupérer le state actuel
 
-const authMiddleware = (store) => (next) => (action) => {
+const eventMiddleware = (store) => (next) => (action) => {
   // console.log('authMiddleware', action);
   const state = store.getState();
 
@@ -15,14 +15,16 @@ const authMiddleware = (store) => (next) => (action) => {
       axios.post(
         // URL
         'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events',
+        // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
         // paramètres
         {
           name: state.event.name,
           startDate: state.event.startDate,
-          schedule: state.event.scheduled,
+          schedule: state.event.schedule,
           endDate: state.event.endDate,
           place: state.event.place,
-          maxParticipants: state.event.maxParticipant,
+          maxParticipants: Number(state.event.maxParticipant),
+          association: Number(state.event.association),
         },
       )
         .then((response) => {
@@ -49,4 +51,4 @@ const authMiddleware = (store) => (next) => (action) => {
   next(action);
 };
 
-export default authMiddleware;
+export default eventMiddleware;

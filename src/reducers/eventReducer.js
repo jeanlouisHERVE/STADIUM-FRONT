@@ -3,18 +3,13 @@ import {
 } from '../actions/event';
 
 const initialState = {
-  // valeur de l'input pour l'adresse e-mail
   name: '',
-  // valeur de l'input pour le mot de passe
   startDate: '',
-  // indique si l'utilisateur est authentifié
   schedule: '',
-  // valeur de l'input pour le mot de passe
   endDate: '',
-  // indique si l'utilisateur est authentifié
   place: '',
-  // indique si l'utilisateur est authentifié
-  maxParticipant: '',
+  maxParticipant: 0,
+  association: 0,
 };
 
 function addEventReducer(state = initialState, action) {

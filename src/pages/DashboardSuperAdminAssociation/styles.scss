@@ -14,7 +14,7 @@ body {
   border-radius: 20px;
   flex-direction: row;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1500px) {
     margin-top: 90px;
   }
   
@@ -24,6 +24,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    @media (max-width: 1500px) {
+      margin-top: 70px;
+    }
 
     h1 {
       font-size: xx-large;
