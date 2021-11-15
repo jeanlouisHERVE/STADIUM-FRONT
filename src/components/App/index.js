@@ -122,8 +122,6 @@ import LegalMention from '../../pages/LegalMention';
 import Error404 from '../../pages/Error404';
 import Error403 from '../../pages/Error403';
 
-import Home2 from '../../pages/Home2';
-
 // SUPER INSCRIPTION AUTHENTIFICATION
 import LoginPage from '../../containers/LoginPage';
 import SignupUser from '../../containers/SignupPages/SignupUser';
@@ -163,9 +161,6 @@ const App = ({ userAuthentified }) => (
     <Switch>
       <Route path="/" exact>
         <Home />
-      </Route>
-      <Route path="/2" exact>
-        <Home2 />
       </Route>
       <Route path="/inscription" exact>
         <SignupUser />

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import levelSelectorData from '../../utils/data/levelData';
+import levelSelectorData from '../../utils/staticDatas/levelData';
 import './styles.scss';
 
 const FieldLevelSelector = ({

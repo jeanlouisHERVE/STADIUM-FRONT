@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
+import daysOfWeekSelectorData from '../../utils/staticDatas/daysOfWeekSelectorData';
 import './styles.scss';
 
 const FieldDaySelector = ({

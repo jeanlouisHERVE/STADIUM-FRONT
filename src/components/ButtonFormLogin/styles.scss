@@ -1,39 +1,70 @@
 @use 'src/styles/vars.scss';
 
-  .btn-form-login{
-    width: auto;
-    top: 1.2em;
-    right: 1.4em;
+.button-wrapper-login{
+  position: absolute;
+    top: 2.5em;
+    right: 2.5em;
+  
+  .button-form-login{
+    height: 2.8em;
+    width: 12em;
+    border-radius: 30px;
+    background-color: vars.$blueColor;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.8em;
-    background-color: #074666;
-    color: white;
-    padding: 1em 3em 1em 3em;
-    border-radius: 30px;
-    border: 1px;
-    box-shadow: 10px 5px 5px vars.$darkColor;
-    z-index:1;  
-    position: absolute;
-  }
-
-@media(min-width:767px) and (max-width:1023px)
-{
-  .btn-form-login{
-    font-size: 1em;
-    top: 2em;
-    right: 1.9em;
-    padding: 1em 1.4em 1em 1.4em;
-    }
-  }
-
-  @media(min-width:1024px)
-{
-  .btn-form-login{
     font-size: 1.2em;
-    top: 3em;
-    right: 3em;
-    padding: 1em 3em 1em 3em;
+    padding: 1em 3em;
+    border: none;
+  }
+  
+  .button-border-login{
+    border-radius: 30px;
+    border: solid 2px vars.$blueColor;
+    height: 3em;
+    position: relative;
+    margin: auto;
+    width: 14em;
+    top: -40px;
+    left: 10px;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      transition: all .3s ease-in-out;
+      top: -50px;
+      left: 0px;
     }
+  }
 }
+
+//   .btn-form-login{
+//     top: 1.2em;
+//     right: 1.4em;
+//     font-size: 0.8em;
+//     background-color: #074666;
+//     padding: 1em 3em 1em 3em;
+//     border: 1px;
+//     box-shadow: 10px 5px 5px vars.$darkColor;
+//     z-index:1;  
+//   }
+
+// @media(min-width:767px) and (max-width:1023px)
+// {
+//   .btn-form-login{
+//     font-size: 1em;
+//     top: 2em;
+//     right: 1.9em;
+//     padding: 1em 1.4em 1em 1.4em;
+//     }
+//   }
+
+//   @media(min-width:1024px)
+// {
+//   .btn-form-login{
+//     font-size: 1.2em;
+//     top: 3em;
+//     right: 3em;
+//     padding: 1em 3em 1em 3em;
+//     }
+// }
 

@@ -2,7 +2,7 @@ import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './styles.scss';
-import daysOfWeek from '../../utils/data/daysOfWeek';
+import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
 // == Composant
 const ListingClasses = ({ activities }) => {
   const path = useLocation();

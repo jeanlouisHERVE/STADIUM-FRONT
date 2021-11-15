@@ -10,7 +10,7 @@ import FieldTime from '../../components/FieldTime';
 import FieldDaySelector from '../../components/FieldDaySelector';
 import FieldLevelSelector from '../../components/FieldLevelSelector';
 import FieldActivitySelector from '../../components/FieldActivitySelector';
-import daysOfWeekSelectorData from '../../utils/data/daysOfWeekSelectorData';
+import daysOfWeekSelectorData from '../../utils/staticDatas/daysOfWeekSelectorData';
 
 const SuperAdminAddLesson = ({
   level,
@@ -77,7 +77,7 @@ const SuperAdminAddLesson = ({
               identifier="startTime"
               placeholder="14:00"
               label="Heure de début"
-              changeField={(identifier, newValue) => {;
+              changeField={(identifier, newValue) => {
                 updateField(newValue, identifier);
               }}
               value={startTime}
