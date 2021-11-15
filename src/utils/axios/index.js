@@ -10,7 +10,6 @@ const axiosConfig = axios.create({
   Authorization: `Bearer ${user.token}`,
 });
 
-
 if (user && user.token) {
   axiosConfig.defaults.headers.Authorization = `Bearer ${user.token}`;
 }

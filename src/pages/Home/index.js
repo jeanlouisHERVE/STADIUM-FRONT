@@ -10,7 +10,7 @@ import Footer from '../../components/Footer';
 import './styles.scss';
 
 // == Composant
-const Home2 = () => (
+const Home = () => (
   <div className="home">
     <div className="wrapper-top">
       <Logo />
@@ -97,4 +97,4 @@ const Home2 = () => (
 );
 
 // == Export
-export default Home2;
+export default Home;

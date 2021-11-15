@@ -19,6 +19,8 @@ const Error403 = () => (
           <p className="error-text"> <em>Oups!</em> <br /> Vous n'avez pas accès à cette page </p>
           <button type="button" className="error-button">
             <Link to="/">Accueil</Link>
+          </button>
+          <button type="button" className="error-button">
             <Link to="/connexion">Connexion</Link>
           </button>
         </div>
