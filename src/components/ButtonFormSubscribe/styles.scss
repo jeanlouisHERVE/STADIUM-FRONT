@@ -1,13 +1,32 @@
 @use 'src/styles/vars.scss';
 
-.btn-form-subscribe{
+.btn-subscribe{
+  
+  .btn-form-subscribe{
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1em;
   background-color: #074666;
   color: white;
-  padding: 1em 3em 1em 3em;
+  padding: 1em 2.5em;
   border-radius: 30px;
   border: 1px;
+  position: relative;
+  z-index:1;
+  
+  }
+
+  // .btn-form-subscribe-border{
+  //   border: 1px solid black;
+  //   padding: 1.4em 5.2em;
+  //   border-radius: 30px;
+  //   width: 1em;
+  //   height: 1em;
+  //   position: relative;
+  //   left:1.1em;
+  //   bottom: 0.1em;
+  //   top:0.6em;
+  //   z-index:0;
+  // }
 }
 
