@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 // Import des reducers
 import loginReducer from './loginReducer';
@@ -11,6 +13,12 @@ import activityReducer from './activityReducer';
 import settingsSuperAdminReducer from './Settings/settingsSuperAdminReducer';
 import associationsReducer from './associationsReducer';
 import AdherentReducer from './adherentReducer';
+
+export const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['login'],
+};
 
 const rootReducer = combineReducers({
   login: loginReducer,
@@ -26,4 +34,4 @@ const rootReducer = combineReducers({
   // ci dessous on ajoute tous les reducers dont on a besoin
 });
 
-export default rootReducer;
+export default persistReducer(persistConfig, rootReducer);
