@@ -9,7 +9,7 @@ const initialState = {
   // valeur de l'input pour le mot de passe
   password: '',
   // indique si l'utilisateur est authentifié
-  userAuthentified: false,
+  userAuthentified: true,
 };
 
 function loginReducer(state = initialState, action) {
