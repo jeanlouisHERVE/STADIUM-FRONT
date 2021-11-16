@@ -132,7 +132,7 @@ const App = ({ userAuthentified }) => (
         </Route>
 
         {/* Every Pages of the AdminAssociation Dashboard */}
-        <Route path="/backoffice/admin/association/:id" exact>
+        <Route path="/backoffice/admin/association" exact>
           <DashboardAdminAssociation />
         </Route>
         <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
