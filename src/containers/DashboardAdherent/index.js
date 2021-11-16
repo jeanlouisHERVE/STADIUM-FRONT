@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import DashboardAdherent from '../pages/DashboardAdherent';
+import DashboardAdherent from '../../pages/DashboardAdherent';
 
-import { updateDocumentAdherent, submitDocumentAdherent } from '../actions/adherent';
+import { updateDocumentAdherent, submitDocumentAdherent } from '../../actions/adherent';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 // === création de l'assistant
-export default connect(mapStateToProps, mapDispatchToProps)(SuperAdminAddAdherent);
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardAdherent);

@@ -10,7 +10,7 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
-const DashboardAdherent = () => {
+const DashboardAdherent = ({ isCompleted, handleSubmit }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [adherentData, setAdherentData] = useState([]);
 
@@ -19,7 +19,7 @@ const DashboardAdherent = () => {
 
   let cssClass = 'dashboard-adherent-documents';
 
-  const isCompleted = adherentData.file.isComplete;
+  // const isCompleted = adherentData.file.isComplete;
 
   if (isCompleted) {
     cssClass += 'dasboard-adherent-documents-NotDisplay';
@@ -33,7 +33,7 @@ const DashboardAdherent = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/${path.pathname}`);
+      const rawResponse = await fetch('https://sym-stadium.herokuapp.com//api/v1/member/profiles/{profilId}');
       // const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
       const response = await rawResponse.json();
       setAdherentData(response);
@@ -109,11 +109,11 @@ const DashboardAdherent = () => {
               {adherentData.file && <p className="dashboard-adherent-document"><p className="strong">Certificat médical :
               // eslint-disable-next-line max-len
               </p> &nbsp;{adherentData.file.medicalCertificate ? <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
-              {adherentData.file && <p className="dashboard-adherent-document"><p className="strong">Règlement intérieur : </p> &nbsp;{adherentData.file.rulesOfProcedure ? 
+              {adherentData.file && <p className="dashboard-adherent-document"><p className="strong">Règlement intérieur : </p> &nbsp;{adherentData.file.rulesOfProcedure ?
               <span className="material-icons" style={{ color: 'green' }}> task</span> : <span className="material-icons" style={{ color: 'red' }}>cancel</span> }</p>}
             </div> */}
           </div>
-          <img className="dashboard-adherent-presentation-picture" src={Avatar} alt="" />
+          {/* <img className="dashboard-adherent-presentation-picture" src={Avatar} alt="" /> */}
         </div>
       </div>
     </>
