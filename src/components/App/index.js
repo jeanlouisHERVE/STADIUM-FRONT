@@ -49,7 +49,11 @@ import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdher
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
-import DashboardAdherent from '../../pages/DashboardAdherent';
+// --------------------------
+// ADHERENT
+// --------------------------
+import DashboardAdherent from '../../containers/DashboardAdherent';
+
 // == Composant
 const App = ({ userAuthentified }) => (
   <div className="App">

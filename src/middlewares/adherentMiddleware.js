@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SUBMIT_ADHERENT } from '../actions/adherent';
+import { SUBMIT_ADHERENT, SUBMIT_DOCUMENT_ADHERENT } from '../actions/adherent';
 
 const adherentMiddleware = (store) => (next) => (action) => {
   const state = store.getState();
@@ -18,6 +18,35 @@ const adherentMiddleware = (store) => (next) => (action) => {
           picture: state.adherent.picture,
           accountId: Number(state.adherent.accountId),
           association: Number(state.adherent.association),
+        },
+      )
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.warn(error);
+          // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
+        });
+
+      break;
+
+    default:
+  }
+  next(action);
+
+  switch (action.type) {
+    case SUBMIT_DOCUMENT_ADHERENT:
+      console.log('on va envoyer la requête à l\'API');
+      axios.post(
+        // URL
+        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/member/profiles',
+        // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+        // paramètres
+        {
+          medicalCerificate: state.adherent.medicalCerificate,
+          rulesOfProcedure: state.adherent.rulesOfProcedure,
+          picture: state.adherent.picture,
+          accountId: Number(state.adherent.accountId),
         },
       )
         .then((response) => {
