@@ -8,9 +8,16 @@
   margin:10px;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
+  h1 {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
 
+  }
   .dashboard-admin-planning-picture {
     width: 90%;
     height: auto;

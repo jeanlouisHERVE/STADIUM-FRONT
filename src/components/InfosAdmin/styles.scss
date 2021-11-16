@@ -1,0 +1,67 @@
+@use 'src/styles/vars';
+
+.dashboard-admin-informations {
+  background-color: #698EA0;
+  height: 100%;
+  width: 23vw;
+  margin: 10px;
+  border-radius: 10px;
+
+  .dashboard-admin-informations-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: x-large;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+    }
+
+    .dashboard-admin-informations-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      padding: 0px 10px; 
+
+      .dashboard-admin-informations-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5E7F90;
+        border-radius: 20px;
+        padding: 7px 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        
+        .dashboard-admin-informations-icon {
+          color : white;
+        }
+        
+        .dashboard-admin-informations-name {
+          color: white;
+          font-weight: 700;
+          font-size: 14px;
+        }
+
+        .dashboard-admin-informations-value {
+          background-color: vars.$turquoiseColor;
+          border-radius: 20px;
+          width: 40px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 800;
+          color: white;
+          text-align: center;
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+}
