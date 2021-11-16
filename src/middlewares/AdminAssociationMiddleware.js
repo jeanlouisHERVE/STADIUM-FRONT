@@ -1,6 +1,6 @@
 import axios from 'axios';
 // import { useLocation } from 'react-router-dom';
-import { GET_ASSOCIATION_INFORMATIONS, saveAssociation } from '../actions/superadmin';
+import { GET_ASSOCIATION_INFORMATIONS, saveAssociation } from '../actions/adminAssociation';
 
 const superAdminMiddleware = (store) => (next) => (action) => {
   // const path = useLocation();

@@ -7,7 +7,7 @@ import Logo from '../../../components/Logo';
 import '../styles.scss';
 
 const SignupUser = ({
-  email,
+  username,
   password,
   updateField,
   handleSubmit,
@@ -28,14 +28,14 @@ const SignupUser = ({
       >
         <h1>Inscription</h1>
         <Field
-          identifier="email"
+          identifier="username"
           placeholder="association@mail.com"
           label="Adresse mail de connexion"
           type="email"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);
           }}
-          value={email}
+          value={username}
         />
         <Field
           identifier="password"
@@ -65,7 +65,7 @@ const SignupUser = ({
 };
 
 SignupUser.propTypes = {
-  email: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,

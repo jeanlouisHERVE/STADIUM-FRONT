@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import SignupMember from '../../../pages/SignupPages/SignupMember';
 
-import { submitSubscription, updateSubscriptionField } from '../../../actions/signup';
+import { submitAssociationSubscription, updateSubscriptionField } from '../../../actions/signup';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(action);
   },
   handleSubmit: () => {
-    dispatch(submitSubscription());
+    dispatch(submitAssociationSubscription());
   },
 });
 

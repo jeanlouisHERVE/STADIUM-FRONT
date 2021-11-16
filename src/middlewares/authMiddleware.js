@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { SUBMIT_LOGIN, successLogin } from '../actions/login';
+import api from '../utils/axios';
 
 // middleware : ça provient de la bibliothèque redux (pas react-redux)
 // du coup on a accès seulement aux méthodes basiques du store, dont getState()
@@ -17,9 +18,19 @@ const authMiddleware = (store) => (next) => (action) => {
       // const state = store.getState();
       // => state.email, state.password
 
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/login_check',
+        '/api/login_check',
+        // { headers:
+        //   const user = JSON.parse(localStorage.getItem('user'));
+
+        //   if (user && user.token) {
+        //     return { 'Authorization': 'Bearer ' + user.token };
+        //   } else {
+        //     return {};
+        //   }
+        // }
+
         // paramètres
         {
           username: store.getState().login.username,

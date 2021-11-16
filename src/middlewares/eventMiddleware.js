@@ -34,6 +34,7 @@ const eventMiddleware = (store) => (next) => (action) => {
           // message d'erreur sur l'application
         });
       break;
+
     case SUBMIT_EVENT:
       console.log('on va envoyer la requête à l\'API');
       axios.post(

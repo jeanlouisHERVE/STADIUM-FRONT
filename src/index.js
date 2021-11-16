@@ -1,9 +1,10 @@
 // == Import : npm
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import store from './store';
+import { store, persistor } from './store';
 
 // == Import : local
 // Composants
@@ -15,7 +16,9 @@ import App from './containers/app';
 const rootComponent = (
   <Provider store={store}>
     <Router>
-      <App />
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
     </Router>
   </Provider>
 );

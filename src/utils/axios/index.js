@@ -3,11 +3,16 @@
 
 import axios from 'axios';
 
-const axiosConfig = axios.create({
-  baseUrl: 'http://ec2-54-197-70-206.compute-1.amazonaws.com',
+const token = JSON.parse(localStorage.getItem('token'));
+const api = axios.create({
+  baseURL: 'http://ec2-54-197-70-206.compute-1.amazonaws.com',
 });
 
-export default axiosConfig;
+if (token) {
+  api.defaults.headers.common.Authorization = `Bearer ${token}`;
+}
+
+export default api;
 
 // case XXX_XXX:
 //   api.post(
