@@ -25,8 +25,8 @@ const SuperAdminAdherent = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
-      // const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
+      // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
+      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
       const response = await rawResponse.json();
       setAdherentData(response);
       console.log(response);

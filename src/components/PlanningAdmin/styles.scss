@@ -2,9 +2,19 @@
 
 
 .dashboard-admin-planning {
-  background-color: aqua;
+  background-color: #678C9F;
   height: 100%;
   width: 62%;
   margin:10px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+
+
+  .dashboard-admin-planning-picture {
+    width: 90%;
+    height: auto;
+    
+
+  }
 }
