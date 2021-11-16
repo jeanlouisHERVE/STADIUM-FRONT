@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import SignupUser from '../../../pages/SignupPages/SignupUser';
 
-import { submitSubscription, updateSubscriptionField } from '../../../actions/signup';
+import { submitUserSubscription, updateSubscriptionField } from '../../../actions/signup';
 
 // === mapStateToProps
 // si on a besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: élément à récupérer dans le state
-  email: state.signupUser.email,
+  username: state.signupUser.username,
   password: state.signupUser.password,
 });
 
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(action);
   },
   handleSubmit: () => {
-    dispatch(submitSubscription());
+    dispatch(submitUserSubscription());
   },
 });
 
