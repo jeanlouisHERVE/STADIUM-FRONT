@@ -1,7 +1,8 @@
 // === action types
 export const UPDATE_SUBSCRIPTION_FIELD = 'UPDATE_SUBSCRIPTION_FIELD';
 // soumission du formulaire de login
-export const SUBMIT_SUBSCRIPTION = 'SUBMIT_SUBSCRIPTION';
+export const SUBMIT_USER_SUBSCRIPTION = 'SUBMIT_USER_SUBSCRIPTION';
+export const SUBMIT_ASSOCIATION_SUBSCRIPTION = 'SUBMIT_ASSOCIATION_SUBSCRIPTION';
 
 // === action creators
 
@@ -14,6 +15,10 @@ export const updateSubscriptionField = (value, identifier) => ({
   name: identifier,
 });
 
-export const submitSubscription = () => ({
-  type: SUBMIT_SUBSCRIPTION,
+export const submitUserSubscription = () => ({
+  type: SUBMIT_USER_SUBSCRIPTION,
+});
+
+export const submitAssociationSubscription = () => ({
+  type: SUBMIT_ASSOCIATION_SUBSCRIPTION,
 });

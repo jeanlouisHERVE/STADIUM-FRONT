@@ -61,6 +61,7 @@
     "react-scroll": "^1.8.4",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
     "styled-components": "^5.3.3"
   },
   "jest": {

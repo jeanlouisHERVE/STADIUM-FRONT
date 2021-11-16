@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
+import api from '../../utils/axios';
 import AsideNavbarAdmin from '../../components/AsideNavbarAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -17,6 +18,8 @@ const DashboardAdminAssociation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [activities, setActivities] = useState([]);
 
   const path = useLocation();
   console.log(path);
@@ -30,17 +33,23 @@ const DashboardAdminAssociation = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations');
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
-      setIsLoaded(true);
-      console.log(response);
+      api.get('/api/v1/backoffice/admin/association/').then((response) => {
+        setData(response.data);
+
+        const assoEventFetch = api.get('/api/v1/backoffice/admin/association/events/');
+        const assoActivitiesFetch = api.get('/api/v1/backoffice/admin/association/activities/');
+
+        Promise.all([assoEventFetch, assoActivitiesFetch]).then((result) => {
+          setEvents(result[0].data);
+          setActivities(result[1].data);
+          setIsLoaded(true);
+        });
+      });
     }
     loadData();
   }, []);
-
   return (
+    isLoaded && (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
@@ -55,14 +64,15 @@ const DashboardAdminAssociation = () => {
               <CarousselPictureAdmin />
             </div>
             <div className="dashboard-adminAssociation-down">
-              <LessonAdmin activities={data.activities} />
-              <EventAdmin events={data.events} />
+              <LessonAdmin activities={activities} />
+              <EventAdmin events={events} />
               <MessageAdmin />
             </div>
           </div>
         </div>
       </div>
     </>
+    )
   );
 };
 

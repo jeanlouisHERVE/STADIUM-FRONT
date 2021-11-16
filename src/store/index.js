@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import { persistStore } from 'redux-persist';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from '../reducers';
 
@@ -28,11 +29,13 @@ const enhancerAvecMiddlewares = applyMiddleware(logMiddleware);
 const enhancerAvecDevToolsEtMiddlewares = composeWithDevTools(enhancerAvecMiddlewares);
 */
 
-const store = createStore(
+export const store = createStore(
   // reducer
   reducer,
   // enhancer
   enhancer,
 );
 
-export default store;
+export const persistor = persistStore(store);
+
+export default { store, persistor };
