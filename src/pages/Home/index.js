@@ -1,10 +1,10 @@
-// import assets
-import dashboardUser from 'src/assets/images/dashboardUser.png';
-import imageStade from 'src/assets/images/imageStade.jpg';
-import imageLogo from 'src/assets/images/imageLogo.png';
-
 import { Link } from 'react-router-dom';
 
+// import assets
+import dashboardUser from '../../assets/images/dashboardUser.png';
+import imageStade from '../../assets/images/imageStade.jpg';
+
+import Logo from '../../components/Logo';
 import ButtonFormLogin from '../../components/ButtonFormLogin';
 import ButtonFormSubscribe from '../../components/ButtonFormSubscribe';
 import Footer from '../../components/Footer';
@@ -16,7 +16,7 @@ const Home = () => (
   <div className="home">
     <div className="home-header-header">
       <div className="part-registration-logo">
-        <img src={imageLogo} alt="" className="imageLogo" />
+        <Logo />
       </div>
       <div className="part-connexion-btn">
         <Link to="/connexion"> <ButtonFormLogin /> </Link>
@@ -81,11 +81,11 @@ const Home = () => (
           </ul>
         </div>
         <div className="part-user-img">
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-left">
             chevron_left
           </span>
           <img src={dashboardUser} alt="" className="dashboard-user-img" />
-          <span className="material-icons--user">
+          <span className="material-icons--user arrow-right">
             chevron_right
           </span>
           <div className="part-user-btn-subscribe"> <Link to="/inscription"> <ButtonFormSubscribe /> </Link> </div>
@@ -100,3 +100,41 @@ const Home = () => (
 
 // == Export
 export default Home;
+
+//* ScrolltoTop Element
+
+// import React, { useEffect, useState } from "react";
+
+// export default function ScrollToTop() {
+//   const [isVisible, setIsVisible] = useState(false);
+
+// Show button when page is scorlled upto given distance
+// const toggleVisibility = () => {
+//   if (window.pageYOffset > 300) {
+//     setIsVisible(true);
+//   } else {
+//     setIsVisible(false);
+//   }
+// };
+// Set the top cordinate to 0
+// make scrolling smooth
+// const scrollToTop = () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth"
+//   });
+// };
+
+// useEffect(() => {
+//   window.addEventListener("scroll", toggleVisibility);
+// }, []);
+
+// return (
+//   <div className="scroll-to-top">
+//     {isVisible &&
+//       <div onClick={scrollToTop}>
+//         <img src='https://i.postimg.cc/44Ytsk8Z/top-arrow-emoj.png' alt='Go to top'/>
+//       </div>}
+//   </div>
+// );
+// }

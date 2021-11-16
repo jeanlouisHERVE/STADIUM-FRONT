@@ -1,16 +1,18 @@
 .card-association {
   background: #6a8fa2;
-  width: 200px;
-  height: 220px;
+  width: 280px;
+  height: 350px;
   padding: 1em;
   padding-top: 2em;
-  margin: 2em 0;
   border-radius: 20px;
   filter: drop-shadow(0 0 15px rgb(0, 0, 0, 0.35));
+  display: flex;
+  flex-direction: column;
+  place-content: center;
 }
 
 .card-association h2 {
-  margin-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -28,13 +30,17 @@
   height: 20%;
   background: #545758;
   font-size: 0.7em;
-  margin: 1em auto;
+  margin: 4.5em auto 1em;
   display: flex;
   place-content: center;
+  border-radius: 15px;
 }
 
 .details-association .card-link {
   color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
   font-weight: 600;
   place-self: center;
 }

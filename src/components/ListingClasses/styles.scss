@@ -1,0 +1,274 @@
+@use 'src/styles/vars';
+
+.listingClasses-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 10px;
+
+  .listingClasses-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 40px;
+    align-items: center;
+    
+    .listingClasses-header-leftside {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+      width:30%;
+
+      .listingClasses-title {
+        margin-right: 15px;
+        
+         h2 {
+          font-weight: 600;
+          font-size: x-large;
+          text-transform: uppercase;
+         }
+      }
+  
+      .listingClasses-addIcon {
+        cursor: pointer;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+        }
+      
+      }
+    }
+
+    .listingClasses-header-rightside {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .listingClasses-filter {
+
+        .listingClasses-filter-button {
+          background-color: white;
+          border: 2px solid vars.$salmonColor;
+          height: 30px;
+          width: 60px;
+          color: vars.$salmonColor;
+          font-weight: 700;
+          cursor: pointer;
+          margin-left: 10px;
+          border-radius: 20px;
+         
+          &:hover {
+            background-color: vars.$salmonColor;
+            color: white;
+          }
+        }
+      }
+      .listingClasses-filterIcon {
+        margin-right: 10px;
+        
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;  /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .listingClasses-line-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    border-bottom: 1px black solid;
+    margin-left: 30px;
+    @media (max-width: 1300px) {
+      margin-left: 0px;
+    }
+
+    .listingClasses-line-header-leftside {
+      display: flex;
+      flex-direction: row;
+
+      .listingClasses-line-header-items-classe {
+        margin-left: 15px;
+        width: 100px;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+      }
+
+      .listingClasses-line-header-items-level {
+        margin-left: 15px;
+        width: 100px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .listingClasses-line-header-items-day {
+        margin-left: 15px;
+        width: 100px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .listingClasses-line-header-items-startTime{
+        margin-left: 15px;
+        width: 100px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .listingClasses-line-header-items-endTime {
+        margin-left: 15px;
+        width: 100px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+     
+    }
+    .listingClasses-line-header-rightside {
+    }
+  }
+  .listingClasses-line-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px black solid;
+    margin-left: 30px;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    @media (max-width: 1300px) {
+      margin-left: 0px;
+    }
+
+    .listingClasses-line-leftside {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+            
+      .listingClasses-line-items-name{
+        margin-left: 15px;
+        width: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .listingClasses-line-classe-container {
+        display: flex;
+        flex-direction: row;
+        
+
+
+        .listingClasses-line-items-level {
+          margin-left: 15px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          .listingClasses-line-items-level-cartouche {
+            height: 20px;
+            background-color: red;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+          }
+        }
+        
+        .listingClasses-line-items-day {
+          margin-left: 15px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .listingClasses-line-items-startTime {
+          margin-left: 15px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .listingClasses-line-items-endTime{
+          margin-left: 15px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+      }
+
+      
+    }
+
+    .listingClasses-line-rightside {
+
+      .listingClasses-line-icon-view {
+        
+        margin-right: 1em;
+
+        cursor: pointer;
+
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px; 
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import './styles.scss';
+
 import Avatar from './avataaars.svg';
 import Avatar2 from './avataaars2.svg';
 import Avatar3 from './avataaars3.svg';
@@ -26,15 +28,23 @@ const AsideNavbar = () => (
       <a className="AsideNavbar-ProfileCard-Link" href="">changer de profil</a>
       <a className="AsideNavbar-ProfileCard-Link" href="">gestion de profil</a>
     </div>
-
     <Nav className="AsideNavbar-Navbar-main">
       <NavMenu className="AsideNavbar-Navbar-ul">
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category">home</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">calendar_today</span><span className="AsideNavbar-Navbar-category">planning</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">sports_martial_arts</span><span className="AsideNavbar-Navbar-category">cours</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">today</span><span className="AsideNavbar-Navbar-category">evenements</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">mark_email_unread</span><span className="AsideNavbar-Navbar-category">messages</span></NavLink>
-        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category">réglages</span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/associations">home</Link></span></NavLink>
+        {/* <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">calendar_today</span>
+          <span className="AsideNavbar-Navbar-category">planning</span>
+        </NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">sports_martial_arts</span>
+          <span className="AsideNavbar-Navbar-category">cours</span>
+        </NavLink>
+        <NavLink className="AsideNavbar-Navbar-item">
+          <span className="material-icons">today</span>
+          <span className="AsideNavbar-Navbar-category">evenements</span>
+        </NavLink> */}
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">mark_email_unread</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/messages">messages</Link></span></NavLink>
+        <NavLink className="AsideNavbar-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/reglages">réglages</Link></span></NavLink>
       </NavMenu>
     </Nav>
   </div>

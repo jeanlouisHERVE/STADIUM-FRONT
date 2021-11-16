@@ -12,6 +12,7 @@ const Field = ({
   type,
   value,
   changeField,
+  hidden,
 }) => {
   const handleChange = (event) => {
     const { value: inputValue, name } = event.target;
@@ -23,6 +24,27 @@ const Field = ({
     changeField(name, inputValue);
   };
 
+  if (hidden === true) {
+    return (
+      <div className="field" hidden>
+        <input
+          className="input"
+          id={identifier}
+          placeholder={placeholder}
+          name={identifier}
+          type={type}
+          value={value}
+          onChange={handleChange}
+        />
+        <label
+          className="label"
+          htmlFor={identifier}
+        >
+          {label}
+        </label>
+      </div>
+    );
+  }
   return (
     <div className="field">
       <input
@@ -59,12 +81,14 @@ Field.propTypes = {
    * - identifier
    * - new value
    */
+  hidden: PropTypes.bool,
   changeField: PropTypes.func.isRequired,
 };
 
 Field.defaultProps = {
   type: 'text',
   value: '',
+  hidden: false,
 };
 
 export default Field;
