@@ -10,7 +10,7 @@ const superAdminMiddleware = (store) => (next) => (action) => {
 
       // axios.get(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`)
       // axios.get('https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/associations/')
-      // axios.get('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/')
+      axios.get('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/admin/association/')
         .then((response) => {
           // console.log(response);
 
