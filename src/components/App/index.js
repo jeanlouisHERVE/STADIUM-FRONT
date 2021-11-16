@@ -49,6 +49,7 @@ import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdher
 import DashboardAdminAssociation from '../../containers/DashboardAdminAssociation';
 import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
+import DashboardAdherent from '../../pages/DashboardAdherent';
 // == Composant
 const App = ({ userAuthentified }) => (
   <div className="App">
@@ -136,6 +137,10 @@ const App = ({ userAuthentified }) => (
           <DashboardAdminAssociation />
         </Route>
         <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
+
+        <Route path="/adherent/profil/:id">
+          <DashboardAdherent />
+        </Route>
 
         <Route>
           <Error404 />
