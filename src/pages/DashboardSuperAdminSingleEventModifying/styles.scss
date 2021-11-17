@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     overflow-y: scroll;
     width: 100%;
 
@@ -31,7 +30,7 @@ body {
       text-transform: uppercase;
       margin-bottom: 30px;
       font-weight: 700;
-      align-self: flex-start;
+      align-self: center;
       margin-top: 20px;
       margin-left: 20px;
     }

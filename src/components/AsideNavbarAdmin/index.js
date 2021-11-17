@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles.scss';
-
+import { useDispatch } from 'react-redux';
+import { logoutUser } from '../../actions/login';
 import Avatar from './jean.svg';
 import Asso from './asso_20.png';
 import
@@ -12,6 +13,7 @@ import
 
 // == Composant
 const AsideNavbarAdmin = () => {
+  const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logoutUser());
   };

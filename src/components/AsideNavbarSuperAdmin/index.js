@@ -2,7 +2,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './styles.scss';
 import { logoutUser } from '../../actions/login';
-
 import Avatar from './avataaars.svg';
 import
 {
@@ -39,7 +38,7 @@ const AsideNavbarSuperAdmin = () => {
         </NavMenu>
       </Nav>
       <div className="AsideNavbarSuperAdmin-logout">
-        <button type="button" href="/logout">
+        <button type="button" onClick={handleLogout}>
           Déconnexion
         </button>
       </div>

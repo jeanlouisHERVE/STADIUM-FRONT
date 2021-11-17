@@ -17,12 +17,14 @@ const Error403 = () => (
         <div className="error">
           <h1 className="error-title">403</h1>
           <p className="error-text"> <em>Oups!</em> <br /> Vous n'avez pas accès à cette page </p>
-          <button type="button" className="error-button">
-            <Link to="/">Accueil</Link>
-          </button>
-          <button type="button" className="error-button">
-            <Link to="/connexion">Connexion</Link>
-          </button>
+          <div className="error-button-container">
+            <button type="button" className="error-button">
+              <Link to="/">Accueil</Link>
+            </button>
+            <button type="button" className="error-button">
+              <Link to="/connexion">Connexion</Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

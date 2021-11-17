@@ -72,7 +72,7 @@ const ListingAdherents = ({
           </div>
           <div className="listingAdherent-line-rightside">
             <Link to={`${path.pathname}/adherent/${adherent.id}`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">visibility</span></Link>
-            <Link to={`${path.pathname}/adherent/${adherent.id}/modify`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">mode_edit</span></Link>
+            {/* <Link to={`${path.pathname}/adherent/${adherent.id}/modify`} className="card-link"><span className="listingAdherent-line-icon-view material-icons">mode_edit</span></Link> */}
             <span
               className="listingEvent-line-icon-delete material-icons"
               onClick={() => {

@@ -32,10 +32,10 @@ const ListingEvents = ({ events, reloadData, sortDate }) => {
           <Link to={`${path.pathname}/addEvent`} className="listingEvent-addIcon"><span className="material-icons">add</span></Link>
         </div>
         <div className="listingEvent-header-rightside">
-          <div className="listingEvent-filter">
+          {/* <div className="listingEvent-filter">
             <button className="listingEvent-filter-button" type="submit" onClick={sortDate}><span className="material-icons">date_range</span></button>
             <button className="listingEvent-filter-button" type="submit">A - Z</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="listingEvent-line-header">
