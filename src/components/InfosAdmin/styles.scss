@@ -8,7 +8,7 @@
   border-radius: 10px;
 
   .dashboard-admin-informations-container {
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: 20px;
+      margin-top: 10px;
       padding: 0px 10px; 
 
       .dashboard-admin-informations-items {
@@ -36,7 +36,7 @@
         border-radius: 20px;
         padding: 7px 10px;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         
         .dashboard-admin-informations-icon {
           color : white;
