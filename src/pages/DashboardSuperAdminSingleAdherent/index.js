@@ -5,7 +5,7 @@ import './styles.scss';
 import Avatar from './avatar.svg';
 
 import api from '../../utils/axios';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -41,7 +41,7 @@ const SuperAdminAdherent = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-adherent">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-rightside">
           <h1 className="dashboard-superadmin-title">ADHERENT : {adherentData.firstName} {adherentData.lastName}</h1>

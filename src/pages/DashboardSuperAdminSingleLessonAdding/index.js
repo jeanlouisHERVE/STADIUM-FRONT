@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import api from '../../utils/axios';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
@@ -60,7 +60,7 @@ const SuperAdminAddLesson = ({
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-lesson-add">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-lesson-add-container">
           <h1>Ajout d'un cours</h1>

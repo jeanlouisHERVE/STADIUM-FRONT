@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 @media (max-width: 1500px) {
-  .AsideNavbar {
+  .AsideNavbarSuperAdmin {
     display : none;
   }
 }
@@ -9,50 +9,50 @@
 
 @media (min-width: 1501px) {
 
-  .AsideNavbar-Navbar-ul {
-    position: relative;
-    top: -50%;
-    transform: translateY(50%);
-  }
   
-  .AsideNavbar {
+  
+  .AsideNavbarSuperAdmin {
     width: 15vw;
     height: 100%;
     padding-top: 20px;
     background-color: vars.$blueColor;
     border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
-    .AsideNavbar-ProfileCard-main {
+    .AsideNavbarSuperAdmin-ProfileCard-main {
 
       display: flex;
       flex-direction: column;
       border: solid 1px vars.$lightColor;
       margin: 0px 30px;
-      
       padding: 15px; 
       border-radius: 25px;
 
-      .AsideNavbar-ProfileCard-MainPicture{
+      .AsideNavbarSuperAdmin-ProfileCard-MainPicture{
         width: 80px;
         height: auto;
         margin: 0px auto 20px auto;
         border: solide 3px vars.$turquoiseColor
       }
 
-      .AsideNavbar-ProfileCard-Name{
+      .AsideNavbarSuperAdmin-ProfileCard-Name{
         color: vars.$lightColor;
         font-weight: 900;
         text-align: center;
+        font-size: x-large;
         
       }
 
-      .AsideNavbar-ProfileCard-Title{
+      .AsideNavbarSuperAdmin-ProfileCard-Title{
         color: vars.$lightColor;
         text-align: center;
         margin-top: 10px;
       }
 
-      .AsideNavbar-ProfileCard-ProfilePictureContainer {
+      .AsideNavbarSuperAdmin-ProfileCard-ProfilePictureContainer {
         
           display: flex;
           flex-direction: row;
@@ -67,13 +67,13 @@
           margin: 20px 0px 20px;
         }
 
-        .AsideNavbar-ProfileCard-ProfilePicture{
+        .AsideNavbarSuperAdmin-ProfileCard-ProfilePicture{
           width: 40px;
           height: auto;
           margin: 5px;
         }
 
-        .AsideNavbar-ProfileCard-AddPicture {
+        .AsideNavbarSuperAdmin-ProfileCard-AddPicture {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -88,7 +88,7 @@
       }
       
 
-      .AsideNavbar-ProfileCard-Link{
+      .AsideNavbarSuperAdmin-ProfileCard-Link{
         color: vars.$lightColor;
         text-align: center;
         margin-top: 10px;
@@ -149,21 +149,27 @@
 
   }
 
-  .AsideNavbar-logout {
-    position: relative;
-    top: 20%;
-    margin-left: 2em;
+  .AsideNavbarSuperAdmin-logout {
+   
 
     button {
-      padding: 1em 1.5em;
-      color: #E4E7EC;
+      padding: 10px;
+      color: vars.$lightColor;
       background-color: vars.$blueColor;
-      font-size: 1.2em;
-      font-weight: 600;
-      border: (solid #E4E7EC 2px);
+      font-size: 1em;
+      font-weight:400;
+      border: (solid vars.$lightColor 1px);
       border-radius: 10px;
       box-shadow: darkslategray;
+      margin: 0px 30px 30px 30px;
+      width: 165px;
+      align-self: center;
+
+      &:hover {
+        background-color: vars.$lightColor;
+        color: vars.$blueColor;
+      
+      } 
     }
   }
-
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 import api from '../../utils/axios';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -33,7 +33,7 @@ const SuperAdminLesson = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-adherent">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-rightside">
           <h1 className="dashboard-superadmin-title">ACTIVITE: {activityData.name}</h1>

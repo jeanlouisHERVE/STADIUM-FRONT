@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import CardAssociation from '../../components/CardAssociation';
@@ -30,7 +30,7 @@ const DashboardSuperAdmin = ({ loadAssociations, loading, associations }) => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin">
-        <AsideNavbar />
+        <AsideNavbarSuperAdmin />
         <div className="cards">
           {associations && associations.map((association) => (
             <CardAssociation key={association.id} association={association} />

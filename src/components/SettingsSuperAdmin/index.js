@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import AsideNavbar from '../AsideNavbar';
+import AsideNavbarSuperAdmin from '../AsideNavbarSuperAdmin';
 import Field from '../Field';
 
 import './styles.scss';
@@ -32,7 +32,7 @@ const SettingsSuperAdmin = ({
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin">
-        <AsideNavbar />
+        <AsideNavbarSuperAdmin />
         <div className="dashboard-superadmin-settings">
           <h1>Réglages du compte</h1>
           <form

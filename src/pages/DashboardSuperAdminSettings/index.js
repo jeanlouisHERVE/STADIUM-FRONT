@@ -1,7 +1,7 @@
 import './styles.scss';
 import useState from 'react';
 
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -18,9 +18,9 @@ const SuperAdminSettings = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-settings">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
-        <h1>DashboardSuperAdminEventADDING</h1>
+        <h1>DashboardSuperAdminSetting</h1>
       </div>
     </>
   );

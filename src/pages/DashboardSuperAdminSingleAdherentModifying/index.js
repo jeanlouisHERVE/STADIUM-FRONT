@@ -1,7 +1,7 @@
 import './styles.scss';
 import { useState } from 'react';
 
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -18,7 +18,7 @@ const SuperAdminModifyAdherent = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-adherent-modify">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <h1>DashboardSuperAdminAdherentMODIFY</h1>
       </div>

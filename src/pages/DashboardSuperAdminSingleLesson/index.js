@@ -5,7 +5,7 @@ import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
 import './styles.scss';
 
 import api from '../../utils/axios';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -36,7 +36,7 @@ const SuperAdminLesson = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-adherent">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-rightside">
           {lessonData.activity && <h1 className="dashboard-superadmin-title">COURS: {lessonData.activity.name}</h1>}
