@@ -1,6 +1,7 @@
 import {
   UPDATE_LOGIN_FIELD,
   SUCCESS_LOGIN,
+  LOGOUT_USER,
 } from '../actions/login';
 
 const initialState = {
@@ -8,6 +9,7 @@ const initialState = {
   username: '',
   // valeur de l'input pour le mot de passe
   password: '',
+  isAuthenticated: false,
 };
 
 function loginReducer(state = initialState, action) {
@@ -22,8 +24,16 @@ function loginReducer(state = initialState, action) {
     case SUCCESS_LOGIN:
       return {
         ...state,
+        isAuthenticated: true,
       };
-
+    case LOGOUT_USER:
+      localStorage.removeItem('token');
+      return {
+        ...state,
+        isAuthenticated: false,
+        username: '',
+        password: '',
+      };
     default:
       return state;
   }

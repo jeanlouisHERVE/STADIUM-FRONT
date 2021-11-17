@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import Logo from '../../components/Logo';
@@ -19,11 +19,16 @@ const LoginPage = ({
   password,
   updateField,
   handleSubmit,
+  isAuthenticated,
 }) => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     handleSubmit();
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/backoffice/superadmin/associations" />;
+  }
 
   return (
     <div className="login-page">
@@ -57,9 +62,7 @@ const LoginPage = ({
           value={password}
         />
         <button type="submit" className="login-submit">
-          <Link to="/backoffice/superadmin/associations">
-            Connexion
-          </Link>
+          Connexion
         </button>
       </form>
     </div>
@@ -72,6 +75,7 @@ LoginPage.propTypes = {
   // 2 paramètres : nouvelle valeur, identifiant
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
 };
 
 export default LoginPage;

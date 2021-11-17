@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import api from '../../utils/axios';
 // import PropTypes from 'prop-types';
 
-import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingClasses from '../../components/ListingClasses';

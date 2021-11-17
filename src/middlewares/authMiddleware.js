@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { SUBMIT_LOGIN, successLogin } from '../actions/login';
 import api from '../utils/axios';
 
@@ -24,8 +24,8 @@ const authMiddleware = (store) => (next) => (action) => {
         },
       )
         .then((response) => {
-          // console.log(response.data.token);
-          axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
+          console.log(response.data.token);
+          api.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
 
           if (response.data.token) {
             localStorage.setItem('token', JSON.stringify(response.data.token));

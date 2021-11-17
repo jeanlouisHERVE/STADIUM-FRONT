@@ -1,4 +1,5 @@
 import './styles.scss';
+import { useSelector } from 'react-redux';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 // HOMEPAGE ET DEPENDANCES
@@ -50,11 +51,12 @@ import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAss
 
 // == Composant
 const App = () => {
-  const isAuthenticated = localStorage.getItem('token');
-
+  // const isAuthenticated = localStorage.getItem('token');
+  const isAuthenticated = useSelector((state) => state.login.isAuthenticated);
   const payloadReader = () => {
     if (isAuthenticated) {
-      const base64Url = isAuthenticated.split('.')[1];
+      const token = localStorage.getItem('token');
+      const base64Url = token.split('.')[1];
       const base64 = base64Url.replace('-', '+').replace('_', '/');
       return JSON.parse(window.atob(base64));
     }
@@ -101,8 +103,7 @@ const App = () => {
           <SignupAssociation />
         </Route>
         <Route exact path="/connexion">
-          {/* {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />} */}
-          <LoginPage />
+          {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />}
         </Route>
 
         <Route path="/legalMention">
@@ -115,8 +116,12 @@ const App = () => {
           <ConfidentialPolicy />
         </Route>
 
+        <Route path="/backoffice/superadmin/associations" exact>
+          <DashboardSuperAdmin />
+        </Route>
         <Route>
-          {!isAuthenticated ? <Error403 /> : null}
+          {/* {!isAuthenticated ? <Error403 /> : null} */}
+          {!isAuthenticated ? <LoginPage /> : null}
         </Route>
         <Route>
           <Error404 />

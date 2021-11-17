@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import './styles.scss';
+import { logoutUser } from '../../actions/login';
 
 import Avatar from './avataaars.svg';
 import Avatar2 from './avataaars2.svg';
@@ -14,10 +16,17 @@ import
 
 // == Composant
 const AsideNavbar = () => {
+  const dispatch = useDispatch();
+
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    dispatch(logoutUser());
   };
 
+  const isAuthenticated = useSelector((state) => state.login.isAuthenticated);
+
+  if (!isAuthenticated) {
+    return <Redirect to="/" />;
+  }
   return (
     <div className="AsideNavbar">
       <div className="AsideNavbar-ProfileCard-main">
@@ -54,9 +63,7 @@ const AsideNavbar = () => {
       </Nav>
       <div className="AsideNavbar-logout">
         <button type="button" onClick={handleLogout}>
-          <Link to="/">
-            Déconnexion
-          </Link>
+          Déconnexion
         </button>
       </div>
     </div>

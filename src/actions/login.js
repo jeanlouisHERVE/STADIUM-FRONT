@@ -5,6 +5,8 @@ export const SUBMIT_LOGIN = 'SUBMIT_LOGIN';
 // indiquer que l'utilisateur s'est authentifié avec succès
 export const SUCCESS_LOGIN = 'SUCCESS_LOGIN';
 
+export const LOGOUT_USER = 'LOGOUT_USER';
+
 // === action creators
 export const updateLoginField = (value, identifier) => ({
   type: UPDATE_LOGIN_FIELD,
@@ -18,4 +20,8 @@ export const submitLogin = () => ({
 
 export const successLogin = () => ({
   type: SUCCESS_LOGIN,
+});
+
+export const logoutUser = () => ({
+  type: LOGOUT_USER,
 });

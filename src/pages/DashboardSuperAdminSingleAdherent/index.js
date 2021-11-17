@@ -92,7 +92,7 @@ const SuperAdminAdherent = () => {
             </div>
             <img className="dashboard-superadmin-presentation-picture" src={Avatar} alt="" />
           </div>
-          <button className="dashboard-superadmin-button" type="submit" style={{ backgroundColor: '#02A5A5', color: 'white' }}><Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link">retour</Link></button>
+          <Link to={`/backoffice/superadmin/associations/${pathArray[4]}`} className="card-link dashboard-superadmin-button" style={{ backgroundColor: '#02A5A5', color: 'white' }}>retour</Link>
         </div>
       </div>
     </>
