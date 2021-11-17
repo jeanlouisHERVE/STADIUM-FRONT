@@ -45,6 +45,11 @@
       
       .AsideNavbarAdmin-middleContainer {
 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         .AsideNavbarAdmin-ProfileCard-Name{
           color: vars.$lightColor;
           font-weight: 900;
@@ -56,6 +61,10 @@
           color: vars.$lightColor;
           text-align: center;
           margin-top: 10px;
+        }
+
+        .AsideNavbarAdmin-ProfileCard-picture{
+          width: 70%;
         }
       }
 
@@ -85,6 +94,7 @@
       justify-content: center;
       margin-bottom: auto;
       height: 45vh;
+      background-color: aqua;
 
       .AsideNavbarAdmin-Navbar-main {
         margin-top: 2em;

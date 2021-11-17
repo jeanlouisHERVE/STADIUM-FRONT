@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 import Avatar from './avataaars.svg';
+import Asso from './asso_20.png';
 import
 {
   Nav,
@@ -17,8 +18,9 @@ const AsideNavbar = () => (
         <img className="AsideNavbarAdmin-ProfileCard-MainPicture" src={Avatar} alt="" />
       </div>
       <div className="AsideNavbarAdmin-middleContainer">
-        <h2 className="AsideNavbarAdmin-ProfileCard-Name">Prénom</h2>
-        <h3 className="AsideNavbarAdmin-ProfileCard-Title">Titre</h3>
+        <h2 className="AsideNavbarAdmin-ProfileCard-Name">Jean</h2>
+        <h3 className="AsideNavbarAdmin-ProfileCard-Title">Admin</h3>
+        <img className="AsideNavbarAdmin-ProfileCard-picture" src={Asso} alt="" />
       </div>
       <div className="AsideNavbarAdmin-downContainer">
         <a className="AsideNavbarAdmin-ProfileCard-Link" href="">Deconnexion</a>

@@ -4,9 +4,6 @@ import './styles.scss';
 import { logoutUser } from '../../actions/login';
 
 import Avatar from './avataaars.svg';
-import Avatar2 from './avataaars2.svg';
-import Avatar3 from './avataaars3.svg';
-import Avatar4 from './avataaars4.svg';
 import
 {
   Nav,
