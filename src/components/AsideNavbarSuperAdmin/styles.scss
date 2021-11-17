@@ -42,6 +42,7 @@
         color: vars.$lightColor;
         font-weight: 900;
         text-align: center;
+        font-size: x-large;
         
       }
 
@@ -156,7 +157,7 @@
       color: vars.$lightColor;
       background-color: vars.$blueColor;
       font-size: 1em;
-      font-weight: 600;
+      font-weight:400;
       border: (solid vars.$lightColor 1px);
       border-radius: 10px;
       box-shadow: darkslategray;
