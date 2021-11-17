@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/axios';
 import { SUBMIT_ADHERENT } from '../actions/adherent';
 
 const adherentMiddleware = (store) => (next) => (action) => {
@@ -7,9 +7,9 @@ const adherentMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SUBMIT_ADHERENT:
       console.log('on va envoyer la requête à l\'API');
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles',
+        '/api/v1/backoffice/superadmin/profiles',
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
         // paramètres
         {

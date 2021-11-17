@@ -6,12 +6,18 @@ import Logo from '../../../components/Logo';
 import '../styles.scss';
 
 const SignupAssociation = ({
-  associationName,
-  presidentName,
+  // associationName,
+  // presidentName,
+  // presidentFirstName,
+  // associationAddress,
+  // associationZipCode,
+  // associationTown,
+
+  name,
+  presidentLastName,
   presidentFirstName,
-  associationAddress,
-  associationZipCode,
-  associationTown,
+  address,
+  phoneNumber,
 
   updateField,
   handleSubmit,
@@ -32,22 +38,22 @@ const SignupAssociation = ({
       >
         <h1 className="signup-title">Association</h1>
         <Field
-          identifier="associationName"
+          identifier="name"
           placeholder="Tous aux jeux"
           label="Nom de l'association"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);
           }}
-          value={associationName}
+          value={name}
         />
         <Field
-          identifier="presidentName"
+          identifier="presidentLastName"
           placeholder="JEAN"
           label="Nom du Président"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);
           }}
-          value={presidentName}
+          value={presidentLastName}
         />
 
         <Field
@@ -61,26 +67,26 @@ const SignupAssociation = ({
         />
 
         <Field
-          identifier="associationAddress"
+          identifier="address"
           placeholder="11 rue du Bon Parmesan"
           label="Adresse de l'association"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);
           }}
-          value={associationAddress}
+          value={address}
         />
 
         <Field
-          identifier="associationZipCode"
+          identifier="phoneNumber"
           placeholder="75000"
           label="Code Postal"
           changeField={(identifier, newValue) => {
             updateField(newValue, identifier);
           }}
-          value={associationZipCode}
+          value={phoneNumber}
         />
 
-        <Field
+        {/* <Field
           identifier="associationTown"
           placeholder="Paris"
           label="Ville"
@@ -88,7 +94,7 @@ const SignupAssociation = ({
             updateField(newValue, identifier);
           }}
           value={associationTown}
-        />
+        /> */}
         <button type="submit" className="signup-submit">Inscription</button>
       </form>
     </div>
@@ -96,12 +102,12 @@ const SignupAssociation = ({
 };
 
 SignupAssociation.propTypes = {
-  associationName: PropTypes.string.isRequired,
-  presidentName: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  presidentLastName: PropTypes.string.isRequired,
   presidentFirstName: PropTypes.string.isRequired,
-  associationAddress: PropTypes.string.isRequired,
-  associationZipCode: PropTypes.string.isRequired,
-  associationTown: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
+  // associationTown: PropTypes.string.isRequired,
   // 2 paramètres : nouvelle valeur, identifiant
   updateField: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,

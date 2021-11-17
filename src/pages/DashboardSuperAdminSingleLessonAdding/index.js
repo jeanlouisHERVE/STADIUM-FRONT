@@ -2,6 +2,7 @@ import './styles.scss';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -39,10 +40,10 @@ const SuperAdminAddLesson = ({
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/${pathArray[4]}`);
-      const response = await rawResponse.json();
-      setLessonData(response);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/associations/${pathArray[4]}`).then((response) => {
+        setLessonData(response.data);
+        // setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

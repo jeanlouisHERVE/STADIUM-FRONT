@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './styles.scss';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -20,10 +21,10 @@ const SuperAdminEvent = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events/${pathArray[6]}`);
-      const response = await rawResponse.json();
-      setEventData(response);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/events/${pathArray[6]}`).then((response) => {
+        setEventData(response.data);
+        // setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
+import api from '../../utils/axios';
 import './styles.scss';
 
 // == Composant
@@ -9,9 +9,9 @@ const ListingEvents = ({ events, reloadData, sortDate }) => {
   const path = useLocation();
 
   const deleteEventItem = (id) => {
-    axios.delete(
+    api.delete(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${id}`,
+      `/api/v1/backoffice/superadmin/events/${id}`,
       // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
       // paramètres
     )
