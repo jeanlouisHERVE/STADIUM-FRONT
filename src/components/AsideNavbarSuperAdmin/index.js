@@ -39,7 +39,7 @@ const AsideNavbarSuperAdmin = () => {
         </NavMenu>
       </Nav>
       <div className="AsideNavbarSuperAdmin-logout">
-        <button type="button" onClick={handleLogout}>
+        <button type="button" href="/logout">
           Déconnexion
         </button>
       </div>
