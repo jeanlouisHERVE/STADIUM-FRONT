@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
 import api from '../../utils/axios';
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
@@ -106,7 +106,7 @@ const SuperAdminModifyEvent = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-event-modify">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-event-modify-container">
           <h1>DashboardSuperAdminEventMODIFY</h1>

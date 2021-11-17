@@ -2,7 +2,7 @@ import './styles.scss';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Field from '../../components/Field';
@@ -35,7 +35,7 @@ const SuperAdminAddActivity = ({
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin-activity-add">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-activity-add-container">
           <h1>Ajout d'une activité</h1>

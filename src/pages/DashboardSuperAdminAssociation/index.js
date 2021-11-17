@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import api from '../../utils/axios';
 // import PropTypes from 'prop-types';
 
-import AsideNavbar from '../../components/AsideNavbar';
+import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingClasses from '../../components/ListingClasses';
 import ListingEvents from '../../components/ListingEvents';
@@ -252,7 +252,7 @@ const SuperAdminAssociationCommands = () => {
       <Navbar toggle={toggle} />
       <div className="dashboard-superadmin">
         <div className="aside-navbar">
-          <AsideNavbar />
+          <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-rightside">
           <h1 className="dashboard-superadmin-title">Tableau de bord : {data.name}</h1>
