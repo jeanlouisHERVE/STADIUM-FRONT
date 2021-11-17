@@ -150,7 +150,7 @@
   }
 
   .AsideNavbarSuperAdmin-logout {
-   
+    margin: 0px auto;
 
     button {
       padding: 10px;
@@ -161,9 +161,10 @@
       border: (solid vars.$lightColor 1px);
       border-radius: 10px;
       box-shadow: darkslategray;
-      margin: 0px 30px 30px 30px;
+      margin: 0px auto 30px auto;
       width: 165px;
       align-self: center;
+      
 
       &:hover {
         background-color: vars.$lightColor;

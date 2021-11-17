@@ -1,7 +1,7 @@
 import './styles.scss';
 import { useState, useEffect } from 'react';
 import moment from 'moment';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import api from '../../utils/axios';
 import AsideNavbarSuperAdmin from '../../components/AsideNavbarSuperAdmin';
 import Navbar from '../../components/Navbar';
@@ -10,25 +10,23 @@ import Field from '../../components/Field';
 import FieldDate from '../../components/FieldDate';
 import FieldTime from '../../components/FieldTime';
 
-const SuperAdminModifyEvent = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
+const SuperAdminModifyEvent = () => {
+  // Local state for the component
+  const [isOpen, setIsOpen] = useState(false);
+  const [isModified, setIsModified] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [eventData, setEventData] = useState({});
+
+  // Ids that we get in the url
+  const { eventId, assoId } = useParams();
+
+  // Toggle is for the navbar
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const [eventData, setEventData] = useState({});
-
-  // const [eventName, setEventName] = useState('');
-  // const [eventStartDate, setEventStartDate] = useState('');
-  // const [eventEndDate, setEventEndDate] = useState('');
-  // const [eventSchedule, setEventSchedule] = useState('');
-  // const [eventPlace, setEventPlace] = useState('');
-  // const [eventMaxParticipant, setMaxParticipant] = useState(0);
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  const { eventId } = useParams();
+  // At the load of the component we get the event data from its id passing in url
   useEffect(() => {
     api.get(
       // URL
@@ -58,11 +56,11 @@ const SuperAdminModifyEvent = () => {
         // message d'erreur sur l'application
       });
   }, []);
-  console.log(eventData);
 
   // handleSubmit() => requete axios pour sauvegarder les données
   // de l'event avec ce qui est présent dans eventData
-  //
+  // When the form is submited, we send a patch request
+  // to the api to apply the modification in the database
   const handleEventModifySubmit = (e) => {
     e.preventDefault();
 
@@ -79,7 +77,8 @@ const SuperAdminModifyEvent = () => {
       },
     )
       .then((response) => {
-        console.log(response.data);
+        // "Flag" to know if the event has been edited
+        setIsModified(true);
         // on veut traiter la réponse en modifiant le state => dispatch une action
         // qui sera traitée par le reducer
         // const actionSuccess = successLogin(response.data.pseudo);
@@ -100,6 +99,11 @@ const SuperAdminModifyEvent = () => {
       [identifier]: value,
     });
   };
+
+  // If the event is edited we redirect
+  if (isModified) {
+    return <Redirect to={`/backoffice/superadmin/associations/${assoId}/event/${eventId}`} />;
+  }
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
