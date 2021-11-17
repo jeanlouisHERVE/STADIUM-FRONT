@@ -3,17 +3,17 @@
   .footer-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: vars.$turquoiseColor;
     color: white;
     text-align: center;
     letter-spacing: 1px;
-    padding-top: 1em;
+    padding: 1em;
+    height: 8em;
 
     @media (max-width: 600px) {
-      height: 10em;
-      padding-top: 2em;
+      height: 12em;
     }
 
     .footer-content-list {
