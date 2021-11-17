@@ -115,13 +115,9 @@ const App = () => {
         <Route path="/confidentialPolicy">
           <ConfidentialPolicy />
         </Route>
-
-        <Route path="/backoffice/superadmin/associations" exact>
-          <DashboardSuperAdmin />
-        </Route>
         <Route>
-          {/* {!isAuthenticated ? <Error403 /> : null} */}
-          {!isAuthenticated ? <LoginPage /> : null}
+          {!isAuthenticated ? <Error403 /> : null}
+          {/* {!isAuthenticated ? <LoginPage /> : null} */}
         </Route>
         <Route>
           <Error404 />
@@ -183,7 +179,7 @@ const App = () => {
           <Route path="/backoffice/admin/association" exact>
             <DashboardAdminAssociation />
           </Route>
-          <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
+          <Route path="/backoffice/admin/association/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
 
           {/* <Route>
             <Error404 />

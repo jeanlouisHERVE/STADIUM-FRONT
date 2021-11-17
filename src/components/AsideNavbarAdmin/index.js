@@ -28,15 +28,15 @@ const AsideNavbar = () => (
       <NavMenu className="AsideNavbarAdmin-Navbar-ul">
         <NavLink className="AsideNavbarAdmin-Navbar-item">
           <span className="material-icons">home</span>
-          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association/14">home</Link></span>
+          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association">home</Link></span>
         </NavLink>
         <NavLink className="AsideNavbarAdmin-Navbar-item">
           <span className="material-icons">dvr</span>
-          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association/14/gestionnaire">Gestionnaire</Link></span>
+          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/association/gestionnaire">Gestionnaire</Link></span>
         </NavLink>
         <NavLink className="AsideNavbarAdmin-Navbar-item">
           <span className="material-icons">mark_email_unread</span>
-          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/superadmin/messages">messages</Link></span>
+          <span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/admin/messages">messages</Link></span>
         </NavLink>
         <NavLink className="AsideNavbarAdmin-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/superadmin/reglages">réglages</Link></span></NavLink>
       </NavMenu>

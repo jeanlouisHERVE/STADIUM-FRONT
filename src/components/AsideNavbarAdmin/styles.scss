@@ -6,7 +6,6 @@
   }
 }
 
-
 @media (min-width: 1501px) {
 
   .AsideNavbarAdmin-Navbar-ul {
@@ -33,7 +32,6 @@
       border-radius: 25px;
       justify-content: space-between;
       align-items: center;
-    
       
       .AsideNavbarAdmin-ProfileCard-Picture-Container{
 
@@ -46,7 +44,6 @@
       }
       
       .AsideNavbarAdmin-middleContainer {
-        background-color: aqua;
 
         .AsideNavbarAdmin-ProfileCard-Name{
           color: vars.$lightColor;
@@ -68,7 +65,6 @@
         align-items: center;
         width: 100%;
         height:10%;
-
 
         .AsideNavbarAdmin-ProfileCard-Link{
           color: vars.$lightColor;
@@ -110,15 +106,9 @@
               white-space: nowrap;
               direction: ltr;
             }
-
           }
-  
         }
-  
       }
-
     }
-
   }
-
 }
