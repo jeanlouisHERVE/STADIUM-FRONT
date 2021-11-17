@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/axios';
 import { SUBMIT_ACTIVITY } from '../actions/activity';
 
 const activityMiddleware = (store) => (next) => (action) => {
@@ -7,9 +7,9 @@ const activityMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SUBMIT_ACTIVITY:
       console.log('on va envoyer la requête à l\'API');
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/activities',
+        '/api/v1/backoffice/superadmin/activities',
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/activities',
         // paramètres
         {

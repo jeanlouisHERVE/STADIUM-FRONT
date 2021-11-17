@@ -3,12 +3,11 @@ import {
 } from '../actions/signup';
 
 const initialState = {
-  associationName: '',
-  presidentName: '',
+  name: '',
+  presidentLastName: '',
   presidentFirstName: '',
-  associationAddress: '',
-  associationZipCode: '',
-  associationTown: '',
+  address: '',
+  phoneNumber: '',
 };
 
 function signupAssociationReducer(state = initialState, action) {

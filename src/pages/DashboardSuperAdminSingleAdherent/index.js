@@ -4,6 +4,7 @@ import moment from 'moment';
 import './styles.scss';
 import Avatar from './avatar.svg';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -25,11 +26,11 @@ const SuperAdminAdherent = () => {
 
   useEffect(() => {
     async function loadData() {
-      // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
-      const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`);
-      const response = await rawResponse.json();
-      setAdherentData(response);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`).then((response) => {
+        setAdherentData(response.data);
+        console.log(response.data);
+        // setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

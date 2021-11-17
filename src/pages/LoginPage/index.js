@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 import Logo from '../../components/Logo';
 import Field from '../../components/Field';
@@ -55,7 +57,9 @@ const LoginPage = ({
           value={password}
         />
         <button type="submit" className="login-submit">
-          Connexion
+          <Link to="/backoffice/superadmin/associations">
+            Connexion
+          </Link>
         </button>
       </form>
     </div>

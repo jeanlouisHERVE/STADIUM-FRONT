@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
+import api from '../../utils/axios';
 import './styles.scss';
 
 // == Composant
@@ -12,9 +12,9 @@ const ListingAdherents = ({
 }) => {
   const path = useLocation();
   const deleteAdherentItem = (id) => {
-    axios.delete(
+    api.delete(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/profiles/${id}`,
+      `/api/v1/backoffice/superadmin/profiles/${id}`,
       // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
       // paramètres
     )

@@ -4,6 +4,7 @@ import moment from 'moment';
 import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
 import './styles.scss';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -21,10 +22,10 @@ const SuperAdminLesson = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/lessons/${pathArray[6]}`);
-      const response = await rawResponse.json();
-      setLessonData(response);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/lessons/${pathArray[6]}`).then((response) => {
+        setLessonData(response.data);
+        // setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

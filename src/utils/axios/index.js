@@ -13,16 +13,3 @@ if (token) {
 }
 
 export default api;
-
-// case XXX_XXX:
-//   api.post(
-//     baseUrl + 'login_check',
-//     {
-//       username: store.getState().login.username,
-//       password: store.getState().login.password,
-//       userAuthentified: store.getState().login.userAuthentified,
-//     },
-//   )
-
-// récup le token en localStorage
-// const token = storage.get('token');

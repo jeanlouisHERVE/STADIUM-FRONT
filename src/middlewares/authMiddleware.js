@@ -7,10 +7,6 @@ import api from '../utils/axios';
 // qui permet de récupérer le state actuel
 
 const authMiddleware = (store) => (next) => (action) => {
-  // const axiosConfig = axios.create({
-  //   baseUrl: 'http://ec2-54-197-70-206.compute-1.amazonaws.com',
-  // });
-
   switch (action.type) {
     case SUBMIT_LOGIN:
       console.log('on va envoyer la requête à l\'API');
@@ -21,33 +17,21 @@ const authMiddleware = (store) => (next) => (action) => {
       api.post(
         // URL
         '/api/login_check',
-        // { headers:
-        //   const user = JSON.parse(localStorage.getItem('user'));
-
-        //   if (user && user.token) {
-        //     return { 'Authorization': 'Bearer ' + user.token };
-        //   } else {
-        //     return {};
-        //   }
-        // }
-
         // paramètres
         {
           username: store.getState().login.username,
           password: store.getState().login.password,
-          userAuthentified: store.getState().login.userAuthentified,
         },
       )
         .then((response) => {
-          console.log(response.data.token);
-
+          // console.log(response.data.token);
           axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
 
           if (response.data.token) {
             localStorage.setItem('token', JSON.stringify(response.data.token));
           }
 
-          console.log(response);
+          // console.log(response);
           store.dispatch(successLogin(response.data));
         })
         .catch((error) => {

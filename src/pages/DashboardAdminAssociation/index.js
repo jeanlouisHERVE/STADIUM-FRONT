@@ -17,7 +17,7 @@ import './styles.scss';
 const DashboardAdminAssociation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [events, setEvents] = useState([]);
   const [activities, setActivities] = useState([]);
 
@@ -33,8 +33,8 @@ const DashboardAdminAssociation = () => {
 
   useEffect(() => {
     async function loadData() {
-      api.get('/api/v1/backoffice/admin/association/').then((response) => {
-        setData(response.data);
+      api.get('/api/v1/backoffice/admin/association/').then(() => {
+        // setData(response.data);
 
         const assoEventFetch = api.get('/api/v1/backoffice/admin/association/events/');
         const assoActivitiesFetch = api.get('/api/v1/backoffice/admin/association/activities/');

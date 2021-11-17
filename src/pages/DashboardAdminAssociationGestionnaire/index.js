@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
+import api from '../../utils/axios';
 import AsideNavbarAdmin from '../../components/AsideNavbarAdmin';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingClasses from '../../components/ListingClasses';
@@ -77,20 +78,18 @@ const DashboardAdminAssociationGestionnaire = () => {
     setShowEvents(!showEvents);
   };
 
-  const path = useLocation();
+  // const path = useLocation();
   // console.log(path.pathname);
 
-  // const pathArray = window.location.pathname.split('/');
+  const pathArray = window.location.pathname.split('/');
   // console.log(pathArray);
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/admin/association/');
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setData(response);
-      setIsLoaded(true);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/associations/${pathArray[6]}`).then((response) => {
+        setData(response.data);
+        setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

@@ -1,8 +1,8 @@
 import './styles.scss';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -30,9 +30,9 @@ const SuperAdminModifyEvent = () => {
 
   const { eventId } = useParams();
   useEffect(() => {
-    axios.get(
+    api.get(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${eventId}`,
+      `/api/v1/backoffice/superadmin/events/${eventId}`,
       // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
       // paramètres
     )
@@ -66,9 +66,9 @@ const SuperAdminModifyEvent = () => {
   const handleEventModifySubmit = (e) => {
     e.preventDefault();
 
-    axios.patch(
+    api.patch(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${eventId}`,
+      `/api/v1/backoffice/superadmin/events/${eventId}`,
       {
         name: eventData.name,
         schedule: eventData.schedule,
