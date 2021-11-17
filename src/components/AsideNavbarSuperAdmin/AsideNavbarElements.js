@@ -12,6 +12,7 @@ export const NavLink = styled.div`
     @media (max-width: 1549px) {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 80%;
     color: #ECF5D2;
     text-transform: uppercase;
