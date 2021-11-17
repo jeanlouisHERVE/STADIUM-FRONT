@@ -13,6 +13,28 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import './styles.scss';
 
+// import pictures
+import asso1 from '../../assets/images/asso_1.png';
+import asso2 from '../../assets/images/asso_2.png';
+import asso3 from '../../assets/images/asso_3.png';
+import asso4 from '../../assets/images/asso_4.png';
+import asso5 from '../../assets/images/asso_5.png';
+import asso6 from '../../assets/images/asso_6.png';
+import asso7 from '../../assets/images/asso_7.png';
+import asso8 from '../../assets/images/asso_8.png';
+import asso9 from '../../assets/images/asso_9.png';
+import asso10 from '../../assets/images/asso_10.png';
+import asso11 from '../../assets/images/asso_11.png';
+import asso12 from '../../assets/images/asso_12.png';
+import asso13 from '../../assets/images/asso_13.png';
+import asso14 from '../../assets/images/asso_14.png';
+import asso15 from '../../assets/images/asso_15.png';
+import asso16 from '../../assets/images/asso_16.png';
+import asso17 from '../../assets/images/asso_17.png';
+import asso18 from '../../assets/images/asso_18.png';
+import asso19 from '../../assets/images/asso_19.png';
+import asso20 from '../../assets/images/asso_20.png';
+
 // == Composant
 const SuperAdminAssociationCommands = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -264,7 +286,7 @@ const SuperAdminAssociationCommands = () => {
               <p className="dashboard-superadmin-presentation-item"><span className="strong">Adresse : </span> &nbsp; {data.address}</p>
               <p className="dashboard-superadmin-presentation-item"><span className="strong">Téléphone : </span> &nbsp; {data.phoneNumber}</p>
             </div>
-            <div className="dashboard-superadmin-presentation-picture">Picture</div>
+            <img className="dashboard-superadmin-presentation-picture" src={asso2} alt="" />
           </div>
           <div className="dashboard-superadmin-buttonsList">
             {buttonAdherentDiv}

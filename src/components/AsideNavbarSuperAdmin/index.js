@@ -2,7 +2,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './styles.scss';
 import { logoutUser } from '../../actions/login';
-
 import Avatar from './avataaars.svg';
 import
 {
