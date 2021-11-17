@@ -11,7 +11,7 @@ const authMiddleware = (store) => (next) => (action) => {
 
       api.post(
         // URL
-        '/api/v1/backoffice/superadmin/accounts/',
+        '/api/v1/subscription/account/new',
         // paramètres
         {
           username: store.getState().signupUser.username,
@@ -28,19 +28,25 @@ const authMiddleware = (store) => (next) => (action) => {
       break;
 
     case SUBMIT_ASSOCIATION_SUBSCRIPTION:
-      console.log('on va envoyer la requête à l\'API');
+      console.log('on va envoyer la requête post à l\'API');
 
       api.post(
         // URL
-        '/api/v1/backoffice/superadmin/associations/',
+        '/api/v1/subscription/account/association/infos',
         // paramètres
         {
-          associationName: store.getState().signupAssociation.associationName,
-          presidentName: store.getState().signupAssociation.presidentName,
+          // associationName: store.getState().signupAssociation.associationName,
+          // presidentName: store.getState().signupAssociation.presidentName,
+          // presidentFirstName: store.getState().signupAssociation.presidentFirstName,
+          // associationAddress: store.getState().signupAssociation.associationAddress,
+          // associationZipCode: store.getState().signupAssociation.associationZipCode,
+          // associationTown: store.getState().signupAssociation.associationTown,
+
+          name: store.getState().signupAssociation.name,
+          presidentLastName: store.getState().signupAssociation.presidentLastName,
           presidentFirstName: store.getState().signupAssociation.presidentFirstName,
-          associationAddress: store.getState().signupAssociation.associationAddress,
-          associationZipCode: store.getState().signupAssociation.associationZipCode,
-          associationTown: store.getState().signupAssociation.associationTown,
+          address: store.getState().signupAssociation.address,
+          phoneNumber: store.getState().signupAssociation.phoneNumber,
         },
       )
         .then((response) => {

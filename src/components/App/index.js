@@ -62,15 +62,19 @@ const App = () => {
   };
 
   const isSuperAdmin = () => {
-    if ((payloadReader().roles[0].indexOf('SUPER')) > -1) {
-      return true;
+    if (isAuthenticated) {
+      if ((payloadReader().roles[0].indexOf('SUPER')) > -1) {
+        return true;
+      }
     }
     return false;
   };
 
   const isAdmin = () => {
-    if ((payloadReader().roles[0].indexOf('ASSO')) > -1) {
-      return true;
+    if (isAuthenticated) {
+      if ((payloadReader().roles[0].indexOf('ASSO')) > -1) {
+        return true;
+      }
     }
     return false;
   };
@@ -112,6 +116,9 @@ const App = () => {
 
         <Route>
           {!isAuthenticated ? <Error403 /> : null}
+        </Route>
+        <Route>
+          <Error404 />
         </Route>
       </Switch>
 
@@ -161,9 +168,6 @@ const App = () => {
             <SettingsSuperAdmin />
           </Route>
 
-          <Route>
-            <Error404 />
-          </Route>
         </Switch>
       )}
 

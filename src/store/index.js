@@ -5,6 +5,7 @@ import reducer from '../reducers';
 
 import logMiddleware from '../middlewares/logMiddleware';
 import authMiddleware from '../middlewares/authMiddleware';
+import signupMiddleware from '../middlewares/signupMiddleware';
 import eventMiddleware from '../middlewares/eventMiddleware';
 import lessonMiddleware from '../middlewares/lessonMiddleware';
 import superAdminMiddleware from '../middlewares/superAdminMiddleware';
@@ -16,6 +17,7 @@ const enhancer = composeWithDevTools(
   applyMiddleware(
     logMiddleware,
     authMiddleware,
+    signupMiddleware,
     eventMiddleware,
     lessonMiddleware,
     superAdminMiddleware,
