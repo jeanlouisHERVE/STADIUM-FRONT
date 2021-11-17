@@ -62,7 +62,7 @@ const SuperAdminAdherent = () => {
                   && activities.map((activity) => (
                     <div className="dashboard-superadmin-adherent-activity-container" key={activity.id}>
                       <div className="dashboard-superadmin-adherent-activity-leftside">
-                        <span className="material-icons">pool</span>
+                        <span className="material-icons">{activity.icon}</span>
                         <p className="dashboard-superadmin-adherent-activity-name">{activity.name}</p>
                       </div>
                       { activity && activity.lessons && activity.lessons.map((lesson) => (
