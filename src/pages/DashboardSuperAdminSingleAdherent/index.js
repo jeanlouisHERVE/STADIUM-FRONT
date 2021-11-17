@@ -28,6 +28,7 @@ const SuperAdminAdherent = () => {
     async function loadData() {
       api.get(`/api/v1/backoffice/superadmin/profiles/${pathArray[6]}`).then((response) => {
         setAdherentData(response.data);
+        console.log(response.data);
         // setIsLoaded(true);
       });
     }

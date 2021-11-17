@@ -39,7 +39,7 @@ import SuperAdminModifyLesson from '../../pages/DashboardSuperAdminSingleLessonM
 
 // adherent
 import SuperAdminAdherent from '../../pages/DashboardSuperAdminSingleAdherent';
-import SuperAdminAddAdherent from '../../pages/DashboardSuperAdminSingleAdherentAdding';
+import SuperAdminAddAdherent from '../../containers/DashboardSuperAdminSingleAdherentAddingPage';
 import SuperAdminModifyAdherent from '../../pages/DashboardSuperAdminSingleAdherentModifying';
 
 // --------------------------
@@ -51,6 +51,34 @@ import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAss
 // == Composant
 const App = () => {
   const isAuthenticated = localStorage.getItem('token');
+
+  const payloadReader = () => {
+    if (isAuthenticated) {
+      const base64Url = isAuthenticated.split('.')[1];
+      const base64 = base64Url.replace('-', '+').replace('_', '/');
+      return JSON.parse(window.atob(base64));
+    }
+    return null;
+  };
+
+  const isSuperAdmin = () => {
+    if ((payloadReader().roles[0].indexOf('SUPER')) > -1) {
+      return true;
+    }
+    return false;
+  };
+
+  const isAdmin = () => {
+    if ((payloadReader().roles[0].indexOf('ASSO')) > -1) {
+      return true;
+    }
+    return false;
+  };
+
+  // console.log((isAuthenticated.split('.'))[2]);
+  // console.log(payloadReader().roles);
+  console.log(isSuperAdmin());
+  console.log(isAdmin());
 
   return (
     <div className="App">
@@ -69,7 +97,7 @@ const App = () => {
           <SignupAssociation />
         </Route>
         <Route exact path="/connexion">
-          {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" /> : <LoginPage />}
+          {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />}
         </Route>
 
         <Route path="/legalMention">
@@ -87,7 +115,7 @@ const App = () => {
         </Route>
       </Switch>
 
-      {isAuthenticated && (
+      {isAuthenticated && isSuperAdmin && (
         <Switch>
           <Route path="/backoffice/superadmin/associations" exact>
             <DashboardSuperAdmin />
@@ -133,15 +161,23 @@ const App = () => {
             <SettingsSuperAdmin />
           </Route>
 
+          <Route>
+            <Error404 />
+          </Route>
+        </Switch>
+      )}
+
+      {isAuthenticated && isAdmin && (
+        <Switch>
           {/* Every Pages of the AdminAssociation Dashboard */}
           <Route path="/backoffice/admin/association" exact>
             <DashboardAdminAssociation />
           </Route>
           <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
 
-          <Route>
+          {/* <Route>
             <Error404 />
-          </Route>
+          </Route> */}
         </Switch>
       )}
     </div>

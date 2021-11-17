@@ -248,10 +248,10 @@ const SuperAdminAssociationCommands = () => {
           <div className="dashboard-superadmin-presentation">
             <div className="dashboard-superadmin-presentation-leftside">
               <p className="dashboard-superadmin-presentation-title">Informations : </p>
-              <p className="dashboard-superadmin-presentation-item"><p className="strong">Nom du Président : </p> &nbsp; {data.presidentFirstName}</p>
-              <p className="dashboard-superadmin-presentation-item"><p className="strong">Prénom du Président : </p> &nbsp; {data.presidentLastName}</p>
-              <p className="dashboard-superadmin-presentation-item"><p className="strong">Adresse : </p> &nbsp; {data.address}</p>
-              <p className="dashboard-superadmin-presentation-item"><p className="strong">Téléphone : </p> &nbsp; {data.phoneNumber}</p>
+              <p className="dashboard-superadmin-presentation-item"><span className="strong">Nom du Président : </span> &nbsp; {data.presidentFirstName}</p>
+              <p className="dashboard-superadmin-presentation-item"><span className="strong">Prénom du Président : </span> &nbsp; {data.presidentLastName}</p>
+              <p className="dashboard-superadmin-presentation-item"><span className="strong">Adresse : </span> &nbsp; {data.address}</p>
+              <p className="dashboard-superadmin-presentation-item"><span className="strong">Téléphone : </span> &nbsp; {data.phoneNumber}</p>
             </div>
             <div className="dashboard-superadmin-presentation-picture">Picture</div>
           </div>
