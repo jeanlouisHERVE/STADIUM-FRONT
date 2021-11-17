@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/axios';
 import { SUBMIT_LESSON } from '../actions/lesson';
 
 // middleware : ça provient de la bibliothèque redux (pas react-redux)
@@ -12,9 +12,9 @@ const lessonMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SUBMIT_LESSON:
       console.log('on va envoyer la requête à l\'API');
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/lessons',
+        '/api/v1/backoffice/superadmin/lessons',
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/lessons',
         // paramètres
         {

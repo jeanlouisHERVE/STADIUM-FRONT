@@ -1,16 +1,21 @@
-import PropTypes from 'prop-types';
-import axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import api from '../../utils/axios';
 import './styles.scss';
 
 // == Composant
-const ListingActivities = ({ activities, reloadData, sort, asort }) => {
+const ListingActivities = ({
+  activities,
+  reloadData,
+  sort,
+  asort,
+}) => {
   const path = useLocation();
 
   const deleteActivity = (id) => {
-    axios.delete(
+    api.delete(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/activities/${id}`,
+      `/api/v1/backoffice/superadmin/activities/${id}`,
       // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
       // paramètres
     )
@@ -60,7 +65,7 @@ const ListingActivities = ({ activities, reloadData, sort, asort }) => {
           <div className="listingActivity-line-rightside">
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">visibility</span></Link>
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">mode_edit</span></Link>
-            <span className="listingActivity-line-icon-view  material-icons" onClick={() => { deleteActivity(activity.id) }}>delete</span>
+            <span className="listingActivity-line-icon-view  material-icons" onClick={() => deleteActivity(activity.id)}>delete</span>
           </div>
         </div>
       ))}
@@ -72,6 +77,7 @@ ListingActivities.propTypes = {
   activities: PropTypes.array.isRequired,
   sort: PropTypes.func.isRequired,
   asort: PropTypes.func.isRequired,
+  reloadData: PropTypes.func.isRequired,
 };
 
 // == Export

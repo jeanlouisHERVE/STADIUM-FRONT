@@ -8,8 +8,6 @@ const initialState = {
   username: '',
   // valeur de l'input pour le mot de passe
   password: '',
-  // indique si l'utilisateur est authentifié
-  userAuthentified: true,
 };
 
 function loginReducer(state = initialState, action) {
@@ -24,8 +22,6 @@ function loginReducer(state = initialState, action) {
     case SUCCESS_LOGIN:
       return {
         ...state,
-        // afficher le formulaire de saisie de message
-        userAuthentified: true,
       };
 
     default:

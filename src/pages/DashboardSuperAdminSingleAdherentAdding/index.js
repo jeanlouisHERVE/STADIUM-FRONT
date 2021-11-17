@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -32,12 +33,10 @@ const SuperAdminAddAdherent = ({
 
   useEffect(() => {
     async function loadData() {
-      // const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
-      const rawResponse = await fetch('http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/accounts/adherents');
-      // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-      const response = await rawResponse.json();
-      setUsersData(response);
-      console.log(usersData);
+      api.get('/api/v1/backoffice/superadmin/accounts/adherents').then((response) => {
+        setUsersData(response.data);
+        // setIsLoaded(true);
+      });
     }
     loadData();
   }, []);

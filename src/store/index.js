@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import { persistStore } from 'redux-persist';
+// import { persistStore } from 'redux-persist';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from '../reducers';
 
@@ -36,6 +36,7 @@ export const store = createStore(
   enhancer,
 );
 
-export const persistor = persistStore(store);
+// export const persistor = persistStore(store);
 
-export default { store, persistor };
+export default { store };
+// export default { persistor };

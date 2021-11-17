@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/axios';
 import { SUBMIT_USER_SUBSCRIPTION, SUBMIT_ASSOCIATION_SUBSCRIPTION } from '../actions/signup';
 
 const authMiddleware = (store) => (next) => (action) => {
@@ -9,9 +9,9 @@ const authMiddleware = (store) => (next) => (action) => {
     case SUBMIT_USER_SUBSCRIPTION:
       console.log('on va envoyer la requête à l\'API');
 
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/accounts/',
+        '/api/v1/backoffice/superadmin/accounts/',
         // paramètres
         {
           username: store.getState().signupUser.username,
@@ -30,9 +30,9 @@ const authMiddleware = (store) => (next) => (action) => {
     case SUBMIT_ASSOCIATION_SUBSCRIPTION:
       console.log('on va envoyer la requête à l\'API');
 
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/associations/',
+        '/api/v1/backoffice/superadmin/associations/',
         // paramètres
         {
           associationName: store.getState().signupAssociation.associationName,

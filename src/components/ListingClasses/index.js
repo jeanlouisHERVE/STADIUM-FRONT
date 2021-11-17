@@ -1,17 +1,23 @@
 import moment from 'moment';
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import api from '../../utils/axios';
 import './styles.scss';
 import daysOfWeek from '../../utils/staticDatas/daysOfWeek';
+
 // == Composant
-const ListingClasses = ({ activities, reloadData, sort, asort }) => {
+const ListingClasses = ({
+  activities,
+  reloadData,
+  sort,
+  asort,
+}) => {
   const path = useLocation();
 
   const deleteLessonItem = (id) => {
-    axios.delete(
+    api.delete(
       // URL
-      `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/lessons/${id}`,
+      `/api/v1/backoffice/superadmin/lessons/${id}`,
       // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
       // paramètres
     )

@@ -4,6 +4,7 @@ import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import CardAssociation from '../../components/CardAssociation';
+import Loader from '../../components/Loader';
 
 import './styles.scss';
 
@@ -20,9 +21,7 @@ const DashboardSuperAdmin = ({ loadAssociations, loading, associations }) => {
 
   if (loading) {
     return (
-      <div>
-        <p>No Data Yet</p>
-      </div>
+      <Loader />
     );
   }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -19,10 +20,9 @@ const SuperAdminLesson = () => {
 
   useEffect(() => {
     async function loadData() {
-      const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/activities/${pathArray[6]}`);
-      const response = await rawResponse.json();
-      setActivityData(response);
-      console.log(response);
+      api.get(`/api/v1/backoffice/superadmin/activities/${pathArray[6]}`).then((response) => {
+        setActivityData(response);
+      });
     }
     loadData();
   }, []);

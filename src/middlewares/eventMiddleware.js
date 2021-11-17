@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../utils/axios';
 import { SUBMIT_EVENT, DELETE_EVENT } from '../actions/event';
 
 // middleware : ça provient de la bibliothèque redux (pas react-redux)
@@ -6,16 +6,15 @@ import { SUBMIT_EVENT, DELETE_EVENT } from '../actions/event';
 // qui permet de récupérer le state actuel
 
 const eventMiddleware = (store) => (next) => (action) => {
-
   // console.log('authMiddleware', action);
   const state = store.getState();
 
   switch (action.type) {
     case DELETE_EVENT:
       console.log(action.eventId);
-      axios.delete(
+      api.delete(
         // URL
-        `http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events/${action.eventId}`,
+        `/api/v1/backoffice/superadmin/events/${action.eventId}`,
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
         // paramètres
       )
@@ -37,9 +36,9 @@ const eventMiddleware = (store) => (next) => (action) => {
 
     case SUBMIT_EVENT:
       console.log('on va envoyer la requête à l\'API');
-      axios.post(
+      api.post(
         // URL
-        'http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1/backoffice/superadmin/events',
+        '/api/v1/backoffice/superadmin/events',
         // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
         // paramètres
         {

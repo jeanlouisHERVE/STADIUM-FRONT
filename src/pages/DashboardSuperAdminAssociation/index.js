@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-no-bind */
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
+import api from '../../utils/axios';
 import AsideNavbar from '../../components/AsideNavbar';
 import ListingAdherents from '../../components/ListingAdherents';
 import ListingClasses from '../../components/ListingClasses';
@@ -187,18 +189,14 @@ const SuperAdminAssociationCommands = () => {
   // console.log(pathArray);
 
   async function loadData() {
-    const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
-    // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
-
-    // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
-    const response = await rawResponse.json();
-    setData(response);
-    setIsLoaded(true);
-    // console.log(response);
+    api.get(`/api/v1${path.pathname}`).then((response) => {
+      setData(response.data);
+      setIsLoaded(true);
+    });
   }
 
   useEffect(() => {
-    (!isLoaded ? loadData() : setIsLoaded(false));
+    loadData();
   }, []);
 
   // console.log(data);
@@ -270,7 +268,8 @@ const SuperAdminAssociationCommands = () => {
                   adherents={data.profils}
                   asort={asortAdherents}
                   sort={sortAdherents}
-                  reloadData={loadData()}
+                  // eslint-disable-next-line react/jsx-no-bind
+                  reloadData={loadData}
                 />
               ) : null}
             {showActivities && data.activities
@@ -279,7 +278,7 @@ const SuperAdminAssociationCommands = () => {
                   activities={data.activities}
                   asort={asortActivities}
                   sort={sortActivities}
-                  reloadData={loadData()}
+                  reloadData={loadData}
                 />
               ) : null}
             {showClasses && data.activities
@@ -288,7 +287,7 @@ const SuperAdminAssociationCommands = () => {
                   activities={data.activities}
                   asort={asortActivities}
                   sort={sortActivities}
-                  reloadData={loadData()}
+                  reloadData={loadData}
                 />
               ) : null}
             {showEvents && isLoaded
@@ -296,7 +295,7 @@ const SuperAdminAssociationCommands = () => {
                 <ListingEvents
                   events={data.events}
                   sortDate={sortDates}
-                  reloadData={loadData()}
+                  reloadData={loadData}
                 />
               ) : null}
           </div>

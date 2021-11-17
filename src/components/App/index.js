@@ -1,6 +1,5 @@
 import './styles.scss';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 // HOMEPAGE ET DEPENDANCES
 import Home from '../../pages/Home';
@@ -50,103 +49,103 @@ import DashboardAdminAssociation from '../../containers/DashboardAdminAssociatio
 import DashboardAdminAssociationGestionnaire from '../../pages/DashboardAdminAssociationGestionnaire';
 
 // == Composant
-const App = ({ userAuthentified }) => (
-  <div className="App">
-    <Switch>
-      <Route path="/" exact>
-        <Home />
-      </Route>
+const App = () => {
+  const isAuthenticated = localStorage.getItem('token');
 
-      <Route path="/inscription" exact>
-        <SignupUser />
-      </Route>
-      <Route path="/inscription/adherent">
-        <SignupMember />
-      </Route>
-      <Route path="/inscription/association">
-        <SignupAssociation />
-      </Route>
-      <Route exact path="/connexion">
-        {userAuthentified ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />}
-      </Route>
-
-      <Route path="/legalMention">
-        <LegalMention />
-      </Route>
-      <Route path="/contact">
-        <Contact />
-      </Route>
-      <Route path="/confidentialPolicy">
-        <ConfidentialPolicy />
-      </Route>
-
-      <Route>
-        {!userAuthentified ? <Error403 /> : null}
-      </Route>
-    </Switch>
-
-    {userAuthentified && (
+  return (
+    <div className="App">
       <Switch>
-        <Route path="/backoffice/superadmin/associations" exact>
-          <DashboardSuperAdmin />
-        </Route>
-        <Route path="/backoffice/superadmin/associations/:id" exact>
-          <SuperAdminAssociation />
+        <Route path="/" exact>
+          <Home />
         </Route>
 
-        {/* SuperAdmin Adherent */}
-        <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
-          <SuperAdminAdherent />
+        <Route path="/inscription" exact>
+          <SignupUser />
         </Route>
-        <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
-        <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
-          <SuperAdminModifyAdherent />
+        <Route path="/inscription/adherent">
+          <SignupMember />
         </Route>
-
-        {/* SuperAdmin Event */}
-        <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
-          <SuperAdminEvent />
+        <Route path="/inscription/association">
+          <SignupAssociation />
         </Route>
-        <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
-        <Route path="/backoffice/superadmin/associations/event/modify" exact>
-          <SuperAdminModifyEvent />
+        <Route exact path="/connexion">
+          {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" /> : <LoginPage />}
         </Route>
 
-        {/* SuperAdmin Lesson */}
-        <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
-          <SuperAdminLesson />
+        <Route path="/legalMention">
+          <LegalMention />
         </Route>
-        <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
-        <Route path="/backoffice/superadmin/associations/lesson/modify" exact>
-          <SuperAdminModifyLesson />
+        <Route path="/contact">
+          <Contact />
         </Route>
-
-        {/* SuperAdmin activity */}
-        <Route path="/backoffice/superadmin/associations/:id/activity/:id" exact>
-          <SuperAdminActivity />
+        <Route path="/confidentialPolicy">
+          <ConfidentialPolicy />
         </Route>
-        <Route path="/backoffice/superadmin/associations/:id/addActivity" component={SuperAdminAddActivity} />
-
-        <Route path="/backoffice/superadmin/reglages" exact>
-          <SettingsSuperAdmin />
-        </Route>
-
-        {/* Every Pages of the AdminAssociation Dashboard */}
-        <Route path="/backoffice/admin/association/:id" exact>
-          <DashboardAdminAssociation />
-        </Route>
-        <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
 
         <Route>
-          <Error404 />
+          {!isAuthenticated ? <Error403 /> : null}
         </Route>
       </Switch>
-    )}
-  </div>
-);
 
-App.propTypes = {
-  userAuthentified: PropTypes.bool.isRequired,
+      {isAuthenticated && (
+        <Switch>
+          <Route path="/backoffice/superadmin/associations" exact>
+            <DashboardSuperAdmin />
+          </Route>
+          <Route path="/backoffice/superadmin/associations/:id" exact>
+            <SuperAdminAssociation />
+          </Route>
+
+          {/* SuperAdmin Adherent */}
+          <Route path="/backoffice/superadmin/associations/:id/adherent/:id">
+            <SuperAdminAdherent />
+          </Route>
+          <Route path="/backoffice/superadmin/associations/:id/addAdherent" component={SuperAdminAddAdherent} />
+          <Route path="/backoffice/superadmin/associations/adherent/modify" exact>
+            <SuperAdminModifyAdherent />
+          </Route>
+
+          {/* SuperAdmin Event */}
+          <Route path="/backoffice/superadmin/associations/:id/event/:id" exact>
+            <SuperAdminEvent />
+          </Route>
+          <Route path="/backoffice/superadmin/associations/:id/addEvent" component={SuperAdminAddEvent} />
+          <Route path="/backoffice/superadmin/associations/event/modify" exact>
+            <SuperAdminModifyEvent />
+          </Route>
+
+          {/* SuperAdmin Lesson */}
+          <Route path="/backoffice/superadmin/associations/:id/lesson/:id" exact>
+            <SuperAdminLesson />
+          </Route>
+          <Route path="/backoffice/superadmin/associations/:id/addLesson" component={SuperAdminAddLesson} />
+          <Route path="/backoffice/superadmin/associations/lesson/modify" exact>
+            <SuperAdminModifyLesson />
+          </Route>
+
+          {/* SuperAdmin activity */}
+          <Route path="/backoffice/superadmin/associations/:id/activity/:id" exact>
+            <SuperAdminActivity />
+          </Route>
+          <Route path="/backoffice/superadmin/associations/:id/addActivity" component={SuperAdminAddActivity} />
+
+          <Route path="/backoffice/superadmin/reglages" exact>
+            <SettingsSuperAdmin />
+          </Route>
+
+          {/* Every Pages of the AdminAssociation Dashboard */}
+          <Route path="/backoffice/admin/association" exact>
+            <DashboardAdminAssociation />
+          </Route>
+          <Route path="/backoffice/admin/association/:id/gestionnaire" component={DashboardAdminAssociationGestionnaire} />
+
+          <Route>
+            <Error404 />
+          </Route>
+        </Switch>
+      )}
+    </div>
+  );
 };
 
 export default App;
