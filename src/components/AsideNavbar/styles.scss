@@ -149,4 +149,21 @@
 
   }
 
+  .AsideNavbar-logout {
+    position: relative;
+    top: 20%;
+    margin-left: 2em;
+
+    button {
+      padding: 1em 1.5em;
+      color: #E4E7EC;
+      background-color: vars.$blueColor;
+      font-size: 1.2em;
+      font-weight: 600;
+      border: (solid #E4E7EC 2px);
+      border-radius: 10px;
+      box-shadow: darkslategray;
+    }
+  }
+
 }

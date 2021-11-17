@@ -101,7 +101,8 @@ const App = () => {
           <SignupAssociation />
         </Route>
         <Route exact path="/connexion">
-          {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />}
+          {/* {isAuthenticated ? <Redirect to="/backoffice/superadmin/associations" exact /> : <LoginPage />} */}
+          <LoginPage />
         </Route>
 
         <Route path="/legalMention">
