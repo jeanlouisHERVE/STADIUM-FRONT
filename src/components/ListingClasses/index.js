@@ -59,13 +59,11 @@ const ListingClasses = ({
       </div>
       {activities.map((activity) => (
         <div className="listingClasses-line-container" key={activity.id}>
-          {console.log(activity)}
           <div className="listingClasses-line-leftside">
             <div className="listingClasses-line-items-name">{activity.name}</div>
             { activity && activity.lessons
             && activity.lessons.map((lesson) => (
               <div className="listingClasses-line-classe-container" key={lesson.id}>
-                {console.log(lesson)}
                 <div className="listingClasses-line-items-level"><div className="listing-line-items-level-cartouche">{lesson.level}</div></div>
                 <div className="listingClasses-line-items-day">{daysOfWeek[lesson.day]}</div>
                 <div className="listingClasses-line-items-startTime">{moment(lesson.startDate).format('LT')}</div>

@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import api from '../../utils/axios';
 // import PropTypes from 'prop-types';
 
 import api from '../../utils/axios';
@@ -194,6 +195,17 @@ const SuperAdminAssociationCommands = () => {
       setIsLoaded(true);
     });
   }
+
+  // async function loadData() {
+  //   const rawResponse = await fetch(`http://ec2-54-197-70-206.compute-1.amazonaws.com/api/v1${path.pathname}`);
+  //   // const rawResponse = await fetch(`https://sym-stadium.herokuapp.com/api/v1${path.pathname}`);
+
+  //   // const rawResponse = await fetch(`http://pablo-cany.vpnuser.lan:8000/api/v1${path.pathname}`);
+  //   const response = await rawResponse.json();
+  //   setData(response);
+  //   setIsLoaded(true);
+  //   // console.log(response);
+  // }
 
   useEffect(() => {
     loadData();

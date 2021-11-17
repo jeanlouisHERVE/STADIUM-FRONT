@@ -7,7 +7,7 @@ import AsideNavbarAdmin from '../../components/AsideNavbarAdmin';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import PlanningAdmin from '../../components/PlanningAdmin';
-import CarousselPictureAdmin from '../../components/CarousselPicturesAdmin';
+import InfosAdmin from '../../components/InfosAdmin';
 import EventAdmin from '../../components/EventAdmin';
 import MessageAdmin from '../../components/MessageAdmin';
 import LessonAdmin from '../../components/LessonAdmin';
@@ -61,7 +61,7 @@ const DashboardAdminAssociation = () => {
           <div className="dashboard-adminAssociation-menu">
             <div className="dashboard-adminAssociation-top">
               <PlanningAdmin />
-              <CarousselPictureAdmin />
+              <InfosAdmin />
             </div>
             <div className="dashboard-adminAssociation-down">
               <LessonAdmin activities={activities} />
