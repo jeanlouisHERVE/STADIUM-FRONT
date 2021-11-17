@@ -71,23 +71,20 @@ body {
         .strong {
           font-weight: bold;
         }
-      
     }
     
     .dashboard-superadmin-button {
-      
       margin-bottom: 2em;
       border: 2px solid vars.$turquoiseColor;
       border-radius: 20px;
-      width: 120px;
+      width: 240px;
       height: 40px;
       color: vars.$turquoiseColor;
       font-weight: 700;
       font-size: small;
       text-transform: uppercase;
+      padding-top: 0px;
       
     }
-    
   }
-  
 }

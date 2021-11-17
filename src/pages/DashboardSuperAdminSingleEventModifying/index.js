@@ -113,7 +113,7 @@ const SuperAdminModifyEvent = () => {
           <AsideNavbarSuperAdmin />
         </div>
         <div className="dashboard-superadmin-event-modify-container">
-          <h1>DashboardSuperAdminEventMODIFY</h1>
+          <h1>Modifier un événement</h1>
           {!isLoading && (
             <form className="dashboard-superadmin-event-modify-form" onSubmit={handleEventModifySubmit}>
               <Field

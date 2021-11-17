@@ -45,8 +45,8 @@ const ListingActivities = ({
         </div>
         <div className="listingActivity-header-rightside">
           <div className="listingActivity-filter">
-            <button className="listingActivity-filter-button" type="button" onClick={asort}>A - Z</button>
-            <button className="listingActivity-filter-button" type="submit" onClick={sort}>Z - A</button>
+            <button className="listingActivity-filter-button" type="button" onClick={sort}>A - Z</button>
+            <button className="listingActivity-filter-button" type="submit" onClick={asort}>Z - A</button>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ const ListingActivities = ({
           </div>
           <div className="listingActivity-line-rightside">
             <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">visibility</span></Link>
-            <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">mode_edit</span></Link>
+            {/* <Link to={`${path.pathname}/activity/${activity.id}`} className="card-link"><span className="listingActivity-line-icon-view material-icons">mode_edit</span></Link> */}
             <span className="listingActivity-line-icon-view  material-icons" onClick={() => deleteActivity(activity.id)}>delete</span>
           </div>
         </div>
