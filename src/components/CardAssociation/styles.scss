@@ -16,9 +16,9 @@
   text-align: center;
 }
 
-.card-association .image {
-  background: #074666;
-  height: 100px;
+.card-association .logo-association {
+  // background: #074666;
+  height: 150px;
   position: relative;
   left: 50%;
   width: 150px;
@@ -28,19 +28,17 @@
 .details-association {
   width: 80%;
   height: 20%;
-  background: #545758;
+  background: #b2cbd4;
   font-size: 0.7em;
-  margin: 4.5em auto 1em;
+  margin: 3.5em auto 1em;
   display: flex;
   place-content: center;
   border-radius: 15px;
-}
-
-.details-association .card-link {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.1em;
   letter-spacing: 0.02em;
   font-weight: 600;
   place-self: center;
+  padding: 0.8em;
 }
