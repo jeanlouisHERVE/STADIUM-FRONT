@@ -32,9 +32,9 @@ const AsideNavbarSuperAdmin = () => {
       </div>
       <Nav className="AsideNavbarSuperAdmin-Navbar-main">
         <NavMenu className="AsideNavbarSuperAdmin-Navbar-ul">
-          <NavLink className="AsideNavbarSuperAdmin-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/associations">home</Link></span></NavLink>
+          <NavLink to="/backoffice/superadmin/associations" className="AsideNavbarSuperAdmin-Navbar-item"><span className="material-icons">home</span><span className="AsideNavbar-Navbar-category">home</span></NavLink>
           <NavLink className="AsideNavbarSuperAdmin-Navbar-item"><span className="material-icons">mark_email_unread</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/messages">messages</Link></span></NavLink>
-          <NavLink className="AsideNavbarSuperAdmin-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category"><Link to="/backoffice/superadmin/reglages">réglages</Link></span></NavLink>
+          <NavLink to="/backoffice/superadmin/reglages" className="AsideNavbarSuperAdmin-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbar-Navbar-category">réglages</span></NavLink>
         </NavMenu>
       </Nav>
       <div className="AsideNavbarSuperAdmin-logout">
