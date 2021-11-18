@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import api from '../../utils/axios';
 import './styles.scss';
+import { useEffect, useState } from 'react';
 
 // == Composant
 const ListingAdherents = ({
@@ -28,20 +29,21 @@ const ListingAdherents = ({
       });
   };
 
-  const InformationAdherent = (id) => {
-    api.get(
-      // URL
-      `/api/v1/backoffice/superadmin/profiles/${id}`,
-      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
-      // paramètres
-    )
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.warn(error);
-        // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
-      });
+
+  // const InformationAdherent = async (id) => {
+  //   const res = await api.get(
+  //     // URL
+  //     `/api/v1/backoffice/superadmin/association/${id}/adherents`,
+  //     // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+  //     // paramètres
+  //   );
+  //   return res.data;
+  // };
+
+  const randomColor = () => {
+    const colors = ['green', 'red'];
+
+    return colors[Math.floor(Math.random() * 2)];
   };
 
   return (
@@ -83,7 +85,7 @@ const ListingAdherents = ({
         <div className="listingAdherent-line-container" key={adherent.id}>
           <div className="listingAdherent-line-leftside">
             <div className="listingAdherent-line-status">
-              <div className={InformationAdherent(adherent.id) && InformationAdherent(adherent.id).data.file.isComplete ? 'green' : 'red'} />
+              <div className={randomColor()} />
             </div>
             <div className="listingAdherent-line-items lastname">{adherent.lastName}</div>
             <div className="listingAdherent-line-items">{adherent.firstName}</div>
