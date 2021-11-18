@@ -8,6 +8,8 @@ import Loader from '../../components/Loader';
 
 import './styles.scss';
 
+// import pictures
+
 const DashboardSuperAdmin = ({ loadAssociations, loading, associations }) => {
   const [isOpen, setIsOpen] = useState(false);
 

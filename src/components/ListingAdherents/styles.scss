@@ -170,11 +170,18 @@
         display: flex;
         justify-content: center;
 
-        .status {
+        .red {
           width: 10px;
           height: 10px;
           border-radius: 50%;
           background-color: brown;
+        }
+        
+        .green {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: green;
         }
 
       }

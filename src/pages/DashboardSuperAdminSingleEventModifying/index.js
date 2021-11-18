@@ -10,7 +10,6 @@ import Field from '../../components/Field';
 import FieldDate from '../../components/FieldDate';
 import FieldTime from '../../components/FieldTime';
 
-
 const SuperAdminModifyEvent = () => {
   // Local state for the component
   const [isOpen, setIsOpen] = useState(false);

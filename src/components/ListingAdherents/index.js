@@ -28,6 +28,22 @@ const ListingAdherents = ({
       });
   };
 
+  const InformationAdherent = (id) => {
+    api.get(
+      // URL
+      `/api/v1/backoffice/superadmin/profiles/${id}`,
+      // 'https://sym-stadium.herokuapp.com/api/v1/backoffice/superadmin/events',
+      // paramètres
+    )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.warn(error);
+        // TODO mettre en place une nouvelle action (par exemple ERROR_LOGIN),
+      });
+  };
+
   return (
     <div className="listingAdherent-container">
       <div className="listingAdherent-header">
@@ -66,7 +82,9 @@ const ListingAdherents = ({
       && adherents.map((adherent) => (
         <div className="listingAdherent-line-container" key={adherent.id}>
           <div className="listingAdherent-line-leftside">
-            <div className="listingAdherent-line-status"><div className="status" /></div>
+            <div className="listingAdherent-line-status">
+              <div className={InformationAdherent(adherent.id) && InformationAdherent(adherent.id).data.file.isComplete ? 'green' : 'red'} />
+            </div>
             <div className="listingAdherent-line-items lastname">{adherent.lastName}</div>
             <div className="listingAdherent-line-items">{adherent.firstName}</div>
           </div>
