@@ -116,8 +116,8 @@ const App = () => {
           <ConfidentialPolicy />
         </Route>
         <Route>
-          {!isAuthenticated ? <Error403 /> : null}
-          {/* {!isAuthenticated ? <LoginPage /> : null} */}
+          {/* {!isAuthenticated ? <Error403 /> : null} */}
+          {!isAuthenticated ? < Redirect to ="/connexion" exact /> : null}
         </Route>
         <Route>
           <Error404 />
@@ -168,6 +168,9 @@ const App = () => {
 
           <Route path="/backoffice/superadmin/reglages" exact>
             <SettingsSuperAdmin />
+          </Route>
+          <Route>
+           <Error404 />
           </Route>
 
         </Switch>
