@@ -20,6 +20,9 @@
     padding-top: 20px;
     background-color: vars.$blueColor;
     border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .AsideNavbarAdmin-ProfileCard-main {
 
@@ -118,6 +121,31 @@
           }
         }
       }
+    }
+  }
+
+  .AsideNavbarSuperAdmin-logout {
+    margin: 0px auto;
+
+    button {
+      padding: 10px;
+      color: vars.$lightColor;
+      background-color: vars.$blueColor;
+      font-size: 1em;
+      font-weight:400;
+      border: (solid vars.$lightColor 1px);
+      border-radius: 10px;
+      box-shadow: darkslategray;
+      margin: 0px auto 30px auto;
+      width: 165px;
+      align-self: center;
+      
+
+      &:hover {
+        background-color: vars.$lightColor;
+        color: vars.$blueColor;
+      
+      } 
     }
   }
 }

@@ -167,9 +167,8 @@ const App = () => {
             <SettingsSuperAdmin />
           </Route>
           <Route>
-            <Error404 />
+            {!isAdmin ? <Error404 /> : null}
           </Route>
-
         </Switch>
       )}
 

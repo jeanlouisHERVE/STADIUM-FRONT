@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './styles.scss';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../actions/login';
 import Avatar from './jean.svg';
 import Asso from './asso_20.png';
@@ -17,6 +17,11 @@ const AsideNavbarAdmin = () => {
   const handleLogout = () => {
     dispatch(logoutUser());
   };
+  const isAuthenticated = useSelector((state) => state.login.isAuthenticated);
+
+  if (!isAuthenticated) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="AsideNavbarAdmin">
@@ -29,9 +34,7 @@ const AsideNavbarAdmin = () => {
           <h3 className="AsideNavbarAdmin-ProfileCard-Title">Admin</h3>
           <img className="AsideNavbarAdmin-ProfileCard-picture" src={Asso} alt="" />
         </div>
-        <div className="AsideNavbarAdmin-downContainer">
-          <a className="AsideNavbarAdmin-ProfileCard-Link" onClick={handleLogout} href="">Deconnexion</a>
-        </div>
+        <div className="AsideNavbarAdmin-downContainer" />
       </div>
       <Nav className="AsideNavbarAdmin-Navbar-main">
         <NavMenu className="AsideNavbarAdmin-Navbar-ul">
@@ -50,6 +53,11 @@ const AsideNavbarAdmin = () => {
           <NavLink className="AsideNavbarAdmin-Navbar-item"><span className="material-icons">settings</span><span className="AsideNavbarAdmin-Navbar-category"><Link to="/backoffice/superadmin/reglages">réglages</Link></span></NavLink>
         </NavMenu>
       </Nav>
+      <div className="AsideNavbarSuperAdmin-logout">
+        <button type="button" onClick={handleLogout}>
+          Déconnexion
+        </button>
+      </div>
     </div>
   );
 }
