@@ -1,5 +1,6 @@
 # STADIUM-FRONT
 Ce projet est un clone de celui réalisé pour la fin de formation chez O'CLOCK en novembre 2021 avec Jean, Mélanie, Pablo et Stéphanie.
+/le code principal est consultable sur la branche dev/
 
 **Présentation**
 
