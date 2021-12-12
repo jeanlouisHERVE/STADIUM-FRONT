@@ -1,11 +1,10 @@
 # STADIUM-FRONT
 Ce projet est un clone de celui réalisé pour la fin de formation chez O'CLOCK en novembre 2021 avec Jean, Mélanie, Pablo et Stéphanie.
 
- :point_right:*le code principal est consultable sur la branche dev* 
+ :point_right: *le code principal est consultable sur la branche dev* 
 
 **Présentation**
-
-STADIUM est une plateforme à destination des associations sportives. Cette application a pour but de faciliter la gestion administrative de ces associations en permettant à leurs adhérents de s'inscrire individuellement ou en famille, de gérer le flux des adhésions, de contrôler la fournitures des documents nécessaires à l'adhésion (certificats médicaux etc.).
+STADIUM est une plateforme à destination des associations sportives dans le but de leur faciliter la gestion administrative de leur adhérents. 
 
 **Page d'accueil**
 ![Alt text](src/assets/PresentationPictures/homepage.png "Title")
