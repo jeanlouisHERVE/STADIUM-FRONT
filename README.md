@@ -4,6 +4,7 @@ Ce projet est un clone de celui réalisé pour la fin de formation chez O'CLOCK 
  :point_right: *le code principal est consultable sur la branche dev* 
 
 **Présentation**
+
 STADIUM est une plateforme à destination des associations sportives dans le but de leur faciliter la gestion administrative de leur adhérents. 
 
 **Page d'accueil**
