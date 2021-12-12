@@ -5,7 +5,7 @@ Ce projet est un clone de celui réalisé pour la fin de formation chez O'CLOCK 
 
 **Présentation**
 
-STADIUM est une plateforme à destination des associations sportives dans le but de leur faciliter la gestion administrative de leur adhérents. 
+STADIUM est une plateforme à destination des associations sportives dont le but de faciliter la gestion administrative de leur adhérents. 
 
 **Page d'accueil**
 ![Alt text](src/assets/PresentationPictures/homepage.png "Title")
